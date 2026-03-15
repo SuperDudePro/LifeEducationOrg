@@ -47,7 +47,7 @@ export default function App() {
         .header {
           background: #000;
           border-bottom: 1px solid rgba(255,255,255,0.10);
-          padding: 28px 24px;
+          padding: 20px 24px;
           text-align: center;
         }
 
@@ -55,7 +55,7 @@ export default function App() {
           margin: 0;
           color: #fff;
           font-family: Georgia, "Times New Roman", serif;
-          font-size: clamp(42px, 7vw, 76px);
+          font-size: clamp(34px, 5.2vw, 60px);
           font-weight: 500;
           letter-spacing: 0.02em;
           line-height: 1;
@@ -79,7 +79,7 @@ export default function App() {
         }
 
         .hero-copy {
-          padding: 48px 48px 56px 56px;
+          padding: 32px 40px 36px 44px;
           justify-content: center;
         }
 
@@ -105,27 +105,27 @@ export default function App() {
           margin: 24px 0 0;
           color: #0f172a;
           font-family: Georgia, "Times New Roman", serif;
-          font-size: clamp(44px, 6vw, 88px);
+          font-size: clamp(34px, 4.8vw, 66px);
           line-height: 0.98;
           font-weight: 500;
         }
 
         .hero-text {
-          margin: 32px 0 0;
+          margin: 24px 0 0;
           max-width: 620px;
           color: #334155;
-          font-size: clamp(20px, 2vw, 28px);
+          font-size: clamp(18px, 1.5vw, 22px);
           line-height: 1.75;
         }
 
         .hero-art {
           justify-content: center;
-          padding: 0 40px 56px 20px;
+          padding: 0 28px 36px 12px;
         }
 
         .art-card {
           width: 100%;
-          min-height: 720px;
+          min-height: 560px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -145,8 +145,8 @@ export default function App() {
         }
 
         .tree-wrap svg {
-          width: 92%;
-          max-width: 680px;
+          width: 78%;
+          max-width: 520px;
           height: auto;
           display: block;
           margin: 0 auto;
@@ -156,7 +156,7 @@ export default function App() {
         .why {
           background: #101114;
           color: #fff;
-          padding: 56px 64px 64px;
+          padding: 48px 56px 56px;
         }
 
         .why-grid {
@@ -188,16 +188,16 @@ export default function App() {
           margin: 24px 0 0;
           color: #fff;
           font-family: Georgia, "Times New Roman", serif;
-          font-size: clamp(34px, 4.5vw, 64px);
+          font-size: clamp(28px, 3.8vw, 48px);
           line-height: 1.02;
           font-weight: 500;
         }
 
         .why-text {
-          margin: 24px 0 0;
+          margin: 20px 0 0;
           max-width: 720px;
           color: #cbd5e1;
-          font-size: 20px;
+          font-size: 18px;
           line-height: 1.75;
         }
 
