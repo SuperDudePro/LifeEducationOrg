@@ -68,10 +68,8 @@ export default function App() {
 
         .hero {
           display: grid;
-          grid-template-columns: 0.92fr 1.08fr;
+          grid-template-columns: 0.88fr 1.12fr;
           gap: 0;
-          max-width: 1600px;
-          margin: 0 auto;
         }
 
         .hero-copy,
@@ -81,14 +79,13 @@ export default function App() {
         }
 
         .hero-copy {
-          padding: 48px 56px 56px 64px;
+          padding: 48px 48px 56px 56px;
           justify-content: center;
         }
 
         .copy-inner {
           width: 100%;
           max-width: 720px;
-          margin: 0 auto;
         }
 
         .pill {
@@ -123,12 +120,11 @@ export default function App() {
 
         .hero-art {
           justify-content: center;
-          padding: 0 64px 56px 56px;
+          padding: 0 40px 56px 20px;
         }
 
         .art-card {
           width: 100%;
-          max-width: 760px;
           min-height: 720px;
           display: flex;
           align-items: center;
@@ -142,21 +138,18 @@ export default function App() {
 
         .tree-wrap {
           width: 100%;
-          max-width: 620px;
           color: #000;
           display: flex;
           justify-content: center;
           align-items: center;
-          margin: 0 auto;
         }
 
         .tree-wrap svg {
-          width: 82%;
-          max-width: 520px;
+          width: 92%;
+          max-width: 680px;
           height: auto;
           display: block;
           margin: 0 auto;
-          transform: translateX(3%);
           filter: drop-shadow(0 24px 60px rgba(15,23,42,0.16));
         }
 
@@ -171,14 +164,11 @@ export default function App() {
           grid-template-columns: 1.05fr 0.95fr;
           gap: 40px;
           align-items: start;
-          max-width: 1600px;
-          margin: 0 auto;
         }
 
         .why-copy {
           width: 100%;
-          max-width: 760px;
-          margin: 0 auto;
+          max-width: 820px;
         }
 
         .why-pill {
@@ -228,8 +218,6 @@ export default function App() {
           display: grid;
           gap: 16px;
           width: 100%;
-          max-width: 560px;
-          margin: 0 auto;
         }
 
         .why-card {
@@ -278,13 +266,11 @@ export default function App() {
 
           .art-card {
             min-height: 0;
-            max-width: none;
           }
 
           .tree-wrap svg {
-            width: 76%;
-            max-width: 460px;
-            transform: none;
+            width: 84%;
+            max-width: 520px;
           }
 
           .why {
