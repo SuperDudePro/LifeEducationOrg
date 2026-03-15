@@ -6,6 +6,33 @@ const TREE_FAVICON = `data:image/svg+xml;utf8,${encodeURIComponent(`
 </svg>
 `)}`;
 
+const FAQ_ITEMS = [
+  {
+    label: "Starting Point",
+    question: "What are you running toward, not just away from?",
+    answer:
+      "Capable, self-directed humans who can own their lives. School is the foil, not the mission. The target is a young adult who can function, think, adapt, build relationships, manage health and money, and keep learning without waiting to be managed.",
+  },
+  {
+    label: "Plain English",
+    question: "What does ‘floor-complete’ mean?",
+    answer:
+      "It means the kid can function in the real world. If you dropped them into a new city at 18, they would not panic. They would ask good questions, solve problems, handle money, navigate systems, and keep moving.",
+  },
+  {
+    label: "Common Objection",
+    question: "Is this just unschooling with a nicer name?",
+    answer:
+      "No. The Floor is a real contract, not a vibe. The Domains are a real coverage map, not hand-waving. Kids get increasing ownership, but responsibility never becomes the same thing as absence of structure.",
+  },
+  {
+    label: "How It Fits",
+    question: "How do the Why, Floor, By 18, and Domains fit together?",
+    answer:
+      "The Why names the target. The Floor defines the non-negotiable minimum by 18. By 18 is the plain-language translation of that contract. The Domains are the broader capability map so important areas of life do not get neglected.",
+  },
+];
+
 export default function App() {
   useEffect(() => {
     let link = document.querySelector("link[rel='icon']") as HTMLLinkElement | null;
@@ -250,7 +277,186 @@ export default function App() {
           line-height: 1.8;
         }
 
-        @media (max-width: 1100px) {
+        .faq {
+          background: linear-gradient(180deg, #eef2f5 0%, #dde3e8 100%);
+          color: #0f172a;
+          padding: 48px 56px 56px;
+        }
+
+        .faq-head {
+          max-width: 980px;
+        }
+
+        .faq-pill {
+          display: inline-flex;
+          align-items: center;
+          padding: 10px 16px;
+          border-radius: 999px;
+          border: 1px solid rgba(15,23,42,0.12);
+          background: rgba(255,255,255,0.55);
+          color: #475569;
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+        }
+
+        .faq-title {
+          margin: 24px 0 0;
+          color: #0f172a;
+          font-family: Georgia, "Times New Roman", serif;
+          font-size: clamp(28px, 3.6vw, 46px);
+          line-height: 1.04;
+          font-weight: 500;
+        }
+
+        .faq-text {
+          margin: 18px 0 0;
+          max-width: 820px;
+          color: #334155;
+          font-size: 18px;
+          line-height: 1.75;
+        }
+
+        .faq-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+          margin-top: 32px;
+        }
+
+        .faq-card {
+          border-radius: 26px;
+          background: #050608;
+          color: #fff;
+          padding: 28px;
+          box-shadow: 0 24px 60px -40px rgba(0,0,0,0.6);
+        }
+
+        .faq-card-label {
+          color: #94a3b8;
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+        }
+
+        .faq-card-title {
+          margin-top: 14px;
+          color: #fff;
+          font-family: Georgia, "Times New Roman", serif;
+          font-size: 28px;
+          line-height: 1.12;
+          font-weight: 500;
+        }
+
+        .faq-card-text {
+          margin-top: 16px;
+          color: #cbd5e1;
+          font-size: 16px;
+          line-height: 1.8;
+        }
+
+        .contact {
+          background: #ffffff;
+          color: #0f172a;
+          padding: 52px 56px 64px;
+          border-top: 1px solid rgba(15,23,42,0.08);
+        }
+
+        .contact-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 24px;
+          align-items: start;
+        }
+
+        .contact-pill {
+          display: inline-flex;
+          align-items: center;
+          padding: 10px 16px;
+          border-radius: 999px;
+          border: 1px solid rgba(15,23,42,0.12);
+          background: #f8fafc;
+          color: #475569;
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+        }
+
+        .contact-title {
+          margin: 24px 0 0;
+          color: #0f172a;
+          font-family: Georgia, "Times New Roman", serif;
+          font-size: clamp(28px, 3.6vw, 46px);
+          line-height: 1.04;
+          font-weight: 500;
+        }
+
+        .contact-text {
+          margin: 18px 0 0;
+          max-width: 760px;
+          color: #334155;
+          font-size: 18px;
+          line-height: 1.75;
+        }
+
+        .contact-copy {
+          max-width: 760px;
+        }
+
+        .contact-card {
+          border-radius: 26px;
+          background: #050608;
+          color: #fff;
+          padding: 28px;
+          width: 100%;
+        }
+
+        .contact-card-label {
+          color: #94a3b8;
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+        }
+
+        .contact-card-line {
+          margin-top: 14px;
+          color: #fff;
+          font-family: Georgia, "Times New Roman", serif;
+          font-size: 28px;
+          line-height: 1.2;
+          font-weight: 500;
+        }
+
+        .contact-card-line a {
+          color: #fff;
+          text-decoration: none;
+        }
+
+        .contact-card-line a:hover {
+          text-decoration: underline;
+        }
+
+        .contact-card-note {
+          margin-top: 14px;
+          color: #cbd5e1;
+          font-size: 15px;
+          line-height: 1.8;
+        }
+
+        .contact-card-cta {
+          margin-top: 22px;
+          display: inline-flex;
+          align-items: center;
+          padding: 12px 18px;
+          border-radius: 999px;
+          border: 1px solid rgba(255,255,255,0.14);
+          color: #fff;
+          font-size: 14px;
+          font-weight: 600;
+          text-decoration: none;
+        }
+
+        @media (max-width: 900px) {
           .hero,
           .why-grid {
             grid-template-columns: 1fr;
@@ -274,6 +480,19 @@ export default function App() {
           }
 
           .why {
+            padding: 40px 32px 48px;
+          }
+
+          .faq {
+            padding: 40px 32px 48px;
+          }
+
+          .faq-grid,
+          .contact-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .contact {
             padding: 40px 32px 48px;
           }
         }
@@ -307,6 +526,24 @@ export default function App() {
 
           .why {
             padding: 28px 20px 32px;
+          }
+
+          .faq {
+            padding: 28px 20px 32px;
+          }
+
+          .faq-card,
+          .contact-card {
+            padding: 22px;
+          }
+
+          .faq-card-title,
+          .contact-card-line {
+            font-size: 24px;
+          }
+
+          .contact {
+            padding: 28px 20px 36px;
           }
 
           .why-card-title {
@@ -404,6 +641,54 @@ export default function App() {
                     The point is not to turn family life into school at home. The point is a better target, clearer guardrails, and a life where real things happen on purpose.
                   </div>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="faq">
+            <div className="faq-head">
+              <div className="faq-pill">Q&amp;A</div>
+              <h3 className="faq-title">The obvious questions are worth asking.</h3>
+              <p className="faq-text">
+                The Why is the main public piece. The Q&amp;A exists to make the position plain, pressure-test the obvious objections, and keep the big distinctions clean.
+              </p>
+            </div>
+
+            <div className="faq-grid">
+              {FAQ_ITEMS.map((item) => (
+                <div className="faq-card" key={item.question}>
+                  <div className="faq-card-label">{item.label}</div>
+                  <div className="faq-card-title">{item.question}</div>
+                  <div className="faq-card-text">{item.answer}</div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="contact">
+            <div className="contact-grid">
+              <div className="contact-copy">
+                <div className="contact-pill">Contact</div>
+                <h3 className="contact-title">Thoughts, objections, and better ideas are welcome.</h3>
+                <p className="contact-text">
+                  Serious feedback is useful. If something here resonates, breaks, or raises a real question, send it. This project gets sharper when it is pressure-tested.
+                </p>
+                <p className="contact-text">
+                  This section is set up for a public contact point now, with room for a simple form later if it ever earns its place. For now, direct email is enough.
+                </p>
+              </div>
+
+              <div className="contact-card">
+                <div className="contact-card-label">Public contact</div>
+                <div className="contact-card-line">
+                  <a href="mailto:LifeEducationInformation@gmail.com">LifeEducationInformation@gmail.com</a>
+                </div>
+                <div className="contact-card-note">
+                  Use this address for thoughts, objections, ideas, examples, or serious feedback.
+                </div>
+                <a className="contact-card-cta" href="mailto:LifeEducationInformation@gmail.com?subject=LifeEducation%20Website%20Feedback">
+                  Email your thoughts
+                </a>
               </div>
             </div>
           </section>
