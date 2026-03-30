@@ -33,8 +33,8 @@ const FAQ_ITEMS = [
   },
 ];
 
-const FLOOR_LINK = "https://docs.google.com/document/d/1vBGzYzg_TqWl5alApBjynVjRvdTBv6X8/edit?usp=sharing&ouid=112063937930878626054&rtpof=true&sd=true";
-const BY18_LINK = "https://docs.google.com/document/d/1xYBP3QPDk56G53RkItLCkzn53-DD3vxD/edit?usp=sharing&ouid=112063937930878626054&rtpof=true&sd=true";
+const FLOOR_LINK = "https://docs.google.com/document/d/1kacHye8nhnrUbYarS9rgdN0o0b_6D5q2/edit?usp=sharing&ouid=112063937930878626054&rtpof=true&sd=true";
+const BY18_LINK = "https://docs.google.com/document/d/11nSF4vmnmNErNnsvcvMKWDo6g84fLYjU/edit?usp=sharing&ouid=112063937930878626054&rtpof=true&sd=true";
 
 export default function App() {
   useEffect(() => {
@@ -786,7 +786,10 @@ export default function App() {
               <div className="floor-pill">The Floor + By 18</div>
               <h3 className="floor-title">The contract, and “By 18,” its public translation.</h3>
               <p className="floor-text">
-                The Floor defines the non-negotiable minimum by 18. “By 18” translates that same standard into direct public language: not what classes they sat through, but what they can actually do in real life.
+                The Floor defines the non-negotiable minimum by 18. “By 18” translates that same standard into direct public language: not what classes they sat through, but what they can actually do in real life. “By 18” names the deadline, not the earliest possible finish.
+              </p>
+              <p className="floor-text">
+                If the Floor is met earlier, the focus shifts toward maintenance, broader domain cultivation, and increasingly self-directed depth.
               </p>
             </div>
 
