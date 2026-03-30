@@ -33,6 +33,9 @@ const FAQ_ITEMS = [
   },
 ];
 
+const FLOOR_LINK = "https://docs.google.com/document/d/1vBGzYzg_TqWl5alApBjynVjRvdTBv6X8/edit?usp=sharing&ouid=112063937930878626054&rtpof=true&sd=true";
+const BY18_LINK = "https://docs.google.com/document/d/1xYBP3QPDk56G53RkItLCkzn53-DD3vxD/edit?usp=sharing&ouid=112063937930878626054&rtpof=true&sd=true";
+
 export default function App() {
   useEffect(() => {
     let link = document.querySelector("link[rel='icon']") as HTMLLinkElement | null;
@@ -249,13 +252,13 @@ export default function App() {
 
         .why-card {
           border-radius: 24px;
-          border: 1px solid rgba(255,255,255,0.10);
-          background: rgba(255,255,255,0.05);
+          border: 1px solid rgba(15,23,42,0.08);
+          background: linear-gradient(180deg, #eef2f5 0%, #dde3e8 100%);
           padding: 24px;
         }
 
         .why-card-label {
-          color: #94a3b8;
+          color: #64748b;
           font-size: 11px;
           font-weight: 700;
           letter-spacing: 0.08em;
@@ -263,7 +266,7 @@ export default function App() {
 
         .why-card-title {
           margin-top: 12px;
-          color: #fff;
+          color: #0f172a;
           font-family: Georgia, "Times New Roman", serif;
           font-size: 32px;
           line-height: 1.1;
@@ -272,7 +275,7 @@ export default function App() {
 
         .why-card-text {
           margin-top: 12px;
-          color: #cbd5e1;
+          color: #334155;
           font-size: 15px;
           line-height: 1.8;
         }
@@ -353,6 +356,99 @@ export default function App() {
           color: #cbd5e1;
           font-size: 16px;
           line-height: 1.8;
+        }
+
+        .floor-section {
+          background: #0b0c0f;
+          color: #fff;
+          padding: 48px 56px 56px;
+          border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .floor-head {
+          max-width: 980px;
+        }
+
+        .floor-pill {
+          display: inline-flex;
+          align-items: center;
+          padding: 10px 16px;
+          border-radius: 999px;
+          border: 1px solid rgba(255,255,255,0.14);
+          background: rgba(255,255,255,0.05);
+          color: #cbd5e1;
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+        }
+
+        .floor-title {
+          margin: 24px 0 0;
+          color: #fff;
+          font-family: Georgia, "Times New Roman", serif;
+          font-size: clamp(28px, 3.6vw, 46px);
+          line-height: 1.04;
+          font-weight: 500;
+        }
+
+        .floor-text {
+          margin: 18px 0 0;
+          max-width: 860px;
+          color: #cbd5e1;
+          font-size: 18px;
+          line-height: 1.75;
+        }
+
+        .floor-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+          margin-top: 32px;
+        }
+
+        .floor-card {
+          border-radius: 26px;
+          border: 1px solid rgba(15,23,42,0.08);
+          background: linear-gradient(180deg, #eef2f5 0%, #dde3e8 100%);
+          color: #0f172a;
+          padding: 28px;
+        }
+
+        .floor-card-label {
+          color: #64748b;
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+        }
+
+        .floor-card-title {
+          margin-top: 14px;
+          color: #0f172a;
+          font-family: Georgia, "Times New Roman", serif;
+          font-size: 28px;
+          line-height: 1.12;
+          font-weight: 500;
+        }
+
+        .floor-card-text {
+          margin-top: 16px;
+          color: #334155;
+          font-size: 16px;
+          line-height: 1.8;
+        }
+
+        .floor-card-button {
+          display: inline-flex;
+          align-items: center;
+          margin-top: 24px;
+          padding: 12px 18px;
+          border-radius: 999px;
+          border: 1px solid rgba(15,23,42,0.12);
+          background: #0f172a;
+          color: #fff;
+          font-size: 14px;
+          font-weight: 600;
+          text-decoration: none;
         }
 
         .contact {
@@ -487,6 +583,14 @@ export default function App() {
             padding: 40px 32px 48px;
           }
 
+          .floor-section {
+            padding: 40px 32px 48px;
+          }
+
+          .floor-grid {
+            grid-template-columns: 1fr;
+          }
+
           .faq-grid,
           .contact-grid {
             grid-template-columns: 1fr;
@@ -532,6 +636,18 @@ export default function App() {
             padding: 28px 20px 32px;
           }
 
+          .floor-section {
+            padding: 28px 20px 32px;
+          }
+
+          .floor-card {
+            padding: 22px;
+          }
+
+          .floor-card-title {
+            font-size: 24px;
+          }
+
           .faq-card,
           .contact-card {
             padding: 22px;
@@ -559,9 +675,7 @@ export default function App() {
       <div className="page">
         <div className="shell">
           <header className="header">
-            <h1 className="brand">
-              LifeEducation<span className="dotorg">.org</span>
-            </h1>
+            <h1 className="brand">LifeEducation.org</h1>
           </header>
 
           <div className="hero">
@@ -612,6 +726,8 @@ export default function App() {
                 <a
                   className="why-button"
                   href="https://docs.google.com/document/d/1iMa_sLEphCEfCAyG_JGlHgeNCwZRda5j/edit?usp=sharing&ouid=112063937930878626054&rtpof=true&sd=true"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   Read the Why Statement
                 </a>
@@ -665,6 +781,40 @@ export default function App() {
             </div>
           </section>
 
+          <section className="floor-section">
+            <div className="floor-head">
+              <div className="floor-pill">The Floor + By 18</div>
+              <h3 className="floor-title">The contract, and “By 18,” its public translation.</h3>
+              <p className="floor-text">
+                The Floor defines the non-negotiable minimum by 18. “By 18” translates that same standard into direct public language: not what classes they sat through, but what they can actually do in real life.
+              </p>
+            </div>
+
+            <div className="floor-grid">
+              <div className="floor-card">
+                <div className="floor-card-label">The contract</div>
+                <div className="floor-card-title">The 18-Year-Old Floor</div>
+                <div className="floor-card-text">
+                  This is the minimum line for adulthood capability. It is not a curriculum and it does not dictate method. It defines the baseline required before the Floor is honestly met: a young adult who can function effectively in the real world without being managed like a child in an adult body.
+                </div>
+                <a className="floor-card-button" href={FLOOR_LINK} target="_blank" rel="noreferrer">
+                  Read the Floor document
+                </a>
+              </div>
+
+              <div className="floor-card">
+                <div className="floor-card-label">Public translation</div>
+                <div className="floor-card-title">By 18: What You Can Do</div>
+                <div className="floor-card-text">
+                  This is the public translation of the same contract. It lays out what floor-complete looks like in practical terms: run your own life, think clearly, handle money, own your health, use technology well, navigate real systems, and make and ship real things.
+                </div>
+                <a className="floor-card-button" href={BY18_LINK} target="_blank" rel="noreferrer">
+                  Read the By 18 document
+                </a>
+              </div>
+            </div>
+          </section>
+
           <section className="contact">
             <div className="contact-grid">
               <div className="contact-copy">
@@ -672,9 +822,6 @@ export default function App() {
                 <h3 className="contact-title">Thoughts, objections, and better ideas are welcome.</h3>
                 <p className="contact-text">
                   Serious feedback is useful. If something here resonates, breaks, or raises a real question, send it. This project gets sharper when it is pressure-tested.
-                </p>
-                <p className="contact-text">
-                  This section is set up for a public contact point now, with room for a simple form later if it ever earns its place. For now, direct email is enough.
                 </p>
               </div>
 
