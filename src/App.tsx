@@ -36,6 +36,7 @@ const FAQ_ITEMS = [
 const FLOOR_LINK = "https://docs.google.com/document/d/1kacHye8nhnrUbYarS9rgdN0o0b_6D5q2/edit?usp=sharing&ouid=112063937930878626054&rtpof=true&sd=true";
 const BY18_LINK = "https://docs.google.com/document/d/11nSF4vmnmNErNnsvcvMKWDo6g84fLYjU/edit?usp=sharing&ouid=112063937930878626054&rtpof=true&sd=true";
 const BREAK_IMAGE = "/lifeeducation_break_navigator.webp";
+const CONTACT_BREAK_IMAGE = "/site_break_02_contact_desk.webp";
 
 export default function App() {
   useEffect(() => {
@@ -226,7 +227,7 @@ export default function App() {
           border-radius: 999px;
           border: 1px solid rgba(255,255,255,0.15);
           background: rgba(255,255,255,0.05);
-          color: #cbd5e1;
+          color: #2A8A67;
           font-size: 11px;
           font-weight: 700;
           letter-spacing: 0.08em;
@@ -255,9 +256,9 @@ export default function App() {
           margin-top: 32px;
           padding: 14px 20px;
           border-radius: 999px;
-          border: 1px solid rgba(255,255,255,0.15);
+          border: 6px solid #2A8A67;
           background: #fff;
-          color: #0f172a;
+          color: #0D4B39;
           font-size: 15px;
           font-weight: 600;
         }
@@ -284,7 +285,7 @@ export default function App() {
         }
 
         .why-card-label {
-          color: #64748b;
+          color: #2A8A67;
           font-size: 11px;
           font-weight: 700;
           letter-spacing: 0.08em;
@@ -313,7 +314,8 @@ export default function App() {
         }
 
         .faq-head {
-          max-width: 980px;
+          width: 100%;
+          max-width: none;
         }
 
         .faq-pill {
@@ -331,11 +333,13 @@ export default function App() {
 
         .faq-title {
           margin: 24px 0 0;
-          color: #35A27A;
+          color: #0D4B39;
           font-family: Georgia, "Times New Roman", serif;
-          font-size: clamp(30px, 3.9vw, 50px);
+          font-size: clamp(26px, 3vw, 40px);
           line-height: 1.04;
           font-weight: 800;
+          white-space: nowrap;
+          width: 100%;
         }
 
         .faq-text {
@@ -402,7 +406,7 @@ export default function App() {
           border-radius: 999px;
           border: 1px solid rgba(255,255,255,0.14);
           background: rgba(255,255,255,0.05);
-          color: #cbd5e1;
+          color: #2A8A67;
           font-size: 11px;
           font-weight: 700;
           letter-spacing: 0.08em;
@@ -441,7 +445,7 @@ export default function App() {
         }
 
         .floor-card-label {
-          color: #64748b;
+          color: #2A8A67;
           font-size: 11px;
           font-weight: 700;
           letter-spacing: 0.08em;
@@ -477,6 +481,18 @@ export default function App() {
           text-decoration: none;
         }
 
+        .floor-card-accent {
+          border: 6px solid #2A8A67;
+        }
+
+        .floor-card-accent .floor-card-title {
+          color: #146C4E;
+        }
+
+        .floor-card-button-accent {
+          border: 6px solid #2A8A67;
+        }
+
         .contact {
           background: #ffffff;
           color: #0f172a;
@@ -496,9 +512,9 @@ export default function App() {
           align-items: center;
           padding: 10px 16px;
           border-radius: 999px;
-          border: 1px solid rgba(15,23,42,0.12);
+          border: 6px solid #2A8A67;
           background: #f8fafc;
-          color: #475569;
+          color: #2A8A67;
           font-size: 11px;
           font-weight: 700;
           letter-spacing: 0.08em;
@@ -506,11 +522,12 @@ export default function App() {
 
         .contact-title {
           margin: 24px 0 0;
-          color: #0f172a;
+          color: #0D4B39;
           font-family: Georgia, "Times New Roman", serif;
-          font-size: clamp(28px, 3.6vw, 46px);
+          font-size: clamp(24px, 2.8vw, 38px);
           line-height: 1.04;
-          font-weight: 500;
+          font-weight: 700;
+          white-space: nowrap;
         }
 
         .contact-text {
@@ -534,7 +551,7 @@ export default function App() {
         }
 
         .contact-card-label {
-          color: #94a3b8;
+          color: #2A8A67;
           font-size: 11px;
           font-weight: 700;
           letter-spacing: 0.08em;
@@ -571,7 +588,7 @@ export default function App() {
           align-items: center;
           padding: 12px 18px;
           border-radius: 999px;
-          border: 1px solid rgba(255,255,255,0.14);
+          border: 6px solid #2A8A67;
           color: #fff;
           font-size: 14px;
           font-weight: 600;
@@ -579,6 +596,14 @@ export default function App() {
         }
 
         @media (max-width: 900px) {
+          .faq-title {
+            white-space: normal;
+          }
+
+          .contact-title {
+            white-space: normal;
+          }
+
           .hero,
           .why-grid {
             grid-template-columns: 1fr;
@@ -849,16 +874,26 @@ export default function App() {
                 </a>
               </div>
 
-              <div className="floor-card">
+              <div className="floor-card floor-card-accent">
                 <div className="floor-card-label">Public translation</div>
                 <div className="floor-card-title">By 18: What You Can Do</div>
                 <div className="floor-card-text">
                   This is the public translation of the same contract. It lays out what floor-complete looks like in practical terms: run your own life, think clearly, handle money, own your health, use technology well, navigate real systems, and make and ship real things.
                 </div>
-                <a className="floor-card-button" href={BY18_LINK} target="_blank" rel="noreferrer">
+                <a className="floor-card-button floor-card-button-accent" href={BY18_LINK} target="_blank" rel="noreferrer">
                   Read the By 18 document
                 </a>
               </div>
+            </div>
+          </section>
+
+          <section className="image-break">
+            <div className="image-break-inner">
+              <img
+                className="image-break-img"
+                src={CONTACT_BREAK_IMAGE}
+                alt="Documents, notes, and letters prepared for serious public exchange"
+              />
             </div>
           </section>
 
