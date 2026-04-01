@@ -6,6 +6,19 @@ const TREE_FAVICON = `data:image/svg+xml;utf8,${encodeURIComponent(`
 </svg>
 `)}`;
 
+const DOMAINS = [
+  "Literacy & Communication",
+  "Mathematics & Logic",
+  "Scientific Thinking & Observation",
+  "Social Studies & Civics",
+  "Philosophy & Ethics",
+  "Economics & Finance",
+  "Health & Physical Development",
+  "Creative Expression",
+  "Technology, Media & AI Literacy",
+  "Life Skills & Project Execution",
+];
+
 const FAQ_ITEMS = [
   {
     label: "Starting Point",
@@ -35,6 +48,7 @@ const FAQ_ITEMS = [
 
 const FLOOR_LINK = "https://docs.google.com/document/d/1kacHye8nhnrUbYarS9rgdN0o0b_6D5q2/edit?usp=sharing&ouid=112063937930878626054&rtpof=true&sd=true";
 const BY18_LINK = "https://docs.google.com/document/d/11nSF4vmnmNErNnsvcvMKWDo6g84fLYjU/edit?usp=sharing&ouid=112063937930878626054&rtpof=true&sd=true";
+const DOMAINS_LINK = "https://docs.google.com/document/d/1pKnXKKN-HkGJ960HEgYYolWxJfMwhTY3/edit?usp=sharing&ouid=112063937930878626054&rtpof=true&sd=true";
 const BREAK_IMAGE = "/lifeeducation_break_navigator.webp";
 const CONTACT_BREAK_IMAGE = "/site_break_02_contact_desk.webp";
 
@@ -125,9 +139,9 @@ export default function App() {
           align-items: center;
           padding: 10px 16px;
           border-radius: 999px;
-          border: 1px solid rgba(148,163,184,0.6);
+          border: 6px solid #2A8A67;
           background: rgba(255,255,255,0.6);
-          color: #475569;
+          color: #2A8A67;
           font-size: 11px;
           font-weight: 700;
           letter-spacing: 0.08em;
@@ -225,7 +239,7 @@ export default function App() {
           align-items: center;
           padding: 10px 16px;
           border-radius: 999px;
-          border: 1px solid rgba(255,255,255,0.15);
+          border: 6px solid #2A8A67;
           background: rgba(255,255,255,0.05);
           color: #2A8A67;
           font-size: 11px;
@@ -404,7 +418,7 @@ export default function App() {
           align-items: center;
           padding: 10px 16px;
           border-radius: 999px;
-          border: 1px solid rgba(255,255,255,0.14);
+          border: 6px solid #2A8A67;
           background: rgba(255,255,255,0.05);
           color: #2A8A67;
           font-size: 11px;
@@ -491,6 +505,87 @@ export default function App() {
 
         .floor-card-button-accent {
           border: 6px solid #2A8A67;
+        }
+
+        .domains {
+          background: linear-gradient(180deg, #eef2f5 0%, #dde3e8 100%);
+          color: #0f172a;
+          padding: 48px 56px 56px;
+          border-top: 1px solid rgba(15,23,42,0.08);
+        }
+
+        .domains-head {
+          max-width: 980px;
+        }
+
+        .domains-pill {
+          display: inline-flex;
+          align-items: center;
+          padding: 10px 16px;
+          border-radius: 999px;
+          border: 6px solid #2A8A67;
+          background: rgba(255,255,255,0.55);
+          color: #2A8A67;
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+        }
+
+        .domains-title {
+          margin: 24px 0 0;
+          color: #0D4B39;
+          font-family: Georgia, "Times New Roman", serif;
+          font-size: clamp(28px, 3.4vw, 44px);
+          line-height: 1.04;
+          font-weight: 700;
+        }
+
+        .domains-text {
+          margin: 18px 0 0;
+          max-width: 860px;
+          color: #334155;
+          font-size: 18px;
+          line-height: 1.75;
+        }
+
+        .domains-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 16px 20px;
+          margin-top: 30px;
+        }
+
+        .domains-item {
+          border-radius: 22px;
+          border: 1px solid rgba(255,255,255,0.08);
+          background: #050608;
+          padding: 18px 20px;
+          color: #fff;
+          font-size: 17px;
+          line-height: 1.45;
+          font-weight: 600;
+          box-shadow: 0 18px 40px -38px rgba(0,0,0,0.45);
+        }
+
+        .domains-note {
+          margin-top: 26px;
+          color: #475569;
+          font-size: 15px;
+          line-height: 1.8;
+        }
+
+        .domains-button {
+          display: inline-flex;
+          align-items: center;
+          margin-top: 28px;
+          padding: 14px 20px;
+          border-radius: 999px;
+          border: 6px solid #2A8A67;
+          background: #fff;
+          color: #0D4B39;
+          font-size: 14px;
+          font-weight: 700;
+          text-decoration: none;
         }
 
         .contact {
@@ -642,6 +737,14 @@ export default function App() {
             padding: 40px 32px 48px;
           }
 
+          .domains {
+            padding: 40px 32px 48px;
+          }
+
+          .domains-grid {
+            grid-template-columns: 1fr;
+          }
+
           .floor-grid {
             grid-template-columns: 1fr;
           }
@@ -697,6 +800,19 @@ export default function App() {
 
           .floor-section {
             padding: 28px 20px 32px;
+          }
+
+          .domains {
+            padding: 28px 20px 32px;
+          }
+
+          .domains-item {
+            padding: 16px 18px;
+            font-size: 16px;
+          }
+
+          .domains-title {
+            font-size: 26px;
           }
 
           .floor-card {
@@ -803,7 +919,7 @@ export default function App() {
               </div>
 
               <div className="why-cards">
-                <div className="why-card why-card-floor">
+                <div className="why-card">
                   <div className="why-card-label">Target</div>
                   <div className="why-card-title">The Floor is the contract.</div>
                   <div className="why-card-text">
@@ -885,6 +1001,33 @@ export default function App() {
                 </a>
               </div>
             </div>
+          </section>
+
+          <section className="domains">
+            <div className="domains-head">
+              <div className="domains-pill">The 10 Domains</div>
+              <h3 className="domains-title">The Floor is the minimum.<br />The Domains are the full map.</h3>
+              <p className="domains-text">
+                The Domains keep the broader landscape of human capability in view so important areas do not get neglected. They are planning anchors and coverage checks, not a second contract.
+              </p>
+              <p className="domains-text">
+                Not everything in the Domains is mandatory for Floor completion. The Floor defines the non-negotiable minimum. The Domains show the fuller range of what a serious life-building education can cultivate over time.
+              </p>
+            </div>
+
+            <div className="domains-grid">
+              {DOMAINS.map((domain) => (
+                <div className="domains-item" key={domain}>{domain}</div>
+              ))}
+            </div>
+
+            <div className="domains-note">
+              Contract first, full map second.
+            </div>
+
+            <a className="domains-button" href={DOMAINS_LINK} target="_blank" rel="noreferrer">
+              Read the Domains document
+            </a>
           </section>
 
           <section className="image-break">
