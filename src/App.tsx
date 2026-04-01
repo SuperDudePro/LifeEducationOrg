@@ -35,6 +35,7 @@ const FAQ_ITEMS = [
 
 const FLOOR_LINK = "https://docs.google.com/document/d/1kacHye8nhnrUbYarS9rgdN0o0b_6D5q2/edit?usp=sharing&ouid=112063937930878626054&rtpof=true&sd=true";
 const BY18_LINK = "https://docs.google.com/document/d/11nSF4vmnmNErNnsvcvMKWDo6g84fLYjU/edit?usp=sharing&ouid=112063937930878626054&rtpof=true&sd=true";
+const BREAK_IMAGE = "/lifeeducation_break_navigator.webp";
 
 export default function App() {
   useEffect(() => {
@@ -183,6 +184,23 @@ export default function App() {
           filter: drop-shadow(0 24px 60px rgba(15,23,42,0.16));
         }
 
+        .image-break {
+          background: #050608;
+          padding: 18px 18px 10px;
+        }
+
+        .image-break-inner {
+          width: 100%;
+          max-width: 1600px;
+          margin: 0 auto;
+        }
+
+        .image-break-img {
+          width: 100%;
+          display: block;
+          height: auto;
+        }
+
         .why {
           background: #101114;
           color: #fff;
@@ -257,6 +275,14 @@ export default function App() {
           padding: 24px;
         }
 
+        .why-card-floor {
+          border: 6px solid #2A8A67;
+        }
+
+        .why-card-floor .why-card-title {
+          color: #0D4B39;
+        }
+
         .why-card-label {
           color: #64748b;
           font-size: 11px;
@@ -295,9 +321,9 @@ export default function App() {
           align-items: center;
           padding: 10px 16px;
           border-radius: 999px;
-          border: 1px solid rgba(15,23,42,0.12);
+          border: 6px solid #2A8A67;
           background: rgba(255,255,255,0.55);
-          color: #475569;
+          color: #2A8A67;
           font-size: 11px;
           font-weight: 700;
           letter-spacing: 0.08em;
@@ -305,11 +331,11 @@ export default function App() {
 
         .faq-title {
           margin: 24px 0 0;
-          color: #0f172a;
+          color: #35A27A;
           font-family: Georgia, "Times New Roman", serif;
-          font-size: clamp(28px, 3.6vw, 46px);
+          font-size: clamp(30px, 3.9vw, 50px);
           line-height: 1.04;
-          font-weight: 500;
+          font-weight: 800;
         }
 
         .faq-text {
@@ -336,7 +362,7 @@ export default function App() {
         }
 
         .faq-card-label {
-          color: #94a3b8;
+          color: #2A8A67;
           font-size: 11px;
           font-weight: 700;
           letter-spacing: 0.08em;
@@ -583,6 +609,10 @@ export default function App() {
             padding: 40px 32px 48px;
           }
 
+          .image-break {
+            padding: 12px 12px 6px;
+          }
+
           .floor-section {
             padding: 40px 32px 48px;
           }
@@ -634,6 +664,10 @@ export default function App() {
 
           .faq {
             padding: 28px 20px 32px;
+          }
+
+          .image-break {
+            padding: 8px 8px 4px;
           }
 
           .floor-section {
@@ -708,6 +742,16 @@ export default function App() {
             </section>
           </div>
 
+          <section className="image-break">
+            <div className="image-break-inner">
+              <img
+                className="image-break-img"
+                src={BREAK_IMAGE}
+                alt="Young person navigating a foreign city with a map"
+              />
+            </div>
+          </section>
+
           <section className="why">
             <div className="why-grid">
               <div className="why-copy">
@@ -734,7 +778,7 @@ export default function App() {
               </div>
 
               <div className="why-cards">
-                <div className="why-card">
+                <div className="why-card why-card-floor">
                   <div className="why-card-label">Target</div>
                   <div className="why-card-title">The Floor is the contract.</div>
                   <div className="why-card-text">
