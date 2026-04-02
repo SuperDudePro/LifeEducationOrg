@@ -239,8 +239,9 @@ export default function App() {
         }
 
         .why-button:hover {
-          background: #ffffff;
-          box-shadow: 0 10px 24px -12px rgba(255,255,255,0.55);
+          background: #dcefe7;
+          color: #0D4B39;
+          box-shadow: 0 12px 28px -16px rgba(42,138,103,0.45);
           transform: translateY(-1px);
         }
 
@@ -557,8 +558,9 @@ export default function App() {
         }
 
         .domains-button:hover {
-          background: #ffffff;
-          box-shadow: 0 10px 24px -12px rgba(15,23,42,0.18);
+          background: #dcefe7;
+          color: #0D4B39;
+          box-shadow: 0 12px 28px -16px rgba(42,138,103,0.45);
           transform: translateY(-1px);
         }
 
