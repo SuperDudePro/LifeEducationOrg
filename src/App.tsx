@@ -68,6 +68,10 @@ export default function App() {
           margin-left: 6px;
         }
 
+        .header a:hover .brand {
+          opacity: 0.92;
+        }
+
         .hero {
           display: grid;
           grid-template-columns: 0.88fr 1.12fr;
@@ -231,11 +235,13 @@ export default function App() {
           color: #0D4B39;
           font-size: 15px;
           font-weight: 600;
-          transition: background-color 0.2s ease, opacity 0.2s ease;
+          transition: background-color 0.2s ease, opacity 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
         }
 
         .why-button:hover {
-          background: #f1f5f9;
+          background: #ffffff;
+          box-shadow: 0 10px 24px -12px rgba(255,255,255,0.55);
+          transform: translateY(-1px);
         }
 
         .why-cards {
@@ -445,11 +451,15 @@ export default function App() {
           font-size: 14px;
           font-weight: 600;
           text-decoration: none;
-          transition: background-color 0.2s ease, opacity 0.2s ease;
+          transition: background-color 0.2s ease, opacity 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
         }
 
         .floor-card-button:hover {
-          background: #1e293b;
+          background: #1f8a67;
+          border-color: #1f8a67;
+          color: #fff;
+          box-shadow: 0 12px 28px -16px rgba(31,138,103,0.75);
+          transform: translateY(-1px);
         }
 
         .floor-card-accent {
@@ -543,11 +553,13 @@ export default function App() {
           font-size: 14px;
           font-weight: 700;
           text-decoration: none;
-          transition: background-color 0.2s ease, opacity 0.2s ease;
+          transition: background-color 0.2s ease, opacity 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
         }
 
         .domains-button:hover {
-          background: #f1f5f9;
+          background: #ffffff;
+          box-shadow: 0 10px 24px -12px rgba(15,23,42,0.18);
+          transform: translateY(-1px);
         }
 
         .contact {
@@ -649,11 +661,15 @@ export default function App() {
           font-size: 14px;
           font-weight: 600;
           text-decoration: none;
-          transition: background-color 0.2s ease, opacity 0.2s ease;
+          transition: background-color 0.2s ease, opacity 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
         }
 
         .contact-card-cta:hover {
-          background: rgba(255,255,255,0.08);
+          background: #2A8A67;
+          border-color: #2A8A67;
+          color: #fff;
+          box-shadow: 0 12px 28px -16px rgba(42,138,103,0.8);
+          transform: translateY(-1px);
         }
 
 
@@ -685,6 +701,8 @@ export default function App() {
 
         .footer-link:hover {
           color: #fff;
+          text-decoration: underline;
+          text-underline-offset: 3px;
         }
 
         @media (max-width: 900px) {
