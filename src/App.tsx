@@ -610,6 +610,7 @@ export default function App() {
 
         .contact-copy {
           max-width: 760px;
+          min-width: 0;
         }
 
         .contact-card {
@@ -618,6 +619,7 @@ export default function App() {
           color: #fff;
           padding: 28px;
           width: 100%;
+          min-width: 0;
         }
 
         .contact-card-label {
@@ -634,11 +636,15 @@ export default function App() {
           font-size: 28px;
           line-height: 1.2;
           font-weight: 500;
+          overflow-wrap: anywhere;
+          word-break: break-word;
         }
 
         .contact-card-line a {
           color: #fff;
           text-decoration: none;
+          overflow-wrap: anywhere;
+          word-break: break-word;
         }
 
         .contact-card-line a:hover {
