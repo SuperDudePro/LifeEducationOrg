@@ -8,7 +8,7 @@ import { By18Page } from "./pages/By18Page";
 import { FloorPage } from "./pages/FloorPage";
 import { DomainsPage } from "./pages/DomainsPage";
 import { DomainDetailPage } from "./pages/DomainDetailPage";
-
+throw new Error("LIFEED TEST");
 export default function App() {
   const [pathname, setPathname] = useState<string>(() => window.location.pathname || "/");
 
