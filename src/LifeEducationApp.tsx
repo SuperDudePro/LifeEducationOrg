@@ -1,3 +1,6 @@
+<div className="fixed left-2 top-2 z-[9999] rounded bg-red-600 px-3 py-2 text-sm font-bold text-white">
+  LIFEED TEST BUILD
+</div>
 import { useEffect, useMemo, useState } from "react";
 import { HomePage } from "./pages/HomePage";
 import { WhyPage } from "./pages/WhyPage";
