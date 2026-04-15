@@ -1,1191 +1,925 @@
-import { useEffect } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
-const TREE_FAVICON = `data:image/svg+xml;utf8,${encodeURIComponent(`
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1288 1632">
-  <path fill="#0D4B39" fill-rule="evenodd" d="M 686 1498 L 684 1502 L 685 1508 L 691 1509 L 693 1506 Z M 655 1139 L 647 1139 L 643 1141 L 629 1155 L 614 1183 L 603 1216 L 594 1270 L 594 1307 L 599 1339 L 599 1360 L 596 1374 L 581 1401 L 533 1456 L 525 1477 L 521 1499 L 522 1522 L 534 1575 L 537 1577 L 540 1568 L 541 1501 L 546 1483 L 560 1459 L 570 1448 L 572 1448 L 587 1486 L 588 1503 L 584 1525 L 587 1526 L 591 1522 L 600 1505 L 603 1488 L 596 1455 L 596 1433 L 599 1422 L 605 1410 L 617 1393 L 645 1446 L 654 1478 L 654 1492 L 651 1511 L 637 1552 L 633 1573 L 634 1593 L 638 1605 L 642 1611 L 644 1610 L 645 1587 L 648 1573 L 654 1556 L 673 1515 L 682 1487 L 684 1487 L 693 1496 L 703 1509 L 712 1529 L 715 1546 L 715 1564 L 713 1573 L 714 1593 L 717 1591 L 726 1572 L 731 1552 L 730 1526 L 721 1500 L 704 1469 L 662 1404 L 650 1377 L 644 1358 L 638 1322 L 638 1292 L 644 1262 L 652 1240 L 672 1272 L 702 1303 L 716 1324 L 720 1336 L 720 1357 L 716 1385 L 716 1407 L 722 1432 L 735 1454 L 761 1483 L 775 1502 L 785 1523 L 791 1550 L 795 1559 L 798 1554 L 799 1544 L 798 1518 L 790 1493 L 777 1471 L 752 1439 L 743 1419 L 741 1409 L 741 1385 L 744 1369 L 748 1369 L 762 1390 L 779 1407 L 797 1437 L 799 1434 L 795 1409 L 773 1367 L 755 1318 L 741 1295 L 712 1258 L 698 1235 L 683 1203 L 666 1153 L 661 1144 Z M 564 21 L 534 21 L 499 27 L 472 37 L 428 61 L 362 71 L 342 77 L 316 89 L 291 107 L 277 121 L 263 139 L 236 182 L 221 191 L 186 206 L 148 234 L 128 256 L 117 273 L 110 288 L 99 322 L 93 373 L 90 383 L 83 393 L 59 419 L 36 455 L 27 479 L 20 518 L 20 545 L 24 571 L 32 595 L 42 615 L 36 649 L 36 673 L 42 699 L 57 732 L 67 746 L 92 773 L 114 790 L 138 803 L 171 814 L 196 818 L 232 818 L 273 811 L 338 787 L 374 777 L 406 775 L 436 779 L 460 787 L 481 797 L 511 818 L 532 840 L 547 863 L 555 880 L 563 906 L 568 941 L 568 968 L 562 1016 L 555 1047 L 549 1065 L 541 1081 L 532 1094 L 511 1114 L 493 1126 L 474 1135 L 427 1149 L 329 1161 L 304 1168 L 259 1185 L 207 1189 L 179 1195 L 156 1205 L 117 1231 L 88 1241 L 91 1244 L 97 1245 L 121 1244 L 136 1240 L 179 1218 L 206 1212 L 244 1213 L 246 1215 L 214 1260 L 200 1272 L 160 1294 L 133 1313 L 113 1321 L 99 1323 L 96 1325 L 99 1328 L 109 1330 L 133 1328 L 195 1301 L 199 1302 L 196 1327 L 188 1352 L 175 1374 L 150 1396 L 150 1399 L 154 1400 L 161 1398 L 177 1389 L 196 1371 L 206 1355 L 237 1281 L 257 1255 L 298 1217 L 323 1204 L 347 1198 L 396 1197 L 413 1199 L 375 1246 L 362 1259 L 343 1270 L 295 1289 L 279 1302 L 268 1317 L 260 1333 L 255 1349 L 238 1387 L 243 1387 L 257 1372 L 282 1334 L 300 1316 L 316 1308 L 358 1294 L 361 1295 L 360 1308 L 353 1336 L 349 1347 L 337 1368 L 314 1392 L 279 1418 L 262 1435 L 253 1447 L 245 1465 L 244 1485 L 245 1489 L 247 1490 L 265 1456 L 291 1434 L 301 1428 L 303 1430 L 303 1480 L 296 1503 L 287 1518 L 290 1520 L 305 1509 L 315 1493 L 320 1473 L 323 1441 L 327 1427 L 334 1414 L 358 1388 L 373 1366 L 384 1341 L 397 1287 L 411 1262 L 435 1236 L 454 1221 L 470 1211 L 521 1186 L 542 1173 L 543 1175 L 529 1206 L 515 1226 L 487 1259 L 471 1283 L 462 1301 L 454 1329 L 447 1343 L 434 1362 L 397 1403 L 385 1424 L 381 1436 L 378 1457 L 382 1522 L 376 1555 L 381 1552 L 388 1542 L 396 1522 L 398 1501 L 398 1462 L 400 1449 L 406 1432 L 413 1421 L 426 1407 L 455 1383 L 458 1385 L 468 1423 L 468 1454 L 463 1472 L 447 1505 L 442 1525 L 442 1543 L 445 1556 L 449 1564 L 456 1571 L 456 1535 L 459 1521 L 464 1509 L 484 1475 L 491 1452 L 491 1418 L 484 1374 L 484 1355 L 489 1329 L 499 1307 L 507 1296 L 514 1290 L 530 1342 L 531 1375 L 529 1390 L 531 1390 L 541 1372 L 547 1347 L 546 1324 L 541 1299 L 541 1279 L 543 1269 L 549 1252 L 584 1184 L 596 1151 L 606 1111 L 613 1046 L 612 949 L 605 882 L 592 835 L 572 790 L 556 765 L 539 744 L 514 720 L 486 700 L 459 687 L 436 679 L 391 670 L 349 669 L 317 674 L 301 679 L 273 692 L 247 707 L 226 714 L 196 714 L 175 705 L 161 693 L 156 685 L 157 684 L 184 693 L 201 693 L 224 687 L 285 651 L 284 639 L 264 620 L 242 607 L 222 605 L 178 609 L 160 606 L 146 600 L 136 593 L 120 574 L 114 559 L 113 544 L 115 543 L 129 562 L 139 572 L 153 580 L 165 582 L 185 582 L 206 580 L 223 575 L 223 571 L 216 562 L 209 547 L 202 521 L 198 494 L 187 470 L 170 453 L 138 436 L 140 433 L 147 432 L 170 433 L 179 436 L 199 447 L 213 461 L 222 478 L 226 490 L 237 541 L 244 559 L 270 587 L 291 605 L 314 620 L 345 632 L 364 635 L 422 639 L 456 646 L 484 657 L 489 656 L 486 642 L 469 591 L 456 568 L 444 555 L 428 546 L 419 544 L 400 545 L 364 554 L 342 553 L 328 548 L 311 534 L 300 518 L 298 511 L 299 509 L 319 525 L 338 532 L 354 532 L 385 524 L 385 521 L 356 500 L 342 486 L 332 467 L 322 429 L 312 414 L 300 407 L 276 400 L 237 383 L 222 371 L 213 360 L 209 352 L 205 333 L 205 318 L 207 303 L 211 292 L 213 291 L 218 316 L 223 331 L 234 348 L 245 359 L 257 365 L 286 372 L 321 385 L 326 378 L 329 366 L 330 352 L 327 339 L 317 327 L 292 317 L 291 314 L 298 310 L 308 309 L 328 312 L 341 322 L 349 338 L 351 355 L 351 428 L 355 444 L 366 466 L 374 475 L 391 486 L 428 500 L 451 512 L 464 522 L 480 539 L 489 552 L 499 573 L 523 648 L 540 682 L 567 715 L 594 742 L 616 770 L 619 770 L 620 745 L 616 698 L 615 646 L 610 603 L 599 563 L 575 511 L 555 480 L 534 458 L 523 450 L 499 437 L 469 427 L 454 420 L 432 403 L 416 377 L 400 305 L 388 271 L 377 250 L 360 230 L 349 224 L 338 221 L 322 222 L 317 224 L 314 223 L 323 213 L 342 206 L 364 207 L 380 214 L 394 226 L 404 240 L 414 261 L 418 275 L 421 278 L 446 250 L 454 235 L 459 217 L 459 192 L 457 182 L 451 168 L 439 155 L 429 149 L 406 143 L 404 140 L 412 136 L 431 135 L 448 139 L 464 149 L 473 159 L 482 179 L 486 199 L 486 220 L 482 237 L 475 252 L 450 288 L 440 311 L 438 322 L 438 342 L 443 365 L 451 380 L 463 390 L 482 400 L 513 409 L 515 407 L 515 402 L 510 383 L 509 371 L 511 343 L 516 326 L 521 316 L 534 301 L 535 307 L 530 331 L 529 356 L 531 379 L 540 413 L 558 440 L 591 472 L 600 485 L 608 503 L 610 503 L 613 495 L 616 465 L 619 398 L 617 239 L 615 225 L 609 212 L 592 192 L 571 148 L 564 138 L 545 122 L 530 116 L 515 113 L 514 111 L 526 106 L 549 105 L 570 113 L 586 129 L 598 151 L 610 181 L 615 186 L 618 175 L 620 134 L 630 58 L 618 42 L 604 33 L 581 24 Z M 723 21 L 709 24 L 694 30 L 675 46 L 662 70 L 655 93 L 649 131 L 645 191 L 648 315 L 651 341 L 655 353 L 659 352 L 702 287 L 725 262 L 742 251 L 764 243 L 789 239 L 800 232 L 804 222 L 807 196 L 813 175 L 818 166 L 832 152 L 847 145 L 867 144 L 885 148 L 896 158 L 867 157 L 858 159 L 846 165 L 838 173 L 831 189 L 828 233 L 824 247 L 820 254 L 809 263 L 764 276 L 749 285 L 736 298 L 717 324 L 675 395 L 660 441 L 655 469 L 651 508 L 651 582 L 655 626 L 661 657 L 665 657 L 673 652 L 711 611 L 727 588 L 741 556 L 745 536 L 745 514 L 735 456 L 735 431 L 742 410 L 753 394 L 767 379 L 775 374 L 780 375 L 762 403 L 757 426 L 759 456 L 765 475 L 771 485 L 831 442 L 844 429 L 856 412 L 864 381 L 865 314 L 869 287 L 880 264 L 900 244 L 912 236 L 924 231 L 949 229 L 956 232 L 954 235 L 931 244 L 919 253 L 905 271 L 900 282 L 894 307 L 894 372 L 891 396 L 885 414 L 886 419 L 898 419 L 923 412 L 937 406 L 945 400 L 952 390 L 960 373 L 968 343 L 977 323 L 987 309 L 1001 295 L 1013 287 L 1032 281 L 1050 283 L 1068 292 L 1083 309 L 1082 310 L 1073 305 L 1060 301 L 1044 301 L 1026 309 L 1014 320 L 1001 338 L 993 356 L 982 395 L 971 414 L 959 427 L 945 436 L 930 442 L 885 455 L 846 472 L 818 491 L 799 510 L 784 535 L 768 583 L 754 615 L 736 644 L 707 683 L 694 707 L 685 733 L 680 754 L 676 786 L 676 812 L 680 813 L 686 807 L 713 772 L 730 755 L 779 717 L 809 688 L 822 668 L 838 637 L 850 605 L 868 567 L 885 541 L 906 520 L 923 509 L 950 499 L 970 496 L 1007 496 L 1030 491 L 1045 483 L 1059 470 L 1067 458 L 1072 444 L 1077 396 L 1081 382 L 1085 375 L 1095 365 L 1100 364 L 1101 368 L 1093 386 L 1092 446 L 1086 470 L 1076 489 L 1062 503 L 1039 517 L 1038 520 L 1046 525 L 1060 529 L 1080 529 L 1097 522 L 1143 488 L 1161 483 L 1172 484 L 1180 489 L 1177 492 L 1158 497 L 1145 503 L 1099 543 L 1088 549 L 1074 553 L 1046 552 L 985 532 L 961 531 L 942 536 L 927 545 L 911 560 L 897 582 L 885 607 L 859 675 L 881 671 L 898 671 L 936 677 L 953 676 L 973 667 L 1037 620 L 1059 611 L 1071 610 L 1087 613 L 1104 620 L 1116 628 L 1129 640 L 1131 644 L 1130 647 L 1113 641 L 1093 637 L 1076 637 L 1052 642 L 1045 645 L 1030 656 L 996 691 L 984 701 L 989 706 L 1011 717 L 1041 728 L 1063 729 L 1084 723 L 1083 728 L 1073 739 L 1061 747 L 1050 751 L 1028 752 L 1005 746 L 956 722 L 939 717 L 924 715 L 878 716 L 858 720 L 839 727 L 817 738 L 798 751 L 780 766 L 749 799 L 734 820 L 716 854 L 702 894 L 694 930 L 691 964 L 696 1121 L 700 1150 L 720 1214 L 733 1238 L 759 1263 L 782 1280 L 814 1309 L 823 1322 L 825 1331 L 825 1359 L 817 1420 L 818 1444 L 826 1468 L 849 1502 L 856 1517 L 861 1538 L 862 1563 L 864 1564 L 867 1562 L 870 1555 L 873 1542 L 872 1516 L 868 1504 L 848 1467 L 843 1448 L 844 1415 L 851 1386 L 854 1385 L 863 1397 L 894 1428 L 913 1444 L 931 1467 L 941 1491 L 943 1531 L 947 1545 L 949 1545 L 952 1537 L 958 1508 L 959 1490 L 956 1472 L 952 1461 L 939 1438 L 924 1419 L 892 1385 L 882 1371 L 864 1338 L 854 1314 L 837 1284 L 766 1214 L 758 1182 L 760 1180 L 799 1197 L 833 1216 L 837 1216 L 875 1251 L 889 1270 L 901 1291 L 915 1330 L 926 1352 L 938 1369 L 978 1409 L 990 1430 L 1005 1468 L 1013 1479 L 1022 1487 L 1023 1483 L 1015 1464 L 1007 1424 L 1003 1413 L 1006 1412 L 1012 1414 L 1041 1432 L 1054 1445 L 1068 1469 L 1071 1471 L 1070 1453 L 1065 1438 L 1057 1425 L 1044 1412 L 1021 1396 L 993 1382 L 975 1367 L 961 1350 L 950 1332 L 937 1299 L 941 1298 L 959 1302 L 1000 1316 L 1017 1328 L 1033 1344 L 1047 1362 L 1053 1366 L 1051 1355 L 1039 1329 L 1024 1308 L 1012 1298 L 997 1290 L 953 1274 L 932 1262 L 897 1223 L 868 1195 L 937 1195 L 952 1197 L 978 1205 L 1005 1220 L 1031 1243 L 1049 1265 L 1066 1292 L 1078 1320 L 1095 1350 L 1117 1372 L 1125 1377 L 1146 1385 L 1156 1384 L 1128 1363 L 1111 1342 L 1099 1312 L 1096 1291 L 1100 1290 L 1109 1292 L 1177 1315 L 1193 1316 L 1196 1315 L 1197 1312 L 1191 1308 L 1170 1300 L 1136 1280 L 1091 1260 L 1080 1250 L 1051 1211 L 1066 1208 L 1099 1209 L 1127 1218 L 1155 1233 L 1169 1238 L 1186 1240 L 1201 1238 L 1203 1235 L 1175 1226 L 1137 1202 L 1108 1190 L 1079 1185 L 1033 1182 L 1019 1178 L 987 1164 L 963 1157 L 924 1151 L 880 1147 L 867 1144 L 815 1126 L 803 1120 L 786 1108 L 767 1087 L 757 1071 L 748 1050 L 739 1014 L 734 976 L 734 949 L 738 919 L 748 888 L 757 870 L 770 851 L 799 822 L 820 807 L 845 794 L 864 786 L 885 780 L 897 778 L 933 779 L 957 785 L 1020 808 L 1045 814 L 1077 818 L 1100 817 L 1125 812 L 1146 804 L 1183 783 L 1205 764 L 1222 744 L 1232 729 L 1245 698 L 1250 674 L 1250 645 L 1244 614 L 1256 589 L 1264 562 L 1267 534 L 1266 511 L 1259 473 L 1245 440 L 1231 420 L 1199 384 L 1189 366 L 1184 335 L 1184 285 L 1181 275 L 1164 248 L 1142 225 L 1118 208 L 1096 197 L 1063 184 L 1054 175 L 1036 144 L 1013 115 L 992 97 L 963 80 L 927 69 L 867 61 L 856 57 L 818 35 L 789 25 L 750 20 Z M 781 96 L 779 98 L 759 106 L 745 114 L 719 138 L 704 161 L 690 190 L 688 188 L 688 176 L 693 148 L 698 134 L 709 116 L 724 103 L 744 95 L 756 93 L 772 93 Z"/>
-</svg>
-`)}`;
+type Domain = {
+  slug: string;
+  title: string;
+  emoji: string;
+  coreOutcomes: string[];
+  competencies: string[];
+  evidence: string;
+};
 
-export default function App() {
-  useEffect(() => {
-    let link = document.querySelector(
-      "link[rel='icon']",
-    ) as HTMLLinkElement | null;
-    if (!link) {
-      link = document.createElement("link");
-      link.rel = "icon";
-      document.head.appendChild(link);
-    }
-    link.href = TREE_FAVICON;
-  }, []);
+const WHY_DATA = {
+  title: "Why LifeEducation.org Exists",
+  subtitle: "Main public overview",
+  intro: [
+    "Most education talk starts in the wrong place.",
+    "It starts with school. Or curriculum. Or standards. Or credentials.",
+    "The better starting point is simpler: what should an 18-year-old actually be able to do?",
+  ],
+  sections: [
+    {
+      heading: "🎯 The Standard",
+      body: [
+        "Not what classes they sat through. Not what boxes got checked. Not what looked good on paper. What can they actually do, on their own, in real life?",
+        "That is the standard.",
+      ],
+    },
+    {
+      heading: "🧭 What LifeEducation Is",
+      body: [
+        "LifeEducation is a lightweight operating system for raising capable, self-directed humans.",
+        "The environment can change. The operating system stays.",
+        "The goal is real capability, autonomy, and judgment.",
+      ],
+    },
+    {
+      heading: "🧱 The Six Priorities",
+      bullets: [
+        "Agency — initiate, choose, steer.",
+        "Capability — do real things in the real world.",
+        "Optionality — keep doors open and avoid accidental dead ends.",
+        "Integrity — honesty, responsibility, repair when wrong.",
+        "Health — the capacity to carry a real life.",
+        "Belonging — relationships, community, contribution.",
+      ],
+      footer:
+        "Those six priorities are the point. They run through every domain, every review, and every decision.",
+    },
+    {
+      heading: "✅ What Floor-Complete Means",
+      body: [
+        "A floor-complete 18-year-old is not perfect. They are a young adult who can function.",
+        "If you dropped them into a new city at 18, they would not panic. They would ask good questions, handle money, solve problems, and keep moving.",
+        "The Floor is the contract. It defines the non-negotiable minimum capability expected by age 18.",
+      ],
+    },
+    {
+      heading: "🏠 What This Looks Like in Practice",
+      bullets: [
+        "Responsibility is real.",
+        "Movement is real.",
+        "Money is real.",
+        "Conflict is real.",
+        "Travel is real.",
+        "Projects are real.",
+        "Repair is real.",
+        "Curiosity is real.",
+        "Contribution is real.",
+      ],
+      footer:
+        "The point is not to turn family life into school at home. The point is to build a life where real things happen on purpose.",
+    },
+  ],
+};
+
+const BY18_DATA = {
+  title: "By 18: What You Can Do",
+  subtitle: "Public translation of the Floor contract",
+  intro: [
+    "By 18 names the deadline, not the earliest possible finish.",
+    "This is the point of the system: not what classes you sat through, but what you can actually do in real life.",
+  ],
+  groups: [
+    {
+      title: "🏃 Run Your Own Life",
+      items: [
+        "manage your time, obligations, logistics, and basic adult tasks",
+        "show up in a new city or system and figure out how it works without panicking",
+        "advocate for yourself in real institutions",
+        "learn what you need next without waiting for a formal class",
+      ],
+    },
+    {
+      title: "🗣️ Communicate Clearly and Deal Well With People",
+      items: [
+        "read adult-level material and understand what it says",
+        "write clearly for the audience you are writing to",
+        "speak comfortably with strangers, authority figures, and groups",
+        "listen well enough to represent someone else’s view fairly",
+      ],
+    },
+    {
+      title: "🧠 Think Clearly About the World",
+      items: [
+        "ask how do we know that and mean it",
+        "test claims, observe outcomes, and update when reality disagrees",
+        "interpret numbers, charts, percentages, and basic statistics",
+        "reason about risk, tradeoffs, and consequences",
+      ],
+    },
+    {
+      title: "💪 Own Your Body and Health",
+      items: [
+        "take responsibility for sleep, hygiene, movement, and nutrition",
+        "cook real meals and feed yourself reasonably well",
+        "handle basic first aid and emergency response",
+        "manage stress with coping tools that actually work",
+      ],
+    },
+  ],
+};
+
+const FLOOR_DATA = {
+  title: "The 18-Year-Old Floor",
+  subtitle: "Working Draft",
+  notice:
+    "Working Draft. This is the current authority on the minimum contract, but it is still intentionally open for revision.",
+  intro: [
+    "The Floor defines the non-negotiable minimum capability expected by age 18.",
+    "It is the baseline for a young adult who can function effectively in the real world without being managed like a child in an adult body.",
+  ],
+  sections: [
+    {
+      heading: "📌 What the Floor Is",
+      body: [
+        "The Floor is not a curriculum.",
+        "It does not dictate how learning happens.",
+        "It defines the capability that must exist before the Floor is honestly met.",
+      ],
+    },
+    {
+      heading: "🗺️ The Floor Lives Inside the Domains",
+      body: [
+        "The Floor is expressed through the LifeEducation domains.",
+        "Domains exist to ensure that important parts of life are not neglected. The Floor defines the minimum contract inside those domains.",
+      ],
+    },
+    {
+      heading: "⚖️ Floor Principles",
+      bullets: [
+        "The Floor is a contract.",
+        "Capability matters more than credentials.",
+        "Evidence exists to make capability legible.",
+        "Verification should match the capability.",
+      ],
+    },
+  ],
+};
+
+const DOMAINS: Domain[] = [
+  {
+    slug: "literacy-communication",
+    title: "Literacy & Communication",
+    emoji: "🗣️",
+    coreOutcomes: [
+      "Read and interpret fiction and non-fiction at an adult level",
+      "Write clearly, persuasively, and reflectively",
+      "Speak effectively to diverse audiences",
+    ],
+    competencies: [
+      "Reading comprehension",
+      "Structured writing",
+      "Practical writing",
+      "Verbal communication",
+      "Media literacy",
+      "Multilingual proficiency",
+    ],
+    evidence: "Reading logs, published pieces, speech videos, multilingual conversations.",
+  },
+  {
+    slug: "mathematics-logic",
+    title: "Mathematics & Logic",
+    emoji: "🔢",
+    coreOutcomes: [
+      "Master Algebra I and Geometry",
+      "Apply quantitative reasoning in real-world problems",
+      "Use logic and pattern recognition to solve novel tasks",
+    ],
+    competencies: [
+      "Algebraic fluency",
+      "Spatial reasoning",
+      "Data analysis",
+      "Mental math",
+      "Risk and trade-off reasoning",
+      "Structured problem-solving",
+    ],
+    evidence: "Solved problems, budgets, spreadsheets, code snippets, design docs.",
+  },
+  {
+    slug: "scientific-thinking-observation",
+    title: "Scientific Thinking & Observation",
+    emoji: "🧪",
+    coreOutcomes: [
+      "Think like a scientist",
+      "Demonstrate everyday scientific literacy",
+      "Understand key biological, physical, and environmental systems",
+    ],
+    competencies: [
+      "Experimental design",
+      "Hypothesis testing",
+      "Observation and inference",
+      "Source validation",
+      "Environmental literacy",
+    ],
+    evidence: "Lab write-ups, garden logs, field sketches, citizen-science uploads.",
+  },
+  {
+    slug: "social-studies-civics",
+    title: "Social Studies & Civics",
+    emoji: "🏛️",
+    coreOutcomes: [
+      "Grasp major historical narratives and civic structures",
+      "Engage with diverse cultures and worldviews",
+      "Apply historical thinking to current events",
+    ],
+    competencies: [
+      "Civics",
+      "History",
+      "Geography",
+      "Media interpretation",
+      "Power and institutions",
+    ],
+    evidence: "Travel journals, debate clips, service reflections, mapping projects.",
+  },
+  {
+    slug: "philosophy-ethics",
+    title: "Philosophy & Ethics",
+    emoji: "🧭",
+    coreOutcomes: [
+      "Think critically about values, purpose, and belief",
+      "Evaluate arguments, including your own",
+      "Navigate ambiguity and conflicting perspectives",
+    ],
+    competencies: [
+      "Moral reasoning",
+      "Bias analysis",
+      "Debate and fair representation",
+      "Logical fallacies",
+      "Self-reflection",
+    ],
+    evidence: "Values maps, debates, reflective essays, ethics case briefs.",
+  },
+  {
+    slug: "economics-finance",
+    title: "Economics & Finance",
+    emoji: "💸",
+    coreOutcomes: [
+      "Make thoughtful, independent decisions about money and value",
+      "Understand economic systems and trade-offs",
+    ],
+    competencies: [
+      "Budgeting",
+      "Contracts and leases",
+      "Taxes",
+      "Insurance",
+      "Opportunity cost",
+      "Travel budgeting",
+    ],
+    evidence: "Budgets, investment journal, business model canvas, trip cost sheets.",
+  },
+  {
+    slug: "health-physical-development",
+    title: "Health & Physical Development",
+    emoji: "💪",
+    coreOutcomes: [
+      "Maintain lifelong physical and mental wellness",
+      "Understand the body-mind-habit loop",
+    ],
+    competencies: [
+      "Nutrition",
+      "Cooking",
+      "Exercise",
+      "Rest and recovery",
+      "Stress management",
+      "First aid",
+    ],
+    evidence: "Fitness logs, meal plans, certs, training videos, wellbeing journal.",
+  },
+  {
+    slug: "creative-expression",
+    title: "Creative Expression",
+    emoji: "🎨",
+    coreOutcomes: [
+      "Appreciate and explore diverse creative forms",
+      "Express ideas and emotions through multiple media",
+    ],
+    competencies: [
+      "Visual arts",
+      "Storytelling",
+      "Creative writing",
+      "Music",
+      "Iteration and revision",
+      "Creative risk-taking",
+    ],
+    evidence: "Portfolio pieces, performances, process journals, peer critiques.",
+  },
+  {
+    slug: "technology-media-ai-literacy",
+    title: "Technology, Media & AI Literacy",
+    emoji: "💻",
+    coreOutcomes: [
+      "Use tech as a tool, not a crutch",
+      "Collaborate effectively with AI and digital systems",
+      "Stay safe, skeptical, and adaptive in a fast-moving digital world",
+    ],
+    competencies: [
+      "Digital navigation",
+      "AI collaboration",
+      "Online safety",
+      "Troubleshooting",
+      "Information literacy",
+      "Attention control",
+    ],
+    evidence: "Code commits, content channels, audits, tutorials, working digital artifacts.",
+  },
+  {
+    slug: "life-skills-project-execution",
+    title: "Life Skills & Project Execution",
+    emoji: "🛠️",
+    coreOutcomes: [
+      "Be capable, adaptable, and self-reliant in real-world settings",
+      "Execute ideas from concept to reality",
+    ],
+    competencies: [
+      "Planning and logistics",
+      "Household management",
+      "Travel independence",
+      "DIY and repair",
+      "Self-advocacy",
+      "Project ownership",
+    ],
+    evidence: "Trip plans, repair photos, dashboards, retrospectives, completed projects.",
+  },
+];
+
+const HOME_FAQ_ITEMS = [
+  {
+    label: "Starting Point",
+    question: "What are you running toward, not just away from?",
+    answer:
+      "Kids who can run their own lives. School is not the point. The point is a young adult who can think, adapt, solve problems, and function in real life.",
+  },
+  {
+    label: "Plain English",
+    question: "What does floor-complete mean?",
+    answer:
+      "It means the kid can function in the real world. If you dropped them into a new city at 18, they would not panic.",
+  },
+  {
+    label: "Common Objection",
+    question: "Is this just unschooling with a nicer name?",
+    answer:
+      "No. The Floor is a real contract. The Domains are a real coverage map.",
+  },
+  {
+    label: "How It Fits",
+    question: "How do the Why, Floor, By 18, and Domains fit together?",
+    answer:
+      "The Why says what this is for. The Floor sets the minimum by 18. By 18 puts that in plain English. The Domains keep the broader map in view.",
+  },
+] as const;
+
+function BrandHeader() {
+  return (
+    <header className="bg-black px-6 py-5 text-center">
+      <a href="/" className="inline-block">
+        <h1 className="font-serif text-4xl text-white md:text-5xl">LifeEducation.org</h1>
+      </a>
+    </header>
+  );
+}
+
+function SiteNav() {
+  const linkClass =
+    "rounded-full border border-white/15 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10";
 
   return (
-    <>
-      <style>{`
-        * { box-sizing: border-box; }
-        html, body, #root { margin: 0; min-height: 100%; }
-        body {
-          background: #000;
-          color: #111827;
-          font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        }
-        a { text-decoration: none; }
-
-        .page {
-          min-height: 100vh;
-          background: #000;
-          padding: 12px;
-        }
-
-        .shell {
-          min-height: calc(100vh - 24px);
-          border-radius: 32px;
-          overflow: hidden;
-          border: 1px solid rgba(255,255,255,0.10);
-          background: linear-gradient(180deg, #f4f6f8 0%, #e3e8ed 100%);
-          box-shadow: 0 35px 120px -50px rgba(0,0,0,0.7);
-        }
-
-        .header {
-          background: #000;
-          border-bottom: 1px solid rgba(255,255,255,0.10);
-          padding: 20px 24px;
-          text-align: center;
-        }
-
-        .brand {
-          margin: 0;
-          color: #fff;
-          font-family: Georgia, "Times New Roman", serif;
-          font-size: clamp(34px, 5.2vw, 60px);
-          font-weight: 500;
-          letter-spacing: 0.02em;
-          line-height: 1;
-        }
-
-        .brand .dotorg {
-          color: #cbd5e1;
-          margin-left: 6px;
-        }
-
-        .header a:hover .brand {
-          opacity: 0.92;
-        }
-
-        .hero {
-          display: grid;
-          grid-template-columns: 0.88fr 1.12fr;
-          gap: 0;
-        }
-
-        .hero-copy,
-        .hero-art {
-          display: flex;
-          align-items: center;
-        }
-
-        .hero-copy {
-          padding: 32px 40px 36px 44px;
-          justify-content: center;
-        }
-
-        .copy-inner {
-          width: 100%;
-          max-width: 720px;
-        }
-
-        .pill {
-          display: inline-flex;
-          align-items: center;
-          padding: 10px 16px;
-          border-radius: 999px;
-          border: 6px solid #2A8A67;
-          background: rgba(255,255,255,0.6);
-          color: #2A8A67;
-          font-size: 11px;
-          font-weight: 700;
-          letter-spacing: 0.08em;
-        }
-
-        .hero-title {
-          margin: 24px 0 0;
-          color: #0f172a;
-          font-family: Georgia, "Times New Roman", serif;
-          font-size: clamp(34px, 4.8vw, 66px);
-          line-height: 0.98;
-          font-weight: 500;
-        }
-
-        .hero-text {
-          margin: 24px 0 0;
-          max-width: 620px;
-          color: #334155;
-          font-size: clamp(18px, 1.5vw, 22px);
-          line-height: 1.75;
-        }
-
-        .hero-art {
-          justify-content: center;
-          padding: 0 28px 36px 12px;
-        }
-
-        .art-card {
-          width: 100%;
-          min-height: 560px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 32px;
-          border-radius: 28px;
-          border: 1px solid rgba(148,163,184,0.55);
-          background: linear-gradient(180deg, #fafbfd 0%, #e9eef3 100%);
-          box-shadow: inset 0 2px 20px rgba(15,23,42,0.06);
-        }
-
-        .tree-wrap {
-          width: 100%;
-          color: #0D4B39;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .tree-wrap img,
-        .tree-wrap svg {
-          width: 78%;
-          max-width: 520px;
-          height: auto;
-          display: block;
-          margin: 0 auto;
-        }
-
-        .image-break {
-          background: #050608;
-          padding: 18px 18px 10px;
-        }
-
-        .image-break-inner {
-          width: 100%;
-          max-width: 1600px;
-          margin: 0 auto;
-        }
-
-        .image-break-img {
-          width: 100%;
-          display: block;
-          height: auto;
-        }
-
-        .why {
-          background: #101114;
-          color: #fff;
-          padding: 48px 56px 56px;
-        }
-
-        .why-grid {
-          display: grid;
-          grid-template-columns: 1.05fr 0.95fr;
-          gap: 40px;
-          align-items: start;
-        }
-
-        .why-copy {
-          width: 100%;
-          max-width: 820px;
-        }
-
-        .why-pill {
-          display: inline-flex;
-          align-items: center;
-          padding: 10px 16px;
-          border-radius: 999px;
-          border: 6px solid #2A8A67;
-          background: rgba(255,255,255,0.05);
-          color: #2A8A67;
-          font-size: 11px;
-          font-weight: 700;
-          letter-spacing: 0.08em;
-        }
-
-        .why-title {
-          margin: 24px 0 0;
-          color: #fff;
-          font-family: Georgia, "Times New Roman", serif;
-          font-size: clamp(28px, 3.8vw, 48px);
-          line-height: 1.02;
-          font-weight: 500;
-        }
-
-        .why-text {
-          margin: 20px 0 0;
-          max-width: 720px;
-          color: #cbd5e1;
-          font-size: 18px;
-          line-height: 1.75;
-        }
-
-        .why-button {
-          display: inline-flex;
-          align-items: center;
-          margin-top: 32px;
-          padding: 14px 20px;
-          border-radius: 999px;
-          border: 6px solid #2A8A67;
-          background: #fff;
-          color: #0D4B39;
-          font-size: 15px;
-          font-weight: 600;
-          transition: background-color 0.2s ease, opacity 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
-        }
-
-        .why-button:hover {
-          background: #dcefe7;
-          color: #0D4B39;
-          box-shadow: 0 12px 28px -16px rgba(42,138,103,0.45);
-          transform: translateY(-1px);
-        }
-
-        .why-cards {
-          display: grid;
-          gap: 16px;
-          width: 100%;
-        }
-
-        .why-card {
-          border-radius: 24px;
-          border: 1px solid rgba(15,23,42,0.08);
-          background: linear-gradient(180deg, #eef2f5 0%, #dde3e8 100%);
-          padding: 24px;
-        }
-
-        .why-card-label {
-          color: #2A8A67;
-          font-size: 11px;
-          font-weight: 700;
-          letter-spacing: 0.08em;
-        }
-
-        .why-card-title {
-          margin-top: 12px;
-          color: #0f172a;
-          font-family: Georgia, "Times New Roman", serif;
-          font-size: 32px;
-          line-height: 1.1;
-          font-weight: 500;
-        }
-
-        .why-card-text {
-          margin-top: 12px;
-          color: #334155;
-          font-size: 15px;
-          line-height: 1.8;
-        }
-
-        .faq {
-          background: linear-gradient(180deg, #eef2f5 0%, #dde3e8 100%);
-          color: #0f172a;
-          padding: 48px 56px 56px;
-        }
-
-        .faq-head {
-          width: 100%;
-          max-width: none;
-        }
-
-        .faq-pill {
-          display: inline-flex;
-          align-items: center;
-          padding: 10px 16px;
-          border-radius: 999px;
-          border: 6px solid #2A8A67;
-          background: rgba(255,255,255,0.55);
-          color: #2A8A67;
-          font-size: 11px;
-          font-weight: 700;
-          letter-spacing: 0.08em;
-        }
-
-        .faq-title {
-          margin: 24px 0 0;
-          color: #0D4B39;
-          font-family: Georgia, "Times New Roman", serif;
-          font-size: clamp(26px, 3vw, 40px);
-          line-height: 1.04;
-          font-weight: 800;
-          width: 100%;
-        }
-
-        .faq-text {
-          margin: 18px 0 0;
-          max-width: 820px;
-          color: #334155;
-          font-size: 18px;
-          line-height: 1.75;
-        }
-
-        .faq-grid {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 20px;
-          margin-top: 32px;
-        }
-
-        .faq-card {
-          border-radius: 26px;
-          background: #050608;
-          color: #fff;
-          padding: 28px;
-          box-shadow: 0 24px 60px -40px rgba(0,0,0,0.6);
-        }
-
-        .faq-card-label {
-          color: #2A8A67;
-          font-size: 11px;
-          font-weight: 700;
-          letter-spacing: 0.08em;
-        }
-
-        .faq-card-title {
-          margin-top: 14px;
-          color: #fff;
-          font-family: Georgia, "Times New Roman", serif;
-          font-size: 28px;
-          line-height: 1.12;
-          font-weight: 500;
-        }
-
-        .faq-card-text {
-          margin-top: 16px;
-          color: #cbd5e1;
-          font-size: 16px;
-          line-height: 1.8;
-        }
-
-        .floor-section {
-          background: #0b0c0f;
-          color: #fff;
-          padding: 48px 56px 56px;
-          border-top: 1px solid rgba(255,255,255,0.08);
-        }
-
-        .floor-head {
-          max-width: 980px;
-        }
-
-        .floor-pill {
-          display: inline-flex;
-          align-items: center;
-          padding: 10px 16px;
-          border-radius: 999px;
-          border: 6px solid #2A8A67;
-          background: rgba(255,255,255,0.05);
-          color: #2A8A67;
-          font-size: 11px;
-          font-weight: 700;
-          letter-spacing: 0.08em;
-        }
-
-        .floor-title {
-          margin: 24px 0 0;
-          color: #fff;
-          font-family: Georgia, "Times New Roman", serif;
-          font-size: clamp(28px, 3.6vw, 46px);
-          line-height: 1.04;
-          font-weight: 500;
-        }
-
-        .floor-text {
-          margin: 18px 0 0;
-          max-width: 860px;
-          color: #cbd5e1;
-          font-size: 18px;
-          line-height: 1.75;
-        }
-
-        .floor-grid {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 20px;
-          margin-top: 32px;
-        }
-
-        .floor-card {
-          border-radius: 26px;
-          border: 1px solid rgba(15,23,42,0.08);
-          background: linear-gradient(180deg, #eef2f5 0%, #dde3e8 100%);
-          color: #0f172a;
-          padding: 28px;
-        }
-
-        .floor-card-label {
-          color: #2A8A67;
-          font-size: 11px;
-          font-weight: 700;
-          letter-spacing: 0.08em;
-        }
-
-        .floor-card-title {
-          margin-top: 14px;
-          color: #0f172a;
-          font-family: Georgia, "Times New Roman", serif;
-          font-size: 28px;
-          line-height: 1.12;
-          font-weight: 500;
-        }
-
-        .floor-card-text {
-          margin-top: 16px;
-          color: #334155;
-          font-size: 16px;
-          line-height: 1.8;
-        }
-
-        .floor-card-button {
-          display: inline-flex;
-          align-items: center;
-          margin-top: 24px;
-          padding: 12px 18px;
-          border-radius: 999px;
-          border: 1px solid rgba(15,23,42,0.12);
-          background: #0f172a;
-          color: #fff;
-          font-size: 14px;
-          font-weight: 600;
-          text-decoration: none;
-          transition: background-color 0.2s ease, opacity 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
-        }
-
-        .floor-card-button:hover {
-          background: #1f8a67;
-          border-color: #1f8a67;
-          color: #fff;
-          box-shadow: 0 12px 28px -16px rgba(31,138,103,0.75);
-          transform: translateY(-1px);
-        }
-
-        .floor-card-accent {
-          border: 6px solid #2A8A67;
-        }
-
-        .floor-card-accent .floor-card-title {
-          color: #146C4E;
-        }
-
-        .floor-card-button-accent {
-          border: 6px solid #2A8A67;
-        }
-
-        .domains {
-          background: linear-gradient(180deg, #eef2f5 0%, #dde3e8 100%);
-          color: #0f172a;
-          padding: 48px 56px 56px;
-          border-top: 1px solid rgba(15,23,42,0.08);
-        }
-
-        .domains-head {
-          max-width: 980px;
-        }
-
-        .domains-pill {
-          display: inline-flex;
-          align-items: center;
-          padding: 10px 16px;
-          border-radius: 999px;
-          border: 6px solid #2A8A67;
-          background: rgba(255,255,255,0.55);
-          color: #2A8A67;
-          font-size: 11px;
-          font-weight: 700;
-          letter-spacing: 0.08em;
-        }
-
-        .domains-title {
-          margin: 24px 0 0;
-          color: #0D4B39;
-          font-family: Georgia, "Times New Roman", serif;
-          font-size: clamp(28px, 3.4vw, 44px);
-          line-height: 1.04;
-          font-weight: 700;
-        }
-
-        .domains-text {
-          margin: 18px 0 0;
-          max-width: 860px;
-          color: #334155;
-          font-size: 18px;
-          line-height: 1.75;
-        }
-
-        .domains-grid {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 16px 20px;
-          margin-top: 30px;
-        }
-
-        .domains-item {
-          border-radius: 22px;
-          border: 1px solid rgba(255,255,255,0.08);
-          background: #050608;
-          padding: 18px 20px;
-          color: #fff;
-          font-size: 17px;
-          line-height: 1.45;
-          font-weight: 600;
-          box-shadow: 0 18px 40px -38px rgba(0,0,0,0.45);
-        }
-
-        .domains-note {
-          margin-top: 26px;
-          color: #475569;
-          font-size: 15px;
-          line-height: 1.8;
-        }
-
-        .domains-button {
-          display: inline-flex;
-          align-items: center;
-          margin-top: 28px;
-          padding: 14px 20px;
-          border-radius: 999px;
-          border: 6px solid #2A8A67;
-          background: #fff;
-          color: #0D4B39;
-          font-size: 14px;
-          font-weight: 700;
-          text-decoration: none;
-          transition: background-color 0.2s ease, opacity 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
-        }
-
-        .domains-button:hover {
-          background: #dcefe7;
-          color: #0D4B39;
-          box-shadow: 0 12px 28px -16px rgba(42,138,103,0.45);
-          transform: translateY(-1px);
-        }
-
-        .contact {
-          background: #ffffff;
-          color: #0f172a;
-          padding: 52px 56px 64px;
-          border-top: 1px solid rgba(15,23,42,0.08);
-        }
-
-        .contact-grid {
-          display: grid;
-          grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
-          gap: 24px;
-          align-items: start;
-        }
-
-        .contact-pill {
-          display: inline-flex;
-          align-items: center;
-          padding: 10px 16px;
-          border-radius: 999px;
-          border: 6px solid #2A8A67;
-          background: #f8fafc;
-          color: #2A8A67;
-          font-size: 11px;
-          font-weight: 700;
-          letter-spacing: 0.08em;
-        }
-
-        .contact-title {
-          margin: 24px 0 0;
-          color: #0D4B39;
-          font-family: Georgia, "Times New Roman", serif;
-          font-size: clamp(24px, 2.8vw, 38px);
-          line-height: 1.04;
-          font-weight: 700;
-        }
-
-        .contact-text {
-          margin: 18px 0 0;
-          max-width: 760px;
-          color: #334155;
-          font-size: 18px;
-          line-height: 1.75;
-        }
-
-        .contact-copy {
-          max-width: 760px;
-          min-width: 0;
-        }
-
-        .contact-card {
-          border-radius: 26px;
-          background: #050608;
-          color: #fff;
-          padding: 28px;
-          width: 100%;
-          min-width: 0;
-        }
-
-        .contact-card-label {
-          color: #2A8A67;
-          font-size: 11px;
-          font-weight: 700;
-          letter-spacing: 0.08em;
-        }
-
-        .contact-card-line {
-          margin-top: 14px;
-          color: #fff;
-          font-family: Georgia, "Times New Roman", serif;
-          font-size: 28px;
-          line-height: 1.2;
-          font-weight: 500;
-          overflow-wrap: anywhere;
-          word-break: break-word;
-        }
-
-        .contact-card-line a {
-          color: #fff;
-          text-decoration: none;
-          overflow-wrap: anywhere;
-          word-break: break-word;
-        }
-
-        .contact-card-line a:hover {
-          text-decoration: underline;
-        }
-
-        .contact-card-note {
-          margin-top: 14px;
-          color: #cbd5e1;
-          font-size: 15px;
-          line-height: 1.8;
-        }
-
-        .contact-card-cta {
-          margin-top: 22px;
-          display: inline-flex;
-          align-items: center;
-          padding: 12px 18px;
-          border-radius: 999px;
-          border: 6px solid #2A8A67;
-          color: #fff;
-          font-size: 14px;
-          font-weight: 600;
-          text-decoration: none;
-          transition: background-color 0.2s ease, opacity 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
-        }
-
-        .contact-card-cta:hover {
-          background: #2A8A67;
-          border-color: #2A8A67;
-          color: #fff;
-          box-shadow: 0 12px 28px -16px rgba(42,138,103,0.8);
-          transform: translateY(-1px);
-        }
-
-
-        .footer {
-          background: #000;
-          color: #cbd5e1;
-          padding: 24px 56px 28px;
-          border-top: 1px solid rgba(255,255,255,0.08);
-        }
-
-        .footer-inner {
-          display: flex;
-          gap: 12px;
-          align-items: center;
-          justify-content: space-between;
-          flex-wrap: wrap;
-        }
-
-        .footer-text,
-        .footer-link {
-          font-size: 14px;
-          line-height: 1.7;
-        }
-
-        .footer-link {
-          color: #cbd5e1;
-          text-decoration: none;
-        }
-
-        .footer-link:hover {
-          color: #fff;
-          text-decoration: underline;
-          text-underline-offset: 3px;
-        }
-
-        @media (max-width: 900px) {
-          .hero,
-          .why-grid {
-            grid-template-columns: 1fr;
-          }
-
-          .hero-copy {
-            padding: 40px 32px 24px;
-          }
-
-          .hero-art {
-            padding: 0 32px 40px;
-          }
-
-          .art-card {
-            min-height: 0;
-          }
-
-          .tree-wrap svg {
-            width: 84%;
-            max-width: 520px;
-          }
-
-          .why {
-            padding: 40px 32px 48px;
-          }
-
-          .faq {
-            padding: 40px 32px 48px;
-          }
-
-          .image-break {
-            padding: 12px 12px 6px;
-          }
-
-          .floor-section {
-            padding: 40px 32px 48px;
-          }
-
-          .domains {
-            padding: 40px 32px 48px;
-          }
-
-          .domains-grid {
-            grid-template-columns: 1fr;
-          }
-
-          .floor-grid {
-            grid-template-columns: 1fr;
-          }
-
-          .faq-grid,
-          .contact-grid {
-            grid-template-columns: 1fr;
-          }
-
-          .contact {
-            padding: 40px 32px 48px;
-          }
-
-          .footer {
-            padding: 24px 32px 28px;
-          }
-        }
-
-        @media (max-width: 640px) {
-          .page {
-            padding: 8px;
-          }
-
-          .shell {
-            min-height: calc(100vh - 16px);
-            border-radius: 24px;
-          }
-
-          .header {
-            padding: 20px 16px;
-          }
-
-          .hero-copy {
-            padding: 28px 20px 20px;
-          }
-
-          .hero-art {
-            padding: 0 20px 28px;
-          }
-
-          .art-card {
-            padding: 20px;
-            border-radius: 22px;
-          }
-
-          .why {
-            padding: 28px 20px 32px;
-          }
-
-          .faq {
-            padding: 28px 20px 32px;
-          }
-
-          .image-break {
-            padding: 8px 8px 4px;
-          }
-
-          .floor-section {
-            padding: 28px 20px 32px;
-          }
-
-          .domains {
-            padding: 28px 20px 32px;
-          }
-
-          .domains-item {
-            padding: 16px 18px;
-            font-size: 16px;
-          }
-
-          .domains-title {
-            font-size: 26px;
-          }
-
-          .floor-card {
-            padding: 22px;
-          }
-
-          .floor-card-title {
-            font-size: 24px;
-          }
-
-          .faq-card,
-          .contact-card {
-            padding: 22px;
-          }
-
-          .faq-card-title,
-          .contact-card-line {
-            font-size: 24px;
-          }
-
-          .contact {
-            padding: 28px 20px 36px;
-          }
-
-          .footer {
-            padding: 20px 20px 24px;
-          }
-
-          .why-card-title {
-            font-size: 26px;
-          }
-
-          .why-text {
-            font-size: 18px;
-          }
-        }
-      `}</style>
-      <div className="page">
-        <div className="shell">
-          <header className="header">
-            <a href="/" aria-label="LifeEducation home">
-              <h1 className="brand">LifeEducation.org</h1>
-            </a>
-          </header>
-          <div className="hero">
-            <section className="hero-copy">
-              <div className="copy-inner">
-                <div className="pill">LifeEducation</div>
-                <h2 className="hero-title">
-                  If you dropped them off in a strange city on a different
-                  continent, could they figure it out?
-                </h2>
-                <p className="hero-text">
-                  Too much of the current system still rewards looking good on
-                  paper. I’m trying to raise kids who can think, adapt, solve
-                  problems, and function in real life.
-                </p>
-              </div>
-            </section>
-            <section className="hero-art">
-              <div className="art-card">
-                <div className="tree-wrap">
-                  <img
-                    src="/lifeeducation_tree_source.webp"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                </div>
-              </div>
-            </section>
+    <nav className="border-b border-white/10 bg-black px-6 py-4 md:px-14">
+      <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4">
+        <a href="/" className={linkClass}>Home</a>
+        <a href="/why" className={linkClass}>Why</a>
+        <a href="/floor" className={linkClass}>Floor</a>
+        <a href="/by-18" className={linkClass}>By 18</a>
+        <a href="/domains" className={linkClass}>Domains</a>
+        <span className="rounded-full border border-white/10 px-4 py-2 text-sm font-semibold text-slate-400">
+          Q&A soon
+        </span>
+      </div>
+    </nav>
+  );
+}
+
+function PageShell({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="min-h-screen bg-black p-3 md:p-4">
+      <div className="mx-auto max-w-7xl overflow-hidden rounded-[28px] border border-white/10 bg-gradient-to-b from-slate-100 to-slate-200 shadow-2xl">
+        <BrandHeader />
+        <SiteNav />
+        {children}
+      </div>
+    </div>
+  );
+}
+
+function PageIntro({
+  pill,
+  title,
+  subtitle,
+  notice,
+}: {
+  pill: string;
+  title: string;
+  subtitle?: string;
+  notice?: string;
+}) {
+  return (
+    <section className="border-b border-slate-300 bg-slate-100 px-6 py-10 md:px-14 md:py-12">
+      <div className="inline-flex rounded-full border-[6px] border-emerald-700 bg-white/70 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.08em] text-emerald-700">
+        {pill}
+      </div>
+      <h1 className="mt-6 font-serif text-4xl leading-tight text-slate-900 md:text-6xl">{title}</h1>
+      {subtitle ? <p className="mt-4 text-lg leading-8 text-slate-600">{subtitle}</p> : null}
+      {notice ? (
+        <div className="mt-6 max-w-4xl rounded-[22px] border border-amber-300 bg-amber-50 px-5 py-4 text-base leading-8 text-amber-900">
+          {notice}
+        </div>
+      ) : null}
+    </section>
+  );
+}
+
+function BackBar({ children }: { children: React.ReactNode }) {
+  return <section className="border-b border-slate-300 bg-white px-6 py-5 md:px-14">{children}</section>;
+}
+
+function RichSection({
+  heading,
+  body,
+  bullets,
+  footer,
+}: {
+  heading: string;
+  body?: string[];
+  bullets?: string[];
+  footer?: string;
+}) {
+  return (
+    <section className="border-t border-slate-300 bg-white px-6 py-10 md:px-14 md:py-12">
+      <h2 className="font-serif text-3xl leading-tight text-emerald-900 md:text-4xl">{heading}</h2>
+      {body?.map((paragraph) => (
+        <p key={paragraph} className="mt-5 max-w-4xl text-lg leading-8 text-slate-700">
+          {paragraph}
+        </p>
+      ))}
+      {bullets?.length ? (
+        <ul className="mt-5 max-w-4xl space-y-3 text-lg leading-8 text-slate-700">
+          {bullets.map((item) => (
+            <li key={item} className="flex gap-3">
+              <span className="mt-[10px] h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-700" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      ) : null}
+      {footer ? <p className="mt-5 max-w-4xl text-lg leading-8 text-slate-700">{footer}</p> : null}
+    </section>
+  );
+}
+
+function HomePage() {
+  return (
+    <PageShell>
+      <section className="grid grid-cols-1 md:grid-cols-[0.88fr_1.12fr]">
+        <div className="flex items-center px-6 py-8 md:px-11 md:py-10">
+          <div className="max-w-2xl">
+            <div className="inline-flex rounded-full border-[6px] border-emerald-700 bg-white/60 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.08em] text-emerald-700">
+              LifeEducation
+            </div>
+            <h2 className="mt-6 font-serif text-4xl leading-none text-slate-900 md:text-6xl">
+              If you dropped them off in a strange city on a different continent, could they figure it out?
+            </h2>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-700 md:text-[22px]">
+              Too much of the current system still rewards looking good on paper. I’m trying to raise kids who can think, adapt, solve problems, and function in real life.
+            </p>
           </div>
-          <section className="image-break">
-            <div className="image-break-inner">
-              <img
-                alt="Young person navigating a foreign city with a map"
-                className="image-break-img"
-                src="/lifeeducation_break_navigator.webp"
-              />
+        </div>
+        <div className="flex items-center justify-center px-5 pb-8 md:px-7 md:pb-10">
+          <div className="flex min-h-[380px] w-full items-center justify-center rounded-[28px] border border-slate-300 bg-gradient-to-b from-slate-50 to-slate-200 p-8">
+            <img
+              src="/lifeeducation_tree_source.webp"
+              alt=""
+              aria-hidden="true"
+              className="block h-auto w-[78%] max-w-[520px]"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-black px-4 py-4 md:px-5 md:py-5">
+        <div className="mx-auto w-full max-w-7xl overflow-hidden">
+          <img
+            className="block h-auto w-full"
+            src="/lifeeducation_break_navigator.webp"
+            alt="Young person navigating a foreign city with a map"
+          />
+        </div>
+      </section>
+
+      <section className="bg-zinc-950 px-6 py-12 text-white md:px-14">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-[1.05fr_0.95fr]">
+          <div className="max-w-3xl">
+            <div className="inline-flex rounded-full border-[6px] border-emerald-700 bg-white/5 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.08em] text-emerald-500">
+              The Why
             </div>
-          </section>
-          <section className="why">
-            <div className="why-grid">
-              <div className="why-copy">
-                <div className="why-pill">The Why</div>
-                <h3 className="why-title">
-                  Most education talk starts in the wrong place.
-                </h3>
-                <p className="why-text">
-                  It starts with school. Or curriculum. Or standards. Or
-                  credentials. The better starting point is simpler: what
-                  should an 18-year-old actually be able to do, on their own,
-                  in real life?
-                </p>
-                <p className="why-text">
-                  Skip the school reform debate. Name a better target and build around it directly.
-                  The goal is real capability, autonomy, and judgment.
-                </p>
-                <a
-                  className="why-button"
-                  href="https://docs.google.com/document/d/1iMa_sLEphCEfCAyG_JGlHgeNCwZRda5j/edit?usp=sharing&ouid=112063937930878626054&rtpof=true&sd=true"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  Read the Why Statement
-                </a>
-              </div>
-              <div className="why-cards">
-                <div className="why-card">
-                  <div className="why-card-label">Target</div>
-                  <div className="why-card-title">
-                    The Floor is the contract.
-                  </div>
-                  <div className="why-card-text">
-                    Minimum adulthood capability by 18. Serious, non-negotiable,
-                    and not disguised curriculum theater.
-                  </div>
-                </div>
-                <div className="why-card">
-                  <div className="why-card-label">Priorities</div>
-                  <div className="why-card-title">
-                    Agency. Capability. Optionality.
-                  </div>
-                  <div className="why-card-text">
-                    Integrity, Health, and Belonging complete the set. The
-                    system exists to serve those six priorities, not replace
-                    them.
-                  </div>
-                </div>
-                <div className="why-card">
-                  <div className="why-card-label">Shape</div>
-                  <div className="why-card-title">Keep it light.</div>
-                  <div className="why-card-text">
-                    A better target, clear guardrails, and a life where real things happen on purpose. That's it.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section className="faq">
-            <div className="faq-head">
-              <div className="faq-pill">Q&A</div>
-              <h3 className="faq-title">
-                The questions a serious parent or skeptic should ask.
-              </h3>
-              <p className="faq-text">
-                Better to answer them plainly than hide the big distinctions
-                under branding.
-              </p>
-            </div>
-            <div className="faq-grid">
-              <div className="faq-card">
-                <div className="faq-card-label">Starting Point</div>
-                <div className="faq-card-title">
-                  What are you running toward, not just away from?
-                </div>
-                <div className="faq-card-text">
-                  Kids who can run their own lives. School is not the point.
-                  The point is a young adult who can think, adapt, build
-                  relationships, handle money and health, and keep learning
-                  without waiting to be managed.
-                </div>
-              </div>
-              <div className="faq-card">
-                <div className="faq-card-label">Plain English</div>
-                <div className="faq-card-title">
-                  What does ‘floor-complete’ mean?
-                </div>
-                <div className="faq-card-text">
-                  It means the kid can function in the real world. If you
-                  dropped them into a new city at 18, they would not panic. They
-                  would ask good questions, solve problems, handle money,
-                  navigate systems, and keep moving.
-                </div>
-              </div>
-              <div className="faq-card">
-                <div className="faq-card-label">Common Objection</div>
-                <div className="faq-card-title">
-                  Is this just unschooling with a nicer name?
-                </div>
-                <div className="faq-card-text">
-                  No. The Floor is a real contract. The Domains are a real
-                  coverage map. Kids get more ownership over time, but that is
-                  not the same thing as having no structure.
-                </div>
-              </div>
-              <div className="faq-card">
-                <div className="faq-card-label">How It Fits</div>
-                <div className="faq-card-title">
-                  How do the Why, Floor, By 18, and Domains fit together?
-                </div>
-                <div className="faq-card-text">
-                  The Why says what this is for. The Floor sets the minimum by
-                  18. By 18 puts that in plain English. The Domains keep the
-                  broader map in view so blind spots do not get ignored.
-                </div>
-              </div>
-            </div>
-          </section>
-          <section className="floor-section">
-            <div className="floor-head">
-              <div className="floor-pill">The Floor + By 18</div>
-              <h3 className="floor-title">
-                The contract, and “By 18,” its public translation.
-              </h3>
-              <p className="floor-text">
-                The Floor is the non-negotiable minimum by 18. “By 18” says
-                the same thing in plain language: not what classes they sat
-                through, but what they can actually do. “By 18” is the
-                deadline, not the earliest possible finish.
-              </p>
-              <p className="floor-text">
-                If they meet the Floor early, the job changes. Then it is
-                maintenance, broader domain life, and more self-directed depth.
-              </p>
-            </div>
-            <div className="floor-grid">
-              <div className="floor-card">
-                <div className="floor-card-label">The contract</div>
-                <div className="floor-card-title">The 18-Year-Old Floor</div>
-                <div className="floor-card-text">
-                  This is the minimum line for adulthood capability. It is not a
-                  curriculum, and it does not tell you how to teach. It defines
-                  what has to be real before you can honestly say the Floor is
-                  met: a young adult who can function in the world without being
-                  managed like a child in an adult body.
-                </div>
-                <a
-                  className="floor-card-button"
-                  href="https://docs.google.com/document/d/1kacHye8nhnrUbYarS9rgdN0o0b_6D5q2/edit?usp=sharing&ouid=112063937930878626054&rtpof=true&sd=true"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  Read the Floor document
-                </a>
-              </div>
-              <div className="floor-card floor-card-accent">
-                <div className="floor-card-label">Public translation</div>
-                <div className="floor-card-title">By 18: What You Can Do</div>
-                <div className="floor-card-text">
-                  This is the same contract in plain public language. It shows
-                  what floor-complete looks like in practice: run your own life,
-                  think clearly, handle money, own your health, use tech well,
-                  navigate real systems, and make real things.
-                </div>
-                <a
-                  className="floor-card-button floor-card-button-accent"
-                  href="https://docs.google.com/document/d/11nSF4vmnmNErNnsvcvMKWDo6g84fLYjU/edit?usp=sharing&ouid=112063937930878626054&rtpof=true&sd=true"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  Read the By 18 document
-                </a>
-              </div>
-            </div>
-          </section>
-          <section className="domains">
-            <div className="domains-head">
-              <div className="domains-pill">The 10 Domains</div>
-              <h3 className="domains-title">
-                The Floor is the minimum.
-                <br />
-                The Domains show the full map.
-              </h3>
-              <p className="domains-text">
-                The Domains are here to keep blind spots visible. Families
-                naturally overbuild what already matters to them and neglect
-                what does not.
-              </p>
-              <p className="domains-text">
-                They are not a second contract. The Floor is still the minimum.
-                The Domains are the broader map of the life I want my kids
-                growing up inside.
-              </p>
-            </div>
-            <div className="domains-grid">
-              <div className="domains-item">Literacy & Communication</div>
-              <div className="domains-item">Mathematics & Logic</div>
-              <div className="domains-item">
-                Scientific Thinking & Observation
-              </div>
-              <div className="domains-item">Social Studies & Civics</div>
-              <div className="domains-item">Philosophy & Ethics</div>
-              <div className="domains-item">Economics & Finance</div>
-              <div className="domains-item">Health & Physical Development</div>
-              <div className="domains-item">Creative Expression</div>
-              <div className="domains-item">
-                Technology, Media & AI Literacy
-              </div>
-              <div className="domains-item">
-                Life Skills & Project Execution
-              </div>
-            </div>
-            <div className="domains-note">Contract first. Full map second.</div>
-            <a
-              className="domains-button"
-              href="https://docs.google.com/document/d/1pKnXKKN-HkGJ960HEgYYolWxJfMwhTY3/edit?usp=sharing&ouid=112063937930878626054&rtpof=true&sd=true"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Read the Domains document
+            <h3 className="mt-6 font-serif text-3xl leading-tight md:text-5xl">
+              Most education talk starts in the wrong place.
+            </h3>
+            <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-300">
+              It starts with school. Or curriculum. Or standards. Or credentials. The better starting point is simpler: what should an 18-year-old actually be able to do, on their own, in real life?
+            </p>
+            <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-300">
+              Skip the school reform debate. Name a better target and build around it directly. The goal is real capability, autonomy, and judgment.
+            </p>
+            <a className="mt-8 inline-flex rounded-full border-[6px] border-emerald-700 bg-white px-5 py-3 text-sm font-semibold text-emerald-900 transition hover:bg-slate-100" href="/why">
+              Read the Why Statement
             </a>
-          </section>
-          <section className="image-break">
-            <div className="image-break-inner">
-              <img
-                alt="Documents, notes, and letters prepared for serious public exchange"
-                className="image-break-img"
-                src="/site_break_02_contact_desk.webp"
-              />
-            </div>
-          </section>
-          <section className="contact">
-            <div className="contact-grid">
-              <div className="contact-copy">
-                <div className="contact-pill">Contact</div>
-                <h3 className="contact-title">
-                  If you see something I’m missing, tell me.
-                </h3>
-                <p className="contact-text">
-                  I’m building this for my own kids first. If you see a blind
-                  spot, a hole in the logic, or a better way to say something,
-                  send it.
-                </p>
-              </div>
-              <div className="contact-card">
-                <div className="contact-card-label">Public contact</div>
-                <div className="contact-card-line">
-                  <a href="mailto:LifeEducationInformation@gmail.com">
-                    LifeEducationInformation@gmail.com
-                  </a>
-                </div>
-                <div className="contact-card-note">
-                  Use this address for objections, ideas, examples, or serious
-                  feedback.
-                </div>
-                <a
-                  className="contact-card-cta"
-                  href="mailto:LifeEducationInformation@gmail.com?subject=LifeEducation%20Website%20Feedback"
-                >
-                  Email your thoughts
-                </a>
+          </div>
+
+          <div className="grid gap-4">
+            <div className="rounded-[24px] bg-gradient-to-b from-slate-100 to-slate-200 p-6 text-slate-900">
+              <div className="text-[11px] font-bold uppercase tracking-[0.08em] text-emerald-700">Target</div>
+              <div className="mt-3 font-serif text-2xl leading-tight">The Floor is the contract.</div>
+              <div className="mt-3 text-base leading-8 text-slate-700">
+                Minimum adulthood capability by 18. Serious, non-negotiable, and not disguised curriculum theater.
               </div>
             </div>
-          </section>
-          <footer className="footer">
-            <div className="footer-inner">
-              <div className="footer-text">© LifeEducation.org</div>
-              <a className="footer-link" href="mailto:LifeEducationInformation@gmail.com">
+            <div className="rounded-[24px] bg-gradient-to-b from-slate-100 to-slate-200 p-6 text-slate-900">
+              <div className="text-[11px] font-bold uppercase tracking-[0.08em] text-emerald-700">Priorities</div>
+              <div className="mt-3 font-serif text-2xl leading-tight">Agency. Capability. Optionality.</div>
+              <div className="mt-3 text-base leading-8 text-slate-700">
+                Integrity, Health, and Belonging complete the set. The system exists to serve those six priorities.
+              </div>
+            </div>
+            <div className="rounded-[24px] bg-gradient-to-b from-slate-100 to-slate-200 p-6 text-slate-900">
+              <div className="text-[11px] font-bold uppercase tracking-[0.08em] text-emerald-700">Shape</div>
+              <div className="mt-3 font-serif text-2xl leading-tight">Keep it light.</div>
+              <div className="mt-3 text-base leading-8 text-slate-700">
+                A better target, clear guardrails, and a life where real things happen on purpose. That’s it.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-slate-200 px-6 py-12 md:px-14">
+        <div className="inline-flex rounded-full border-[6px] border-emerald-700 bg-white/60 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.08em] text-emerald-700">
+          Q&amp;A
+        </div>
+        <h3 className="mt-6 font-serif text-3xl font-bold leading-tight text-emerald-900 md:text-5xl">
+          The questions a serious parent or skeptic should ask.
+        </h3>
+        <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-700">
+          Better to answer them plainly than hide the big distinctions under branding.
+        </p>
+
+        <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2">
+          {HOME_FAQ_ITEMS.map((item) => (
+            <div key={item.question} className="rounded-[26px] bg-black p-7 text-white shadow-xl">
+              <div className="text-[11px] font-bold uppercase tracking-[0.08em] text-emerald-600">{item.label}</div>
+              <div className="mt-3 font-serif text-2xl leading-tight">{item.question}</div>
+              <div className="mt-4 text-base leading-8 text-slate-300">{item.answer}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="border-t border-slate-300 bg-black px-6 py-12 text-white md:px-14">
+        <div className="inline-flex rounded-full border-[6px] border-emerald-700 bg-white/5 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.08em] text-emerald-500">
+          The Floor + By 18
+        </div>
+        <h3 className="mt-6 font-serif text-3xl leading-tight md:text-5xl">
+          The contract, and By 18, its public translation.
+        </h3>
+        <p className="mt-4 max-w-4xl text-lg leading-8 text-slate-300">
+          The Floor is the non-negotiable minimum by 18. By 18 says the same thing in plain language.
+        </p>
+
+        <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2">
+          <div className="rounded-[26px] bg-gradient-to-b from-slate-100 to-slate-200 p-7 text-slate-900 shadow-xl">
+            <div className="text-[11px] font-bold uppercase tracking-[0.08em] text-emerald-700">The contract</div>
+            <div className="mt-3 font-serif text-2xl leading-tight">The 18-Year-Old Floor</div>
+            <div className="mt-4 text-base leading-8 text-slate-700">
+              This is the minimum line for adulthood capability.
+            </div>
+            <a className="mt-6 inline-flex rounded-full border border-slate-300 bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800" href="/floor">
+              Read the Floor document
+            </a>
+          </div>
+
+          <div className="rounded-[26px] border-[6px] border-emerald-700 bg-gradient-to-b from-slate-100 to-slate-200 p-7 text-slate-900 shadow-xl">
+            <div className="text-[11px] font-bold uppercase tracking-[0.08em] text-emerald-700">Public translation</div>
+            <div className="mt-3 font-serif text-2xl leading-tight text-emerald-800">By 18: What You Can Do</div>
+            <div className="mt-4 text-base leading-8 text-slate-700">
+              This is the same contract in plain public language.
+            </div>
+            <a className="mt-6 inline-flex rounded-full border-[6px] border-emerald-700 bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800" href="/by-18">
+              Read the By 18 document
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-slate-300 bg-slate-200 px-6 py-12 md:px-14">
+        <div className="inline-flex rounded-full border-[6px] border-emerald-700 bg-white/60 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.08em] text-emerald-700">
+          The 10 Domains
+        </div>
+        <h3 className="mt-6 font-serif text-3xl font-bold leading-tight text-emerald-900 md:text-5xl">
+          The Floor is the minimum.
+          <br />
+          The Domains show the full map.
+        </h3>
+        <p className="mt-4 max-w-4xl text-lg leading-8 text-slate-700">
+          The Domains are here to keep blind spots visible.
+        </p>
+        <p className="mt-4 max-w-4xl text-lg leading-8 text-slate-700">
+          They are not a second contract. The Floor is still the minimum.
+        </p>
+
+        <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
+          {DOMAINS.map((domain) => (
+            <a
+              key={domain.slug}
+              href={`/domains/${domain.slug}`}
+              className="rounded-[22px] bg-black px-5 py-4 text-lg font-semibold leading-7 text-white shadow-lg transition hover:bg-zinc-900"
+            >
+              {domain.title}
+            </a>
+          ))}
+        </div>
+
+        <div className="mt-6 text-sm leading-7 text-slate-600">Contract first. Full map second.</div>
+        <a className="mt-7 inline-flex rounded-full border-[6px] border-emerald-700 bg-white px-5 py-3 text-sm font-bold text-emerald-900 transition hover:bg-slate-100" href="/domains">
+          Read the Domains document
+        </a>
+      </section>
+
+      <section className="bg-black px-4 py-4 md:px-5 md:py-5">
+        <div className="mx-auto w-full max-w-7xl overflow-hidden">
+          <img
+            className="block h-auto w-full"
+            src="/site_break_02_contact_desk.webp"
+            alt="Documents, notes, and letters prepared for serious public exchange"
+          />
+        </div>
+      </section>
+
+      <section className="border-t border-slate-300 bg-white px-6 py-12 md:px-14 md:py-14">
+        <div className="inline-flex rounded-full border-[6px] border-emerald-700 bg-slate-50 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.08em] text-emerald-700">
+          Contact
+        </div>
+        <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.9fr)]">
+          <div className="max-w-3xl min-w-0">
+            <h3 className="font-serif text-3xl font-bold leading-tight text-emerald-900 md:text-5xl">
+              If you see something I’m missing, tell me.
+            </h3>
+            <p className="mt-4 text-lg leading-8 text-slate-700">
+              I’m building this for my own kids first. If you see a blind spot, a hole in the logic, or a better way to say something, send it.
+            </p>
+          </div>
+          <div className="w-full min-w-0 rounded-[26px] bg-black p-7 text-white shadow-xl">
+            <div className="text-[11px] font-bold uppercase tracking-[0.08em] text-emerald-600">Public contact</div>
+            <div className="mt-3 font-serif text-2xl leading-tight break-words [overflow-wrap:anywhere]">
+              <a href="mailto:LifeEducationInformation@gmail.com" className="break-words [overflow-wrap:anywhere]">
                 LifeEducationInformation@gmail.com
               </a>
             </div>
-          </footer>
+            <div className="mt-4 text-base leading-8 text-slate-300">
+              Use this address for objections, ideas, examples, or serious feedback.
+            </div>
+            <a className="mt-6 inline-flex rounded-full border-[6px] border-emerald-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10" href="mailto:LifeEducationInformation@gmail.com?subject=LifeEducation%20Website%20Feedback">
+              Email your thoughts
+            </a>
+          </div>
         </div>
-      </div>
-    </>
+      </section>
+
+      <footer className="border-t border-slate-300 bg-black px-6 py-8 text-slate-300 md:px-14">
+        <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+          <div className="text-sm leading-7">© LifeEducation.org</div>
+          <div className="text-sm leading-7">
+            <a className="hover:text-white" href="mailto:LifeEducationInformation@gmail.com">
+              LifeEducationInformation@gmail.com
+            </a>
+          </div>
+        </div>
+      </footer>
+    </PageShell>
   );
+}
+
+function WhyPage() {
+  return (
+    <PageShell>
+      <PageIntro pill="The Why" title={WHY_DATA.title} subtitle={WHY_DATA.subtitle} />
+      <BackBar>
+        <a href="/" className="text-sm font-semibold text-emerald-800 transition hover:text-emerald-900">
+          ← Back to Home
+        </a>
+      </BackBar>
+      <section className="bg-black px-6 py-10 text-white md:px-14 md:py-12">
+        {WHY_DATA.intro.map((paragraph) => (
+          <p key={paragraph} className="max-w-4xl text-xl leading-9 text-slate-200 [&+p]:mt-5">
+            {paragraph}
+          </p>
+        ))}
+      </section>
+      {WHY_DATA.sections.map((section) => (
+        <RichSection key={section.heading} {...section} />
+      ))}
+    </PageShell>
+  );
+}
+
+function By18Page() {
+  return (
+    <PageShell>
+      <PageIntro pill="By 18" title={BY18_DATA.title} subtitle={BY18_DATA.subtitle} />
+      <BackBar>
+        <div className="flex flex-wrap gap-4 text-sm font-semibold text-emerald-800">
+          <a href="/" className="transition hover:text-emerald-900">← Back to Home</a>
+          <a href="/floor" className="transition hover:text-emerald-900">View the Floor</a>
+        </div>
+      </BackBar>
+      <section className="bg-black px-6 py-10 text-white md:px-14 md:py-12">
+        {BY18_DATA.intro.map((paragraph) => (
+          <p key={paragraph} className="max-w-4xl text-xl leading-9 text-slate-200 [&+p]:mt-5">
+            {paragraph}
+          </p>
+        ))}
+      </section>
+      {BY18_DATA.groups.map((group) => (
+        <section key={group.title} className="border-t border-slate-300 bg-white px-6 py-10 md:px-14 md:py-12">
+          <h2 className="font-serif text-3xl leading-tight text-emerald-900 md:text-4xl">{group.title}</h2>
+          <ul className="mt-6 max-w-5xl space-y-3 text-lg leading-8 text-slate-700">
+            {group.items.map((item) => (
+              <li key={item} className="flex gap-3">
+                <span className="mt-[10px] h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-700" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </PageShell>
+  );
+}
+
+function FloorPage() {
+  return (
+    <PageShell>
+      <PageIntro pill="The Floor" title={FLOOR_DATA.title} subtitle={FLOOR_DATA.subtitle} notice={FLOOR_DATA.notice} />
+      <BackBar>
+        <div className="flex flex-wrap gap-4 text-sm font-semibold text-emerald-800">
+          <a href="/" className="transition hover:text-emerald-900">← Back to Home</a>
+          <a href="/by-18" className="transition hover:text-emerald-900">View By 18</a>
+        </div>
+      </BackBar>
+      <section className="bg-black px-6 py-10 text-white md:px-14 md:py-12">
+        {FLOOR_DATA.intro.map((paragraph) => (
+          <p key={paragraph} className="max-w-4xl text-xl leading-9 text-slate-200 [&+p]:mt-5">
+            {paragraph}
+          </p>
+        ))}
+      </section>
+      {FLOOR_DATA.sections.map((section) => (
+        <RichSection key={section.heading} {...section} />
+      ))}
+    </PageShell>
+  );
+}
+
+function DomainsPage() {
+  return (
+    <PageShell>
+      <PageIntro pill="The Domains" title="10-Domain Learning Outcomes Framework" subtitle="Broader map, not a second contract" />
+      <BackBar>
+        <a href="/" className="text-sm font-semibold text-emerald-800 transition hover:text-emerald-900">
+          ← Back to Home
+        </a>
+      </BackBar>
+      <section className="bg-black px-6 py-10 text-white md:px-14 md:py-12">
+        <p className="max-w-5xl text-xl leading-9 text-slate-200">
+          The Floor defines the non-negotiable minimum. The Domains describe the fuller landscape: core outcomes, key competencies, and evidence examples.
+        </p>
+        <p className="mt-5 max-w-5xl text-xl leading-9 text-slate-200">
+          Not everything here is required. The Floor remains the final word on what is mandatory.
+        </p>
+      </section>
+      <section className="border-t border-slate-300 bg-white px-6 py-10 md:px-14 md:py-12">
+        <h2 className="font-serif text-3xl leading-tight text-emerald-900 md:text-4xl">The 10 Core Learning Domains</h2>
+        <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
+          {DOMAINS.map((domain) => (
+            <a
+              key={domain.slug}
+              href={`/domains/${domain.slug}`}
+              className="rounded-[24px] bg-black px-5 py-5 text-white shadow-lg transition hover:-translate-y-[1px] hover:bg-zinc-900"
+            >
+              <div className="text-2xl">{domain.emoji}</div>
+              <div className="mt-3 font-serif text-2xl leading-tight">{domain.title}</div>
+              <div className="mt-3 text-sm leading-7 text-slate-300">Open full domain details</div>
+            </a>
+          ))}
+        </div>
+      </section>
+    </PageShell>
+  );
+}
+
+function DomainDetailPage({ slug }: { slug: string }) {
+  const domain = DOMAINS.find((item) => item.slug === slug);
+
+  if (!domain) {
+    return (
+      <PageShell>
+        <PageIntro pill="Domain Detail" title="Domain not found" subtitle="That domain page does not exist yet." />
+      </PageShell>
+    );
+  }
+
+  return (
+    <PageShell>
+      <PageIntro pill="Domain Detail" title={`${domain.emoji} ${domain.title}`} subtitle="Broader map page, not the minimum contract." />
+      <BackBar>
+        <div className="flex flex-wrap gap-4 text-sm font-semibold text-emerald-800">
+          <a href="/domains" className="transition hover:text-emerald-900">← Back to Domains</a>
+          <a href="/" className="transition hover:text-emerald-900">Back to Home</a>
+        </div>
+      </BackBar>
+      <section className="bg-black px-6 py-10 text-white md:px-14 md:py-12">
+        <p className="max-w-4xl text-xl leading-9 text-slate-200">
+          This page shows the broader domain map: core outcomes, key competencies, and evidence examples. The Floor still defines the minimum contract.
+        </p>
+      </section>
+      <section className="border-t border-slate-300 bg-white px-6 py-10 md:px-14 md:py-12">
+        <h2 className="font-serif text-3xl leading-tight text-emerald-900 md:text-4xl">✅ Core Outcomes</h2>
+        <ul className="mt-6 max-w-4xl space-y-3 text-lg leading-8 text-slate-700">
+          {domain.coreOutcomes.map((item) => (
+            <li key={item} className="flex gap-3">
+              <span className="mt-[10px] h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-700" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+      <section className="border-t border-slate-300 bg-slate-100 px-6 py-10 md:px-14 md:py-12">
+        <h2 className="font-serif text-3xl leading-tight text-emerald-900 md:text-4xl">🧠 Key Competencies</h2>
+        <ul className="mt-6 max-w-5xl space-y-3 text-lg leading-8 text-slate-700">
+          {domain.competencies.map((item) => (
+            <li key={item} className="flex gap-3">
+              <span className="mt-[10px] h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-700" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+      <section className="border-t border-slate-300 bg-white px-6 py-10 md:px-14 md:py-12">
+        <h2 className="font-serif text-3xl leading-tight text-emerald-900 md:text-4xl">🧪 Evidence Examples</h2>
+        <p className="mt-5 max-w-4xl text-lg leading-8 text-slate-700">{domain.evidence}</p>
+      </section>
+    </PageShell>
+  );
+}
+
+export default function App() {
+  const [pathname, setPathname] = useState<string>(() => window.location.pathname || "/");
+
+  useEffect(() => {
+    const onPopState = () => setPathname(window.location.pathname || "/");
+    window.addEventListener("popstate", onPopState);
+
+    const onClick = (event: MouseEvent) => {
+      const target = event.target as HTMLElement | null;
+      const anchor = target?.closest("a") as HTMLAnchorElement | null;
+      if (!anchor) return;
+      const href = anchor.getAttribute("href");
+      if (!href) return;
+      if (href.startsWith("mailto:") || href.startsWith("http") || href.startsWith("#")) return;
+      event.preventDefault();
+      if (href !== window.location.pathname) {
+        window.history.pushState({}, "", href);
+        setPathname(href);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    };
+
+    document.addEventListener("click", onClick);
+    return () => {
+      window.removeEventListener("popstate", onPopState);
+      document.removeEventListener("click", onClick);
+    };
+  }, []);
+
+  const page = useMemo(() => {
+    if (pathname === "/why") return <WhyPage />;
+    if (pathname === "/by-18") return <By18Page />;
+    if (pathname === "/floor") return <FloorPage />;
+    if (pathname === "/domains") return <DomainsPage />;
+    if (pathname.startsWith("/domains/")) {
+      return <DomainDetailPage slug={pathname.replace("/domains/", "")} />;
+    }
+    return <HomePage />;
+  }, [pathname]);
+
+  return page;
 }
