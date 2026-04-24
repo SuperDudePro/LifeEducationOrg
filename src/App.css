@@ -97,8 +97,9 @@ a { text-decoration: none; }
 .back-link-row { display: flex; flex-wrap: wrap; gap: 18px; }
 .back-link { color: #0D4B39; font-size: 14px; font-weight: 700; }
 .back-link:hover { text-decoration: underline; }
+/* Full-width document intro blocks: prevents black intro text from looking trapped on the left half. */
 .doc-dark { background: #0b0c0f; padding: 40px 56px 44px; }
-.doc-dark-text { margin: 0; max-width: 960px; color: #e2e8f0; font-size: 20px; line-height: 1.8; }
+.doc-dark-text { margin: 0; max-width: none; width: min(100%, 1280px); color: #e2e8f0; font-size: 20px; line-height: 1.8; }
 .doc-dark-text + .doc-dark-text { margin-top: 18px; }
 .doc-section { background: #fff; border-top: 1px solid rgba(15,23,42,0.08); padding: 40px 56px 46px; }
 .doc-section-alt { background: linear-gradient(180deg, #eef2f5 0%, #dde3e8 100%); }
@@ -114,7 +115,7 @@ a { text-decoration: none; }
 .domain-page-card-title { margin-top: 14px; font-size: 28px; line-height: 1.12; font-weight: 500; }
 .domain-page-card-note { margin-top: 10px; color: #cbd5e1; font-size: 14px; line-height: 1.6; }
 .footer { background: #000; color: #cbd5e1; padding: 24px 56px 28px; border-top: 1px solid rgba(255,255,255,0.08); }
-.footer-inner { display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.footer-inner { display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap; width: min(100%, 1280px); }
 .footer-text, .footer-link { font-size: 14px; line-height: 1.7; }
 .footer-link { color: #cbd5e1; text-decoration: none; }
 .footer-link:hover { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
