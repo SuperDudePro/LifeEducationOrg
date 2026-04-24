@@ -16,7 +16,7 @@ export function DomainDetailPage({ slug }: { slug: string }) {
 
   return (
     <PageShell>
-      <PageIntro pill="Domain Detail" title={`${domain.emoji} ${domain.title}`} subtitle="Broader map page, not the minimum contract." />
+      <PageIntro pill="Domain Detail" title={domain.title} subtitle="Broader map page, not the minimum contract." />
       <BackBar>
         <div className="flex flex-wrap gap-4 text-sm font-semibold text-emerald-800">
           <a href="/domains" className="transition hover:text-emerald-900">← Back to Domains</a>
@@ -29,7 +29,7 @@ export function DomainDetailPage({ slug }: { slug: string }) {
         </p>
       </section>
       <section className="border-t border-slate-300 bg-white px-6 py-10 md:px-14 md:py-12">
-        <h2 className="font-serif text-3xl leading-tight text-emerald-900 md:text-4xl">✅ Core Outcomes</h2>
+        <h2 className="font-serif text-3xl leading-tight text-emerald-900 md:text-4xl">Core Outcomes</h2>
         <ul className="mt-6 max-w-4xl space-y-3 text-lg leading-8 text-slate-700">
           {domain.coreOutcomes.map((item) => (
             <li key={item} className="flex gap-3">
@@ -40,7 +40,7 @@ export function DomainDetailPage({ slug }: { slug: string }) {
         </ul>
       </section>
       <section className="border-t border-slate-300 bg-slate-100 px-6 py-10 md:px-14 md:py-12">
-        <h2 className="font-serif text-3xl leading-tight text-emerald-900 md:text-4xl">🧠 Key Competencies</h2>
+        <h2 className="font-serif text-3xl leading-tight text-emerald-900 md:text-4xl">Key Competencies</h2>
         <ul className="mt-6 max-w-5xl space-y-3 text-lg leading-8 text-slate-700">
           {domain.competencies.map((item) => (
             <li key={item} className="flex gap-3">
@@ -51,7 +51,7 @@ export function DomainDetailPage({ slug }: { slug: string }) {
         </ul>
       </section>
       <section className="border-t border-slate-300 bg-white px-6 py-10 md:px-14 md:py-12">
-        <h2 className="font-serif text-3xl leading-tight text-emerald-900 md:text-4xl">🧪 Evidence Examples</h2>
+        <h2 className="font-serif text-3xl leading-tight text-emerald-900 md:text-4xl">Evidence Examples</h2>
         <p className="mt-5 max-w-4xl text-lg leading-8 text-slate-700">{domain.evidence}</p>
       </section>
     </PageShell>

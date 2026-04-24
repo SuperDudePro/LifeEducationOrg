@@ -15,14 +15,14 @@ export const WHY_DATA: {
   ],
   sections: [
     {
-      heading: "🎯 The Standard",
+      heading: "The Standard",
       body: [
         "Not what classes they sat through. Not what boxes got checked. Not what looked good on paper. What can they actually do, on their own, in real life?",
         "That is the standard.",
       ],
     },
     {
-      heading: "🧭 What LifeEducation Is",
+      heading: "What LifeEducation Is",
       body: [
         "LifeEducation is a lightweight operating system for raising capable, self-directed humans.",
         "The environment can change. The operating system stays.",
@@ -30,7 +30,7 @@ export const WHY_DATA: {
       ],
     },
     {
-      heading: "🧱 The Six Priorities",
+      heading: "The Six Priorities",
       bullets: [
         "Agency — initiate, choose, steer.",
         "Capability — do real things in the real world.",
@@ -43,7 +43,7 @@ export const WHY_DATA: {
         "Those six priorities are the point. They run through every domain, every review, and every decision.",
     },
     {
-      heading: "✅ What Floor-Complete Means",
+      heading: "What Floor-Complete Means",
       body: [
         "A floor-complete 18-year-old is not perfect. They are a young adult who can function.",
         "If you dropped them into a new city at 18, they would not panic. They would ask good questions, handle money, solve problems, and keep moving.",
@@ -51,7 +51,7 @@ export const WHY_DATA: {
       ],
     },
     {
-      heading: "🏠 What This Looks Like in Practice",
+      heading: "What This Looks Like in Practice",
       bullets: [
         "Responsibility is real.",
         "Movement is real.",

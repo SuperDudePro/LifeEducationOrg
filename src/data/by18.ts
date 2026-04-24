@@ -7,7 +7,7 @@ export const BY18_DATA = {
   ],
   groups: [
     {
-      title: "🏃 Run Your Own Life",
+      title: "Run Your Own Life",
       items: [
         "manage your time, obligations, logistics, and basic adult tasks",
         "show up in a new city or system and figure out how it works without panicking",
@@ -16,7 +16,7 @@ export const BY18_DATA = {
       ],
     },
     {
-      title: "🗣️ Communicate Clearly and Deal Well With People",
+      title: "Communicate Clearly and Deal Well With People",
       items: [
         "read adult-level material and understand what it says",
         "write clearly for the audience you are writing to",
@@ -25,7 +25,7 @@ export const BY18_DATA = {
       ],
     },
     {
-      title: "🧠 Think Clearly About the World",
+      title: "Think Clearly About the World",
       items: [
         "ask how do we know that and mean it",
         "test claims, observe outcomes, and update when reality disagrees",
@@ -34,7 +34,7 @@ export const BY18_DATA = {
       ],
     },
     {
-      title: "💪 Own Your Body and Health",
+      title: "Own Your Body and Health",
       items: [
         "take responsibility for sleep, hygiene, movement, and nutrition",
         "cook real meals and feed yourself reasonably well",

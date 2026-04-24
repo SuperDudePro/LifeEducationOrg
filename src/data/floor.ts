@@ -17,7 +17,7 @@ export const FLOOR_DATA: {
   ],
   sections: [
     {
-      heading: "📌 What the Floor Is",
+      heading: "What the Floor Is",
       body: [
         "The Floor is not a curriculum.",
         "It does not dictate how learning happens.",
@@ -25,14 +25,14 @@ export const FLOOR_DATA: {
       ],
     },
     {
-      heading: "🗺️ The Floor Lives Inside the Domains",
+      heading: "The Floor Lives Inside the Domains",
       body: [
         "The Floor is expressed through the LifeEducation domains.",
         "Domains exist to ensure that important parts of life are not neglected. The Floor defines the minimum contract inside those domains.",
       ],
     },
     {
-      heading: "⚖️ Floor Principles",
+      heading: "Floor Principles",
       bullets: [
         "The Floor is a contract.",
         "Capability matters more than credentials.",

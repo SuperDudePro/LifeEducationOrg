@@ -29,7 +29,7 @@ export function DomainsPage() {
               href={`/domains/${domain.slug}`}
               className="rounded-[24px] bg-black px-5 py-5 text-white shadow-lg transition hover:-translate-y-[1px] hover:bg-zinc-900"
             >
-              <div className="text-2xl">{domain.emoji}</div>
+              <div className="text-sm font-semibold uppercase tracking-[0.18em] text-emerald-300">Domain {domain.number}</div>
               <div className="mt-3 font-serif text-2xl leading-tight">{domain.title}</div>
               <div className="mt-3 text-sm leading-7 text-slate-300">Open full domain details</div>
             </a>

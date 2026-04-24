@@ -4,7 +4,8 @@ export const DOMAINS: Domain[] = [
   {
     slug: "literacy-communication",
     title: "Literacy & Communication",
-    emoji: "🗣️",
+    number: "1",
+
     coreOutcomes: [
       "Read and interpret fiction and non-fiction at an adult level",
       "Write clearly, persuasively, and reflectively",
@@ -23,7 +24,8 @@ export const DOMAINS: Domain[] = [
   {
     slug: "mathematics-logic",
     title: "Mathematics & Logic",
-    emoji: "🔢",
+    number: "2",
+
     coreOutcomes: [
       "Master Algebra I and Geometry",
       "Apply quantitative reasoning in real-world problems",
@@ -42,7 +44,8 @@ export const DOMAINS: Domain[] = [
   {
     slug: "scientific-thinking-observation",
     title: "Scientific Thinking & Observation",
-    emoji: "🧪",
+    number: "3",
+
     coreOutcomes: [
       "Think like a scientist",
       "Demonstrate everyday scientific literacy",
@@ -60,7 +63,8 @@ export const DOMAINS: Domain[] = [
   {
     slug: "social-studies-civics",
     title: "Social Studies & Civics",
-    emoji: "🏛️",
+    number: "4",
+
     coreOutcomes: [
       "Grasp major historical narratives and civic structures",
       "Engage with diverse cultures and worldviews",
@@ -78,7 +82,8 @@ export const DOMAINS: Domain[] = [
   {
     slug: "philosophy-ethics",
     title: "Philosophy & Ethics",
-    emoji: "🧭",
+    number: "5",
+
     coreOutcomes: [
       "Think critically about values, purpose, and belief",
       "Evaluate arguments, including your own",
@@ -96,7 +101,8 @@ export const DOMAINS: Domain[] = [
   {
     slug: "economics-finance",
     title: "Economics & Finance",
-    emoji: "💸",
+    number: "6",
+
     coreOutcomes: [
       "Make thoughtful, independent decisions about money and value",
       "Understand economic systems and trade-offs",
@@ -114,7 +120,8 @@ export const DOMAINS: Domain[] = [
   {
     slug: "health-physical-development",
     title: "Health & Physical Development",
-    emoji: "💪",
+    number: "7",
+
     coreOutcomes: [
       "Maintain lifelong physical and mental wellness",
       "Understand the body-mind-habit loop",
@@ -132,7 +139,8 @@ export const DOMAINS: Domain[] = [
   {
     slug: "creative-expression",
     title: "Creative Expression",
-    emoji: "🎨",
+    number: "8",
+
     coreOutcomes: [
       "Appreciate and explore diverse creative forms",
       "Express ideas and emotions through multiple media",
@@ -150,7 +158,8 @@ export const DOMAINS: Domain[] = [
   {
     slug: "technology-media-ai-literacy",
     title: "Technology, Media & AI Literacy",
-    emoji: "💻",
+    number: "9",
+
     coreOutcomes: [
       "Use tech as a tool, not a crutch",
       "Collaborate effectively with AI and digital systems",
@@ -169,7 +178,8 @@ export const DOMAINS: Domain[] = [
   {
     slug: "life-skills-project-execution",
     title: "Life Skills & Project Execution",
-    emoji: "🛠️",
+    number: "10",
+
     coreOutcomes: [
       "Be capable, adaptable, and self-reliant in real-world settings",
       "Execute ideas from concept to reality",

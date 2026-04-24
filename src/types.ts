@@ -1,7 +1,7 @@
 export type Domain = {
   slug: string;
   title: string;
-  emoji: string;
+  number: string;
   coreOutcomes: string[];
   competencies: string[];
   evidence: string;
