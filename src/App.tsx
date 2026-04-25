@@ -1151,7 +1151,7 @@ function PageShell({ children }: { children: ReactNode }) {
           </a>
         </header>
         <SiteNav />
-        <main id="main-content" tabIndex={-1}>
+        <main id="main-content">
           {children}
         </main>
       </div>

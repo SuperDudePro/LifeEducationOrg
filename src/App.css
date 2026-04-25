@@ -49,7 +49,8 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
 .why-button:hover, .domains-button:hover { background: #dcefe7; color: #0D4B39; box-shadow: 0 12px 28px -16px rgba(42,138,103,0.45); transform: translateY(-1px); }
 .why-cards { display: grid; gap: 16px; width: 100%; }
 .why-card { border-radius: 24px; border: 1px solid rgba(15,23,42,0.08); background: #eef2f5; padding: 24px; }
-.why-card-label, .faq-card-label, .floor-card-label, .contact-card-label { color: #0D4B39; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.why-card-label, .floor-card-label { color: #0D4B39; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.faq-card-label, .contact-card-label { color: #EAFBF1; font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
 .why-card-title { margin-top: 12px; color: #0f172a; font-size: 32px; line-height: 1.1; font-weight: 500; }
 .why-card-text { margin-top: 12px; color: #334155; font-size: 15px; line-height: 1.8; }
 .faq { background: #eef2f5; color: #0f172a; padding: 48px 56px 56px; }
