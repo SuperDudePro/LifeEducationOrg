@@ -1143,14 +1143,17 @@ function SiteNav() {
 function PageShell({ children }: { children: ReactNode }) {
   return (
     <div className="page">
+      <a className="skip-link" href="#main-content">Skip to main content</a>
       <div className="shell">
         <header className="header">
           <a href="/" aria-label="LifeEducation home">
-            <h1 className="brand">LifeEducation.org</h1>
+            <div className="brand" aria-hidden="true">LifeEducation.org</div>
           </a>
         </header>
         <SiteNav />
-        {children}
+        <main id="main-content" tabIndex={-1}>
+          {children}
+        </main>
       </div>
     </div>
   );
@@ -1222,9 +1225,9 @@ function HomePage() {
         <section className="hero-copy">
           <div className="copy-inner">
             <div className="pill">LifeEducation</div>
-            <h2 className="hero-title">
+            <h1 className="hero-title">
               If you dropped them off in a strange city on a different continent, could they figure it out?
-            </h2>
+            </h1>
             <p className="hero-text">
               Too much of the current system still rewards looking good on paper. I’m trying to raise kids who can think, adapt, solve problems, and function in real life.
             </p>
@@ -1247,7 +1250,7 @@ function HomePage() {
         <div className="why-grid">
           <div className="why-copy">
             <div className="why-pill">The Why</div>
-            <h3 className="why-title">Most education talk starts in the wrong place.</h3>
+            <h2 className="why-title">Most education talk starts in the wrong place.</h2>
             <p className="why-text">
               It starts with school. Or curriculum. Or standards. Or credentials. The better starting point is simpler: what should an 18-year-old actually be able to do, on their own, in real life?
             </p>
@@ -1278,7 +1281,7 @@ function HomePage() {
       <section className="faq">
         <div className="faq-head">
           <div className="faq-pill">Q&amp;A</div>
-          <h3 className="faq-title">The questions a serious parent or skeptic should ask.</h3>
+          <h2 className="faq-title">The questions a serious parent or skeptic should ask.</h2>
           <p className="faq-text">Better to answer them plainly than hide the big distinctions under branding. These are the short versions; the full Q&amp;A now has the complete public FAQ.</p>
         </div>
         <div className="faq-grid">
@@ -1295,7 +1298,7 @@ function HomePage() {
       <section className="floor-section">
         <div className="floor-head">
           <div className="floor-pill">The Floor + By 18</div>
-          <h3 className="floor-title">The contract, and By 18, its public translation.</h3>
+          <h2 className="floor-title">The contract, and By 18, its public translation.</h2>
           <p className="floor-text">The Floor is the non-negotiable minimum by 18. By 18 says the same thing in plain language.</p>
         </div>
         <div className="floor-grid">
@@ -1316,7 +1319,7 @@ function HomePage() {
       <section className="domains">
         <div className="domains-head">
           <div className="domains-pill">The 10 Domains</div>
-          <h3 className="domains-title">The Floor is the minimum.<br />The Domains show the full map.</h3>
+          <h2 className="domains-title">The Floor is the minimum.<br />The Domains show the full map.</h2>
           <p className="domains-text">The Domains are here to keep blind spots visible.</p>
           <p className="domains-text">They are not a second contract. The Floor is still the minimum.</p>
         </div>
@@ -1340,7 +1343,7 @@ function HomePage() {
         <div className="contact-grid">
           <div className="contact-copy">
             <div className="contact-pill">Contact</div>
-            <h3 className="contact-title">If you see something I’m missing, tell me.</h3>
+            <h2 className="contact-title">If you see something I’m missing, tell me.</h2>
             <p className="contact-text">I’m building this for my own kids first. If you see a blind spot, a hole in the logic, or a better way to say something, send it.</p>
           </div>
           <div className="contact-card">
@@ -1390,7 +1393,7 @@ function By18Page() {
         {BY18_DATA.intro.map((paragraph) => (
           <p key={paragraph} className="doc-dark-text">{paragraph}</p>
         ))}
-        <p className="doc-dark-text doc-dark-lead">{BY18_DATA.lead}</p>
+        <h2 className="doc-dark-text doc-dark-lead">{BY18_DATA.lead}</h2>
       </section>
       {BY18_DATA.groups.map((group) => (
         <section key={group.title} className="doc-section">
