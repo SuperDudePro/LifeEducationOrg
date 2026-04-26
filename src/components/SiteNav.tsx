@@ -5,7 +5,7 @@ export function SiteNav({ currentPath }: { currentPath: string }) {
     <nav className="site-nav" aria-label="Primary navigation">
       <div className="site-nav-inner">
         {NAV_ITEMS.map((item) => {
-          const isCurrent = currentPath === item.href;
+          const isCurrent = currentPath === item.href || (item.href !== "/" && currentPath.startsWith(`${item.href}/`));
           return (
             <a
               key={item.href}

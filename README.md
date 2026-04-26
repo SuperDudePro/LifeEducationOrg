@@ -42,3 +42,23 @@ public/
 
 Do not copy the enclosing folder itself.
 Do not upload `.git`, `node_modules`, `dist`, or any old ZIPs into the repo.
+
+## Posts workflow
+
+Posts use the same lightweight folder model as the related blog project.
+
+Add a new post by creating a folder under `src/posts`:
+
+```text
+src/posts/my-post-slug/
+  index.tsx
+  optional-image.webp
+```
+
+Each `index.tsx` exports one `LifeEducationPost` object. The post list is discovered automatically through `src/content/loadPosts.ts`, so no separate registry needs to be maintained.
+
+Current starter post:
+
+```text
+src/posts/coming-soon/index.tsx
+```

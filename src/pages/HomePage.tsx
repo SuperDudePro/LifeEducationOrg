@@ -1,8 +1,12 @@
 import { DOMAINS } from "../data/domainsData";
 import { HOME_FAQ_ITEMS } from "../data/homeFaqData";
 import { PageShell } from "../components/PageShell";
+import { PostCard } from "../components/PostCard";
+import { getRecentPosts } from "../content/loadPosts";
 
 export function HomePage() {
+  const featuredPosts = getRecentPosts(2);
+
   return (
     <PageShell>
       <div className="hero">
@@ -117,6 +121,19 @@ export function HomePage() {
         </div>
         <div className="domains-note">Contract first. Full map second.</div>
         <a className="domains-button" href="/domains">Read the Domains document</a>
+      </section>
+      <section className="posts-section posts-section-home">
+        <div className="posts-head">
+          <div className="posts-pill">Posts</div>
+          <h2 className="posts-title">Short essays and notes as the system gets built in public.</h2>
+          <p className="posts-text">This will hold practical writing on the Floor, the Domains, evidence, parenting, travel, and the work of raising capable kids without recreating school at home.</p>
+        </div>
+        <div className="post-grid">
+          {featuredPosts.map((post) => (
+            <PostCard key={post.slug} post={post} />
+          ))}
+        </div>
+        <a className="domains-button" href="/posts">Browse posts</a>
       </section>
       <section className="image-break">
         <div className="image-break-inner">

@@ -9,6 +9,8 @@ import { FloorPage } from "./pages/FloorPage";
 import { DomainsPage } from "./pages/DomainsPage";
 import { DomainDetailPage } from "./pages/DomainDetailPage";
 import { QAPage } from "./pages/QAPage";
+import { PostsPage } from "./pages/PostsPage";
+import { PostPage } from "./pages/PostPage";
 
 export default function App() {
   useEffect(() => {
@@ -66,8 +68,14 @@ export default function App() {
       "/floor": "The 18-Year-Old Floor | LifeEducation.org",
       "/by-18": "By 18: What You Can Do | LifeEducation.org",
       "/domains": "10 Domains | LifeEducation.org",
+      "/posts": "Posts | LifeEducation.org",
       "/qa": "LifeEducation Q&A",
     };
+
+    if (pathname.startsWith("/posts/")) {
+      document.title = "Post | LifeEducation.org";
+      return;
+    }
 
     if (pathname.startsWith("/domains/")) {
       const slug = pathname.replace("/domains/", "");
@@ -84,6 +92,8 @@ export default function App() {
     if (pathname === "/by-18") return <By18Page />;
     if (pathname === "/floor") return <FloorPage />;
     if (pathname === "/qa") return <QAPage />;
+    if (pathname === "/posts") return <PostsPage />;
+    if (pathname.startsWith("/posts/")) return <PostPage slug={pathname.replace("/posts/", "")} />;
     if (pathname === "/domains") return <DomainsPage />;
     if (pathname.startsWith("/domains/")) {
       return <DomainDetailPage slug={pathname.replace("/domains/", "")} />;
