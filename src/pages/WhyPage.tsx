@@ -14,8 +14,12 @@ export function WhyPage() {
           <p key={paragraph} className="doc-dark-text">{paragraph}</p>
         ))}
       </section>
-      {WHY_DATA.sections.map((section) => (
-        <RichSection key={section.heading} {...section} />
+      {WHY_DATA.sections.map((section, index) => (
+        <RichSection
+          key={section.heading}
+          {...section}
+          className={index % 2 === 0 ? "doc-section-light" : "doc-section-medium"}
+        />
       ))}
       <footer className="footer"><div className="footer-inner"><div className="footer-text">© LifeEducation.org</div><a className="footer-link" href="mailto:LifeEducationInformation@gmail.com">LifeEducationInformation@gmail.com</a></div></footer>
     </PageShell>

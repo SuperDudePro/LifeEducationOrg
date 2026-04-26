@@ -11,6 +11,7 @@ import { DomainDetailPage } from "./pages/DomainDetailPage";
 import { QAPage } from "./pages/QAPage";
 import { PostsPage } from "./pages/PostsPage";
 import { PostPage } from "./pages/PostPage";
+import { getPostBySlug } from "./content/loadPosts";
 
 export default function App() {
   useEffect(() => {
@@ -62,29 +63,85 @@ export default function App() {
   }, [pathname]);
 
   useEffect(() => {
-    const titleMap: Record<string, string> = {
-      "/": "LifeEducation.org",
-      "/why": "Why LifeEducation.org Exists",
-      "/floor": "The 18-Year-Old Floor | LifeEducation.org",
-      "/by-18": "By 18: What You Can Do | LifeEducation.org",
-      "/domains": "10 Domains | LifeEducation.org",
-      "/posts": "Posts | LifeEducation.org",
-      "/qa": "LifeEducation Q&A",
+    const defaultDescription =
+      "LifeEducation.org is a lightweight operating system for raising capable, self-directed humans outside the default school script.";
+    const metaMap: Record<string, { title: string; description: string }> = {
+      "/": {
+        title: "LifeEducation.org",
+        description: defaultDescription,
+      },
+      "/why": {
+        title: "Why LifeEducation.org Exists | LifeEducation.org",
+        description:
+          "The founding statement for LifeEducation: a framework for raising capable, self-directed humans with real-world judgment by 18.",
+      },
+      "/floor": {
+        title: "The 18-Year-Old Floor | LifeEducation.org",
+        description:
+          "The non-negotiable minimum adulthood capability contract for LifeEducation.",
+      },
+      "/by-18": {
+        title: "By 18: What You Can Do | LifeEducation.org",
+        description:
+          "A plain-language public translation of the LifeEducation Floor contract.",
+      },
+      "/domains": {
+        title: "10 Domains | LifeEducation.org",
+        description:
+          "The broader LifeEducation capability map across communication, math, science, civics, ethics, finance, health, creativity, technology, and life skills.",
+      },
+      "/posts": {
+        title: "Posts | LifeEducation.org",
+        description:
+          "Field notes and essays on building LifeEducation in real life.",
+      },
+      "/qa": {
+        title: "LifeEducation Q&A | LifeEducation.org",
+        description:
+          "Plain answers to common questions and objections about the LifeEducation framework.",
+      },
     };
 
-    if (pathname.startsWith("/posts/")) {
-      document.title = "Post | LifeEducation.org";
-      return;
-    }
+    let meta = metaMap[pathname] ?? metaMap["/"];
 
-    if (pathname.startsWith("/domains/")) {
+    if (pathname.startsWith("/posts/")) {
+      const slug = pathname.replace("/posts/", "");
+      const post = getPostBySlug(slug);
+      meta = post
+        ? { title: `${post.title} | LifeEducation.org`, description: post.excerpt }
+        : { title: "Post not found | LifeEducation.org", description: defaultDescription };
+    } else if (pathname.startsWith("/domains/")) {
       const slug = pathname.replace("/domains/", "");
       const domain = DOMAINS.find((item) => item.slug === slug);
-      document.title = domain ? `${domain.title} | LifeEducation.org` : "Domain not found | LifeEducation.org";
-      return;
+      meta = domain
+        ? {
+            title: `${domain.title} | LifeEducation.org`,
+            description: `LifeEducation Domain ${domain.number}: ${domain.title}. Core outcomes, key competencies, and evidence examples.`,
+          }
+        : { title: "Domain not found | LifeEducation.org", description: defaultDescription };
     }
 
-    document.title = titleMap[pathname] ?? "LifeEducation.org";
+    document.title = meta.title;
+
+    const setMeta = (selector: string, attr: "content" | "href", value: string, create?: () => HTMLMetaElement | HTMLLinkElement) => {
+      let element = document.head.querySelector(selector) as HTMLMetaElement | HTMLLinkElement | null;
+      if (!element && create) {
+        element = create();
+        document.head.appendChild(element);
+      }
+      element?.setAttribute(attr, value);
+    };
+
+    setMeta("meta[name='description']", "content", meta.description);
+    setMeta("meta[property='og:title']", "content", meta.title);
+    setMeta("meta[property='og:description']", "content", meta.description);
+    setMeta("meta[name='twitter:title']", "content", meta.title);
+    setMeta("meta[name='twitter:description']", "content", meta.description);
+    setMeta("link[rel='canonical']", "href", `${window.location.origin}${pathname === "/" ? "/" : pathname}`, () => {
+      const link = document.createElement("link");
+      link.rel = "canonical";
+      return link;
+    });
   }, [pathname]);
 
   const page = useMemo(() => {

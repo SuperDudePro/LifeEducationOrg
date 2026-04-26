@@ -3,14 +3,18 @@ export function RichSection({
   body,
   bullets,
   footer,
+  className,
 }: {
   heading: string;
   body?: string[];
   bullets?: string[];
   footer?: string;
+  className?: string;
 }) {
+  const sectionClassName = ["doc-section", className].filter(Boolean).join(" ");
+
   return (
-    <section className="doc-section">
+    <section className={sectionClassName}>
       <h2 className="doc-section-title">{heading}</h2>
       {body?.map((paragraph) => (
         <p key={paragraph} className="doc-section-text">
