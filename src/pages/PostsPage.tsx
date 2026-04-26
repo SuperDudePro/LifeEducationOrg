@@ -11,24 +11,24 @@ export function PostsPage() {
     <PageShell>
       <PageIntro
         pill="Posts"
-        title="Posts"
-        subtitle="Essays and field notes on LifeEducation, capability, the Floor, domains, parenting, and real-world learning."
+        title="Field Notes"
+        subtitle="Essays on raising capable kids, building LifeEducation in real life, and testing a different path toward adulthood."
       />
       <BackBar><a href="/" className="back-link">← Back to Home</a></BackBar>
       <section className="doc-dark">
         <p className="doc-dark-text">
-          This is the running post library for the project. It is intentionally simple: add a new folder under <code>src/posts</code>, drop in the post code and any images, and the site picks it up automatically.
+          This is the public notebook for LifeEducation: the place for essays, objections, revisions, experiments, and real-world examples that do not belong inside the core framework documents.
         </p>
         <p className="doc-dark-text">
-          The lane is narrow on purpose. Posts here should support the core question: what does it take to raise capable, self-directed humans without turning life into school theater?
+          The focus stays narrow on purpose. Everything here returns to the same question: what does it take to raise capable, self-directed humans without confusing schooling, credentials, or paperwork with actual readiness for life?
         </p>
       </section>
       <section className="posts-section">
         <div className="posts-head">
-          <div className="posts-pill">Current posts</div>
-          <h2 className="posts-title">Large cards, simple archive, no CMS overhead.</h2>
+          <div className="posts-pill">Latest writing</div>
+          <h2 className="posts-title">Explorations from the LifeEducation build.</h2>
           <p className="posts-text">
-            New entries live as folders in <code>src/posts</code>. That keeps this site aligned with the Our Old Dad workflow instead of adding another system to maintain.
+            Posts here will follow the project as it moves from documents into daily life: the Floor, the Domains, autonomy, evidence, travel, money, health, technology, and the practical work of building a childhood that points toward real adulthood.
           </p>
         </div>
         <div className="post-grid">

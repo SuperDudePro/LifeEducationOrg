@@ -31,11 +31,11 @@ export function PostCard({ post }: Props) {
         </h2>
         <p className="post-card-excerpt">{post.excerpt}</p>
         {post.tags?.length ? (
-          <div className="post-tags" aria-label="Post tags">
+          <ul className="post-tags" aria-label="Post tags">
             {post.tags.slice(0, 4).map((tag) => (
-              <span key={tag} className="post-tag">{tag}</span>
+              <li key={tag} className="post-tag">{tag}</li>
             ))}
-          </div>
+          </ul>
         ) : null}
         <a className="post-read-link" href={`/posts/${post.slug}`}>Read post</a>
       </div>

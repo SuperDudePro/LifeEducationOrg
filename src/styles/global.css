@@ -380,7 +380,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
   }
 }
 
-/* Posts system: same folder-based publishing model as Our Old Dad, styled for LifeEducation. */
+/* Posts */
 .posts-section {
   background: #eef2f5;
   border-top: 1px solid rgba(15, 23, 42, 0.08);
@@ -403,9 +403,9 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
   min-height: 28px;
   padding: 0 11px;
   border-radius: 999px;
-  border: 1px solid rgba(42, 138, 103, 0.25);
-  background: rgba(42, 138, 103, 0.10);
-  color: #0D4B39;
+  border: 1px solid var(--le-accent-light);
+  background: var(--le-accent-dark);
+  color: #ffffff;
   font-size: 12px;
   font-weight: 900;
   letter-spacing: 0.08em;
@@ -525,13 +525,15 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 18px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
 }
 
 .post-tag {
   border-radius: 999px;
-  background: #eef7f3;
-  color: #0D4B39;
+  background: #d7f2e7;
+  color: #073426;
   padding: 7px 10px;
   font-size: 12px;
   font-weight: 800;

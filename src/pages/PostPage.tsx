@@ -15,7 +15,7 @@ export function PostPage({ slug }: Props) {
         <section className="doc-hero">
           <div className="doc-pill">Post not found</div>
           <h1 className="doc-title">That post is not here.</h1>
-          <p className="doc-subtitle">The route exists, but no matching post folder was found under src/posts.</p>
+          <p className="doc-subtitle">The link may be old, or the post may have moved.</p>
         </section>
         <BackBar><a href="/posts" className="back-link">← Back to Posts</a></BackBar>
       </PageShell>
