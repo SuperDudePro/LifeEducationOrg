@@ -7,7 +7,7 @@ const post: LifeEducationPost = {
     "This space will hold public essays and field notes about raising capable kids, building the Floor in real life, and testing LifeEducation outside the usual school script.",
   publishedAt: "2026-04-25",
   displayDate: "April 2026",
-  status: "Featured",
+  status: "Coming Soon",
   topic: "Site Notes",
   tags: ["LifeEducation", "Parenting", "Capability", "Worldschooling", "The Floor"],
   heroImage: "/lifeeducation_break_navigator.webp",

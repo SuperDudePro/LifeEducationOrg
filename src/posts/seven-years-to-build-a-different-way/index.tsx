@@ -2,7 +2,6 @@ import type { LifeEducationPost } from "../../content/postTypes";
 import lifeEducationPlaneBuilding from "./images/life-education-plane-building.png";
 import lifeEducationHallwayToOpenRoad from "./images/life-education-hallway-to-open-road.png";
 import lifeEducationMapPassportsSpanish from "./images/life-education-map-passports-spanish.png";
-import lifeEducationRoadschoolRuins from "./images/life-education-roadschool-ruins.png";
 
 type PostBlock =
   | { type: "paragraph"; text: string }
@@ -232,11 +231,6 @@ const postBlocks: PostBlock[] = [
     "text": "A way that helps kids become who they are instead of spending thirteen years teaching them how to survive systems they didn’t choose."
   },
   {
-    "type": "figure",
-    "image": lifeEducationRoadschoolRuins,
-    "alt": "A father kneeling with two young children beside old stone ruins near a camper van, using the world as the classroom."
-  },
-  {
     "type": "paragraph",
     "text": "That’s the journey."
   },
@@ -262,23 +256,21 @@ const postBlocks: PostBlock[] = [
   }
 ];
 
-function PostBody() {
-  return (
-    <>
-      {postBlocks.map((block, index) => {
-        if (block.type === "figure") {
-          return (
-            <figure className="post-figure" key={`figure-${index}`}>
-              <img src={block.image} alt={block.alt} loading="lazy" decoding="async" />
-            </figure>
-          );
-        }
+const postBody = (
+  <>
+    {postBlocks.map((block, index) => {
+      if (block.type === "figure") {
+        return (
+          <figure className="post-figure" key={`figure-${index}`}>
+            <img src={block.image} alt={block.alt} loading="lazy" decoding="async" />
+          </figure>
+        );
+      }
 
-        return <p key={`paragraph-${index}`}>{block.text}</p>;
-      })}
-    </>
-  );
-}
+      return <p key={`paragraph-${index}`}>{block.text}</p>;
+    })}
+  </>
+);
 
 const post: LifeEducationPost = {
   slug: "seven-years-to-build-a-different-way",
@@ -293,7 +285,7 @@ const post: LifeEducationPost = {
   heroAlt: "A father and two children working together on an unfinished airplane, surrounded by maps, plans, and learning notes.",
   cardImage: lifeEducationPlaneBuilding,
   cardAlt: "A father and two children working together on an unfinished airplane, surrounded by maps, plans, and learning notes.",
-  body: <PostBody />,
+  body: postBody,
 };
 
 export default post;
