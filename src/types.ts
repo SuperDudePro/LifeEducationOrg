@@ -14,3 +14,5 @@ export type RichSectionContent = {
   bullets?: string[];
   footer?: string;
 };
+
+export type RichSectionData = RichSectionContent;
