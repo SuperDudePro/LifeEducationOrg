@@ -1,7 +1,7 @@
-import { BackBar } from "../components/BackBar";
-import { PageIntro } from "../components/PageIntro";
 import { PageShell } from "../components/PageShell";
-import { DOMAINS } from "../data/domains";
+import { PageIntro } from "../components/PageIntro";
+import { BackBar } from "../components/BackBar";
+import { DOMAINS } from "../data/domainsData";
 
 export function DomainDetailPage({ slug }: { slug: string }) {
   const domain = DOMAINS.find((item) => item.slug === slug);
@@ -18,42 +18,30 @@ export function DomainDetailPage({ slug }: { slug: string }) {
     <PageShell>
       <PageIntro pill="Domain Detail" title={domain.title} subtitle="Broader map page, not the minimum contract." />
       <BackBar>
-        <div className="flex flex-wrap gap-4 text-sm font-semibold text-emerald-800">
-          <a href="/domains" className="transition hover:text-emerald-900">← Back to Domains</a>
-          <a href="/" className="transition hover:text-emerald-900">Back to Home</a>
-        </div>
+        <div className="back-link-row"><a href="/domains" className="back-link">← Back to Domains</a><a href="/" className="back-link">Back to Home</a></div>
       </BackBar>
-      <section className="bg-black px-6 py-10 text-white md:px-14 md:py-12">
-        <p className="max-w-4xl text-xl leading-9 text-slate-200">
-          This page shows the broader domain map: core outcomes, key competencies, and evidence examples. The Floor still defines the minimum contract.
-        </p>
-      </section>
-      <section className="border-t border-slate-300 bg-white px-6 py-10 md:px-14 md:py-12">
-        <h2 className="font-serif text-3xl leading-tight text-emerald-900 md:text-4xl">Core Outcomes</h2>
-        <ul className="mt-6 max-w-4xl space-y-3 text-lg leading-8 text-slate-700">
+      <section className="doc-dark"><p className="doc-dark-text">This page shows the broader domain map: core outcomes, key competencies, and evidence examples. The Floor still defines the minimum contract.</p></section>
+      <section className="doc-section">
+        <h2 className="doc-section-title">Core Outcomes</h2>
+        <ul className="doc-list">
           {domain.coreOutcomes.map((item) => (
-            <li key={item} className="flex gap-3">
-              <span className="mt-[10px] h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-700" />
-              <span>{item}</span>
-            </li>
+            <li key={item} className="doc-list-item"><span className="doc-list-dot" /><span>{item}</span></li>
           ))}
         </ul>
       </section>
-      <section className="border-t border-slate-300 bg-slate-100 px-6 py-10 md:px-14 md:py-12">
-        <h2 className="font-serif text-3xl leading-tight text-emerald-900 md:text-4xl">Key Competencies</h2>
-        <ul className="mt-6 max-w-5xl space-y-3 text-lg leading-8 text-slate-700">
+      <section className="doc-section doc-section-alt">
+        <h2 className="doc-section-title">Key Competencies</h2>
+        <ul className="doc-list">
           {domain.competencies.map((item) => (
-            <li key={item} className="flex gap-3">
-              <span className="mt-[10px] h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-700" />
-              <span>{item}</span>
-            </li>
+            <li key={item} className="doc-list-item"><span className="doc-list-dot" /><span>{item}</span></li>
           ))}
         </ul>
       </section>
-      <section className="border-t border-slate-300 bg-white px-6 py-10 md:px-14 md:py-12">
-        <h2 className="font-serif text-3xl leading-tight text-emerald-900 md:text-4xl">Evidence Examples</h2>
-        <p className="mt-5 max-w-4xl text-lg leading-8 text-slate-700">{domain.evidence}</p>
+      <section className="doc-section">
+        <h2 className="doc-section-title">Evidence Examples</h2>
+        <p className="doc-section-text">{domain.evidence}</p>
       </section>
+      <footer className="footer"><div className="footer-inner"><div className="footer-text">© LifeEducation.org</div><a className="footer-link" href="mailto:LifeEducationInformation@gmail.com">LifeEducationInformation@gmail.com</a></div></footer>
     </PageShell>
   );
 }

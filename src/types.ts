@@ -1,3 +1,4 @@
+
 export type Domain = {
   slug: string;
   title: string;
@@ -7,7 +8,7 @@ export type Domain = {
   evidence: string;
 };
 
-export type RichSectionData = {
+export type RichSectionContent = {
   heading: string;
   body?: string[];
   bullets?: string[];

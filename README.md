@@ -1,73 +1,44 @@
-# React + TypeScript + Vite
+# LifeEducation.org site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Vite + React source project. This keeps the same deployment shape as the original working site: the repo root contains `package.json`, `vite.config.ts`, `index.html`, `src/`, and `public/`.
 
-Currently, two official plugins are available:
+## Source layout
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```text
+src/
+  App.tsx                 # route selection, document titles, internal navigation handling
+  main.tsx                # React entrypoint + shared CSS import
+  components/             # reusable layout and document components
+  data/                   # page/domain/Q&A content objects
+  pages/                  # one file per site page
+  styles/global.css       # universal stylesheet for the whole site
+  types.ts
+  utils/routing.ts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Local commands
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm ci
+npm run dev
+npm run build
+npm run lint
 ```
+
+## File Explorer upload rule
+
+Copy the CONTENTS of this folder into the GitHub repo root.
+
+The repo root should directly show:
+
+```text
+package.json
+package-lock.json
+vite.config.ts
+index.html
+src/
+public/
+```
+
+Do not copy the enclosing folder itself.
+Do not upload `.git`, `node_modules`, `dist`, or any old ZIPs into the repo.
