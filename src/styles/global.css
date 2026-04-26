@@ -665,3 +665,18 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
     padding: 22px;
   }
 }
+
+.post-figure {
+  max-width: 980px;
+  margin: 42px 0 46px;
+  overflow: hidden;
+  border-radius: 28px;
+  background: #07110d;
+  box-shadow: 0 28px 80px -48px rgba(15, 23, 42, 0.72);
+}
+
+.post-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

@@ -125,8 +125,8 @@ export function HomePage() {
       <section className="posts-section posts-section-home">
         <div className="posts-head">
           <div className="posts-pill">Posts</div>
-          <h2 className="posts-title">Short essays and notes as the system gets built in public.</h2>
-          <p className="posts-text">This will hold practical writing on the Floor, the Domains, evidence, parenting, travel, and the work of raising capable kids without recreating school at home.</p>
+          <h2 className="posts-title">Field notes as the system gets built in public.</h2>
+          <p className="posts-text">Practical writing on the Floor, the Domains, evidence, parenting, travel, and the work of raising capable kids without recreating school at home.</p>
         </div>
         <div className="post-grid">
           {featuredPosts.map((post) => (

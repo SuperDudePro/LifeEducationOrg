@@ -28,7 +28,7 @@ export function PostsPage() {
           <div className="posts-pill">Latest writing</div>
           <h2 className="posts-title">Explorations from the LifeEducation build.</h2>
           <p className="posts-text">
-            Posts here will follow the project as it moves from documents into daily life: the Floor, the Domains, autonomy, evidence, travel, money, health, technology, and the practical work of building a childhood that points toward real adulthood.
+            Posts here follow the project as it moves from documents into daily life: the Floor, the Domains, autonomy, evidence, travel, money, health, technology, and the practical work of building a childhood that points toward real adulthood.
           </p>
         </div>
         <div className="post-grid">
