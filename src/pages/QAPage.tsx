@@ -14,7 +14,7 @@ export function QAPage() {
         ))}
       </section>
       {QA_DATA.sections.map((section, sectionIndex) => (
-        <section key={section.heading} className={sectionIndex % 2 === 0 ? "doc-section" : "doc-section doc-section-alt"}>
+        <section key={section.heading} className={sectionIndex % 2 === 0 ? "doc-section qa-section qa-section-light" : "doc-section qa-section qa-section-medium"}>
           <h2 className="doc-section-title">{section.heading}</h2>
           <div className="qa-list">
             {section.items.map((item) => (
