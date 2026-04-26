@@ -1,6 +1,6 @@
 export const QA_DATA = {
   "intro": [
-    "These are the questions we get asked most, plus the questions we think serious readers should ask even if they usually do not. *Quick scan, not exhaustive policy manual.* The Why is the main public-facing piece. This Q&A exists to make the public position plain, test it against obvious objections, and keep the core distinctions clean: the Floor is the contract, the Domains are the broader map, and the system stays light on purpose."
+    "These are the questions we get asked most, plus the questions we think serious readers should ask even if they usually do not. Quick scan, not exhaustive policy manual. The Why is the main public-facing piece. This Q&A exists to make the public position plain, test it against obvious objections, and keep the core distinctions clean: the Floor is the contract, the Domains are the broader map, and the system stays light on purpose."
   ],
   "sections": [
     {
@@ -19,7 +19,7 @@ export const QA_DATA = {
           ]
         },
         {
-          "question": "What does \"floor-complete\" mean in plain English?",
+          "question": "What does “floor-complete” mean in plain English?",
           "answer": [
             "It means the kid can function in the real world. If you dropped them into a new city at 18, they would not panic. They would ask good questions, solve problems, handle money, navigate systems, and keep moving."
           ]
@@ -45,7 +45,7 @@ export const QA_DATA = {
           ]
         },
         {
-          "question": "What does \"LifeEducation is the OS\" mean?",
+          "question": "What does “LifeEducation is the OS” mean?",
           "answer": [
             "It means the environment can change while the target stays stable. School, homeschool, travel, sports, apprenticeships, co-ops, or local community life are different environments. The OS is the stable set of priorities, guardrails, and competence targets that keeps the whole thing coherent."
           ]
@@ -59,7 +59,7 @@ export const QA_DATA = {
         {
           "question": "Are you trying to prescribe one path for everyone?",
           "answer": [
-            "No. We are documenting our path and our reasoning, not claiming there is only one valid way to raise capable adults. The value is in the target, the guardrails, and the clarity---not in pretending everyone should copy the same implementation."
+            "No. We are documenting our path and our reasoning, not claiming there is only one valid way to raise capable adults. The value is in the target, the guardrails, and the clarity—not in pretending everyone should copy the same implementation."
           ]
         }
       ]
@@ -76,13 +76,13 @@ export const QA_DATA = {
         {
           "question": "Is this just unschooling with a nicer name?",
           "answer": [
-            "No. The Floor is a real contract, not a vibe. The Domains are a real coverage map, not \"trust the process\" hand-waving. Kids get increasing ownership, but responsibility never becomes the same thing as absence of structure."
+            "No. The Floor is a real contract, not a vibe. The Domains are a real coverage map, not “trust the process” hand-waving. Kids get increasing ownership, but responsibility never becomes the same thing as absence of structure."
           ]
         },
         {
           "question": "What if they only learn how to game the Floor?",
           "answer": [
-            "In short: Even the \"worst-case\" version is still a serious adulthood standard, not paper compliance.",
+            "In short: Even the “worst-case” version is still a serious adulthood standard, not paper compliance.",
             "First, that is harder than it sounds if the Floor is honest. Second, even the fallback case is still a stronger result than paper success without dependable capability. The Floor is not the aspiration. It is the minimum line below which adulthood should not be claimed."
           ]
         },
@@ -93,7 +93,7 @@ export const QA_DATA = {
           ]
         },
         {
-          "question": "Isn't this lowering the bar by rejecting conventional standards?",
+          "question": "Isn’t this lowering the bar by rejecting conventional standards?",
           "answer": [
             "No. It is changing the bar from seat time and compliance to demonstrated capability. The system is stricter about real-world function and less impressed by paper signals standing alone."
           ]
@@ -111,13 +111,13 @@ export const QA_DATA = {
           ]
         },
         {
-          "question": "Isn't this elitist or only for privileged families?",
+          "question": "Isn’t this elitist or only for privileged families?",
           "answer": [
             "Some versions will require more time or money than others, but the core model is not a luxury brand. Most of the strongest levers are not expensive: responsibility, reading, movement, projects, honest expectations, community structures, and practical documentation. The system should work at low budget, not only high budget."
           ]
         },
         {
-          "question": "Isn't this just helicopter parenting with better language?",
+          "question": "Isn’t this just helicopter parenting with better language?",
           "answer": [
             "It can become that if the parent never transfers ownership. The system is built to do the opposite: increasing responsibility over time, clear readiness-based bands, and an eventual post-floor charter where the young person drives."
           ]
@@ -165,9 +165,9 @@ export const QA_DATA = {
           ]
         },
         {
-          "question": "What is the parent's role, really?",
+          "question": "What is the parent’s role, really?",
           "answer": [
-            "The parent is less \"teacher delivering lessons\" and more environment architect: choosing contexts, noticing openings, arranging exposure, sequencing challenge, and closing loops when life presents something worth learning from."
+            "The parent is less “teacher delivering lessons” and more environment architect: choosing contexts, noticing openings, arranging exposure, sequencing challenge, and closing loops when life presents something worth learning from."
           ]
         },
         {
@@ -177,7 +177,7 @@ export const QA_DATA = {
           ]
         },
         {
-          "question": "What if life gets messy---travel, sickness, burnout, family stress?",
+          "question": "What if life gets messy—travel, sickness, burnout, family stress?",
           "answer": [
             "Then the system should shrink, not disappear. Minimum viable check-ins, lighter weeks, fewer threads, smaller outputs, and later resets are part of the design. A system that only works in calm weeks is not a real system."
           ]
@@ -210,7 +210,7 @@ export const QA_DATA = {
           "question": "What happens if a kid is clearly not on track for the Floor by 15 or 16?",
           "answer": [
             "In short: Late drift is not a branding problem. It is a floor-critical intervention problem.",
-            "Then you stop pretending broad enrichment will magically close a concrete gap. Narrow scope. Baseline honestly. Close the biggest floor-critical gaps first. Use direct instruction, extra reps, formal verification, outside help, or a more compliance-heavy path if that is what it takes. The point is not to protect the parent's preferred style. The point is to get the kid across the contract line in reality."
+            "Then you stop pretending broad enrichment will magically close a concrete gap. Narrow scope. Baseline honestly. Close the biggest floor-critical gaps first. Use direct instruction, extra reps, formal verification, outside help, or a more compliance-heavy path if that is what it takes. The point is not to protect the parent’s preferred style. The point is to get the kid across the contract line in reality."
           ]
         },
         {
@@ -234,7 +234,7 @@ export const QA_DATA = {
         {
           "question": "What about math curriculum specifically? Do you use one?",
           "answer": [
-            "Method is secondary. Benchmarks are not. We care that the kid reaches the math floor---mental math, percentages, estimates, charts, Algebra I, Geometry, and real-world quantitative judgment. A family might use a formal curriculum, tutoring, online tools, school classes, or a mix. The system is agnostic about method and strict about whether the capability becomes real."
+            "Method is secondary. Benchmarks are not. We care that the kid reaches the math floor—mental math, percentages, estimates, charts, Algebra I, Geometry, and real-world quantitative judgment. A family might use a formal curriculum, tutoring, online tools, school classes, or a mix. The system is agnostic about method and strict about whether the capability becomes real."
           ]
         },
         {
@@ -257,7 +257,7 @@ export const QA_DATA = {
         {
           "question": "What do you actually document?",
           "answer": [
-            "A light trail: annual summaries, notable writing, major projects, work or volunteer history, references when relevant, and any formal courses, tests, or certifications that genuinely reduce friction for the kid's chosen path."
+            "A light trail: annual summaries, notable writing, major projects, work or volunteer history, references when relevant, and any formal courses, tests, or certifications that genuinely reduce friction for the kid’s chosen path."
           ]
         },
         {
@@ -274,7 +274,7 @@ export const QA_DATA = {
           ]
         },
         {
-          "question": "What are \"strong artifacts\"?",
+          "question": "What are “strong artifacts”?",
           "answer": [
             "Examples include a revised essay, a research presentation, a budget with reflection, a real build, a science notebook, a creative portfolio, a service log, a project plan, a work reference, or a documented repair. In other words: outputs that make capability visible."
           ]
@@ -282,13 +282,13 @@ export const QA_DATA = {
         {
           "question": "Where do tests, classes, and certifications fit?",
           "answer": [
-            "As tools, not the center. If a class, exam, or cert reduces friction for a real path, use it. If it is just theater, skip it. The rule is not \"avoid formal signals.\" The rule is \"do not confuse them with the target.\""
+            "As tools, not the center. If a class, exam, or cert reduces friction for a real path, use it. If it is just theater, skip it. The rule is not “avoid formal signals.” The rule is “do not confuse them with the target.”"
           ]
         },
         {
           "question": "How is AI used?",
           "answer": [
-            "As a tool for idea generation, feedback, coaching, simplification, pattern spotting, drafting support, and admin help. It is not allowed to replace the kid's understanding, judgment, or proof of capability."
+            "As a tool for idea generation, feedback, coaching, simplification, pattern spotting, drafting support, and admin help. It is not allowed to replace the kid’s understanding, judgment, or proof of capability."
           ]
         },
         {
@@ -313,7 +313,7 @@ export const QA_DATA = {
           "question": "Who decides if the Floor is actually met?",
           "answer": [
             "In short: Primary judgment stays with the family, but high-stakes claims need stronger proof than confidence.",
-            "The family using the system has primary responsibility for that judgment, but not by vibes. Floor claims should be tied to real evidence, direct performance, and---where the stakes are higher---short challenge checks, outside proof, or formal benchmarks. For some doors, outside systems will still matter. That is fine. The internal claim should still be honest before the external one ever shows up."
+            "The family using the system has primary responsibility for that judgment, but not by vibes. Floor claims should be tied to real evidence, direct performance, and—where the stakes are higher—short challenge checks, outside proof, or formal benchmarks. For some doors, outside systems will still matter. That is fine. The internal claim should still be honest before the external one ever shows up."
           ]
         }
       ]
@@ -370,7 +370,7 @@ export const QA_DATA = {
           ]
         },
         {
-          "question": "Why talk about \"doors\" at all?",
+          "question": "Why talk about “doors” at all?",
           "answer": [
             "Because some future options close accidentally and expensively. The point is not to script a career. It is to avoid closing paths by neglect when keeping them open was reasonable."
           ]
@@ -405,7 +405,7 @@ export const QA_DATA = {
           ]
         },
         {
-          "question": "Won't kids miss out on school culture?",
+          "question": "Won’t kids miss out on school culture?",
           "answer": [
             "They may miss some school-specific culture. The question is whether school culture is the target. We care more about real belonging, real roles, and real relationships than about access to one particular youth institution."
           ]
@@ -436,7 +436,7 @@ export const QA_DATA = {
         {
           "question": "Is this legal?",
           "answer": [
-            "Usually some version is legal, but requirements vary by state and country. Verify locally, keep clean records, and do not build your plan on internet folklore. We are not lawyers. Check with a qualified attorney, homeschool regulatory body, or equivalent local authority before betting your child's path on assumptions."
+            "Usually some version is legal, but requirements vary by state and country. Verify locally, keep clean records, and do not build your plan on internet folklore. We are not lawyers. Check with a qualified attorney, homeschool regulatory body, or equivalent local authority before betting your child’s path on assumptions."
           ]
         },
         {
@@ -448,7 +448,7 @@ export const QA_DATA = {
         {
           "question": "What if you move states or countries?",
           "answer": [
-            "Treat it like a system change. Re-check requirements, translate your documentation into the new system's language, and keep your portfolio and summaries as the constant."
+            "Treat it like a system change. Re-check requirements, translate your documentation into the new system’s language, and keep your portfolio and summaries as the constant."
           ]
         },
         {
@@ -507,7 +507,7 @@ export const QA_DATA = {
         {
           "question": "What about neurodivergence or special needs?",
           "answer": [
-            "Bands are readiness-based, not age-based. If a kid needs more structure, co-regulation, fewer threads, or slower transfer of ownership, that is not failure. It means the system should fit the kid's brain instead of pretending one timeline fits everyone."
+            "Bands are readiness-based, not age-based. If a kid needs more structure, co-regulation, fewer threads, or slower transfer of ownership, that is not failure. It means the system should fit the kid’s brain instead of pretending one timeline fits everyone."
           ]
         },
         {
@@ -565,4 +565,4 @@ export const QA_DATA = {
   "bottom": [
     "LifeEducation is not trying to win a branding contest. It is trying to produce young adults who can function, think, adapt, and build. The Floor is the minimum contract. The Domains keep the full picture in view. The broader environment is what makes that picture real. And the point of this Q&A is simple: make the public position clear enough that the project can be judged on what it is actually trying to do."
   ]
-} as const;
+};

@@ -16,11 +16,11 @@ export function DomainDetailPage({ slug }: { slug: string }) {
 
   return (
     <PageShell>
-      <PageIntro pill="Domain Detail" title={domain.title} subtitle="Broader map page, not the minimum contract." />
+      <PageIntro pill={`Domain ${domain.number}`} title={domain.title} subtitle="Broader map page, not the minimum contract." />
       <BackBar>
         <div className="back-link-row"><a href="/domains" className="back-link">← Back to Domains</a><a href="/" className="back-link">Back to Home</a></div>
       </BackBar>
-      <section className="doc-dark"><p className="doc-dark-text">This page shows the broader domain map: core outcomes, key competencies, and evidence examples. The Floor still defines the minimum contract.</p></section>
+      <section className="doc-dark"><p className="doc-dark-text">This page shows the full domain map from the 10-Domain Framework: core outcomes, key competencies, and evidence examples. The Floor still defines the minimum contract.</p></section>
       <section className="doc-section">
         <h2 className="doc-section-title">Core Outcomes</h2>
         <ul className="doc-list">
@@ -31,7 +31,7 @@ export function DomainDetailPage({ slug }: { slug: string }) {
       </section>
       <section className="doc-section doc-section-alt">
         <h2 className="doc-section-title">Key Competencies</h2>
-        <ul className="doc-list">
+        <ul className="doc-list doc-list-columns">
           {domain.competencies.map((item) => (
             <li key={item} className="doc-list-item"><span className="doc-list-dot" /><span>{item}</span></li>
           ))}

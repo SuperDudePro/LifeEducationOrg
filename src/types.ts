@@ -16,3 +16,15 @@ export type RichSectionContent = {
 };
 
 export type RichSectionData = RichSectionContent;
+
+
+export type ContentBlock =
+  | { type: "paragraph"; text: string }
+  | { type: "subheading"; text: string; level?: number }
+  | { type: "list"; items: string[] };
+
+export type StructuredSection = {
+  id: string;
+  heading: string;
+  blocks: ContentBlock[];
+};
