@@ -687,3 +687,10 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
   width: 100%;
   height: auto;
 }
+
+.post-figure figcaption {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding: 0.9rem 1.1rem;
+}

@@ -1,6 +1,11 @@
 import type { ReactNode } from "react";
 
-export type PostStatus = "Featured" | "Recent" | "Coming Soon";
+export type PostStatus = "Featured" | "Recent" | "Coming Soon" | "Draft";
+
+export type PostImage = {
+  src: string;
+  alt: string;
+};
 
 export type LifeEducationPost = {
   slug: string;

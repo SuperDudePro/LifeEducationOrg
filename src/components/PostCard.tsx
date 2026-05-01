@@ -1,4 +1,4 @@
-import { formatPostDate } from "../content/loadPosts";
+import { formatPostDate, getPostHref, getPostImage } from "../content/loadPosts";
 import type { LifeEducationPost } from "../content/postTypes";
 
 type Props = {
@@ -6,14 +6,14 @@ type Props = {
 };
 
 export function PostCard({ post }: Props) {
-  const imageSrc = post.cardImage ?? post.heroImage;
-  const imageAlt = post.cardAlt ?? post.heroAlt ?? "";
+  const href = getPostHref(post);
+  const image = getPostImage(post);
 
   return (
     <article className="post-card">
-      <a className="post-card-media" href={`/posts/${post.slug}`} aria-label={`Read ${post.title}`}>
-        {imageSrc ? (
-          <img className="post-card-image" src={imageSrc} alt={imageAlt} loading="lazy" decoding="async" />
+      <a className="post-card-media" href={href} aria-label={`Read ${post.title}`}>
+        {image ? (
+          <img className="post-card-image" src={image.src} alt={image.alt} loading="lazy" decoding="async" />
         ) : (
           <div className="post-card-placeholder" aria-hidden="true">
             <span>LifeEducation</span>
@@ -27,7 +27,7 @@ export function PostCard({ post }: Props) {
         </div>
         {post.topic ? <div className="post-card-topic">{post.topic}</div> : null}
         <h2 className="post-card-title">
-          <a href={`/posts/${post.slug}`}>{post.title}</a>
+          <a href={href}>{post.title}</a>
         </h2>
         <p className="post-card-excerpt">{post.excerpt}</p>
         {post.tags?.length ? (
@@ -37,7 +37,7 @@ export function PostCard({ post }: Props) {
             ))}
           </ul>
         ) : null}
-        <a className="post-read-link" href={`/posts/${post.slug}`}>Read post</a>
+        <a className="post-read-link" href={href}>Read post</a>
       </div>
     </article>
   );
