@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Feelings are real but not verdicts</title>
+  <desc id="desc">Charcoal-style illustration of a young person walking a narrow green line between a storm cloud labeled feelings and a light labeled verdicts.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#f8f4eb"/><stop offset="1" stop-color="#e5dccb"/></linearGradient>
+    <radialGradient id="greenGlow" cx="76%" cy="30%" r="35%"><stop offset="0" stop-color="#78a83a" stop-opacity="0.58"/><stop offset="0.65" stop-color="#78a83a" stop-opacity="0.12"/><stop offset="1" stop-color="#78a83a" stop-opacity="0"/></radialGradient>
+    <pattern id="hatch" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(19)"><path d="M0 5 H11" stroke="#1d1d1b" stroke-opacity="0.14" stroke-width="2"/></pattern>
+    <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" seed="41"/><feDisplacementMap in="SourceGraphic" scale="1.4"/></filter>
+  </defs>
+  <rect width="1200" height="760" fill="url(#paper)"/>
+  <rect width="1200" height="760" fill="url(#greenGlow)"/>
+  <path d="M0 610 C140 545 260 520 372 520 C445 520 505 545 572 580 C650 620 745 640 866 596 C995 548 1100 545 1200 585 L1200 760 L0 760 Z" fill="url(#hatch)" opacity="0.82"/>
+  <path d="M125 650 C240 590 365 560 520 555" stroke="#1d1d1b" stroke-width="10" opacity="0.45" fill="none"/>
+  <path d="M1080 640 C958 590 835 560 680 555" stroke="#1d1d1b" stroke-width="10" opacity="0.45" fill="none"/>
+  <path d="M210 610 C390 550 620 530 990 610" stroke="#5a8f2f" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <g filter="url(#rough)">
+    <path d="M195 185 C170 135 230 96 276 126 C301 70 391 84 402 151 C456 143 494 194 474 244 C523 277 498 349 431 346 H223 C161 346 139 274 187 239 C171 219 173 199 195 185 Z" fill="#23231f"/>
+    <path d="M235 348 C230 382 218 407 206 436" stroke="#23231f" stroke-width="12" stroke-linecap="round"/>
+    <path d="M306 348 C302 395 292 431 275 470" stroke="#23231f" stroke-width="12" stroke-linecap="round"/>
+    <path d="M386 348 C380 388 369 423 354 455" stroke="#23231f" stroke-width="12" stroke-linecap="round"/>
+    <text x="335" y="245" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="54" fill="#f8f4eb">FEELINGS</text>
+  </g>
+  <g filter="url(#rough)">
+    <circle cx="900" cy="210" r="95" fill="#f8f4eb" stroke="#5a8f2f" stroke-width="12"/>
+    <path d="M900 145 L900 250" stroke="#5a8f2f" stroke-width="12" stroke-linecap="round"/>
+    <path d="M850 197 H950" stroke="#5a8f2f" stroke-width="12" stroke-linecap="round"/>
+    <path d="M865 165 C890 185 914 185 937 165" stroke="#1d1d1b" stroke-width="7" fill="none"/>
+    <text x="900" y="340" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="52" fill="#355f25">VERDICTS</text>
+  </g>
+  <g transform="translate(555 310)" filter="url(#rough)">
+    <circle cx="50" cy="40" r="34" fill="#1d1d1b"/>
+    <path d="M25 18 C48 -6 84 2 99 30" stroke="#111" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <path d="M52 80 C92 95 108 153 98 236 L5 236 C-3 154 12 95 52 80 Z" fill="#22221f"/>
+    <path d="M30 94 L78 94 L87 220 L20 220 Z" fill="#355f25" opacity="0.92"/>
+    <path d="M15 122 C-45 158 -83 205 -112 265" stroke="#22221f" stroke-width="17" fill="none" stroke-linecap="round"/>
+    <path d="M91 122 C154 154 197 198 233 260" stroke="#22221f" stroke-width="17" fill="none" stroke-linecap="round"/>
+    <path d="M12 236 L90 236 L118 392 L78 392 L61 286 L44 286 L27 392 L-13 392 Z" fill="#1d1d1b"/>
+  </g>
+  <text x="125" y="90" font-family="Impact, Arial Black, sans-serif" font-size="58" fill="#1d1d1b">FEELINGS ARE REAL.</text>
+  <text x="125" y="150" font-family="Impact, Arial Black, sans-serif" font-size="58" fill="#355f25">THEY ARE NOT VERDICTS.</text>
+  <text x="1080" y="690" text-anchor="end" font-family="Impact, Arial Black, sans-serif" font-size="54" fill="#1d1d1b">WALK THE LINE. THINK CLEARLY.</text>
+</svg>
