@@ -1,8 +1,8 @@
 import type { LifeEducationPost } from "../../postTypes";
 import { PostFigure } from "../../../components/PostFigure";
-import heroCrossroads from "./images/hero-crossroads.svg";
-import fairArgument from "./images/fair-argument.svg";
-import judgmentLine from "./images/judgment-line.svg";
+import heroCrossroads from "../domain-5-philosophy-ethics--lifeeducation/drop-in/domain-5-philosophy-ethics/images/hero-crossroads.webp";
+import fairArgument from "../domain-5-philosophy-ethics--lifeeducation/drop-in/domain-5-philosophy-ethics/images/fair-argument.webp";
+import feelingsVsVerdicts from "../domain-5-philosophy-ethics--lifeeducation/drop-in/domain-5-philosophy-ethics/images/feelings-vs-verdicts.webp";
 
 const post: LifeEducationPost = {
   slug: "domain-5-philosophy-ethics",
@@ -15,9 +15,9 @@ const post: LifeEducationPost = {
   tags: ["LifeEducation", "Domains", "Philosophy", "Ethics", "Judgment"],
   heroImage: heroCrossroads,
   heroAlt:
-    "A young person stands at a hard ethical crossroads, with signs for easy opinion, popular choice, consequence, courage, and becoming someone they respect.",
+    "A young person stands at a hard ethical crossroads between an easier crowded path and a harder green-lit path toward judgment and character.",
   cardImage: heroCrossroads,
-  cardAlt: "A young person faces a split path between easy opinion and harder ethical choices.",
+  cardAlt: "A young person faces a split path between easier choices and a harder ethical road.",
   body: (
     <>
       <p>Most people hear "philosophy" and think about school.</p>
@@ -38,7 +38,7 @@ const post: LifeEducationPost = {
       <p>Because every kid is going to live a life full of decisions where no adult is standing there to make the call.</p>
       <p>A young adult who cannot reason about values is easier to flatter, easier to scare, easier to herd, and easier to use.</p>
 
-      <PostFigure src={heroCrossroads} alt="A young person stands at a hard ethical crossroads, with signs for easy opinion, popular choice, consequence, courage, and becoming someone they respect." />
+      <PostFigure src={heroCrossroads} alt="A young person stands at a hard ethical crossroads between an easier crowded path and a harder green-lit path toward judgment and character." />
 
       <h2>School ethics arrives pre-settled</h2>
       <p>A lot of school ethics arrives already simplified.</p>
@@ -77,7 +77,7 @@ const post: LifeEducationPost = {
       <p>It is also lazy.</p>
       <p>A capable young adult should be able to slow down and say: here is what I think you are saying, here is why it might make sense to you, here is the strongest version of your argument, and here is where I still disagree.</p>
 
-      <PostFigure src={fairArgument} alt="Two young people sit across a table, practicing fair argument with a green speech circle that says to state it fairly, then respond." />
+      <PostFigure src={fairArgument} alt="Two young people sit across a table having a serious conversation, with overlapping speech bubbles highlighted in green." />
 
       <p>That one habit changes everything.</p>
       <p>It makes disagreement less stupid. It makes the kid harder to manipulate. Once they learn to steel-man another view, they can hear when somebody is straw-manning theirs. They notice cheap rhetoric, false choices, emotional bait, and the moment somebody quietly changes the subject.</p>
@@ -96,7 +96,7 @@ const post: LifeEducationPost = {
       <p>It asks them to become honest about what they are feeling, what actually happened, what story they are telling about it, and what principle is actually at stake.</p>
       <p>That is not emotional suppression. That is moral adulthood.</p>
 
-      <PostFigure src={judgmentLine} alt="A young person walks a green line between feelings and judgment, learning to think before deciding." />
+      <PostFigure src={feelingsVsVerdicts} alt="A young person walks a narrow green-lit ridge between a dark emotional storm and a calmer open landscape." />
 
       <h2>Ambiguity is not failure</h2>
       <p>Some questions do not resolve cleanly.</p>
