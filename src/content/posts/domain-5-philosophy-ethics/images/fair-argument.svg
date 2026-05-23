@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Two young people practicing fair argument</title>
+  <desc id="desc">Charcoal-style illustration of two young people at a table with a green speech circle reading State it fairly, then respond.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#f8f4eb"/><stop offset="1" stop-color="#e8dfcf"/></linearGradient>
+    <pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(-22)"><path d="M0 5 H10" stroke="#1d1d1b" stroke-opacity="0.13" stroke-width="2"/></pattern>
+    <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" seed="23"/><feDisplacementMap in="SourceGraphic" scale="1.2"/></filter>
+  </defs>
+  <rect width="1200" height="760" fill="url(#paper)"/>
+  <rect width="1200" height="760" fill="url(#hatch)" opacity="0.5"/>
+  <path d="M90 585 C260 520 418 500 600 505 C790 510 965 532 1110 594 L1110 718 L90 718 Z" fill="#1d1d1b" opacity="0.12"/>
+  <g filter="url(#rough)">
+    <path d="M500 238 C555 200 645 200 700 238 C762 280 762 372 700 414 C645 452 555 452 500 414 C438 372 438 280 500 238 Z" fill="#f8f4eb" stroke="#355f25" stroke-width="10"/>
+    <text x="600" y="300" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="54" fill="#355f25">STATE IT</text>
+    <text x="600" y="360" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="58" fill="#355f25">FAIRLY</text>
+    <text x="600" y="420" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="48" fill="#1d1d1b">THEN RESPOND.</text>
+    <path d="M446 326 C408 322 376 306 346 280" fill="none" stroke="#355f25" stroke-width="6" stroke-linecap="round"/>
+    <path d="M754 326 C792 322 824 306 854 280" fill="none" stroke="#355f25" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(150 230)" filter="url(#rough)">
+    <circle cx="125" cy="85" r="48" fill="#1d1d1b"/>
+    <path d="M78 52 C112 14 162 20 190 58" stroke="#111" stroke-width="14" fill="none" stroke-linecap="round"/>
+    <path d="M91 135 C38 180 35 270 74 346 L182 346 C218 266 218 181 162 135 Z" fill="#f4efe5" stroke="#1d1d1b" stroke-width="8"/>
+    <path d="M110 150 L155 150 L168 342 L98 342 Z" fill="#355f25" opacity="0.78"/>
+    <path d="M70 230 C25 250 5 280 0 315" stroke="#1d1d1b" stroke-width="13" fill="none" stroke-linecap="round"/>
+    <path d="M180 224 C260 242 315 268 360 305" stroke="#1d1d1b" stroke-width="13" fill="none" stroke-linecap="round"/>
+    <path d="M338 297 L382 302 L344 326" fill="none" stroke="#1d1d1b" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(840 230) scale(-1 1)" filter="url(#rough)">
+    <circle cx="125" cy="85" r="48" fill="#1d1d1b"/>
+    <path d="M82 45 C112 12 164 17 192 61" stroke="#111" stroke-width="14" fill="none" stroke-linecap="round"/>
+    <path d="M91 135 C38 180 35 270 74 346 L182 346 C218 266 218 181 162 135 Z" fill="#2a2a27" stroke="#1d1d1b" stroke-width="8"/>
+    <path d="M70 230 C25 250 5 280 0 315" stroke="#1d1d1b" stroke-width="13" fill="none" stroke-linecap="round"/>
+    <path d="M180 224 C260 242 315 268 360 305" stroke="#1d1d1b" stroke-width="13" fill="none" stroke-linecap="round"/>
+    <path d="M338 297 L382 302 L344 326" fill="none" stroke="#1d1d1b" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="28" fill="#1d1d1b">
+    <text x="600" y="650" text-anchor="middle" font-weight="700">Understand first. Disagree second. Argue better.</text>
+  </g>
+</svg>
