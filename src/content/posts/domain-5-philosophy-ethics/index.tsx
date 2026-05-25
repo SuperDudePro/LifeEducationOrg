@@ -1,8 +1,8 @@
 import type { LifeEducationPost } from "../../postTypes";
 import { PostFigure } from "../../../components/PostFigure";
-import heroCrossroads from "../domain-5-philosophy-ethics--lifeeducation/drop-in/domain-5-philosophy-ethics/images/hero-crossroads.webp";
-import fairArgument from "../domain-5-philosophy-ethics--lifeeducation/drop-in/domain-5-philosophy-ethics/images/fair-argument.webp";
-import feelingsVsVerdicts from "../domain-5-philosophy-ethics--lifeeducation/drop-in/domain-5-philosophy-ethics/images/feelings-vs-verdicts.webp";
+import heroCrossroads from "./images/hero-crossroads.webp";
+import fairArgument from "./images/fair-argument.webp";
+import feelingsVsVerdicts from "./images/feelings-vs-verdicts.webp";
 
 const post: LifeEducationPost = {
   slug: "domain-5-philosophy-ethics",
