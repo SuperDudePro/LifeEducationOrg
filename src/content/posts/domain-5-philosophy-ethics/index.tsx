@@ -20,7 +20,7 @@ const post: LifeEducationPost = {
   cardAlt: "A young person faces a split path between easier choices and a harder ethical road.",
   body: (
     <>
-      <p>Most people hear "philosophy" and think about school.</p>
+      <p>"Philosophy" makes most people think of school.</p>
       <p>Dead Greeks. Abstract questions. Quotes on posters. Somebody in a coffee shop asking whether the chair is real.</p>
       <p>Most people hear "ethics" and think about character education.</p>
       <p>Be nice. Don&apos;t lie. Don&apos;t steal. Pick the right answer on the worksheet.</p>
@@ -69,10 +69,8 @@ const post: LifeEducationPost = {
       <p>That is the floor: not moral perfection, not certainty, not a polished personal brand. Enough examined judgment to keep them from being carried through life by appetite, pressure, and whatever voice is loudest.</p>
 
       <h2>You do not understand an argument until you can state it fairly</h2>
-      <p>This may be the most useful habit in the whole domain.</p>
-      <p>You do not understand a position until you can state it in a way the other person recognizes.</p>
-      <p>That does not mean you agree.</p>
-      <p>It means you are not fighting a cartoon.</p>
+      <p>This may be the most useful habit in the whole domain: you do not understand a position until you can state it in a way the other person recognizes.</p>
+      <p>That does not mean you agree. It means you are not fighting a cartoon.</p>
       <p>Most people argue with the weakest version of the other side. It feels good. It is easier. It gets applause from people who already agree.</p>
       <p>It is also lazy.</p>
       <p>A capable young adult should be able to slow down and say: here is what I think you are saying, here is why it might make sense to you, here is the strongest version of your argument, and here is where I still disagree.</p>
@@ -113,8 +111,7 @@ const post: LifeEducationPost = {
       <h2>Obedience is not ethics</h2>
       <p>There is a fake version of ethics that just means obedience.</p>
       <p>Be polite. Don&apos;t upset people. Follow the rules. Say sorry. Respect authority.</p>
-      <p>Some of that matters.</p>
-      <p>But obedience is not ethics.</p>
+      <p>Some of that matters. But obedience is not ethics.</p>
       <p>A young adult may need to disobey. They may need to challenge a rule. They may need to disappoint someone. They may need to say no to a group, a boss, a coach, a friend, a partner, or a parent.</p>
       <p>If Domain 5 only produces compliance, it failed.</p>
       <p>The goal is not a kid who never causes problems.</p>
@@ -135,15 +132,10 @@ const post: LifeEducationPost = {
       <p>The point is that getting to the answer takes thinking, not just feeling, not just obeying, and not just guessing.</p>
 
       <h2>The old books are tools, not idols</h2>
-      <p>None of this means the philosophers were wrong to write the books.</p>
-      <p>People have been working on these problems for a long time. Some of them worked on them harder, longer, and more honestly than anyone the kid is going to meet at school or on a screen. That work is available. Most of it is free.</p>
-      <p>A young adult who never cracks open Aristotle or Confucius or the Stoics or the Buddhists or Mill or anyone else is not failing the floor. The floor is not a reading list.</p>
-      <p>But a young adult who treats those names as either sacred jargon or dead weight is missing the point.</p>
-      <p>The old books are tools. They are other people&apos;s attempts to think clearly about exactly the problems this domain is for: how to live, what to value, how to argue, how to handle suffering, how to be decent in hard situations. Not all of them got it right. None of them got everything right. But almost all of them got further on at least one question than a kid would get alone.</p>
-      <p>The point is not to memorize them.</p>
-      <p>The point is not to obey them.</p>
-      <p>The point is to use them. Borrow what works. Argue with the rest. Notice that the question you are stuck on has been worked on for two thousand years by people who were not stupid, and you do not have to start from scratch.</p>
-      <p>That is how the tradition is supposed to function. Not a list of names to drop. Not a museum to walk through. A toolbox to reach into when the situation demands more than you brought to it on your own.</p>
+      <p>None of this means the old books were a mistake. People have worked on these problems for a long time -- harder, longer, and more honestly than anyone the kid is likely to meet at school or on a screen. That work is available, and most of it is free.</p>
+      <p>A young adult who never cracks open Aristotle or Confucius or the Stoics or Mill is not failing the floor; the floor is not a reading list. But treating those names as either sacred jargon or dead weight misses the point.</p>
+      <p>The old books are tools -- other people&apos;s attempts to think clearly about exactly what this domain is for: how to live, what to value, how to argue, how to be decent in hard situations. None of them got everything right. Almost all of them got further on at least one question than a kid would get alone.</p>
+      <p>So use them. Borrow what works, argue with the rest, and notice that the problem you are stuck on has been worked for two thousand years by people who were not stupid. That is how a tradition is supposed to function: not a list of names to drop or a museum to walk through, but a toolbox to reach into when the situation demands more than you brought on your own.</p>
 
       <h2>How families build it</h2>
       <p>Families do not need to run a philosophy seminar at the dinner table.</p>

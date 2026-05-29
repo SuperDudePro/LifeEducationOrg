@@ -20,7 +20,7 @@ const post: LifeEducationPost = {
     "A young adult holding a map, surrounded by civic scenes -- capitol, polling box, passport checkpoint, bus stop, news page, and signposts.",
   body: (
     <>
-      <p>Most people hear "social studies" and think about school.</p>
+      <p>"Social studies" still sounds like a class period.</p>
 
       <p>Dates. Maps. Presidents. Wars. Capitals. A worksheet on the three branches of government.</p>
 
@@ -203,7 +203,7 @@ const post: LifeEducationPost = {
 
       <p>A kid who does not stays a tourist in their own life.</p>
 
-      <h2>The news is professional. So is everything pretending to be news.</h2>
+      <h2>The news looks professional. So does the fake stuff.</h2>
 
       <p>Modern life is packed with people trying to tell you what to think.</p>
 

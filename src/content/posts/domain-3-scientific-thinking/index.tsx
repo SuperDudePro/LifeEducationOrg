@@ -20,7 +20,7 @@ const post: LifeEducationPost = {
     "A grayscale and green scene showing a teenager observing plant samples and notes as part of a real-world science investigation.",
   body: (
     <>
-      <p>Most people hear "science" and think about school.</p>
+      <p>Say "science" and most people picture a classroom.</p>
 
       <p>Textbooks. Vocabulary. Lab reports. Safety goggles. Maybe a baking soda volcano if the teacher is feeling ambitious.</p>
 

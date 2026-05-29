@@ -290,7 +290,7 @@ const post: LifeEducationPost = {
 
       <p>Usually from someone selling something.</p>
 
-      <h2>The floor by 18</h2>
+      <h2>The floor: what they need to show</h2>
 
       <p>By 18, a young adult should be able to handle ordinary numbers without being babied.</p>
 

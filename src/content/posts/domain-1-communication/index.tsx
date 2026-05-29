@@ -21,7 +21,7 @@ const post: LifeEducationPost = {
     "A grayscale and purple illustration showing multiple everyday forms of communication around a young person.",
   body: (
     <>
-      <p>Most people hear “communication” and think about school.</p>
+      <p>For most people, “communication” is a school word.</p>
 
       <p>Essays. Grammar. Speeches. Presentations. Maybe vocabulary.</p>
 
@@ -148,7 +148,7 @@ const post: LifeEducationPost = {
 
       <p>That is adulthood.</p>
 
-      <h2>The minimum floor</h2>
+      <h2>The floor: what they need to show</h2>
 
       <p>A floor-complete 18-year-old does not need to be eloquent.</p>
 
