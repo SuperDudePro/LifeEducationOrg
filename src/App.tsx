@@ -11,6 +11,7 @@ import { DomainDetailPage } from "./pages/DomainDetailPage";
 import { QAPage } from "./pages/QAPage";
 import { PostsPage } from "./pages/PostsPage";
 import { PostPage } from "./pages/PostPage";
+import { NotFoundPage } from "./pages/NotFoundPage";
 import { getPostBySlug } from "./content/loadPosts";
 
 export default function App() {
@@ -104,6 +105,8 @@ export default function App() {
 
     let meta = metaMap[pathname] ?? metaMap["/"];
 
+    const isKnownTopLevel = pathname === "/" || pathname in metaMap;
+
     if (pathname.startsWith("/posts/")) {
       const slug = pathname.replace("/posts/", "");
       const post = getPostBySlug(slug);
@@ -116,9 +119,11 @@ export default function App() {
       meta = domain
         ? {
             title: `${domain.title} | LifeEducation.org`,
-            description: `LifeEducation Domain ${domain.number}: ${domain.title}. Core outcomes, key competencies, and evidence examples.`,
+            description: `LifeEducation Domain ${domain.number}: ${domain.title}. The floor, the broader map, how it builds, and the essay.`,
           }
         : { title: "Domain not found | LifeEducation.org", description: defaultDescription };
+    } else if (!isKnownTopLevel) {
+      meta = { title: "Page not found | LifeEducation.org", description: defaultDescription };
     }
 
     document.title = meta.title;
@@ -145,6 +150,7 @@ export default function App() {
   }, [pathname]);
 
   const page = useMemo(() => {
+    if (pathname === "/") return <HomePage />;
     if (pathname === "/why") return <WhyPage />;
     if (pathname === "/by-18") return <By18Page />;
     if (pathname === "/floor") return <FloorPage />;
@@ -155,7 +161,7 @@ export default function App() {
     if (pathname.startsWith("/domains/")) {
       return <DomainDetailPage slug={pathname.replace("/domains/", "")} />;
     }
-    return <HomePage />;
+    return <NotFoundPage />;
   }, [pathname]);
 
   return <>{page}</>;

@@ -1,8 +1,8 @@
 import type { LifeEducationPost } from "../../postTypes";
 import { PostFigure } from "../../../components/PostFigure";
-import lifeEducationPlaneBuilding from "./images/life-education-plane-building.png";
-import lifeEducationHallwayToOpenRoad from "./images/life-education-hallway-to-open-road.png";
-import lifeEducationMapPassportsSpanish from "./images/life-education-map-passports-spanish.png";
+import lifeEducationPlaneBuilding from "./images/life-education-plane-building.webp";
+import lifeEducationHallwayToOpenRoad from "./images/life-education-hallway-to-open-road.webp";
+import lifeEducationMapPassportsSpanish from "./images/life-education-map-passports-spanish.webp";
 
 type PostBlock =
   | { type: "paragraph"; text: string }

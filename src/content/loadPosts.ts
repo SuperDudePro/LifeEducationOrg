@@ -53,6 +53,15 @@ export function getPostHref(post: LifeEducationPost | string): string {
   return `/posts/${slug}`;
 }
 
+// Returns the long-form essay for a domain, if one exists yet.
+// Posts follow the slug convention `domain-{number}-{topic}`, so we match on the
+// numeric prefix. Domains without an essay (currently 7-10) simply return undefined,
+// and the domain page degrades cleanly.
+export function getPostForDomain(domainNumber: string): LifeEducationPost | undefined {
+  const prefix = `domain-${domainNumber}-`;
+  return posts.find((post) => post.slug.startsWith(prefix));
+}
+
 export function getPostImage(post: LifeEducationPost, preferred: "card" | "hero" = "card"): PostImage | undefined {
   const src = preferred === "card" ? post.cardImage ?? post.heroImage : post.heroImage ?? post.cardImage;
   const alt = preferred === "card" ? post.cardAlt ?? post.heroAlt : post.heroAlt ?? post.cardAlt;

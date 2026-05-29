@@ -1,8 +1,8 @@
 import type { LifeEducationPost } from "../../postTypes";
 import { PostFigure } from "../../../components/PostFigure";
-import heroMoneyDecisions from "./images/hero-money-decisions.svg";
-import opportunityCostCrossroads from "./images/opportunity-cost-crossroads.svg";
-import moneyQuestionsMentoring from "./images/money-questions-mentoring.svg";
+import heroMoneyDecisions from "./images/hero-money-decisions.webp";
+import opportunityCostCrossroads from "./images/opportunity-cost-crossroads.webp";
+import moneyQuestionsMentoring from "./images/money-questions-mentoring.webp";
 
 const post: LifeEducationPost = {
   slug: "domain-6-economics-finance",

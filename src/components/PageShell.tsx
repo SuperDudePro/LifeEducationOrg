@@ -9,8 +9,8 @@ export function PageShell({ children }: { children: ReactNode }) {
       <a className="skip-link" href="#main-content">Skip to main content</a>
       <div className="shell">
         <header className="header">
-          <a href="/" aria-label="LifeEducation home">
-            <div className="brand" aria-hidden="true">LifeEducation.org</div>
+          <a href="/" aria-label="LifeEducation.org home">
+            <div className="brand">LifeEducation.org</div>
           </a>
         </header>
         <SiteNav currentPath={currentPath} />
