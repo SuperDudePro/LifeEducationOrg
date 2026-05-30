@@ -31,7 +31,7 @@ const post: LifeEducationPost = {
       <PostFigure src={heroMoneyDecisions} alt="A young adult works through a simple budget, lease, and balance screen in a mostly black-and-white sketch with restrained green highlights." />
 
       <h2>What real life will ask them</h2>
-      <p>By the time they&apos;re twenty-two, the average young adult has to decide:</p>
+      <p>By 18, the floor is supposed to be built. Here is what adult life does with it:</p>
       <ul>
         <li>whether to sign a lease they can&apos;t quite afford with roommates they barely know</li>
         <li>whether to take on student loans they can&apos;t yet calculate the cost of</li>

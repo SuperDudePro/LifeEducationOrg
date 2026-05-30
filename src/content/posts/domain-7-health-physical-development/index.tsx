@@ -40,7 +40,7 @@ const post: LifeEducationPost = {
       />
 
       <h2>What real life will ask them</h2>
-      <p>By the time they are twenty-two, real life may ask:</p>
+      <p>By 18, the floor is supposed to be built. Here is what adult life does with it:</p>
       <ul>
         <li>Can you feed yourself when nobody else is planning dinner?</li>
         <li>Can you sleep enough when your schedule changes?</li>
