@@ -7,7 +7,7 @@ export type PostImage = {
   alt: string;
 };
 
-export type LifeEducationPost = {
+export type LifeEducationPostMeta = {
   slug: string;
   title: string;
   excerpt: string;
@@ -20,5 +20,8 @@ export type LifeEducationPost = {
   heroAlt?: string;
   cardImage?: string;
   cardAlt?: string;
+};
+
+export type LifeEducationPost = LifeEducationPostMeta & {
   body: ReactNode;
 };

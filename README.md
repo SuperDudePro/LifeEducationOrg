@@ -9,6 +9,7 @@ src/
   App.tsx                 # route selection, document titles, internal navigation handling
   main.tsx                # React entrypoint + shared CSS import
   components/             # reusable layout and document components
+  content/                # post metadata, TSX post bodies, and post loader
   data/                   # page/domain/Q&A content objects
   pages/                  # one file per site page
   styles/global.css       # universal stylesheet for the whole site
@@ -21,8 +22,10 @@ src/
 ```bash
 npm ci
 npm run dev
+npm run check
 npm run build
 npm run lint
+npm run sitemap
 ```
 
 ## File Explorer upload rule
@@ -45,20 +48,33 @@ Do not upload `.git`, `node_modules`, `dist`, or any old ZIPs into the repo.
 
 ## Posts workflow
 
-Posts use the same lightweight folder model as the related blog project.
+Posts use a lightweight folder model under `src/content/posts`. Each post keeps
+metadata separate from the full TSX body so list pages can stay fast as the
+content library grows.
 
-Add a new post by creating a folder under `src/posts`:
+Add a new post by creating a folder under `src/content/posts`:
 
 ```text
-src/posts/my-post-slug/
+src/content/posts/my-post-slug/
+  meta.ts
   index.tsx
-  optional-image.webp
+  images/
+    optional-image.webp
 ```
 
-Each `index.tsx` exports one `LifeEducationPost` object. The post list is discovered automatically through `src/content/loadPosts.ts`, so no separate registry needs to be maintained.
+Each `meta.ts` exports `metadata` with one `LifeEducationPostMeta` object. Each
+`index.tsx` imports that metadata and exports one `LifeEducationPost` object with
+the full `body`. The post list is discovered automatically through
+`src/content/loadPosts.ts`, so no separate registry needs to be maintained.
 
-Current starter post:
+Folder names must match `metadata.slug`; the loader and sitemap generator both
+validate that. Set `status: "Draft"` to keep a post out of public lists, or
+`status: "Coming Soon"` for a public placeholder that stays out of the sitemap.
 
 ```text
-src/posts/coming-soon/index.tsx
+src/content/posts/coming-soon/
+  meta.ts
+  index.tsx
 ```
+
+Run `npm run sitemap` after adding or renaming posts or domains.

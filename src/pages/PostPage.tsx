@@ -1,13 +1,54 @@
+import { useEffect, useState } from "react";
 import { PageShell } from "../components/PageShell";
 import { BackBar } from "../components/BackBar";
-import { getPostBySlug, formatPostDate } from "../content/loadPosts";
+import { formatPostDate, loadPostBySlug } from "../content/loadPosts";
+import type { LifeEducationPost } from "../content/postTypes";
 
 type Props = {
   slug: string;
 };
 
+type PostLoadState = {
+  slug: string;
+  post: LifeEducationPost | null | undefined;
+};
+
 export function PostPage({ slug }: Props) {
-  const post = getPostBySlug(slug);
+  const [loadState, setLoadState] = useState<PostLoadState>({ slug, post: undefined });
+
+  useEffect(() => {
+    let isActive = true;
+
+    loadPostBySlug(slug)
+      .then((loadedPost) => {
+        if (isActive) {
+          setLoadState({ slug, post: loadedPost ?? null });
+        }
+      })
+      .catch(() => {
+        if (isActive) {
+          setLoadState({ slug, post: null });
+        }
+      });
+
+    return () => {
+      isActive = false;
+    };
+  }, [slug]);
+
+  const post = loadState.slug === slug ? loadState.post : undefined;
+
+  if (post === undefined) {
+    return (
+      <PageShell>
+        <section className="doc-hero">
+          <div className="doc-pill">Loading post</div>
+          <h1 className="doc-title">Loading the field note.</h1>
+          <p className="doc-subtitle">One moment while the essay opens.</p>
+        </section>
+      </PageShell>
+    );
+  }
 
   if (!post) {
     return (

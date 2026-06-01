@@ -1,8 +1,8 @@
 import { formatPostDate, getPostHref, getPostImage } from "../content/loadPosts";
-import type { LifeEducationPost } from "../content/postTypes";
+import type { LifeEducationPostMeta } from "../content/postTypes";
 
 type Props = {
-  post: LifeEducationPost;
+  post: LifeEducationPostMeta;
 };
 
 export function PostCard({ post }: Props) {
