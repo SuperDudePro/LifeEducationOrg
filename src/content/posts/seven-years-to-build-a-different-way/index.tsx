@@ -1,8 +1,8 @@
 import type { LifeEducationPost } from "../../postTypes";
 import { PostFigure } from "../../../components/PostFigure";
-import lifeEducationPlaneBuilding from "./images/life-education-plane-building.webp";
 import lifeEducationHallwayToOpenRoad from "./images/life-education-hallway-to-open-road.webp";
 import lifeEducationMapPassportsSpanish from "./images/life-education-map-passports-spanish.webp";
+import { metadata } from "./meta";
 
 type PostBlock =
   | { type: "paragraph"; text: string }
@@ -270,18 +270,7 @@ const postBody = (
 );
 
 const post: LifeEducationPost = {
-  slug: "seven-years-to-build-a-different-way",
-  title: "Seven Years to Build a Different Way",
-  excerpt: "I’m a high school teacher, an old dad, and a father of four. After more than two decades inside American education, I don’t think the system can give my youngest kids what they need. So I’m building something else: a life education system that can travel, prove learning, protect curiosity, and help them become capable human beings.",
-  publishedAt: "2026-04-26",
-  displayDate: "April 26, 2026",
-  status: "Featured",
-  topic: "Founding Notes",
-  tags: ["LifeEducation", "Worldschooling", "Parenting", "The Floor"],
-  heroImage: lifeEducationPlaneBuilding,
-  heroAlt: "A father and two children working together on an unfinished airplane, surrounded by maps, plans, and learning notes.",
-  cardImage: lifeEducationPlaneBuilding,
-  cardAlt: "A father and two children working together on an unfinished airplane, surrounded by maps, plans, and learning notes.",
+  ...metadata,
   body: postBody,
 };
 
