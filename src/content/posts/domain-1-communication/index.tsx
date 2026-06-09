@@ -7,362 +7,210 @@ const post: LifeEducationPost = {
   ...metadata,
   body: (
     <>
-      <p>For most people, “communication” is a school word.</p>
-
-      <p>Essays. Grammar. Speeches. Presentations. Maybe vocabulary.</p>
+      <p>For most people, “communication” is a school word. Essays, grammar, speeches, presentations, maybe vocabulary.</p>
 
       <p>
-        Those things matter. A young adult should be able to write clearly, speak when needed, and read carefully enough that instructions, forms, warnings, and contracts do not slide past them.
+        Those things matter. A young adult should be able to write clearly, speak when the situation calls for it, and read carefully enough that instructions, forms, warnings, and contracts don’t slide past them.
       </p>
-
-      <p>But communication is bigger than school writing.</p>
-
-      <p>Communication is how a person moves through the world with other people.</p>
 
       <p>
-        It is how they ask for help.<br />
-        It is how they explain what happened.<br />
-        It is how they disagree.<br />
-        It is how they repair damage.<br />
-        It is how they tell the truth when lying would be easier.<br />
-        It is how they make themselves understandable to doctors, bosses, landlords, teachers, friends, clients, officials, strangers, and the people they love.
+        But communication is bigger than school writing. It’s how a person moves through the world with other people — how they ask for help, explain what happened, disagree without making everything worse, repair damage after they’ve caused it, tell the truth when lying would be easier, and make themselves understandable to doctors, bosses, landlords, teachers, friends, clients, officials, strangers, and the people they love.
       </p>
 
-      <p>A person who cannot communicate is easier to ignore, easier to mislead, easier to misunderstand, and easier to trap.</p>
+      <p>A person who can’t communicate is easier to ignore, easier to mislead, easier to misunderstand, and easier to trap.</p>
 
-      <p>That is why communication belongs in LifeEducation.</p>
-
-      <p>Not because every kid needs to become a polished speaker or a beautiful writer.</p>
-
-      <p>Because every young adult needs enough command of language to function.</p>
+      <p>
+        That’s why communication belongs in LifeEducation. Not because every kid needs to become a polished speaker or a beautiful writer — because every young adult needs enough command of language to function.
+      </p>
 
       <h2>The everyday version</h2>
 
-      <p>Communication practice starts earlier than we usually admit.</p>
-
-      <p>It starts when a kid comes to you with a problem and cannot explain the context.</p>
+      <p>Communication practice starts earlier than we usually admit. It starts when a kid comes to you with a problem and can’t explain the context.</p>
 
       <p>
-        They are upset. Or frustrated. Or rushed. Or annoyed that you do not instantly understand what they mean. So they start in the middle. They leave out the setup. They assume you know what happened before you walked into the room. They ramble around the point. They give you feelings instead of facts.
+        They’re upset, or frustrated, or rushed, or annoyed that you don’t instantly understand what they mean. So they start in the middle. They leave out the setup. They assume you already know what happened before you walked into the room. They give you feelings instead of facts.
       </p>
 
       <p>They say, “He did it again,” as if you know who “he” is, what “it” means, and what happened the last three times.</p>
 
-      <p>That is not just a parenting annoyance.</p>
-
-      <p>That is communication practice.</p>
+      <p>That’s not just a parenting annoyance. That’s communication practice.</p>
 
       <p>
-        A kid who cannot explain the context cannot get useful help. A kid who rambles instead of getting to the point may have a real problem, but they are making the problem harder to solve. A kid who cannot slow down and clarify what they mean is still depending on someone else to do the invisible work for them.
+        A kid who can’t explain the context can’t get useful help. A kid who rambles around the point may have a real problem, but they’re making it harder to solve. A kid who can’t slow down and clarify what they mean is still depending on someone else to do the invisible work for them.
       </p>
-
-      <p>And we often fail to count that as learning.</p>
 
       <p>
-        We count the essay.<br />
-        We count the spelling test.<br />
-        We count the presentation.
+        We don’t always count that as learning. We count the essay, the spelling test, the presentation, the report. But we don’t always count the moment a kid has to stop, back up, explain the situation, name the actual problem, and say what they’re asking for.
       </p>
-
-      <p>But we do not always count the moment where a kid has to stop, back up, explain the context, name the actual problem, and say what they mean.</p>
 
       <p>We should.</p>
 
-      <p>Because that may matter more in adult life than another five-paragraph essay.</p>
+      <p>That may matter more in adult life than another five-paragraph essay.</p>
 
       <h2>Say what you mean</h2>
 
-      <p>One of the most basic communication skills is also one of the hardest:</p>
-
-      <p>Say what you mean already.</p>
-
-      <p>Not what you are circling around.</p>
-
-      <p>Not the emotional weather around the thing.</p>
-
-      <p>Not the ten details that feel important because you are upset.</p>
-
-      <p>The thing.</p>
+      <p>
+        One of the most basic communication skills is also one of the hardest: say what you mean. Not what you’re circling around, not the emotional weather around the thing, not the ten details that feel important because you’re upset. The thing.
+      </p>
 
       <p>
-        What happened?<br />
-        What do you need?<br />
-        What have you already tried?<br />
-        What are you asking me to do?<br />
-        What are you afraid will happen?<br />
-        What part do you not understand?
+        What happened? What do you need? What have you already tried? What are you asking me to do? What are you afraid will happen? What part don’t you understand?
       </p>
 
       <p>And just as important: answer the question being asked.</p>
 
-      <p>Kids are very good at answering the question next to the question.</p>
-
-      <p>“Why did you go to the store when I told you to go to school?”</p>
-
-      <p>“I wanted a snack.”</p>
+      <p>
+        Kids are very good at answering the question next to the question. Ask, “Why did you go to the store when I told you to go to school?” and you get, “I wanted a snack.”
+      </p>
 
       <p>That is not an answer.</p>
 
       <p>
-        The snack may explain what they wanted. It does not explain why they made that decision. It does not answer why they ignored the instruction, changed the plan, or decided their want mattered more in that moment.
+        The snack explains what they wanted. It doesn’t explain why they made that decision — why they ignored the instruction, changed the plan, and decided what they wanted mattered more in that moment. The real question was never about the snack, and they usually know that.
       </p>
-
-      <p>The real question is not about the snack.</p>
-
-      <p>And they usually know that.</p>
 
       <PostFigure
         src={answerActualQuestionComic}
         alt="A three-panel comic showing a child first avoiding a question, then answering with more context, then anticipating the real question being asked."
       />
 
-      <p>Adult life is full of this.</p>
-
       <p>
-        A boss asks why the work is late.<br />
-        A roommate asks why the bill was not paid.<br />
-        A doctor asks when the symptoms started.<br />
-        A friend asks why you did not show up.<br />
-        A partner asks why you said yes when you meant no.
+        Adult life is full of this. A boss asks why the work is late. A roommate asks why the bill wasn’t paid. A doctor asks when the symptoms started. A friend asks why you didn’t show up. A partner asks why you said yes when you meant no.
       </p>
 
       <p>If the answer dodges the real question, communication has failed.</p>
 
-      <p>A young adult needs to learn to hear what is actually being asked. They need to anticipate the next obvious question. They need to stop pretending that a technically related answer is the same as an honest answer.</p>
+      <p>
+        A young adult needs to learn to hear what’s actually being asked, anticipate the next obvious question, and stop pretending that a technically related answer is the same as an honest answer.
+      </p>
 
-      <p>That is not a school skill.</p>
-
-      <p>That is adulthood.</p>
+      <p>That’s not a school skill. That’s adulthood.</p>
 
       <h2>The floor: what they need to show</h2>
 
-      <p>A floor-complete 18-year-old does not need to be eloquent.</p>
-
-      <p>They do not need to write like a professional. They do not need to win debates. They do not need to like public speaking. They do not need to be charming, extroverted, or quick on their feet.</p>
+      <p>
+        A floor-complete 18-year-old doesn’t need to be eloquent. They don’t need to write like a professional, win debates, enjoy public speaking, or come across as charming, extroverted, and quick on their feet.
+      </p>
 
       <p>But they do need to function.</p>
 
       <p>
-        At minimum, they should be able to explain what they need, ask a useful question, write a clear email or message, make a phone call when the situation requires it, read instructions carefully, summarize what someone else said, tell the truth without burying the main point, apologize without turning it into self-defense, disagree without immediately escalating, document a problem, communicate with adults outside the family, and keep trying when the first attempt does not work.
+        At minimum, they should be able to explain what they need, ask a useful question, write a clear email or message, make a phone call when the situation requires it, read instructions carefully, summarize what someone else said, tell the truth without burying the main point, apologize without turning it into self-defense, disagree without immediately escalating, document a problem, communicate with adults outside the family, and keep trying when the first attempt doesn’t work.
       </p>
 
-      <p>They should also be able to give context.</p>
-
-      <p>That belongs in the floor.</p>
-
-      <p>By 18, a young adult should be able to walk into a conversation and explain the situation well enough that another person can understand the problem.</p>
+      <p>
+        They should also be able to give context. By 18, a young adult should be able to walk into a conversation and explain the situation well enough that another person can understand the problem:
+      </p>
 
       <p>
-        They should be able to say:<br />
-        Here is what happened.<br />
-        Here is what I need.<br />
-        Here is what I tried.<br />
-        Here is where I am stuck.<br />
-        Here is what I am asking.
+        Here’s what happened.<br />
+        Here’s what I need.<br />
+        Here’s what I tried.<br />
+        Here’s where I’m stuck.<br />
+        Here’s what I’m asking.
       </p>
 
       <p>They should be able to answer the question being asked, not dodge into a nearby fact that feels safer.</p>
 
-      <p>That is the floor.</p>
+      <p>That’s the floor. Not polish. Function.</p>
 
-      <p>Not polish.</p>
-
-      <p>Function.</p>
-
-      <p>A young adult who can do those things is not finished. Nobody is. But they are not helpless. They can enter a new situation, gather information, state a need, respond to feedback, and keep moving.</p>
+      <p>
+        A young adult who can do those things isn’t finished. Nobody is. But they’re not helpless. They can enter a new situation, gather information, state a need, respond to feedback, and keep moving.
+      </p>
 
       <h2>Beyond the floor</h2>
 
-      <p>The floor is not the ceiling.</p>
-
-      <p>Beyond the minimum, communication becomes one of the main ways a person builds a life.</p>
-
-      <p>Writing gets stronger. Speech gets clearer. Listening gets deeper. Humor gets sharper. Conflict gets less childish. Storytelling becomes possible. Persuasion becomes honest instead of manipulative. Emotional honesty gets more precise.</p>
-
       <p>
-        A young adult who grows beyond the floor can do more than get by.<br />
-        They can make a case.<br />
-        They can explain an idea.<br />
-        They can write something worth reading.<br />
-        They can teach someone else.<br />
-        They can negotiate.<br />
-        They can lead a hard conversation.<br />
-        They can say no without turning cruel.<br />
-        They can say yes without disappearing into people-pleasing.<br />
-        They can repair trust after they damage it.<br />
-        They can use language to build instead of just react.
+        The floor isn’t the ceiling. Beyond the minimum, communication becomes one of the main ways a person builds a life. Writing gets stronger, speech gets clearer, listening gets deeper, humor gets sharper. Conflict gets less childish. Storytelling becomes possible. Persuasion becomes honest instead of manipulative. Emotional honesty gets more precise.
       </p>
 
-      <p>That is the deeper hope of the Communication Domain.</p>
+      <p>
+        A young adult who grows beyond the floor can do more than get by. They can make a case, explain an idea, write something worth reading, teach someone else, negotiate, lead a hard conversation, say no without turning cruel, say yes without disappearing into people-pleasing, repair trust after they damage it, and use language to build instead of just react.
+      </p>
 
-      <p>Not a kid who sounds impressive.</p>
-
-      <p>A person who can create clarity, connection, and forward motion.</p>
+      <p>
+        That’s the deeper hope of the Communication Domain: not a kid who sounds impressive, but a person who can create clarity, connection, and forward motion.
+      </p>
 
       <h2>Where it gets tested</h2>
 
-      <p>Communication is not mostly tested in essays.</p>
-
-      <p>It is tested when a kid comes downstairs furious and expects everybody else to understand the whole situation from one sentence.</p>
-
-      <p>It is tested when they ask for help but skip the part where they explain what they have already tried.</p>
-
-      <p>It is tested when they are blaming somebody else but have not yet told the story in a way that separates facts from feelings.</p>
-
-      <p>It is tested when they are embarrassed and want the adult to rescue them without making them explain the problem.</p>
-
       <p>
-        Later, it is tested when the doctor says something confusing and they have to ask a follow-up question.<br />
-        When a debit card gets declined.<br />
-        When a deadline is missed.<br />
-        When a roommate keeps leaving dishes in the sink.<br />
-        When a boss gives unclear instructions.<br />
-        When a friend is hurt.<br />
-        When a landlord sends a confusing lease.<br />
-        When a form asks a question they do not understand.<br />
-        When they are angry and the first sentence in their mouth would make everything worse.
+        Communication isn’t mostly tested in essays. It’s tested when a kid comes downstairs furious and expects everybody else to understand the whole situation from one sentence. When they ask for help but skip the part where they explain what they’ve already tried. When they’re blaming somebody else but haven’t told the story in a way that separates facts from feelings. When they’re embarrassed and want the adult to rescue them without making them explain the problem.
       </p>
 
-      <p>Academic writing can help. It teaches structure, evidence, clarity, and revision when it is done well.</p>
-
-      <p>But life asks for more than thesis statements and paragraph structure.</p>
-
       <p>
-        Life asks:<br />
-        What happened?<br />
-        What matters?<br />
-        What needs to be said?<br />
-        Who needs to hear it?<br />
-        What format fits the situation?<br />
-        What can wait?<br />
-        What needs to be documented?<br />
-        What is the cleanest true sentence?<br />
-        What am I avoiding?
+        Later, it’s tested when the doctor says something confusing and they have to ask a follow-up question. When a debit card gets declined. When a deadline is missed. When a roommate keeps leaving dishes in the sink. When a boss gives unclear instructions. When a friend is hurt. When a landlord sends a confusing lease. When a form asks a question they don’t understand. When the first sentence in their mouth would make everything worse.
       </p>
 
-      <p>That is communication as adult competence.</p>
+      <p>
+        Academic writing can help. Done well, it teaches structure, evidence, clarity, and revision. But life asks for more than thesis statements and paragraph structure. It asks: what happened, what matters, what needs to be said, who needs to hear it, what format fits, what can wait, what needs to be documented, what’s the cleanest true sentence, and what am I avoiding?
+      </p>
+
+      <p>That’s communication as adult competence.</p>
 
       <h2>What this is not</h2>
 
-      <p>This is not about turning children into miniature executives.</p>
+      <p>
+        This isn’t about turning children into miniature executives. It’s not about making every kid debate, or grammar as a personality, or forcing shy kids to become extroverts, or correcting every sentence until the kid stops wanting to talk.
+      </p>
 
-      <p>It is not about making every kid debate.</p>
+      <p>
+        And it’s not about letting kids spray words everywhere and calling it self-expression. Expression matters, but communication is more than self-expression. It also takes accuracy, timing, listening, repair, restraint, courage, and responsibility. A person can express themselves constantly and still communicate badly. They can talk a lot and still not say what they mean.
+      </p>
 
-      <p>It is not about grammar as a personality.</p>
-
-      <p>It is not about forcing shy kids to become extroverts.</p>
-
-      <p>It is not about correcting every sentence until the kid stops wanting to talk.</p>
-
-      <p>It is also not about letting kids spray words everywhere and calling it self-expression.</p>
-
-      <p>Expression matters. But communication is not only self-expression. It also requires accuracy, timing, listening, repair, restraint, courage, and responsibility.</p>
-
-      <p>A person can express themselves constantly and still communicate badly.</p>
-
-      <p>They can talk a lot and still not say what they mean.</p>
-
-      <p>The goal is not more talking.</p>
-
-      <p>The goal is better contact with reality and other people.</p>
+      <p>The goal isn’t more talking. The goal is better contact with reality and other people.</p>
 
       <h2>How families build it</h2>
 
-      <p>The Communication Domain does not require turning the house into school.</p>
-
-      <p>It requires real communication to be treated as real.</p>
-
-      <p>That means you do not always accept the first muddy version.</p>
+      <p>The Communication Domain doesn’t require turning the house into school. It requires real communication to be treated as real.</p>
 
       <p>
-        You make them try again.<br />
-        You help them slow down.<br />
-        You ask for the missing context.<br />
-        You make them separate the story from the complaint.<br />
-        You make them name the request.<br />
-        You make them notice when they are rambling.<br />
-        You make them answer the actual question.<br />
-        You make them think about what someone will obviously ask next.<br />
-        You work with them until the meaning is actually on the table.
+        That means you don’t always accept the first muddy version. You make them try again. You help them slow down, ask for the missing context, separate the story from the complaint, name the request, notice when they’re rambling, answer the actual question, and think about what someone will obviously ask next. You work with them until the meaning is actually on the table.
       </p>
-
-      <p>This can sound small, but it is not.</p>
-
-      <p>A child who learns to clarify their own meaning is learning how to think. They are learning how to ask for help. They are learning how to participate in adult life without making everybody else guess.</p>
-
-      <p>The daily opportunities are everywhere.</p>
 
       <p>
-        Let the kid order food.<br />
-        Let them ask the librarian.<br />
-        Let them email the coach.<br />
-        Let them explain the problem.<br />
-        Let them make the call.<br />
-        Let them write the note.<br />
-        Let them apologize directly.<br />
-        Let them sit with the awkward pause.<br />
-        Let them try again when the first version was muddy.
+        This can sound small. It isn’t. A child who learns to clarify their own meaning is learning how to think, how to ask for help, and how to participate in adult life without making everybody else guess.
       </p>
-
-      <p>Then close the loop.</p>
 
       <p>
-        What worked?<br />
-        What was unclear?<br />
-        What sentence would have helped?<br />
-        What did the other person need that we did not give them?<br />
-        What should we do differently next time?
+        The daily opportunities are everywhere. Let the kid order food. Let them ask the librarian, email the coach, explain the problem, make the call, write the note, apologize directly, sit with the awkward pause, and try again when the first version was muddy.
       </p>
-
-      <p>That is not assignment theater.</p>
-
-      <p>That is life being used on purpose.</p>
 
       <p>
-        At six, that might mean asking the server for ketchup.<br />
-        At ten, it might mean explaining a problem to a teacher.<br />
-        At thirteen, it might mean writing a clear message about a group project.<br />
-        At sixteen, it might mean making an appointment, asking for clarification at work, or handling a disagreement without hiding behind a parent.
+        Then close the loop. What worked? What was unclear? What sentence would have helped? What did the other person need that we didn’t give them? What should we do differently next time?
       </p>
 
-      <p>By eighteen, the pattern should be clear:</p>
+      <p>That’s not assignment theater. That’s life being used on purpose.</p>
 
-      <p>This person can communicate well enough to function outside the family.</p>
+      <p>
+        At six, that might mean asking the server for ketchup. At ten, explaining a problem to a teacher. At thirteen, writing a clear message about a group project. At sixteen, making an appointment, asking for clarification at work, or handling a disagreement without hiding behind a parent.
+      </p>
 
-      <p>Not perfectly.</p>
+      <p>By eighteen, the pattern should be clear: this person can communicate well enough to function outside the family.</p>
 
-      <p>For real.</p>
+      <p>Not perfectly. For real.</p>
 
       <h2>Why communication matters</h2>
 
-      <p>A young adult who cannot communicate is not fully free.</p>
-
       <p>
-        They may have thoughts but cannot make them useful.<br />
-        They may have needs but cannot state them clearly.<br />
-        They may have problems but cannot document them.<br />
-        They may have boundaries but cannot hold them.<br />
-        They may have knowledge but cannot share it.<br />
-        They may feel remorse but cannot repair.<br />
-        They may have questions but cannot ask them without shame.
+        A young adult who can’t communicate isn’t fully free. They may have thoughts they can’t make useful, needs they can’t state clearly, problems they can’t document, boundaries they can’t hold, knowledge they can’t share, remorse they can’t turn into repair, and questions they can’t ask without shame.
       </p>
 
-      <p>That is too fragile.</p>
+      <p>That’s too fragile.</p>
 
       <p>LifeEducation starts with a simple question:</p>
 
       <p><strong>What should an 18-year-old actually be able to do?</strong></p>
 
-      <p>Communication is one of the first answers.</p>
+      <p>
+        Communication is one of the first answers. An 18-year-old should be able to use language to understand, be understood, solve problems, build relationships, repair damage, navigate systems, and take responsibility for their own life.
+      </p>
 
-      <p>An 18-year-old should be able to use language to understand, be understood, solve problems, build relationships, repair damage, navigate systems, and take responsibility for their own life.</p>
+      <p>That starts at home, long before it looks like “education.” It starts when a kid comes in upset, confused, half-explaining, half-complaining, and the adult doesn’t just solve the problem for them.</p>
 
-      <p>That starts at home, long before it looks like “education.”</p>
-
-      <p>It starts when a kid comes in upset, confused, half-explaining, half-complaining, and the adult does not just solve the problem for them.</p>
+      <p>The adult says:</p>
 
       <p>
-        The adult says:<br />
         Slow down.<br />
         Start over.<br />
         Tell me what happened.<br />
@@ -371,13 +219,7 @@ const post: LifeEducationPost = {
         Say what you mean.
       </p>
 
-      <p>That is Domain 1.</p>
-
-      <p>Not essays.</p>
-
-      <p>Not speeches.</p>
-
-      <p>Not polish.</p>
+      <p>That is Domain 1. Not essays. Not speeches. Not polish.</p>
 
       <p>Communication as adult capability.</p>
     </>
