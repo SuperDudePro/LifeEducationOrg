@@ -210,7 +210,7 @@ const post: LifeEducationPost = {
         letting ordinary consequences teach the parts no parent can.
       </p>
 
-      <h2>What this does not mean</h2>
+      <h2>What this is not</h2>
 
       <p>
         The floor here is real, but it isn&apos;t a fantasy of total
