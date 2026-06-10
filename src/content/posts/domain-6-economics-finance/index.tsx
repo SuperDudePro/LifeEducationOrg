@@ -46,22 +46,19 @@ const post: LifeEducationPost = {
       <h2>What real life will ask them</h2>
 
       <p>
-        By 18, the floor is supposed to be built. Here is what adult life does
-        with it:
+        By 18, the floor is supposed to be built. Real life will ask whether
+        they can decide if they should sign a lease they can barely afford, take
+        on loans they do not fully understand yet, accept a job that pays less
+        but gets them out of a bad situation, send money to someone who keeps
+        asking, or use a buy-now-pay-later button for something they do not
+        actually need.
       </p>
 
-      <ul>
-        <li>whether to sign a lease they can&apos;t quite afford with roommates they barely know</li>
-        <li>whether to take on student loans they can&apos;t yet calculate the cost of</li>
-        <li>whether to take a job that pays less but gets them out of a place that&apos;s wrecking them</li>
-        <li>whether to send money to a family member who keeps asking</li>
-        <li>whether to use a buy-now-pay-later option for something they don&apos;t actually need</li>
-        <li>whether to leave money sitting in a checking account where it does nothing</li>
-      </ul>
-
       <p>
-        None of these are on the school worksheet. All of them are the actual
-        job.
+        It will ask whether they can read the money behind the decision: what
+        it costs now, what it costs later, who benefits if they say yes, what
+        they give up, and whether the paperwork hides the part that matters.
+        None of that is the school worksheet. All of it is the actual job.
       </p>
 
       <h2>School finance stops at definitions</h2>
@@ -69,7 +66,7 @@ const post: LifeEducationPost = {
       <p>
         School finance teaches definitions; real life asks questions. It teaches
         the names of accounts, taxes, and documents without the judgment those
-        things require — so a student can pass the personal finance unit, get an
+        things require &mdash; so a student can pass the personal finance unit, get an
         A, and still sign a lease without reading it.
       </p>
 
@@ -105,23 +102,23 @@ const post: LifeEducationPost = {
 
       <p>
         The real skill is knowing which paperwork actually matters and making
-        sure those documents get read — even if not by them.
+        sure those documents get read &mdash; even if not by them alone.
       </p>
 
       <p>
         Leases, loan papers, employment contracts, insurance policies, anything
         that takes their money or their time on a recurring basis. These get
         read. By them, by a parent, by a lawyer, by a friend who knows the
-        field, or by an AI tool that helps them surface the questions they
-        should be asking.
+        field, or with an AI tool used only to surface the questions they should
+        be asking.
       </p>
 
       <p>
-        A young adult in this decade can paste a lease into an AI tool and ask
+        A young adult in this decade can paste a lease into an AI tool and ask,
         &quot;what should I be asking about this?&quot; That isn&apos;t cheating
-        — it&apos;s the floor-level move, as long as the tool raises the
-        questions and the kid still makes the decision. Same goes for comparing
-        loan terms or decoding insurance language.
+        &mdash; it is a floor-level move, as long as the tool raises questions,
+        not conclusions, and the person still checks, asks, and decides. Same
+        goes for comparing loan terms or decoding insurance language.
       </p>
 
       <p>
@@ -145,18 +142,19 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        They can run their own money — track what they spend, save toward
+        They can run their own money &mdash; track what they spend, save toward
         something they want, avoid the obvious traps, and explain what credit is
-        and what it costs. They can recognize the documents that matter —
-        leases, loans, contracts, insurance, tax forms — and make sure those get
-        read, by them or by someone or something that helps.
+        and what it costs. They can recognize the documents that matter &mdash;
+        leases, loans, contracts, insurance, tax forms &mdash; and make sure those get
+        read, by them or by someone or something that helps them ask better
+        questions.
       </p>
 
       <p>
         They understand taxes and basic insurance well enough not to get
         blindsided by obligations, coverage, or claims. They understand how
         markets work: supply and demand, prices as signals, why things cost what
-        they cost. They can think about value beyond money — time, opportunity
+        they cost. They can think about value beyond money &mdash; time, opportunity
         cost, what they trade when they choose.
       </p>
 
@@ -249,7 +247,14 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        This also isn&apos;t a lesson about refusing to engage with money on
+        It also is not investment advice, legal advice, tax advice, or a claim
+        that an AI tool can decide what a young adult should sign. This domain
+        teaches the questions: what does this cost, who benefits, what am I
+        agreeing to, what help do I need, and what am I giving up?
+      </p>
+
+      <p>
+        And this isn&apos;t a lesson about refusing to engage with money on
         moral grounds.
       </p>
 
@@ -276,7 +281,7 @@ const post: LifeEducationPost = {
       <p>
         That&apos;s what the floor is actually for. Not a number in an account.
         The ability to walk away from a bad job, a bad relationship, a bad
-        apartment, or a bad deal — because their finances don&apos;t have them
+        apartment, or a bad deal &mdash; because their finances don&apos;t have them
         trapped.
       </p>
 
@@ -316,7 +321,7 @@ const post: LifeEducationPost = {
       <p>
         When they have their first job, have them file their own taxes. Even if
         it&apos;s simple. Especially if it&apos;s simple. Before they sign
-        anything — a phone contract, a gym membership, a payment plan — have
+        anything &mdash; a phone contract, a gym membership, a payment plan &mdash; have
         them figure out which parts matter and either read those or get help
         reading them.
       </p>
@@ -357,9 +362,9 @@ const post: LifeEducationPost = {
       <p>
         Can they say no to a thing they want, without making the no into a
         performance? Can they tell you, out loud, what they gave up to do what
-        they&apos;re doing? Can they use the tools available to handle things
-        they can&apos;t read alone? Can they ask &quot;who benefits if I say
-        yes?&quot; before they say yes?
+        they&apos;re doing? Can they use the tools available to surface better
+        questions about things they can&apos;t read alone? Can they ask &quot;who benefits
+        if I say yes?&quot; before they say yes?
       </p>
 
       <p>
