@@ -10,7 +10,7 @@ const post: LifeEducationPost = {
   body: (
     <>
       <p>
-        Say "health" and most people picture one of two things: gym class or a
+        Say &quot;health&quot; and most people picture one of two things: gym class or a
         doctor&apos;s office.
       </p>
 
@@ -57,19 +57,19 @@ const post: LifeEducationPost = {
       <h2>What real life will ask them</h2>
 
       <p>
-        By 18, the floor is supposed to be built. Here is what adult life does
-        with it:
+        By 18, the floor is supposed to be built. Real life will ask whether
+        they can feed themselves when nobody else is planning dinner, sleep
+        enough when the schedule changes, keep moving when no coach is watching,
+        and walk all day in a new city without falling apart.
       </p>
 
-      <ul>
-        <li>Can you feed yourself when nobody else is planning dinner?</li>
-        <li>Can you sleep enough when your schedule changes?</li>
-        <li>Can you walk all day in a new city without falling apart?</li>
-        <li>Can you tell when pain, illness, anxiety, or injury needs help?</li>
-        <li>Can you explain symptoms clearly to a doctor and follow the plan afterward?</li>
-        <li>Can you handle alcohol, caffeine, drugs, medications, sex, reproduction, and consent without ignorance doing the thinking for you?</li>
-        <li>Can you act in an emergency before panic takes over?</li>
-      </ul>
+      <p>
+        It will ask whether they can tell when pain, illness, anxiety, or injury
+        needs help; explain symptoms clearly to a doctor; follow a plan
+        afterward; handle alcohol, caffeine, drugs, medications, sex,
+        reproduction, and consent without ignorance doing the thinking; and act
+        in an emergency before panic takes over.
+      </p>
 
       <p>
         That&apos;s the actual class. Not a worksheet on food groups. Not one
@@ -126,9 +126,11 @@ const post: LifeEducationPost = {
 
       <p>
         They should maintain serious physical capability. The LifeEducation
-        floor names a top-10% age-group fitness target. That sounds more
-        extreme than it is. For a healthy kid without a disability, injury, or
-        medical barrier, it&apos;s a habits bar, not a genetics bar.
+        floor names a top-10% age-group fitness target. For a healthy kid
+        without a disability, injury, or medical barrier, it is a habits bar,
+        not a genetics bar. Injuries, disabilities, and medical realities change
+        the measurement protocol. They do not erase the need to build as much
+        trained capacity as the body can honestly support.
       </p>
 
       <p>
@@ -182,8 +184,9 @@ const post: LifeEducationPost = {
 
       <p>
         That doesn&apos;t mean every body uses the same measurement. Injuries,
-        disabilities, and medical realities change the test. They don&apos;t
-        erase the need for trained capacity.
+        disabilities, and medical realities change the test. The standard must
+        be measured honestly against the body in front of us, not used as a
+        shame stick or an excuse for neglect.
       </p>
 
       <p>
