@@ -1,6 +1,5 @@
-// Source of truth: LifeEducation_Floor_v1_4 (Google Drive), per-domain sections.
-// Sync direction: Drive doc -> this file. If the Floor doc is revised, update here.
-// Last synced: 2026-05-28 (Floor v1.4).
+// Source of truth: LifeEducation_Floor_v2_4_Working_Draft.md (Google Drive), per-domain sections.
+// Sync direction: Drive doc -> this file. Last synced: 2026-06-10 from Floor v2.4.
 import type { FloorByDomain } from "../types";
 
 export const FLOOR_BY_DOMAIN: FloorByDomain[] = [
@@ -13,7 +12,7 @@ export const FLOOR_BY_DOMAIN: FloorByDomain[] = [
       "Speak comfortably to strangers, authority figures, and groups—can hold a conversation, ask for what they need, and present an idea without falling apart",
       "Listen well enough to accurately represent what someone else said, even when they disagree",
       "Detect when someone is trying to manipulate or persuade them through language—advertising, political rhetoric, emotional appeals—and can name what's happening",
-      "Function in at least one language beyond English at a conversational level (given their Filipino and Irish heritage, Tagalog or Irish are obvious candidates, but not mandatory)",
+      "Function in at least one language beyond English at a conversational level",
     ],
     notOnFloor: [
       "Literary analysis for its own sake",
@@ -30,7 +29,7 @@ export const FLOOR_BY_DOMAIN: FloorByDomain[] = [
       "Handle everyday mental math without reaching for a phone—tips, rough totals, quick comparisons",
       "Work with percentages, ratios, and basic statistics well enough to interpret news, polls, and data claims without being easily fooled",
       "Solve problems they haven't seen before by breaking them down logically—not panicking when there's no formula handed to them",
-      "Read a graph, chart, or table and understand what it's actually saying (and what it might be hiding)",
+      "Read a graph, chart, or table and understand what it's actually saying, and what it might be hiding",
       "Think in estimates and sanity-checks—can spot when a number is way off before doing precise calculations",
       "Demonstrate competence in Algebra I and Geometry fundamentals—can follow a formula, rearrange it, plug in values, and reason about shapes, angles, and spatial relationships",
       "Reason about risk, likelihood, and tradeoffs in everyday decisions",
@@ -47,7 +46,7 @@ export const FLOOR_BY_DOMAIN: FloorByDomain[] = [
     number: "3",
     canDo: [
       "Ask \"how do we know that?\" and mean it—default skepticism toward claims until they understand the evidence",
-      "Design a simple test to answer a question they actually have, run it, and interpret what happened honestly (including \"I don't know\" or \"my guess was wrong\")",
+      "Design a simple test to answer a question they actually have, run it, and interpret what happened honestly, including \"I don't know\" or \"my guess was wrong\"",
       "Observe carefully and document what they see without immediately jumping to conclusions",
       "Distinguish between correlation and causation, anecdote and data, one study and scientific consensus",
       "Read a science news article and often spot when a headline overstates or misrepresents what the research actually found",
@@ -67,11 +66,12 @@ export const FLOOR_BY_DOMAIN: FloorByDomain[] = [
     number: "4",
     canDo: [
       "Explain how power works—who has it, how it's gained, how it's kept, how it's lost—across different systems (democracies, authoritarian states, corporations, communities)",
-      "Navigate the civic structures that affect them: how to vote, how laws get made, how courts work, what rights they have (and where those rights differ by country)",
+      "Navigate the civic structures that affect them: how to vote, how laws get made, how courts work, what rights they have, and where those rights differ by country",
       "Understand enough history to recognize patterns—why empires rise and fall, how movements gain traction, what conditions lead to conflict or cooperation",
       "Place themselves in historical and cultural context: know where they come from (U.S., Philippines, Ireland) and what shaped those places",
       "Read the news critically—identify bias, check sources, notice what's missing, hold multiple accounts of the same event at once",
-      "Understand that \"the way we do it\" is not \"the way it has to be\"—that systems are human-made, have tradeoffs, and can be changed",
+      "Understand that \"the way we do it\" is not \"the way it has to be\"—systems are human-made, have tradeoffs, and can be changed",
+      "Demonstrate sufficient civic knowledge to pass a rigorous civics exam",
     ],
     notOnFloor: [
       "Memorized dates and names",
@@ -87,11 +87,11 @@ export const FLOOR_BY_DOMAIN: FloorByDomain[] = [
       "Articulate what they believe and why—not just inherited opinions, but examined positions they can defend and revise",
       "Recognize when they're facing an ethical dilemma and think through it rather than just reacting",
       "Restate someone else's view in a way they'd recognize as fair before arguing back",
-      "Spot logical fallacies and manipulative reasoning in arguments (including their own)",
+      "Spot logical fallacies and manipulative reasoning in arguments, including their own",
       "Sit with ambiguity—tolerate not knowing, hold conflicting ideas, and act anyway when needed",
       "Distinguish between \"I don't like this\" and \"this is wrong\"—separate emotional reactions from moral reasoning",
       "Understand that smart, good-faith people can reach different conclusions and that disagreement isn't automatically bad faith",
-      "Realize there are different valid ways to judge whether something is right (outcomes, principles, character, relationships) and can notice which lens they're using",
+      "Realize there are different valid ways to judge whether something is right (outcomes, principles, character, relationships) and notice which lens they're using",
       "Reflect regularly on who they're becoming and whether that matches who they want to be",
     ],
     notOnFloor: [
@@ -127,10 +127,10 @@ export const FLOOR_BY_DOMAIN: FloorByDomain[] = [
     slug: "health-physical-development",
     number: "7",
     canDo: [
-      "Take responsibility for their own body—they don't need to be nagged about sleep, hygiene, nutrition, or movement",
+      "Take responsibility for their own body—they do not need to be nagged about sleep, hygiene, nutrition, or movement",
       "Feed themselves well: understand what food does, cook real meals, make reasonable choices without obsession or denial",
       "Maintain top-10% age-group fitness—not through obsession, but through consistent habits and genuine engagement with their physical health",
-      "Recognize when something's wrong with their body and take appropriate action—when to rest, when to treat it themselves, when to seek help",
+      "Recognize when something is wrong with their body and take appropriate action—when to rest, when to treat it themselves, when to seek help",
       "Handle basic first aid and emergency response: stop bleeding, stabilize an injury, call for help, not panic",
       "Understand how substances work—alcohol, caffeine, drugs, medications—and make informed choices about what they put in their body",
       "Manage stress without destructive coping mechanisms—have actual tools that work for them",
@@ -147,11 +147,12 @@ export const FLOOR_BY_DOMAIN: FloorByDomain[] = [
     slug: "creative-expression",
     number: "8",
     canDo: [
-      "Make something that didn't exist before—in any medium—without waiting for permission or instruction",
+      "Make something that did not exist before—in any medium—without waiting for permission or instruction",
       "Use creative work as a tool for processing, communicating, or exploring ideas—not just for decoration or grades",
       "Push through the discomfort of making something that might not be good—tolerate the vulnerability of creative risk",
       "Appreciate creative work across cultures and forms, even when it's not their taste—can articulate what's working and why",
       "Distinguish between \"I don't like this\" and \"this isn't good\"—separate personal preference from craft",
+      "Finish and iterate on creative work—understand revision as part of making, not a sign of failure",
       "Know from experience at least one creative outlet that feels satisfying and can pick it back up when they choose",
       "Understand that creativity is a skill that develops, not a fixed trait you either have or don't",
     ],
