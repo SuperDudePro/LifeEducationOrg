@@ -7,15 +7,15 @@ export type Domain = {
   evidence: string;
 };
 
-// Per-domain Floor content. Source: LifeEducation_Floor_v1_4 (Drive), Domain sections.
+// Per-domain Floor content. Source: LifeEducation_Floor_v2_4_Working_Draft.md (Drive), Domain sections.
 export type FloorByDomain = {
   slug: string;
   number: string;
   canDo: string[];      // "The floor-complete 18-year-old can:"
-  notOnFloor: string[]; // "What's NOT on the floor:"
+  notOnFloor: string[]; // "The Floor Does Not Require"
 };
 
-// Per-domain age-band scaffolding. Source: Age_Band_Scaffolding_v0_4 (Drive).
+// Per-domain age-band scaffolding. Source: Age_Band_Scaffolding_v0_6_Part1_final.md and Age_Band_Scaffolding_v0_6_Part2_final.md (Drive).
 export type AgeBand = {
   band: string;        // e.g. "Early Childhood (18 months – 5 years)"
   onTrack: string[];
