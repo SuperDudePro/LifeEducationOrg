@@ -23,6 +23,16 @@ const post: LifeEducationPost = {
         That’s why communication belongs in LifeEducation. Not because every kid needs to become a polished speaker or a beautiful writer — because every young adult needs enough command of language to function.
       </p>
 
+      <h2>What real life will ask them</h2>
+
+      <p>
+        Real life will not ask whether they can label a sentence diagram. It will ask whether they can explain what happened, state what they need, ask a useful question, read the message carefully, document the problem, and respond without making the situation worse.
+      </p>
+
+      <p>
+        It will ask whether they can talk to the doctor when something feels wrong, email the teacher or boss when there is a problem, tell a friend the truth without turning cruel, apologize without turning the apology into a defense brief, and keep trying when the first version of the conversation is muddy.
+      </p>
+
       <h2>The everyday version</h2>
 
       <p>Communication practice starts earlier than we usually admit. It starts when a kid comes to you with a problem and can’t explain the context.</p>
@@ -190,33 +200,14 @@ const post: LifeEducationPost = {
 
       <p>Not perfectly. For real.</p>
 
-      <h2>Why communication matters</h2>
+      <h2>The real test</h2>
 
       <p>
-        A young adult who can’t communicate isn’t fully free. They may have thoughts they can’t make useful, needs they can’t state clearly, problems they can’t document, boundaries they can’t hold, knowledge they can’t share, remorse they can’t turn into repair, and questions they can’t ask without shame.
+        The real test of Domain 1 isn’t whether a young adult can produce a clean essay on command. The real test is whether they can use language when the stakes are no longer academic.
       </p>
 
-      <p>That’s too fragile.</p>
-
-      <p>LifeEducation starts with a simple question:</p>
-
-      <p><strong>What should an 18-year-old actually be able to do?</strong></p>
-
       <p>
-        Communication is one of the first answers. An 18-year-old should be able to use language to understand, be understood, solve problems, build relationships, repair damage, navigate systems, and take responsibility for their own life.
-      </p>
-
-      <p>That starts at home, long before it looks like “education.” It starts when a kid comes in upset, confused, half-explaining, half-complaining, and the adult doesn’t just solve the problem for them.</p>
-
-      <p>The adult says:</p>
-
-      <p>
-        Slow down.<br />
-        Start over.<br />
-        Tell me what happened.<br />
-        Tell me what you need.<br />
-        Answer the question.<br />
-        Say what you mean.
+        Can they understand, be understood, solve problems, build relationships, repair damage, navigate systems, and take responsibility for their own life? Can they slow down, start over, tell what happened, name what they need, answer the question, and say what they mean?
       </p>
 
       <p>That is Domain 1. Not essays. Not speeches. Not polish.</p>
