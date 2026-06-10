@@ -10,13 +10,13 @@ const post: LifeEducationPost = {
   body: (
     <>
       <p>
-        "Philosophy" makes most people think of school. Dead Greeks. Abstract
+        &quot;Philosophy&quot; makes most people think of school. Dead Greeks. Abstract
         questions. Quotes on posters. Somebody in a coffee shop asking whether
         the chair is real.
       </p>
 
       <p>
-        Most people hear "ethics" and think about character education. Be nice.
+        Most people hear &quot;ethics&quot; and think about character education. Be nice.
         Don&apos;t lie. Don&apos;t steal. Pick the right answer on the
         worksheet.
       </p>
@@ -24,14 +24,29 @@ const post: LifeEducationPost = {
       <p>
         That version has its place. A young adult should know that people have
         argued about right and wrong for a long time. They should know that
-        values matter, that actions have consequences, and that "everybody does
-        it" does not make something right.
+        values matter, that actions have consequences, and that &quot;everybody does
+        it&quot; does not make something right.
       </p>
 
       <p>
         But Domain 5 isn&apos;t really about old books or character posters.
         It&apos;s about learning how to think when the answer isn&apos;t
         obvious.
+      </p>
+
+      <h2>What real life will ask them</h2>
+
+      <p>
+        Real life will ask whether they can tell the truth when it costs them,
+        stay loyal without covering for something rotten, forgive without
+        becoming weak, set a limit without becoming cruel, and admit they might
+        be wrong without falling apart.
+      </p>
+
+      <p>
+        It will ask whether they can face a decision where every option costs
+        something and still think like a responsible person instead of grabbing
+        the easiest excuse in the room.
       </p>
 
       <p>
@@ -93,14 +108,14 @@ const post: LifeEducationPost = {
       <h2>The floor: what they need to show</h2>
 
       <p>
-        The floor is not "quote Plato." It is not "win debates." It is not
-        "always be certain." It is not "have the same opinions as your parents."
+        The floor is not &quot;quote Plato.&quot; It is not &quot;win debates.&quot; It is not
+        &quot;always be certain.&quot; It is not &quot;have the same opinions as your parents.&quot;
       </p>
 
       <p>
         By 18, they should be able to think about values, responsibility, and
         consequences without falling apart. They should be able to explain what
-        they believe and why — not inherited opinions, but positions they have
+        they believe and why &mdash; not inherited opinions, but positions they have
         actually thought about and can revise when better thinking arrives.
       </p>
 
@@ -112,18 +127,18 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        They should be able to sit with uncertainty without panicking — to not
+        They should be able to sit with uncertainty without panicking &mdash; to not
         know, to hold conflicting ideas, and still act when action is needed.
-        They should know the difference between "I don&apos;t like this" and
-        "this is wrong." They should understand that smart, decent people can
+        They should know the difference between &quot;I don&apos;t like this&quot; and
+        &quot;this is wrong.&quot; They should understand that smart, decent people can
         reach different conclusions without one of them automatically being
         stupid or evil.
       </p>
 
       <p>
         They should know there is more than one honest way to judge whether
-        something is right — by outcomes, by principles, by character, by what
-        we owe other people — and they should notice which lens they are using
+        something is right &mdash; by outcomes, by principles, by character, by what
+        we owe other people &mdash; and they should notice which lens they are using
         and why. And they should be able to look at their own life and ask
         honestly: is this turning me into someone I respect?
       </p>
@@ -186,9 +201,9 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        But feelings aren&apos;t automatically moral conclusions. "I hate this"
-        is not the same as "this is wrong." "I feel uncomfortable" is not the
-        same as "I was harmed." "I feel certain" is not the same as "I am right."
+        But feelings aren&apos;t automatically moral conclusions. &quot;I hate this&quot;
+        is not the same as &quot;this is wrong.&quot; &quot;I feel uncomfortable&quot; is not the
+        same as &quot;I was harmed.&quot; &quot;I feel certain&quot; is not the same as &quot;I am right.&quot;
       </p>
 
       <p>
@@ -226,7 +241,7 @@ const post: LifeEducationPost = {
 
       <p>
         Schools reward quick certainty. The internet rewards faster certainty.
-        Peer groups reward belonging-certainty — say the right thing fast enough
+        Peer groups reward belonging-certainty &mdash; say the right thing fast enough
         and the group knows you are safe.
       </p>
 
@@ -318,33 +333,18 @@ const post: LifeEducationPost = {
 
       <p>
         None of this means the old books were a mistake. People have worked on
-        these problems for a long time — harder, longer, and more honestly than
-        anyone the kid is likely to meet at school or on a screen. That work is
-        available, and most of it is free.
+        these problems for a long time. A young adult who never cracks open
+        Aristotle or Confucius or the Stoics or Mill isn&apos;t failing the floor;
+        the floor isn&apos;t a reading list. But treating those names as either
+        sacred jargon or dead weight misses the point.
       </p>
 
       <p>
-        A young adult who never cracks open Aristotle or Confucius or the Stoics
-        or Mill isn&apos;t failing the floor; the floor isn&apos;t a reading
-        list. But treating those names as either sacred jargon or dead weight
-        misses the point.
-      </p>
-
-      <p>
-        The old books are tools — other people&apos;s attempts to think clearly
+        The old books are tools &mdash; other people&apos;s attempts to think clearly
         about exactly what this domain is for: how to live, what to value, how
-        to argue, how to be decent in hard situations. None of them got
-        everything right. Almost all of them got further on at least one
-        question than a kid would get alone.
-      </p>
-
-      <p>
-        So use them. Borrow what works, argue with the rest, and notice that the
-        problem you are stuck on has been worked for two thousand years by
-        people who were not stupid. That&apos;s how a tradition is supposed to
-        function: not a list of names to drop or a museum to walk through, but a
-        toolbox to reach into when the situation demands more than you brought
-        on your own.
+        to argue, and how to be decent in hard situations. Use them. Borrow what
+        works, argue with the rest, and remember that the problem you are stuck
+        on has probably been worked before by people who were not stupid.
       </p>
 
       <h2>How families build it</h2>
@@ -356,12 +356,12 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        When a kid says, "That&apos;s not fair," don&apos;t rush past it. Ask
+        When a kid says, &quot;That&apos;s not fair,&quot; don&apos;t rush past it. Ask
         the next question. Fair how? Equal? Earned? Promised? Consistent?
       </p>
 
       <p>
-        When a kid says, "They&apos;re wrong," ask them to state the other side
+        When a kid says, &quot;They&apos;re wrong,&quot; ask them to state the other side
         first.
       </p>
 
@@ -371,7 +371,7 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        When a kid hurts someone, don&apos;t settle for "say sorry." Ask what
+        When a kid hurts someone, don&apos;t settle for &quot;say sorry.&quot; Ask what
         happened, what they noticed, what they missed, and what repair would
         actually mean.
       </p>
