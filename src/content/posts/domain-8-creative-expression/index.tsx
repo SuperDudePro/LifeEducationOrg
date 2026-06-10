@@ -45,19 +45,19 @@ const post: LifeEducationPost = {
       <h2>What real life will ask them</h2>
 
       <p>
-        By 18, the floor is supposed to be built. Here is what adult life does
-        with it:
+        By 18, the floor is supposed to be built. Real life will ask whether
+        they can make something from nothing when there is no example to copy,
+        finish what they start, and keep going when the first rough version is
+        worse than the idea in their head.
       </p>
 
-      <ul>
-        <li>Can you make something from nothing when there is no example to copy?</li>
-        <li>Can you finish what you start, or do your projects die at the first rough draft?</li>
-        <li>Can you solve a problem nobody solved for you — design the room, fix the workflow, name the thing, plan the event?</li>
-        <li>Can you make a case that actually moves people, not just one that is technically correct?</li>
-        <li>Can you process something hard — grief, change, confusion — by making something out of it?</li>
-        <li>Can you tell the difference between work you dislike and work that is bad?</li>
-        <li>Do you have one thing you make just because making it is good for you?</li>
-      </ul>
+      <p>
+        It will ask whether they can solve a problem nobody solved for them,
+        design the room, fix the workflow, name the thing, plan the event, make
+        a case people can actually hear, process something hard by making
+        something out of it, and keep one creative outlet alive because making
+        is good for them.
+      </p>
 
       <p>
         That&apos;s the actual class. Not a grade on a still-life. Not a
@@ -73,7 +73,7 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        Art, music, and drama get treated as electives — nice if there is room,
+        Art, music, and drama get treated as electives &mdash; nice if there is room,
         first to go when budgets get tight. Inside those classes, kids get
         sorted fast. The ones who show early ability get called talented and
         pushed forward. The ones who do not get a passing grade and a quiet
@@ -90,7 +90,7 @@ const post: LifeEducationPost = {
         The problem isn&apos;t that creative work gets judged. It should. Craft
         is real, and a kid who never gets honest feedback never improves. The
         problem is the order. School judges the performance before a kid has
-        built any identity as someone who makes things — graded first, maker
+        built any identity as someone who makes things &mdash; graded first, maker
         second.
       </p>
 
@@ -102,7 +102,7 @@ const post: LifeEducationPost = {
       <p>
         It runs backwards. The making has to come first. The same honest
         standard lands fine on a kid who already believes the making is theirs
-        to do — and crushes a kid who doesn&apos;t.
+        to do &mdash; and crushes a kid who doesn&apos;t.
       </p>
 
       <h2>The floor: what they need to show</h2>
@@ -114,7 +114,7 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        The floor is a working relationship with making things — enough that a
+        The floor is a working relationship with making things &mdash; enough that a
         young adult can create, finish, and use creativity as a real tool
         instead of believing it belongs to other people.
       </p>
@@ -128,10 +128,10 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        They should be able to use creative work as a tool — to process
-        something, communicate something, or work an idea out — not just for a
+        They should be able to use creative work as a tool &mdash; to process
+        something, communicate something, or work an idea out &mdash; not just for a
         grade or a wall. They should be able to push through the discomfort of
-        making something that might not be good, and to let it be seen — by a
+        making something that might not be good, and to let it be seen &mdash; by a
         parent, a small group, a teacher, whoever the work is for.
       </p>
 
@@ -151,7 +151,7 @@ const post: LifeEducationPost = {
 
       <p>
         They should know, from experience, at least one creative outlet that
-        feels satisfying — something they make because making it is good, and
+        feels satisfying &mdash; something they make because making it is good, and
         can pick back up when they choose. And they should understand that
         creativity is a skill that develops, not a fixed trait.
       </p>
@@ -175,7 +175,7 @@ const post: LifeEducationPost = {
 
       <p>
         The belief survives because it is convenient: it explains away every
-        hard moment. Aptitude is real — some people pick things up faster — but
+        hard moment. Aptitude is real &mdash; some people pick things up faster &mdash; but
         aptitude is not destiny, and nobody is born knowing how to draw, write,
         play, build, or compose.
       </p>
@@ -211,7 +211,7 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        Finishing is where most creative work dies — and finishing is the part
+        Finishing is where most creative work dies &mdash; and finishing is the part
         that actually teaches.
       </p>
 
@@ -231,13 +231,13 @@ const post: LifeEducationPost = {
 
       <p>
         A kid who only ever starts learns nothing except how to start. A kid who
-        finishes — even badly, even small — learns how making actually works:
+        finishes &mdash; even badly, even small &mdash; learns how making actually works:
         idea, attempt, mess, revision, done.
       </p>
 
       <p>
         It also means tolerating the risk that the thing might be bad. Every
-        finished thing is a bet that you had something worth making — sometimes
+        finished thing is a bet that you had something worth making &mdash; sometimes
         a private bet, sometimes one other people get to see. A kid who
         can&apos;t stand that vulnerability will stay safe and make nothing.
       </p>
@@ -254,7 +254,7 @@ const post: LifeEducationPost = {
       <p>
         Two different skills hide inside &quot;being good at art,&quot; and
         most people only develop one. The first is making. The second is judging
-        — and a young adult needs to be honest about the difference between
+        &mdash; and a young adult needs to be honest about the difference between
         &quot;I don&apos;t like this&quot; and &quot;this isn&apos;t good.&quot;
       </p>
 
@@ -271,9 +271,9 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        A floor-level adult can look at work outside their own taste — a genre
+        A floor-level adult can look at work outside their own taste &mdash; a genre
         they do not enjoy, a tradition they did not grow up in, a style that is
-        not theirs — and still say something true about what is working in it
+        not theirs &mdash; and still say something true about what is working in it
         and why.
       </p>
 
@@ -297,19 +297,14 @@ const post: LifeEducationPost = {
       <h2>Creativity is a tool, not decoration</h2>
 
       <p>
-        The biggest misread of this domain is thinking it is about art on a
-        wall.
-      </p>
-
-      <p>
         Creativity is a way of solving problems that do not have a known answer.
         The person who can turn an idea into something real is the one who
         designs the workaround, reframes the argument so people finally hear it,
-        builds the thing the instructions did not cover.
+        or builds the thing the instructions did not cover.
       </p>
 
       <p>
-        None of that gets called art. All of it is the same muscle.
+        None of that has to be called art. All of it uses the same muscle.
       </p>
 
       <p>
@@ -321,14 +316,10 @@ const post: LifeEducationPost = {
 
       <p>
         That&apos;s the real cost of giving up on this domain. It&apos;s not
-        just giving up drawing. It&apos;s giving up a whole class of tools — for
-        solving problems, for communicating, for getting through hard things —
+        just giving up drawing. It&apos;s giving up a whole class of tools &mdash; for
+        solving problems, for communicating, for getting through hard things &mdash;
         and handing them to &quot;creative people,&quot; as if those were a
         separate species.
-      </p>
-
-      <p>
-        They are not. The tool is available to anyone willing to practice it.
       </p>
 
       <PostFigure src={creativeExpressionOutlet} alt="A quiet dark creative corner holds sketches, notebooks, a small sculpture, and restrained green accents as a young person reflects nearby." />
@@ -361,7 +352,7 @@ const post: LifeEducationPost = {
 
       <p>
         Families don&apos;t need to run an art school. They need to keep making
-        a normal, expected, no-big-deal part of life — and stop sorting kids
+        a normal, expected, no-big-deal part of life &mdash; and stop sorting kids
         into creative and not.
       </p>
 
@@ -374,7 +365,7 @@ const post: LifeEducationPost = {
 
       <p>
         Give them materials and time, and mostly stay out of the way. Not a
-        project with a rubric — just stuff, and room to use it. But help them
+        project with a rubric &mdash; just stuff, and room to use it. But help them
         scope it small enough to actually finish. A kid who sets out to write a
         novel quits; a kid who finishes a one-page story learns the whole loop.
         Small and done beats big and abandoned.
@@ -393,8 +384,8 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        Expose them to work outside their taste — music, film, art, writing from
-        other cultures and eras — and talk about what is working in it, not just
+        Expose them to work outside their taste &mdash; music, film, art, writing from
+        other cultures and eras &mdash; and talk about what is working in it, not just
         whether you liked it.
       </p>
 
@@ -424,7 +415,7 @@ const post: LifeEducationPost = {
 
       <p>
         Do they understand, in their bones, that creativity is a skill they can
-        build — not a trait they were or weren&apos;t given?
+        build &mdash; not a trait they were or weren&apos;t given?
       </p>
 
       <p>
