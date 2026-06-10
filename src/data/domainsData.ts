@@ -1,6 +1,5 @@
-// Source of truth: 10_Learning_Domains (Google Drive), framework outcomes/competencies/evidence.
-// Sync direction: Drive doc -> this file. The site currently runs ahead of Drive v1.4;
-// reconcile by updating the Drive doc to match, then bump this note. Last synced: 2026-05-28.
+// Source of truth: 10_Learning_Domains_v1_6_final.md (Google Drive), framework outcomes/competencies/evidence.
+// Sync direction: Drive doc -> this file. Last synced: 2026-06-10 from v1.6.
 import type { Domain } from "../types";
 
 export const DOMAINS_META = {
@@ -31,7 +30,7 @@ export const DOMAINS_META = {
   ]
 };
 
-export const DOMAINS = [
+export const DOMAINS: Domain[] = [
   {
     "slug": "literacy-communication",
     "title": "Literacy & Communication",
@@ -290,4 +289,4 @@ export const DOMAINS = [
     ],
     "evidence": "trip plans, repair photos, time-use dashboards, capstone retrospectives, etc."
   }
-] satisfies Domain[];
+];
