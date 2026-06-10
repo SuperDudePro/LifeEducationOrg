@@ -53,20 +53,22 @@ const post: LifeEducationPost = {
       <h2>What real life will ask them</h2>
 
       <p>
-        By 18, the floor is supposed to be built. Here is what adult life does
-        with it:
+        By 18, the floor is supposed to be built. Real life will ask whether
+        they can learn a new app, system, or device without someone walking them
+        through every click; get useful work out of an AI tool without handing
+        over their own thinking; spot a scam, phishing message, fake source, or
+        deal designed to rob them; and protect their accounts, money, identity,
+        and reputation from people who do this for a living.
       </p>
 
-      <ul>
-        <li>Can you learn a new app, system, or device without someone walking you through it?</li>
-        <li>Can you get real work out of an AI tool without handing over your own thinking?</li>
-        <li>Can you tell when a website, a message, or a deal is trying to rob you?</li>
-        <li>Can you keep your accounts, money, and identity from being stolen by people who do this for a living?</li>
-        <li>Can you tell a reliable source from a confident stranger, and notice when you are stuck in an echo chamber?</li>
-        <li>Can you feel a feed pulling on you and put it down anyway?</li>
-        <li>Can you fix the small stuff — the frozen laptop, the dead connection — before calling for help?</li>
-        <li>Can you still function when the tech fails, the power is out, and the phone is dead?</li>
-      </ul>
+      <p>
+        It will ask whether they can tell a reliable source from a confident
+        stranger, notice when they are being sealed inside an echo chamber, feel
+        a feed pulling on them and put it down anyway, troubleshoot the frozen
+        laptop or dead connection before calling for help, and still function
+        when the power is out, the phone is dead, or the tool they normally use
+        is unavailable.
+      </p>
 
       <p>
         That&apos;s the actual class. Not a typing test. Not a slideshow about
@@ -104,7 +106,7 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        The comfort is real, and it is worth something — they aren&apos;t scared
+        The comfort is real, and it is worth something &mdash; they aren&apos;t scared
         of a new device, and that matters. But comfort without understanding is
         exactly what scammers, platforms, and algorithms are built to exploit. A
         confident user who does not know what is happening under the surface is
@@ -113,7 +115,7 @@ const post: LifeEducationPost = {
 
       <p>
         The job isn&apos;t to make them comfortable. They&apos;re already
-        comfortable. The job is to make them hard to fool — and expensive to
+        comfortable. The job is to make them hard to fool &mdash; and expensive to
         manipulate.
       </p>
 
@@ -131,7 +133,7 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        By 18, they should be able to use technology to get real things done —
+        By 18, they should be able to use technology to get real things done &mdash;
         not dependent on it, not afraid of it, just competent. They should be
         able to learn a new app, platform, or device on their own. Find the
         settings, read the documentation, search the error message, ask the
@@ -142,7 +144,7 @@ const post: LifeEducationPost = {
 
       <p>
         They should be able to work with AI without outsourcing their thinking
-        to it — knowing what these tools are good at, where they fail, and how
+        to it &mdash; knowing what these tools are good at, where they fail, and how
         to use them to do more rather than to avoid doing anything.
       </p>
 
@@ -155,13 +157,13 @@ const post: LifeEducationPost = {
 
       <p>
         They should be able to control their own attention, and to evaluate
-        information — trace a claim to its source, cross-check it, and notice
+        information &mdash; trace a claim to its source, cross-check it, and notice
         when they are being fed exactly what keeps them scrolling.
       </p>
 
       <p>
         They should be able to troubleshoot basic problems before calling for
-        help, and understand that technology is built by humans with agendas —
+        help, and understand that technology is built by humans with agendas &mdash;
         it is not neutral, and it is not inevitable.
       </p>
 
@@ -172,7 +174,7 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        And they should be able to use digital tools to make something real — a
+        And they should be able to use digital tools to make something real &mdash; a
         document, a spreadsheet, a video, a design, a working project that
         serves an actual purpose, not just a grade.
       </p>
@@ -184,8 +186,8 @@ const post: LifeEducationPost = {
       <h2>AI is a tool, not a brain to borrow</h2>
 
       <p>
-        This is the newest part of the domain and the one most likely to go
-        wrong.
+        This is the fastest-moving part of the domain, which is exactly why the
+        principle has to be durable.
       </p>
 
       <p>
@@ -200,7 +202,7 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        These tools will do the thinking for you if you let them — and they make
+        These tools will do the thinking for you if you let them &mdash; and they make
         it feel like progress. You get an answer. It sounds good. The work
         appears done. What is missing is the part where your own brain actually
         got stronger, because it did not have to do anything.
@@ -218,26 +220,25 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        Make it concrete: a young adult facing their first lease can paste in
-        the confusing clause and ask the AI what it means — then use that to ask
-        the landlord a sharper question, instead of signing blind or letting the
-        AI tell them whether to sign. The tool did not make the decision. It
-        made them a more informed person who then made the decision. That&apos;s
-        the whole difference.
+        Make it concrete: a young adult facing their first lease can use an AI
+        tool to translate a confusing clause into better questions for the
+        landlord, a parent, or a qualified professional. The tool does not
+        decide whether to sign. It makes the person more informed before they
+        ask, check, and decide. That is the whole difference.
       </p>
 
       <p>
         This also means knowing how these tools fail. They make things up with
         total confidence. They get facts wrong, invent sources, and agree with
         whatever you seem to want to hear. A young adult who trusts AI output
-        the way they would trust a calculator is going to get burned,
-        repeatedly, in ways they may not even notice.
+        without checking it is going to get burned, repeatedly, in ways they may
+        not even notice.
       </p>
 
       <p>
         The test is simple: after using an AI tool, are you smarter or just
         finished? If you are smarter, it was a tool. If you are just finished,
-        it was a crutch — and crutches, used long enough, make the leg stop
+        it was a crutch &mdash; and crutches, used long enough, make the leg stop
         working.
       </p>
 
@@ -294,16 +295,15 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        A young adult&apos;s attention is the product. The apps are free because
-        the user is what is being sold. Every feed, notification, autoplay,
-        streak, and red badge is the output of teams of brilliant people whose
-        entire job is to take as much of that attention as possible and give
-        back as little as they can.
+        On many free platforms, a young adult&apos;s attention is the product. The
+        user is what is being sold. Feeds, notifications, autoplay, streaks, and
+        red badges are built to take as much of that attention as possible and
+        give back as little as they can.
       </p>
 
       <p>
-        This is not a fair fight, and pretending it is — &quot;just use
-        willpower&quot; — is useless advice. You do not out-willpower a machine
+        This is not a fair fight, and pretending it is &mdash; &quot;just use
+        willpower&quot; &mdash; is useless advice. You do not out-willpower a machine
         designed by hundreds of people to beat your willpower.
       </p>
 
@@ -317,14 +317,14 @@ const post: LifeEducationPost = {
       <p>
         The goal is not to reject technology. A young adult who throws the phone
         in a drawer and calls it virtue has not learned control; they have just
-        run away. The goal is to be the one deciding — to pick up the tool, use
+        run away. The goal is to be the one deciding &mdash; to pick up the tool, use
         it on purpose, and put it down when the using is done, instead of
         surfacing two hours later wondering where the evening went.
       </p>
 
       <p>
         A person who can&apos;t direct their own attention does not fully own
-        their own life. Everything else — work, relationships, learning, rest —
+        their own life. Everything else &mdash; work, relationships, learning, rest &mdash;
         runs through it.
       </p>
 
@@ -345,8 +345,8 @@ const post: LifeEducationPost = {
 
       <p>
         They do not fully control it, they cannot fully delete it, and other
-        people — schools, employers, dates, strangers who decide they do not
-        like them — will read it and draw conclusions long before meeting them
+        people &mdash; schools, employers, dates, strangers who decide they do not
+        like them &mdash; will read it and draw conclusions long before meeting them
         in person.
       </p>
 
@@ -358,8 +358,8 @@ const post: LifeEducationPost = {
 
       <p>
         Two things they should understand in their bones: &quot;private&quot; is
-        a setting, not a fact — anything sent to anyone can be saved, forwarded,
-        and surface years later — and the feed rewards the loudest, angriest,
+        a setting, not a fact &mdash; anything sent to anyone can be saved, forwarded,
+        and surface years later &mdash; and the feed rewards the loudest, angriest,
         most performed version of a person, which is rarely the one they will
         want attached to their name later.
       </p>
@@ -384,7 +384,7 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        It is not about banning things — the phone, the games, the AI — and
+        It is not about banning things &mdash; the phone, the games, the AI &mdash; and
         calling the absence a skill. A kid kept away from technology is not
         prepared for it; they are just unprepared later, with less supervision.
       </p>
@@ -405,7 +405,7 @@ const post: LifeEducationPost = {
       <p>
         Families don&apos;t need to become IT departments. They need to stop
         treating technology as either a babysitter or a boogeyman, and start
-        treating it like what it is — a powerful tool a kid has to learn to
+        treating it like what it is &mdash; a powerful tool a kid has to learn to
         operate.
       </p>
 
@@ -424,9 +424,9 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        Talk about the business model, plainly and more than once: these apps
-        are free because you are the product. A kid who hears that out loud
-        stops taking the bait personally.
+        Talk about the business model, plainly and more than once: many apps are
+        free because attention and data are valuable. A kid who hears that out
+        loud stops taking the bait personally.
       </p>
 
       <p>
@@ -450,7 +450,7 @@ const post: LifeEducationPost = {
 
       <p>
         Talk about the trail before they leave one they regret. Not as a scare
-        campaign — as a plain fact about how the world now works. Ask, before
+        campaign &mdash; as a plain fact about how the world now works. Ask, before
         they post: would you be fine with this still being findable in ten
         years, by someone who is not on your side? A kid who learns to ask that
         themselves does not need you checking their accounts.
@@ -471,8 +471,8 @@ const post: LifeEducationPost = {
       <p>
         It is whether they can walk up to an unfamiliar tool and master it
         instead of waiting to be shown. Whether they can use AI to get sharper
-        instead of softer. Whether they can be lied to by a screen — by a
-        scammer, a feed, a confident fake — and catch it.
+        instead of softer. Whether they can be lied to by a screen &mdash; by a
+        scammer, a feed, a confident fake &mdash; and catch it.
       </p>
 
       <p>
@@ -483,14 +483,14 @@ const post: LifeEducationPost = {
 
       <p>
         And underneath all of it, one question: when they pick up the most
-        powerful tools ever built, are they the one in charge — or is something
+        powerful tools ever built, are they the one in charge &mdash; or is something
         on the other side of the glass quietly running them?
       </p>
 
       <p>
         That&apos;s the point of Domain 9. Not being good with phones. Not
         coding. Not screen-time panic. Technology, media, and AI as tools they
-        command — not masters they serve.
+        command &mdash; not masters they serve.
       </p>
     </>
   ),
