@@ -60,7 +60,7 @@ export function DomainDetailPage({ slug }: { slug: string }) {
             The non-negotiable minimum. This is the contract, not the menu — what a
             floor-complete 18-year-old must actually be able to do.
           </p>
-          <p className="domain-layer-source">From the Floor (v1.4).</p>
+          <p className="domain-layer-source">From the LifeEducation Floor (v2.4).</p>
           <ul className="doc-list">
             {floor.canDo.map((item) => (
               <li key={item} className="doc-list-item">
@@ -86,7 +86,7 @@ export function DomainDetailPage({ slug }: { slug: string }) {
           The fuller landscape this domain engages over time. Broader than the floor —
           inclusion here does not by itself make a competency mandatory.
         </p>
-        <p className="domain-layer-source">From the 10-Domain Framework.</p>
+        <p className="domain-layer-source">From the 10-Domain Framework (v1.6).</p>
         <h3 className="doc-subheading-small">Core Outcomes</h3>
         <ul className="doc-list">
           {domain.coreOutcomes.map((item) => (
@@ -114,7 +114,7 @@ export function DomainDetailPage({ slug }: { slug: string }) {
           <h2 className="doc-section-title">How It Builds</h2>
           <p className="doc-section-text">{ageBands.runwayNote}</p>
           <p className="domain-layer-source">
-            From the Age-Band Scaffolding (v0.4). Written for adults: "on track" means a
+            From the Age-Band Scaffolding (v0.6). Written for adults: "on track" means a
             normal healthy trajectory toward the floor, not gifted or ahead. "Red flags"
             are persistent patterns worth investigating, not verdicts.
           </p>
