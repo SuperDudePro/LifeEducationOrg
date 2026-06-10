@@ -8,7 +8,7 @@ const post: LifeEducationPost = {
   body: (
     <>
       <p>
-        Say "science" and most people picture a classroom. Textbooks,
+        Say &quot;science&quot; and most people picture a classroom. Textbooks,
         vocabulary, lab reports, safety goggles, maybe a baking soda volcano if
         the teacher is feeling ambitious.
       </p>
@@ -16,11 +16,11 @@ const post: LifeEducationPost = {
       <p>
         That version has its place. Kids should understand biology, chemistry,
         physics, weather, bodies, ecosystems, and the physical world they live
-        in. But Domain 3 isn't really about passing science class.
+        in. But Domain 3 isn&apos;t really about passing science class.
       </p>
 
       <p>
-        It's about learning how to deal with reality.
+        It&apos;s about learning how to deal with reality.
       </p>
 
       <p>
@@ -29,6 +29,21 @@ const post: LifeEducationPost = {
         the evidence gets better. Not because every kid needs to become a
         scientist, but because every kid is going to live in a world full of
         confident people saying things that may or may not be true.
+      </p>
+
+      <h2>What real life will ask them</h2>
+
+      <p>
+        Real life will not hand them a clean experiment with labeled materials
+        and an answer the adult already knows. It will hand them a symptom, a
+        headline, a broken appliance, a dying plant, a product claim, a weird
+        smell, a weather pattern, or a confident stranger with a theory.
+      </p>
+
+      <p>
+        It will ask whether they can slow down, observe carefully, separate what
+        happened from what they think it means, and keep checking until reality
+        has had a chance to answer.
       </p>
 
       <h2>Real life does not hand you a lab sheet</h2>
@@ -44,14 +59,14 @@ const post: LifeEducationPost = {
         Real life is messier. It gives you a sick plant, a weird smell in the
         basement, a dog that keeps scratching, a headline that sounds
         terrifying, a medicine that helped one person and not another, a product
-        with fake science on the label, and a weather pattern that doesn't match
+        with fake science on the label, and a weather pattern that doesn&apos;t match
         what people are saying online.
       </p>
 
-      <p>Then it waits to see if you can think.</p>
+      <p>Then it asks whether you can think.</p>
 
       <p>
-        The adult version of science isn't just knowing facts. It's knowing how
+        The adult version of science isn&apos;t just knowing facts. It&apos;s knowing how
         to approach uncertainty without panicking, guessing, or handing your
         brain to the loudest person in the room.
       </p>
@@ -64,15 +79,15 @@ const post: LifeEducationPost = {
       <h2>The floor: what they need to show</h2>
 
       <p>
-        The floor is not "complete a biology course." It is not "memorize the
-        periodic table." It is not "win a science fair."
+        The floor is not &quot;complete a biology course.&quot; It is not &quot;memorize the
+        periodic table.&quot; It is not &quot;win a science fair.&quot;
       </p>
 
       <p>
         By 18, they should be able to think their way through a real question.
-        They should be able to ask "How do we know that?" and mean it. They
+        They should be able to ask &quot;How do we know that?&quot; and mean it. They
         should be able to design a simple test, run it, and interpret what
-        happened honestly — including "I don't know" or "my guess was wrong."
+        happened honestly &mdash; including &quot;I don&apos;t know&quot; or &quot;my guess was wrong.&quot;
       </p>
 
       <p>
@@ -85,8 +100,8 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        They should understand that their body is a biological system — sleep,
-        digestion, movement, hormones, immune response — not a black box. They
+        They should understand that their body is a biological system &mdash; sleep,
+        digestion, movement, hormones, immune response &mdash; not a black box. They
         should grasp enough of the physical world to not be mystified by
         weather, electricity, combustion, infection, ecosystems, or why the sky
         is blue. They should recognize that scientific knowledge updates and
@@ -94,7 +109,7 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        That's the floor: not deep content mastery, but functional contact with
+        That&apos;s the floor: not deep content mastery, but functional contact with
         reality.
       </p>
 
@@ -106,7 +121,7 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        Kids jump fast. Adults do too. The plant died, so I'm bad at plants.
+        Kids jump fast. Adults do too. The plant died, so I&apos;m bad at plants.
         The teacher hates me. That food made me sick. This supplement works
         because the video said so. Everyone is getting sick because of that one
         thing I heard about.
@@ -121,25 +136,25 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        A person who can't separate observation from interpretation is easy to
+        A person who can&apos;t separate observation from interpretation is easy to
         fool. They can be moved around by anecdotes, headlines, fear,
         confidence, and their own first reaction.
       </p>
 
       <p>
-        By 18, they should be able to slow down and say, "Here's what I saw.
-        Here's what I think it might mean. Here's what I still don't know."
+        By 18, they should be able to slow down and say, &quot;Here&apos;s what I saw.
+        Here&apos;s what I think it might mean. Here&apos;s what I still don&apos;t know.&quot;
       </p>
 
-      <p>That's a serious adult skill.</p>
+      <p>That&apos;s a serious adult skill.</p>
 
       <h2>Cynicism is not the goal</h2>
 
       <p>
         Modern life is packed with science-flavored claims: health claims, food
         claims, climate claims, fitness claims, medical claims, technology
-        claims, "studies show" claims, "experts say" claims, and "they don't
-        want you to know" claims.
+        claims, &quot;studies show&quot; claims, &quot;experts say&quot; claims, and &quot;they don&apos;t
+        want you to know&quot; claims.
       </p>
 
       <p>
@@ -148,7 +163,7 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        A young adult doesn't need to become cynical. Cynicism is cheap. It's
+        A young adult doesn&apos;t need to become cynical. Cynicism is cheap. It&apos;s
         just gullibility with a meaner face.
       </p>
 
@@ -161,19 +176,19 @@ const post: LifeEducationPost = {
       <p>That last question matters most.</p>
 
       <p>
-        A person who has no answer to "What would change my mind?" isn't
-        thinking scientifically anymore. They're defending a position.
+        A person who has no answer to &quot;What would change my mind?&quot; isn&apos;t
+        thinking scientifically anymore. They&apos;re defending a position.
       </p>
 
       <p>
-        We all do that sometimes. The goal is to notice when it's happening.
+        We all do that sometimes. The goal is to notice when it&apos;s happening.
       </p>
 
       <h2>Science changes because science works</h2>
 
       <p>
         Kids also need to understand that scientific knowledge updates. That
-        doesn't mean science is fake. It means science is alive.
+        doesn&apos;t mean science is fake. It means science is alive.
       </p>
 
       <p>
@@ -184,20 +199,20 @@ const post: LifeEducationPost = {
 
       <p>
         Without that understanding, people fall into two childish patterns. One
-        says, "Science changed its mind, so you can't trust science." The other
-        says, "Science said it, so no one is allowed to question it."
+        says, &quot;Science changed its mind, so you can&apos;t trust science.&quot; The other
+        says, &quot;Science said it, so no one is allowed to question it.&quot;
       </p>
 
       <p>Both are bad.</p>
 
       <p>
-        A better version is: "This is the best current explanation based on the
+        A better version is: &quot;This is the best current explanation based on the
         evidence we have. We should take good evidence seriously, and we should
-        stay honest when better evidence arrives."
+        stay honest when better evidence arrives.&quot;
       </p>
 
       <p>
-        That's hard for adults, which is why kids need practice before the
+        That&apos;s hard for adults, which is why kids need practice before the
         stakes are high.
       </p>
 
@@ -212,7 +227,7 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        The question isn't whether the work looks school-ish. The question is
+        The question isn&apos;t whether the work looks school-ish. The question is
         whether the capability is real.
       </p>
 
@@ -222,12 +237,27 @@ const post: LifeEducationPost = {
         thinking?
       </p>
 
-      <p>That's the point.</p>
+      <p>That&apos;s the point.</p>
+
+      <h2>What this is not</h2>
+
+      <p>
+        This is not about turning every kid into a scientist, a lab-report
+        machine, or someone who refuses to act until the evidence is perfect.
+        Real life still requires decisions with incomplete information.
+      </p>
+
+      <p>
+        It is also not about sneering at everything as fake. The target is not
+        cynicism. The target is honest contact with evidence: enough skepticism
+        to avoid being fooled, and enough humility to update when reality pushes
+        back.
+      </p>
 
       <h2>How families build it</h2>
 
       <p>
-        Families don't need to turn the house into a lab. They need to treat
+        Families don&apos;t need to turn the house into a lab. They need to treat
         ordinary observation as real learning.
       </p>
 
@@ -253,15 +283,15 @@ const post: LifeEducationPost = {
       <h2>The real test</h2>
 
       <p>
-        The real test of Domain 3 isn't whether a young adult remembers every
+        The real test of Domain 3 isn&apos;t whether a young adult remembers every
         science fact they were taught. The real test is whether they can meet
         reality without making things up.
       </p>
 
       <p>
-        Can they ask, "How do we know?" Can they tell the difference between a
+        Can they ask, &quot;How do we know?&quot; Can they tell the difference between a
         story, a claim, and evidence? Can they update their thinking without
-        treating it like humiliation? Can they say "I don't know yet" and then
+        treating it like humiliation? Can they say &quot;I don&apos;t know yet&quot; and then
         do the next useful thing?
       </p>
 
