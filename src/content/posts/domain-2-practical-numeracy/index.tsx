@@ -44,6 +44,48 @@ const post: LifeEducationPost = {
         numeracy. They need enough number sense to stay awake.
       </p>
 
+      <h2>What real life will ask them</h2>
+
+      <p>
+        Real life will ask whether they can stand in front of a price, a rate, a
+        chart, a loan, a salary, a statistic, a discount, or a payment plan and
+        not get rushed by the number on the surface.
+      </p>
+
+      <p>
+        It will ask whether they can estimate before they calculate, compare
+        before they believe, notice what is missing, and ask the question that
+        changes the whole deal: compared to what?
+      </p>
+
+      <h2>The floor: what they need to show</h2>
+
+      <p>
+        By 18, a young adult should be able to handle ordinary numbers without
+        being babied.
+      </p>
+
+      <p>
+        They should be able to read a bill and understand what they&apos;re
+        being charged for. They should be able to compare two prices that are
+        packaged differently. They should understand interest well enough to be
+        afraid of bad debt. They should know that gross pay and take-home pay
+        aren&apos;t the same thing. They should be able to estimate a total
+        before the app tells them. They should be able to look at a lease, a
+        phone plan, a subscription, a loan offer, or a &quot;free trial&quot;
+        and notice where the hooks are.
+      </p>
+
+      <p>
+        They should understand percentages in normal adult situations. They
+        should know that &quot;affordable monthly payment&quot; doesn&apos;t
+        mean affordable. They should know that a number can be true and still
+        not tell the truth. They should ask &quot;compared to what?&quot; almost
+        automatically.
+      </p>
+
+      <p>That is not genius-level math. That is the minimum.</p>
+
       <h2>Math class is too clean</h2>
 
       <p>
@@ -61,10 +103,9 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        Then it waits to see if you notice what&apos;s missing. Compared to
-        what? For how long? At what rate? With what fee? What happens if
-        I&apos;m late? What&apos;s the total cost? Who counted this? Who benefits
-        if I believe it?
+        Then it waits to see if you notice what&apos;s missing. For how long?
+        At what rate? With what fee? What happens if I&apos;m late? What&apos;s
+        the total cost? Who counted this? Who benefits if I believe it?
       </p>
 
       <p>
@@ -270,34 +311,6 @@ const post: LifeEducationPost = {
         something.
       </p>
 
-      <h2>The floor: what they need to show</h2>
-
-      <p>
-        By 18, a young adult should be able to handle ordinary numbers without
-        being babied.
-      </p>
-
-      <p>
-        They should be able to read a bill and understand what they&apos;re
-        being charged for. They should be able to compare two prices that are
-        packaged differently. They should understand interest well enough to be
-        afraid of bad debt. They should know that gross pay and take-home pay
-        aren&apos;t the same thing. They should be able to estimate a total
-        before the app tells them. They should be able to look at a lease, a
-        phone plan, a subscription, a loan offer, or a &quot;free trial&quot;
-        and notice where the hooks are.
-      </p>
-
-      <p>
-        They should understand percentages in normal adult situations. They
-        should know that &quot;affordable monthly payment&quot; doesn&apos;t
-        mean affordable. They should know that a number can be true and still
-        not tell the truth. They should ask &quot;compared to what?&quot; almost
-        automatically.
-      </p>
-
-      <p>That is not genius-level math. That is the minimum.</p>
-
       <h2>Beyond the floor</h2>
 
       <p>
@@ -326,6 +339,22 @@ const post: LifeEducationPost = {
         src={marketMathKids}
         alt="Two younger children at an outdoor market stall count coins and compare handwritten produce prices while working through simple real-world math."
       />
+
+      <h2>What this is not</h2>
+
+      <p>
+        This is not an argument against math class, algebra, geometry,
+        statistics, or kids who want to go deep. It is not permission to stop at
+        calculator dependence, vibes, or &quot;I&apos;m just not a math
+        person.&quot;
+      </p>
+
+      <p>
+        It is also not an argument for turning every child into a tiny accountant.
+        Numeracy is not finance. Finance gets its own domain. This one is about
+        number sense: the ability to read quantity, scale, probability, and
+        comparison well enough not to be fooled by the adult world&apos;s math.
+      </p>
 
       <h2>How families build it</h2>
 
