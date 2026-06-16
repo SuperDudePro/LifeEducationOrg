@@ -11,11 +11,7 @@ type PostBlock =
 const postBlocks: PostBlock[] = [
   {
     "type": "paragraph",
-    "text": "I’m Will."
-  },
-  {
-    "type": "paragraph",
-    "text": "I’m a high school teacher. I’m an old dad. I have two high school juniors, a four-year-old, and a two-year-old."
+    "text": "I’m Will. I’m a high school teacher, an old dad, and a father of four. I have two high school juniors, a four-year-old, and a two-year-old."
   },
   {
     "type": "paragraph",
@@ -23,55 +19,19 @@ const postBlocks: PostBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "When I first started teaching, school seemed mostly okay."
+    "text": "When I first started teaching, school seemed mostly okay. That was partly because I didn’t have kids of my own yet. I didn’t know enough to know better. And the kids I was teaching were usually pretty far behind, so when I helped them catch up, it felt like the system was doing something useful. Not great. Not inspiring. Not exactly the Academy in ancient Athens. But okay-ish."
   },
   {
     "type": "paragraph",
-    "text": "That was partly because I didn’t have kids of my own yet. I didn’t know enough to know better. And the kids I was teaching were usually pretty far behind, so when I helped them catch up, it felt like the system was doing something useful."
+    "text": "Then my own kids started school in the United States, and that changed things. I knew pretty quickly that something wasn’t right. Not in the “this teacher is annoying” way. Not in the “this homework assignment is dumb” way. Those things are always going to happen. I mean wrong in the deeper way. Wrong in the structure. Wrong in the assumptions. Wrong in what the system rewards and what it slowly grinds out of kids."
   },
   {
     "type": "paragraph",
-    "text": "Not great. Not inspiring. Not exactly the Academy in ancient Athens."
+    "text": "But what could I do? Mostly, I tried to reduce the damage. Help at home. Fill in the gaps. Explain what school failed to explain. Push back where I could. Teach them how to think outside the machinery. Try to get them through it with the ability to think clearly and take care of themselves."
   },
   {
     "type": "paragraph",
-    "text": "But okay-ish."
-  },
-  {
-    "type": "paragraph",
-    "text": "Then my own kids started school in the United States."
-  },
-  {
-    "type": "paragraph",
-    "text": "That changed things."
-  },
-  {
-    "type": "paragraph",
-    "text": "I knew pretty quickly that something wasn’t right. Not in the “this teacher is annoying” way. Not in the “this homework assignment is dumb” way. Those things are always going to happen. I mean wrong in the deeper way. Wrong in the structure. Wrong in the assumptions. Wrong in what the system rewards and what it slowly grinds out of kids."
-  },
-  {
-    "type": "paragraph",
-    "text": "But what could I do?"
-  },
-  {
-    "type": "paragraph",
-    "text": "Mostly, I tried to reduce the damage."
-  },
-  {
-    "type": "paragraph",
-    "text": "Help at home. Fill in the gaps. Explain what school failed to explain. Push back where I could. Teach them how to think outside the machinery. Try to get them through it with the ability to think clearly and take care of themselves."
-  },
-  {
-    "type": "paragraph",
-    "text": "That became the goal."
-  },
-  {
-    "type": "paragraph",
-    "text": "Not excellence. Not school success as defined by school. Not a perfect résumé full of activities nobody would do unless adults had turned childhood into a competitive paperwork exercise."
-  },
-  {
-    "type": "paragraph",
-    "text": "Just this: get them through with their minds intact."
+    "text": "That became the goal. Not excellence. Not school success as defined by school. Not a perfect résumé full of activities nobody would do unless adults had turned childhood into a competitive paperwork exercise. Just this: get them through with their minds intact."
   },
   {
     "type": "paragraph",
@@ -92,39 +52,19 @@ const postBlocks: PostBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "The good news is that I’m lucky."
+    "text": "The good news is that I’m lucky. I’m about seven years from retirement. By then, my youngest kids will be around nine and eleven. The plan is to slow travel — first through the United States and North America, and then farther out into the world."
   },
   {
     "type": "paragraph",
-    "text": "I’m about seven years from retirement. By then, my youngest kids will be around nine and eleven. The plan is to slow travel — first through the United States and North America, and then farther out into the world."
+    "text": "The kids have three passports from three countries on three continents, including the European Union. So we have some moving around to do. For me, this solves one enormous problem: middle school and high school in the United States."
   },
   {
     "type": "paragraph",
-    "text": "The kids have three passports from three countries on three continents, including the European Union."
+    "text": "But it creates another problem. If I’m going to step away from the standard path, I need something better than a vague freedom fantasy. “We’ll travel and learn from the world” sounds nice, but so do a lot of things people say right before they make a mess."
   },
   {
     "type": "paragraph",
-    "text": "So we have some moving around to do."
-  },
-  {
-    "type": "paragraph",
-    "text": "For me, this solves one enormous problem: middle school and high school in the United States."
-  },
-  {
-    "type": "paragraph",
-    "text": "But it creates another problem."
-  },
-  {
-    "type": "paragraph",
-    "text": "If I’m going to step away from the standard path, I need something better than a vague freedom fantasy. “We’ll travel and learn from the world” sounds nice, but so do a lot of things people say right before they make a mess."
-  },
-  {
-    "type": "paragraph",
-    "text": "I need a real system."
-  },
-  {
-    "type": "paragraph",
-    "text": "A system that can prove what they’ve learned. A system that teaches what I think actually matters. A system that lets them go as far as they want in any direction they want. A system that prepares them not just for college, or work, or tests, but for being functional human beings almost anywhere in the world."
+    "text": "I need a real system. A system that can prove what they’ve learned. A system that teaches what I think actually matters. A system that lets them go as far as they want in any direction they want. A system that prepares them not just for college, or work, or tests, but for being functional human beings almost anywhere in the world."
   },
   {
     "type": "paragraph",
@@ -145,15 +85,7 @@ const postBlocks: PostBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "She’s mostly excited to go to school and have friends."
-  },
-  {
-    "type": "paragraph",
-    "text": "Which is fair."
-  },
-  {
-    "type": "paragraph",
-    "text": "She’s four. Friends are the curriculum."
+    "text": "She’s mostly excited to go to school and have friends, which is fair. She’s four. Friends are the curriculum."
   },
   {
     "type": "paragraph",
@@ -161,39 +93,15 @@ const postBlocks: PostBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "So the clock is running."
+    "text": "So the clock is running. We have seven years to build the systems that will let us travel the world and help these kids become capable, curious, resilient people who can thrive in more than one kind of place. The opportunity is magnificent. The need is urgent. The stakes are precious."
   },
   {
     "type": "paragraph",
-    "text": "We have seven years to build the systems that will let us travel the world and help these kids become capable, curious, resilient people who can thrive in more than one kind of place."
+    "text": "And I’m not pretending I’m fearless. I’m as conditioned as anyone else to worry about breaking away. I’m as conditioned as anyone else to soften every criticism of the system with twelve disclaimers and a group hug. I know the script: be practical, don’t be extreme, don’t mess up your kids, stay inside the lines. Sure, the system has problems, but what are you going to do?"
   },
   {
     "type": "paragraph",
-    "text": "The opportunity is magnificent."
-  },
-  {
-    "type": "paragraph",
-    "text": "The need is urgent."
-  },
-  {
-    "type": "paragraph",
-    "text": "The stakes are precious."
-  },
-  {
-    "type": "paragraph",
-    "text": "And I’m not pretending I’m fearless. I’m as conditioned as anyone else to worry about breaking away. I’m as conditioned as anyone else to soften every criticism of the system with twelve disclaimers and a group hug. I know the script."
-  },
-  {
-    "type": "paragraph",
-    "text": "Be practical. Don’t be extreme. Don’t mess up your kids. Stay inside the lines. Sure, the system has problems, but what are you going to do?"
-  },
-  {
-    "type": "paragraph",
-    "text": "Well."
-  },
-  {
-    "type": "paragraph",
-    "text": "This is what I’m going to do."
+    "text": "Well. This is what I’m going to do."
   },
   {
     "type": "paragraph",
@@ -205,19 +113,11 @@ const postBlocks: PostBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "I have no illusions that this will go smoothly. I don’t think we’re going to float around the world in some glowing educational montage while everyone learns Mandarin by osmosis and develops perfect emotional regulation."
+    "text": "I have no illusions that this will go smoothly. I don’t think we’re going to float around the world in some glowing educational montage while everyone learns Mandarin by osmosis and develops perfect emotional regulation. I expect setbacks. I expect confusion. I expect to overbuild some things and underprepare for others. I expect to discover that some of my strongest opinions are only half right."
   },
   {
     "type": "paragraph",
-    "text": "I expect setbacks. I expect confusion. I expect to overbuild some things and underprepare for others. I expect to discover that some of my strongest opinions are only half right."
-  },
-  {
-    "type": "paragraph",
-    "text": "Fine."
-  },
-  {
-    "type": "paragraph",
-    "text": "That’s part of the point."
+    "text": "Fine. That’s part of the point."
   },
   {
     "type": "paragraph",
@@ -225,35 +125,15 @@ const postBlocks: PostBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "A way that takes learning seriously without turning childhood into compliance training."
+    "text": "A way that takes learning seriously without turning childhood into compliance training. A way that helps kids become who they are instead of spending thirteen years teaching them how to survive systems they didn’t choose."
   },
   {
     "type": "paragraph",
-    "text": "A way that helps kids become who they are instead of spending thirteen years teaching them how to survive systems they didn’t choose."
+    "text": "That’s the journey. You’re welcome to follow along. Comments, suggestions, questions, warnings, criticism, and useful arguments are all welcome."
   },
   {
     "type": "paragraph",
-    "text": "That’s the journey."
-  },
-  {
-    "type": "paragraph",
-    "text": "You’re welcome to follow along."
-  },
-  {
-    "type": "paragraph",
-    "text": "Comments, suggestions, questions, warnings, criticism, and useful arguments are all welcome."
-  },
-  {
-    "type": "paragraph",
-    "text": "We’re building the plane before takeoff."
-  },
-  {
-    "type": "paragraph",
-    "text": "Not ideal."
-  },
-  {
-    "type": "paragraph",
-    "text": "But better than pretending the bus is going somewhere worth going."
+    "text": "We’re building the plane before takeoff. Not ideal. But better than pretending the bus is going somewhere worth going."
   }
 ];
 
