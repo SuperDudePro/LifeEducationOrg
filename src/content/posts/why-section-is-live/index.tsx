@@ -1,157 +1,92 @@
 import type { LifeEducationPost } from "../../postTypes";
+import navigationImage from "./images/real-world-navigation-inline.jpg";
 import { PostFigure } from "../../../components/PostFigure";
-import lifeEducationHallwayToOpenRoad from "./images/life-education-hallway-to-open-road.webp";
-import lifeEducationMapPassportsSpanish from "./images/life-education-map-passports-spanish.webp";
 import { metadata } from "./meta";
-
-type PostBlock =
-  | { type: "paragraph"; text: string }
-  | { type: "figure"; image: string; alt: string };
-
-const postBlocks: PostBlock[] = [
-  {
-    "type": "paragraph",
-    "text": "I’m Will. I’m a high school teacher, an old dad, and a father of four. I have two high school juniors, a four-year-old, and a two-year-old."
-  },
-  {
-    "type": "paragraph",
-    "text": "Teaching is my third career. I started in finance, moved to IT, and then eventually made my way into education, with a lot of odd in-between stops along the way. But I’m old, so even with all that moving around, I’ve still been teaching for more than two decades."
-  },
-  {
-    "type": "paragraph",
-    "text": "When I first started teaching, school seemed mostly okay. That was partly because I didn’t have kids of my own yet. I didn’t know enough to know better. And the kids I was teaching were usually pretty far behind, so when I helped them catch up, it felt like the system was doing something useful. Not great. Not inspiring. Not exactly the Academy in ancient Athens. But okay-ish."
-  },
-  {
-    "type": "paragraph",
-    "text": "Then my own kids started school in the United States, and that changed things. I knew pretty quickly that something wasn’t right. Not in the “this teacher is annoying” way. Not in the “this homework assignment is dumb” way. Those things are always going to happen. I mean wrong in the deeper way. Wrong in the structure. Wrong in the assumptions. Wrong in what the system rewards and what it slowly grinds out of kids."
-  },
-  {
-    "type": "paragraph",
-    "text": "But what could I do? Mostly, I tried to reduce the damage. Help at home. Fill in the gaps. Explain what school failed to explain. Push back where I could. Teach them how to think outside the machinery. Try to get them through it with the ability to think clearly and take care of themselves."
-  },
-  {
-    "type": "paragraph",
-    "text": "That became the goal. Not excellence. Not school success as defined by school. Not a perfect résumé full of activities nobody would do unless adults had turned childhood into a competitive paperwork exercise. Just this: get them through with their minds intact."
-  },
-  {
-    "type": "paragraph",
-    "text": "Every year that passed, I became more convinced that the system was mostly pointless for the kind of life I want my kids to be able to live. And now that my older kids are upperclassmen in high school, post-Covid, I don’t have much doubt left."
-  },
-  {
-    "type": "paragraph",
-    "text": "We’re facing a disaster."
-  },
-  {
-    "type": "paragraph",
-    "text": "I know that sounds dramatic. I also know people outside schools say dramatic things about schools all the time. The difference is that I’m not outside. I’ve been inside for a long time. Long enough to see what’s changed, what hasn’t changed, and what’s become impossible to ignore."
-  },
-  {
-    "type": "figure",
-    "image": lifeEducationHallwayToOpenRoad,
-    "alt": "An empty school hallway fading into an open desert road with a father and two young children walking away from the building."
-  },
-  {
-    "type": "paragraph",
-    "text": "The good news is that I’m lucky. I’m about seven years from retirement. By then, my youngest kids will be around nine and eleven. The plan is to slow travel — first through the United States and North America, and then farther out into the world."
-  },
-  {
-    "type": "paragraph",
-    "text": "The kids have three passports from three countries on three continents, including the European Union. So we have some moving around to do. For me, this solves one enormous problem: middle school and high school in the United States."
-  },
-  {
-    "type": "paragraph",
-    "text": "But it creates another problem. If I’m going to step away from the standard path, I need something better than a vague freedom fantasy. “We’ll travel and learn from the world” sounds nice, but so do a lot of things people say right before they make a mess."
-  },
-  {
-    "type": "paragraph",
-    "text": "I need a real system. A system that can prove what they’ve learned. A system that teaches what I think actually matters. A system that lets them go as far as they want in any direction they want. A system that prepares them not just for college, or work, or tests, but for being functional human beings almost anywhere in the world."
-  },
-  {
-    "type": "paragraph",
-    "text": "That’s what this project is about."
-  },
-  {
-    "type": "paragraph",
-    "text": "The Life Education Project is my attempt to build that system before we need it."
-  },
-  {
-    "type": "figure",
-    "image": lifeEducationMapPassportsSpanish,
-    "alt": "A wooden desk with a world map, passports from different regions, a notebook labeled “systems and experiments,” and Spanish children’s dictionaries."
-  },
-  {
-    "type": "paragraph",
-    "text": "My four-year-old daughter is starting preschool at a dual-language school. They begin with about 90 percent Spanish and gradually add more English over time. That’s close to ideal for us. I can teach her a lot. I can’t teach her Spanish the way immersion can."
-  },
-  {
-    "type": "paragraph",
-    "text": "She’s mostly excited to go to school and have friends, which is fair. She’s four. Friends are the curriculum."
-  },
-  {
-    "type": "paragraph",
-    "text": "But if it works, both younger kids may become conversationally fluent in Spanish before we ever begin the bigger travel plan. That matters. Not because Spanish is a résumé decoration. Because language changes how you move through the world. It gives you more places where you’re not just standing outside, smiling politely, and hoping someone switches to English."
-  },
-  {
-    "type": "paragraph",
-    "text": "So the clock is running. We have seven years to build the systems that will let us travel the world and help these kids become capable, curious, resilient people who can thrive in more than one kind of place. The opportunity is magnificent. The need is urgent. The stakes are precious."
-  },
-  {
-    "type": "paragraph",
-    "text": "And I’m not pretending I’m fearless. I’m as conditioned as anyone else to worry about breaking away. I’m as conditioned as anyone else to soften every criticism of the system with twelve disclaimers and a group hug. I know the script: be practical, don’t be extreme, don’t mess up your kids, stay inside the lines. Sure, the system has problems, but what are you going to do?"
-  },
-  {
-    "type": "paragraph",
-    "text": "Well. This is what I’m going to do."
-  },
-  {
-    "type": "paragraph",
-    "text": "This blog will document the process: the plans, the experiments, the doubts, the failures, the curriculum, the travel preparation, the language learning, the books, the tools, the systems, the reconsiderations, and the parts where I realize I was wrong."
-  },
-  {
-    "type": "paragraph",
-    "text": "Especially those parts."
-  },
-  {
-    "type": "paragraph",
-    "text": "I have no illusions that this will go smoothly. I don’t think we’re going to float around the world in some glowing educational montage while everyone learns Mandarin by osmosis and develops perfect emotional regulation. I expect setbacks. I expect confusion. I expect to overbuild some things and underprepare for others. I expect to discover that some of my strongest opinions are only half right."
-  },
-  {
-    "type": "paragraph",
-    "text": "Fine. That’s part of the point."
-  },
-  {
-    "type": "paragraph",
-    "text": "The goal isn’t to build a perfect childhood. That’s another trap. The goal is to build a better way to grow up than the one currently being offered. Freer. Less harsh. More honest. More useful. More human."
-  },
-  {
-    "type": "paragraph",
-    "text": "A way that takes learning seriously without turning childhood into compliance training. A way that helps kids become who they are instead of spending thirteen years teaching them how to survive systems they didn’t choose."
-  },
-  {
-    "type": "paragraph",
-    "text": "That’s the journey. You’re welcome to follow along. Comments, suggestions, questions, warnings, criticism, and useful arguments are all welcome."
-  },
-  {
-    "type": "paragraph",
-    "text": "We’re building the plane before takeoff. Not ideal. But better than pretending the bus is going somewhere worth going."
-  }
-];
-
-const postBody = (
-  <>
-    {postBlocks.map((block, index) => {
-      if (block.type === "figure") {
-        return <PostFigure key={`figure-${index}`} src={block.image} alt={block.alt} />;
-      }
-
-      return <p key={`paragraph-${index}`}>{block.text}</p>;
-    })}
-  </>
-);
 
 const post: LifeEducationPost = {
   ...metadata,
-  body: postBody,
+  body: (
+    <>
+      <p>
+        Most education arguments start too late. They start with school choice, curriculum, grades, college, test scores, learning styles, screen time, homework, standards, or whatever fight happens to be loudest that week.
+      </p>
+      <p>
+        Those things matter. Some of them matter a lot. But they’re not the starting point.
+      </p>
+      <p>
+        The better starting point is simpler: <strong>What should an 18-year-old actually be able to do?</strong>
+      </p>
+      <p>
+        That question is now the center of the Why section on LifeEducation.org. I’ve been building LifeEducation around that question for a while, but the project needed a clearer front door. Not another explanation of every layer. Not a giant document dump. Not a manifesto that tries to answer every possible objection before anyone has even walked in.
+      </p>
+      <p>
+        Just the reason the project exists.
+      </p>
+      <p>
+        The Why section is that front door. It explains the target: raising capable, self-directed humans who can function in the real world without needing to be managed like children in adult-sized bodies.
+      </p>
+      <p>
+        That doesn’t mean rejecting school. It doesn’t mean pretending every family should homeschool. It doesn’t mean building a rigid curriculum and calling it freedom. The point is different.
+      </p>
+      <p>
+        LifeEducation treats the learning environment as changeable. School, homeschool, travel, hybrid, tutors, projects, work, books, community, and online tools are environments. They can help. They can fail. They can change. The operating system underneath has to be stronger than any one environment.
+      </p>
+      <PostFigure
+        src={navigationImage}
+        alt="A young person uses a public travel kiosk while a phone shows navigation, symbolizing real-world problem solving and system navigation."
+        caption="The environment can change. The target should not."
+      />
+      <p>
+        A kid can be school-successful and still not be ready for life. A kid can collect credentials and still freeze when nobody tells them what to do next. A kid can look impressive on paper and still lack judgment, agency, resilience, practical competence, or the ability to navigate real systems.
+      </p>
+      <p>
+        That gap is where LifeEducation starts.
+      </p>
+      <p>
+        The Why section lays out the basic thesis: the goal is not compliance, polish, or institutional approval. The goal is real capability, autonomy, judgment, health, belonging, optionality, and integrity built over time, tested in real life, and transferred gradually from parent to child.
+      </p>
+
+      <h2>Why the Why comes first</h2>
+      <p>
+        LifeEducation separates the Why from the Floor and the Domains on purpose. The Why names the target. The Floor defines the minimum. The Domains keep the full map of human competence in view.
+      </p>
+      <p>
+        Those pieces are related, but they’re not the same thing. Keeping them separate matters. Otherwise, the whole thing starts to look like a giant checklist or a homeschool binder with better branding.
+      </p>
+      <p>
+        That’s not what I’m building.
+      </p>
+      <p>
+        The Why is the answer to the question, “What are we actually optimizing for?” That question has to come first.
+      </p>
+
+      <h2>A clearer target</h2>
+      <p>
+        Without a clear target, education becomes a pile of activities. Classes, lessons, sports, apps, books, chores, trips, projects, grades, habits, and enrichment all compete for attention. Some are useful. Some are noise. Some are only useful if they serve a real aim.
+      </p>
+      <p>
+        The Why section is my attempt to name the target clearly enough that the rest of the system can be judged against it. Does this build agency? Does this build capability? Does this preserve optionality? Does this strengthen integrity? Does this support health? Does this deepen belonging?
+      </p>
+      <p>
+        Those are better questions than “Does this look like school?” or “Will this impress someone?”
+      </p>
+      <p>
+        The section is live now because the project needed a public anchor. The rest of LifeEducation can keep developing, but the basic standard should be visible: by 18, the goal is not a kid who has merely completed childhood. The goal is a young adult who can begin owning a life.
+      </p>
+      <p>
+        Not perfectly. Not dramatically. Not as a finished product. Just for real.
+      </p>
+      <p>
+        <a className="why-button" href="/why">Read the Why section</a>
+      </p>
+      <p>
+        More pieces are coming. The Floor and the Domains are the next major layers, but the Why comes first.
+      </p>
+      <p>
+        Because if the target is wrong, the system doesn’t matter.
+      </p>
+    </>
+  ),
 };
 
 export default post;
