@@ -145,13 +145,13 @@ export function HomePage() {
           <div className="contact-copy">
             <div className="contact-pill">Contact</div>
             <h2 className="contact-title">If you see something I’m missing, tell me.</h2>
-            <p className="contact-text">I’m building this for my own kids first. If you see a blind spot, a hole in the logic, a better example, or a serious objection, send it through the contact page.</p>
+            <p className="contact-text">Useful objections are welcome. So are corrections, better examples, edge cases, and serious holes in the logic.</p>
           </div>
           <div className="contact-card">
-            <div className="contact-card-label">Public contact</div>
-            <div className="contact-card-line">Send a note without exposing an address.</div>
-            <div className="contact-card-note">Use the contact page for objections, ideas, examples, corrections, or serious feedback.</div>
-            <a className="contact-card-cta" href="/contact">Contact LifeEducation</a>
+            <div className="contact-card-label">Send a note</div>
+            <div className="contact-card-line">I’m not trying to protect the argument from criticism.</div>
+            <div className="contact-card-note">I’m trying to make the target clearer, sharper, and harder to fool myself about.</div>
+            <a className="contact-card-cta" href="/contact">Send feedback</a>
           </div>
         </div>
       </section>
