@@ -1,7 +1,5 @@
 import { type CSSProperties, type FormEvent, useState } from "react";
 import { PageShell } from "../components/PageShell";
-import { PageIntro } from "../components/PageIntro";
-import { BackBar } from "../components/BackBar";
 
 type FormState = "idle" | "sending" | "sent" | "error";
 
@@ -98,12 +96,6 @@ export function ContactPage() {
 
   return (
     <PageShell>
-      <PageIntro
-        pill="Contact"
-        title="Send a Note"
-        subtitle="Questions, objections, corrections, blind spots, useful examples, and serious feedback can go here."
-      />
-      <BackBar><a href="/" className="back-link">← Back to Home</a></BackBar>
       <section className="doc-section">
         <p className="doc-section-text">
           I’m building LifeEducation in public because the target matters too much to hide the weak spots. If you see a hole in the logic, a better example, or something that needs to be said more plainly, send it.
