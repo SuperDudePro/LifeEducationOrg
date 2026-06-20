@@ -145,20 +145,20 @@ export function HomePage() {
           <div className="contact-copy">
             <div className="contact-pill">Contact</div>
             <h2 className="contact-title">If you see something I’m missing, tell me.</h2>
-            <p className="contact-text">I’m building this for my own kids first. If you see a blind spot, a hole in the logic, or a better way to say something, send it.</p>
+            <p className="contact-text">I’m building this for my own kids first. If you see a blind spot, a hole in the logic, a better example, or a serious objection, send it through the contact page.</p>
           </div>
           <div className="contact-card">
             <div className="contact-card-label">Public contact</div>
-            <div className="contact-card-line"><a href="mailto:LifeEducationInformation@gmail.com">LifeEducationInformation@gmail.com</a></div>
-            <div className="contact-card-note">Use this address for objections, ideas, examples, or serious feedback.</div>
-            <a className="contact-card-cta" href="mailto:LifeEducationInformation@gmail.com?subject=LifeEducation%20Website%20Feedback">Email your thoughts</a>
+            <div className="contact-card-line">Send a note without exposing an address.</div>
+            <div className="contact-card-note">Use the contact page for objections, ideas, examples, corrections, or serious feedback.</div>
+            <a className="contact-card-cta" href="/contact">Contact LifeEducation</a>
           </div>
         </div>
       </section>
       <footer className="footer">
         <div className="footer-inner">
           <div className="footer-text">© LifeEducation.org</div>
-          <a className="footer-link" href="mailto:LifeEducationInformation@gmail.com">LifeEducationInformation@gmail.com</a>
+          <a className="footer-link" href="/contact">Contact</a>
         </div>
       </footer>
     </PageShell>
