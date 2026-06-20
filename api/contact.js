@@ -21,6 +21,18 @@ function json(response, status, body) {
   return response.status(status).json(body);
 }
 
+function getProviderErrorMessage(errorText) {
+  try {
+    const parsed = JSON.parse(errorText);
+    if (typeof parsed.message === "string") return parsed.message;
+    if (typeof parsed.error === "string") return parsed.error;
+  } catch {
+    // Fall back to raw text below.
+  }
+
+  return errorText || "The email provider rejected the message.";
+}
+
 export default async function handler(request, response) {
   response.setHeader("Content-Type", "application/json; charset=utf-8");
 
@@ -85,8 +97,12 @@ export default async function handler(request, response) {
 
   if (!sendResponse.ok) {
     const errorText = await sendResponse.text();
-    console.error("Contact email failed:", errorText);
-    return json(response, 502, { ok: false, error: "Message could not be sent." });
+    const providerError = getProviderErrorMessage(errorText);
+    console.error(`Contact email failed (${sendResponse.status}):`, errorText);
+    return json(response, 502, {
+      ok: false,
+      error: `Message could not be sent. Provider said: ${providerError}`,
+    });
   }
 
   return json(response, 200, { ok: true });
