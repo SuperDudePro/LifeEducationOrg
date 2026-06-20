@@ -40,7 +40,7 @@ export function PostsPage() {
       <footer className="footer">
         <div className="footer-inner">
           <div className="footer-text">© LifeEducation.org</div>
-          <a className="footer-link" href="mailto:LifeEducationInformation@gmail.com">LifeEducationInformation@gmail.com</a>
+          <a className="footer-link" href="/contact">Contact</a>
         </div>
       </footer>
     </PageShell>
