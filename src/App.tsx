@@ -11,6 +11,7 @@ import { DomainDetailPage } from "./pages/DomainDetailPage";
 import { QAPage } from "./pages/QAPage";
 import { PostsPage } from "./pages/PostsPage";
 import { PostPage } from "./pages/PostPage";
+import { ContactPage } from "./pages/ContactPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { getPostBySlug } from "./content/loadPosts";
 
@@ -30,38 +31,8 @@ export default function App() {
   useEffect(() => {
     const onPopState = () => setPathname(normalizePath(window.location.pathname || "/"));
     window.addEventListener("popstate", onPopState);
-
-    const onClick = (event: MouseEvent) => {
-      const target = event.target as HTMLElement | null;
-      const anchor = target?.closest("a") as HTMLAnchorElement | null;
-      if (!anchor) return;
-      const href = anchor.getAttribute("href");
-      if (!href) return;
-      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-      if (anchor.target && anchor.target !== "_self") return;
-      if (anchor.hasAttribute("download")) return;
-      if (href.startsWith("mailto:") || href.startsWith("tel:") || href.startsWith("http") || href.startsWith("#")) return;
-
-      const nextUrl = new URL(href, window.location.origin);
-      if (nextUrl.origin !== window.location.origin) return;
-
-      const nextPath = normalizePath(nextUrl.pathname);
-      if (nextPath.includes(".")) return;
-
-      event.preventDefault();
-      if (nextPath !== pathname) {
-        window.history.pushState({}, "", nextPath);
-        setPathname(nextPath);
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-    };
-
-    document.addEventListener("click", onClick);
-    return () => {
-      window.removeEventListener("popstate", onPopState);
-      document.removeEventListener("click", onClick);
-    };
-  }, [pathname]);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, []);
 
   useEffect(() => {
     const defaultDescription =
@@ -100,6 +71,11 @@ export default function App() {
         title: "LifeEducation Q&A | LifeEducation.org",
         description:
           "Plain answers to common questions and objections about the LifeEducation framework.",
+      },
+      "/contact": {
+        title: "Contact | LifeEducation.org",
+        description:
+          "Send questions, corrections, objections, examples, or serious feedback about LifeEducation.",
       },
     };
 
@@ -155,12 +131,11 @@ export default function App() {
     if (pathname === "/by-18") return <By18Page />;
     if (pathname === "/floor") return <FloorPage />;
     if (pathname === "/qa") return <QAPage />;
+    if (pathname === "/contact") return <ContactPage />;
     if (pathname === "/posts") return <PostsPage />;
     if (pathname.startsWith("/posts/")) return <PostPage slug={pathname.replace("/posts/", "")} />;
     if (pathname === "/domains") return <DomainsPage />;
-    if (pathname.startsWith("/domains/")) {
-      return <DomainDetailPage slug={pathname.replace("/domains/", "")} />;
-    }
+    if (pathname.startsWith("/domains/")) return <DomainDetailPage slug={pathname.replace("/domains/", "")} />;
     return <NotFoundPage />;
   }, [pathname]);
 
