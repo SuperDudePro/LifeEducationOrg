@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { TREE_FAVICON } from "./data/site";
 import { DOMAINS } from "./data/domainsData";
 import { normalizePath } from "./utils/routing";
@@ -139,5 +140,10 @@ export default function App() {
     return <NotFoundPage />;
   }, [pathname]);
 
-  return <>{page}</>;
+  return (
+    <>
+      {page}
+      <Analytics />
+    </>
+  );
 }
