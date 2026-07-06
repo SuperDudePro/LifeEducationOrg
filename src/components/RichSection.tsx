@@ -1,16 +1,18 @@
+type RichSectionProps = {
+  heading: string;
+  body?: readonly string[];
+  bullets?: readonly string[];
+  footer?: string;
+  className?: string;
+};
+
 export function RichSection({
   heading,
   body,
   bullets,
   footer,
   className,
-}: {
-  heading: string;
-  body?: string[];
-  bullets?: string[];
-  footer?: string;
-  className?: string;
-}) {
+}: RichSectionProps) {
   const sectionClassName = ["doc-section", className].filter(Boolean).join(" ");
 
   return (
