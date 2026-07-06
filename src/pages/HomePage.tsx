@@ -17,7 +17,7 @@ export function HomePage() {
               If you dropped them off in a strange city on a different continent, could they figure it out?
             </h1>
             <p className="hero-text">
-              Too much of the current system still rewards looking good on paper. I’m trying to raise kids who can think, adapt, solve problems, and function in real life.
+              LifeEducation is not anti-education. It is anti school-as-default-authority: a refusal to treat official schooling as proof of learning, plus a real system for building capability.
             </p>
           </div>
         </section>
@@ -43,25 +43,25 @@ export function HomePage() {
               It starts with school. Or curriculum. Or standards. Or credentials. The better starting point is simpler: what should an 18-year-old actually be able to do, on their own, in real life?
             </p>
             <p className="why-text">
-              Skip the school reform debate. Name a better target and build around it directly. The goal is real capability, autonomy, and judgment.
+              A great school may be worth using. But school is an environment, not the operating system, and it does not deserve automatic trust just because it is official.
             </p>
             <a className="why-button" href="/why">Read the Why Statement</a>
           </div>
           <div className="why-cards">
+            <div className="why-card">
+              <div className="why-card-label">Legitimacy</div>
+              <div className="why-card-title">School has to prove itself.</div>
+              <div className="why-card-text">Attendance, grades, credits, and paperwork rituals are not proof that real education is happening.</div>
+            </div>
             <div className="why-card">
               <div className="why-card-label">Target</div>
               <div className="why-card-title">The Floor is the contract.</div>
               <div className="why-card-text">Minimum adulthood capability by 18. Serious, non-negotiable, and not disguised curriculum theater.</div>
             </div>
             <div className="why-card">
-              <div className="why-card-label">Priorities</div>
-              <div className="why-card-title">Agency. Capability. Optionality.</div>
-              <div className="why-card-text">Integrity, Health, and Belonging complete the set. The system exists to serve those six priorities.</div>
-            </div>
-            <div className="why-card">
               <div className="why-card-label">Shape</div>
-              <div className="why-card-title">Keep it light.</div>
-              <div className="why-card-text">A better target, clear guardrails, and a life where real things happen on purpose. That’s it.</div>
+              <div className="why-card-title">Indictment + replacement.</div>
+              <div className="why-card-text">The critique is direct, but it points back to a standard: real capability, autonomy, judgment, and ownership.</div>
             </div>
           </div>
         </div>
@@ -70,7 +70,7 @@ export function HomePage() {
         <div className="faq-head">
           <div className="faq-pill">Q&amp;A</div>
           <h2 className="faq-title">The questions a serious parent or skeptic should ask.</h2>
-          <p className="faq-text">Better to answer them plainly than hide the big distinctions under branding. These are the short versions; the full Q&amp;A now has the complete public FAQ.</p>
+          <p className="faq-text">Better to answer them plainly than hide the big distinctions under branding. These are the short versions; the full Q&amp;A names the education/schooling distinction directly.</p>
         </div>
         <div className="faq-grid">
           {HOME_FAQ_ITEMS.map((item) => (
@@ -126,7 +126,7 @@ export function HomePage() {
         <div className="posts-head">
           <div className="posts-pill">Posts</div>
           <h2 className="posts-title">Field notes as the system gets built in public.</h2>
-          <p className="posts-text">Practical writing on the Floor, the Domains, evidence, parenting, travel, and the work of raising capable kids without recreating school at home.</p>
+          <p className="posts-text">Practical writing on school legitimacy, the Floor, the Domains, evidence, parenting, travel, and the work of raising capable kids without recreating school at home.</p>
         </div>
         <div className="post-grid">
           {featuredPosts.map((post) => (

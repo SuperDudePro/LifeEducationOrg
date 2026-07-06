@@ -36,7 +36,7 @@ export default function App() {
 
   useEffect(() => {
     const defaultDescription =
-      "LifeEducation.org is a lightweight operating system for raising capable, self-directed humans outside the default school script.";
+      "LifeEducation.org is a lightweight operating system for raising capable, self-directed humans without treating school as the default authority over education.";
     const metaMap: Record<string, { title: string; description: string }> = {
       "/": {
         title: "LifeEducation.org",
@@ -45,7 +45,7 @@ export default function App() {
       "/why": {
         title: "Why LifeEducation.org Exists | LifeEducation.org",
         description:
-          "The founding statement for LifeEducation: a framework for raising capable, self-directed humans with real-world judgment by 18.",
+          "The founding statement for LifeEducation: not anti-education, but anti school-as-default-authority, with real capability as the standard.",
       },
       "/floor": {
         title: "The 18-Year-Old Floor | LifeEducation.org",
@@ -58,19 +58,19 @@ export default function App() {
           "A plain-language public translation of the LifeEducation Floor contract.",
       },
       "/domains": {
-        title: "10 Domains | LifeEducation.org",
+        title: "The 10 Domains | LifeEducation.org",
         description:
           "The broader LifeEducation capability map across communication, math, science, civics, ethics, finance, health, creativity, technology, and life skills.",
       },
       "/posts": {
         title: "Posts | LifeEducation.org",
         description:
-          "Field notes and essays on building LifeEducation in real life.",
+          "Field notes and essays on school legitimacy, the Floor, the Domains, and building LifeEducation in real life.",
       },
       "/qa": {
         title: "LifeEducation Q&A | LifeEducation.org",
         description:
-          "Plain answers to common questions and objections about the LifeEducation framework.",
+          "Plain answers to common questions and objections, including the distinction between education, schooling, and school-as-default-authority.",
       },
       "/contact": {
         title: "Contact | LifeEducation.org",
