@@ -2,6 +2,7 @@ import { DOMAINS } from "../data/domainsData";
 import { HOME_FAQ_ITEMS } from "../data/homeFaqData";
 import { PageShell } from "../components/PageShell";
 import { PostCard } from "../components/PostCard";
+import { SubscribeForm } from "../components/SubscribeForm";
 import { getRecentPosts } from "../content/loadPosts";
 
 export function HomePage() {
@@ -135,6 +136,7 @@ export function HomePage() {
         </div>
         <a className="domains-button" href="/posts">Browse posts</a>
       </section>
+      <SubscribeForm idPrefix="home-page" />
       <section className="image-break">
         <div className="image-break-inner">
           <img className="image-break-img" src="/site_break_02_contact_desk.webp" alt="Documents, notes, and letters prepared for serious public exchange" loading="lazy" decoding="async" />
