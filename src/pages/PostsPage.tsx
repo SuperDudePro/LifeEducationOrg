@@ -2,6 +2,7 @@ import { PageShell } from "../components/PageShell";
 import { PageIntro } from "../components/PageIntro";
 import { BackBar } from "../components/BackBar";
 import { PostCard } from "../components/PostCard";
+import { SubscribeForm } from "../components/SubscribeForm";
 import { getRecentPosts } from "../content/loadPosts";
 
 export function PostsPage() {
@@ -23,6 +24,7 @@ export function PostsPage() {
           The focus stays narrow on purpose. Everything here returns to the same question: what does it take to raise capable, self-directed humans without confusing schooling, credentials, or paperwork with actual readiness for life?
         </p>
       </section>
+      <SubscribeForm idPrefix="posts-page" />
       <section className="posts-section">
         <div className="posts-head">
           <div className="posts-pill">Latest writing</div>
