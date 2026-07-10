@@ -21,16 +21,53 @@ function json(response, status, body) {
   return response.status(status).json(body);
 }
 
-function getProviderErrorMessage(errorText) {
-  try {
-    const parsed = JSON.parse(errorText);
-    if (typeof parsed.message === "string") return parsed.message;
-    if (typeof parsed.error === "string") return parsed.error;
-  } catch {
-    // Fall back to raw text below.
+async function resendRequest(path, apiKey, options = {}) {
+  return fetch(`https://api.resend.com${path}`, {
+    ...options,
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+      ...(options.headers || {}),
+    },
+  });
+}
+
+async function subscribeContact(email, name, apiKey, segmentId) {
+  const createResponse = await resendRequest("/contacts", apiKey, {
+    method: "POST",
+    body: JSON.stringify({
+      email,
+      first_name: name,
+      unsubscribed: false,
+      segments: [{ id: segmentId }],
+    }),
+  });
+
+  if (createResponse.ok) return;
+
+  if (createResponse.status !== 409 && createResponse.status !== 422) {
+    throw new Error(`Resend contact creation failed (${createResponse.status}).`);
   }
 
-  return errorText || "The email provider rejected the message.";
+  const encodedEmail = encodeURIComponent(email);
+  const updateResponse = await resendRequest(`/contacts/${encodedEmail}`, apiKey, {
+    method: "PATCH",
+    body: JSON.stringify({ first_name: name, unsubscribed: false }),
+  });
+
+  if (!updateResponse.ok && updateResponse.status !== 404) {
+    throw new Error(`Could not update existing contact (${updateResponse.status}).`);
+  }
+
+  const segmentResponse = await resendRequest(
+    `/contacts/${encodedEmail}/segments/${encodeURIComponent(segmentId)}`,
+    apiKey,
+    { method: "POST" },
+  );
+
+  if (!segmentResponse.ok && segmentResponse.status !== 409) {
+    throw new Error(`Could not add contact to segment (${segmentResponse.status}).`);
+  }
 }
 
 export default async function handler(request, response) {
@@ -48,15 +85,16 @@ export default async function handler(request, response) {
   }
 
   const name = getString(body, "name");
-  const email = getString(body, "email");
+  const email = getString(body, "email").toLowerCase();
   const subject = getString(body, "subject") || "New contact message";
   const message = getString(body, "message");
+  const wantsSubscription = getString(body, "subscribe") === "yes";
 
   if (!name || !email || !message) {
     return json(response, 400, { ok: false, error: "Name, email, and message are required." });
   }
 
-  if (!email.includes("@") || !email.includes(".")) {
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 180) {
     return json(response, 400, { ok: false, error: "Use a valid email address." });
   }
 
@@ -69,23 +107,26 @@ export default async function handler(request, response) {
     CONTACT_SUBJECT_PREFIX = "LifeEducation",
     CONTACT_TO_EMAIL,
     RESEND_API_KEY,
+    RESEND_LE_SEGMENT_ID,
   } = process.env;
 
   if (!RESEND_API_KEY || !CONTACT_TO_EMAIL || !CONTACT_FROM_EMAIL) {
-    console.error("Missing contact form environment variables.");
+    console.error("Missing LifeEducation contact form environment variables.");
     return json(response, 500, { ok: false, error: "Contact form is not configured yet." });
   }
 
   const safeSubject = `${CONTACT_SUBJECT_PREFIX}: ${subject}`.slice(0, 160);
-  const text = [`Name: ${name}`, `Email: ${email}`, `Subject: ${subject}`, "", message].join("\n");
-  const endpoint = "https://api." + "resend.com" + "/emails";
+  const text = [
+    `Name: ${name}`,
+    `Email: ${email}`,
+    `Subject: ${subject}`,
+    `Requested subscription: ${wantsSubscription ? "Yes" : "No"}`,
+    "",
+    message,
+  ].join("\n");
 
-  const sendResponse = await fetch(endpoint, {
+  const sendResponse = await resendRequest("/emails", RESEND_API_KEY, {
     method: "POST",
-    headers: {
-      Authorization: `Bearer ${RESEND_API_KEY}`,
-      "Content-Type": "application/json",
-    },
     body: JSON.stringify({
       from: CONTACT_FROM_EMAIL,
       to: [CONTACT_TO_EMAIL],
@@ -97,13 +138,31 @@ export default async function handler(request, response) {
 
   if (!sendResponse.ok) {
     const errorText = await sendResponse.text();
-    const providerError = getProviderErrorMessage(errorText);
-    console.error(`Contact email failed (${sendResponse.status}):`, errorText);
-    return json(response, 502, {
-      ok: false,
-      error: `Message could not be sent. Provider said: ${providerError}`,
-    });
+    console.error(`LifeEducation contact email failed (${sendResponse.status}):`, errorText);
+    return json(response, 502, { ok: false, error: "Message could not be sent." });
   }
 
-  return json(response, 200, { ok: true });
+  if (wantsSubscription) {
+    if (!RESEND_LE_SEGMENT_ID) {
+      console.error("Missing RESEND_LE_SEGMENT_ID for LifeEducation contact subscription.");
+      return json(response, 200, {
+        ok: true,
+        subscribed: false,
+        warning: "Message sent, but the email subscription could not be completed.",
+      });
+    }
+
+    try {
+      await subscribeContact(email, name, RESEND_API_KEY, RESEND_LE_SEGMENT_ID);
+    } catch (error) {
+      console.error("LifeEducation contact message sent, but subscription failed:", error);
+      return json(response, 200, {
+        ok: true,
+        subscribed: false,
+        warning: "Message sent, but the email subscription could not be completed.",
+      });
+    }
+  }
+
+  return json(response, 200, { ok: true, subscribed: wantsSubscription });
 }
