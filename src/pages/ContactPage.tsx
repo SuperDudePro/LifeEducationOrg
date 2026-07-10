@@ -1,7 +1,7 @@
 import { type CSSProperties, type FormEvent, useState } from "react";
 import { PageShell } from "../components/PageShell";
 
-type FormState = "idle" | "sending" | "sent" | "error";
+type FormState = "idle" | "sending" | "sent" | "partial" | "error";
 
 const formStyle: CSSProperties = {
   display: "flex",
@@ -45,10 +45,33 @@ const textareaStyle: CSSProperties = {
   resize: "vertical",
 };
 
+const checkboxRowStyle: CSSProperties = {
+  alignItems: "flex-start",
+  display: "flex",
+  gap: "0.7rem",
+};
+
+const checkboxStyle: CSSProperties = {
+  flex: "0 0 auto",
+  height: "1.1rem",
+  marginTop: "0.15rem",
+  width: "1.1rem",
+};
+
+const checkboxTextStyle: CSSProperties = {
+  color: "#334155",
+  lineHeight: 1.5,
+};
+
 const statusStyle: CSSProperties = {
   color: "#0D4B39",
   fontWeight: 800,
   marginBottom: 0,
+};
+
+const warningStatusStyle: CSSProperties = {
+  ...statusStyle,
+  color: "#7c4a03",
 };
 
 const errorStatusStyle: CSSProperties = {
@@ -59,11 +82,13 @@ const errorStatusStyle: CSSProperties = {
 export function ContactPage() {
   const [formState, setFormState] = useState<FormState>("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setFormState("sending");
     setErrorMessage("");
+    setSuccessMessage("");
 
     const form = event.currentTarget;
     const formData = new FormData(form);
@@ -78,13 +103,30 @@ export function ContactPage() {
         body: JSON.stringify(payload),
       });
 
-      const result = (await response.json().catch(() => null)) as { error?: string } | null;
+      const result = (await response.json().catch(() => null)) as {
+        error?: string;
+        subscribed?: boolean;
+        warning?: string;
+      } | null;
 
       if (!response.ok) {
         throw new Error(result?.error ?? "The message did not send.");
       }
 
+      const requestedSubscription = formData.get("subscribe") === "yes";
       form.reset();
+
+      if (result?.warning) {
+        setSuccessMessage(result.warning);
+        setFormState("partial");
+        return;
+      }
+
+      setSuccessMessage(
+        requestedSubscription && result?.subscribed
+          ? "Message sent, and you are subscribed."
+          : "Message sent.",
+      );
       setFormState("sent");
     } catch (error) {
       setFormState("error");
@@ -127,11 +169,17 @@ export function ContactPage() {
             <textarea id="message" name="message" required maxLength={4000} rows={8} style={textareaStyle} />
           </div>
 
+          <label style={checkboxRowStyle}>
+            <input type="checkbox" name="subscribe" value="yes" style={checkboxStyle} />
+            <span style={checkboxTextStyle}>Also send me new LifeEducation posts by email.</span>
+          </label>
+
           <button className="why-button" type="submit" disabled={isSending}>
             {isSending ? "Sending..." : "Send note"}
           </button>
 
-          {formState === "sent" && <p style={statusStyle}>Message sent.</p>}
+          {formState === "sent" && <p style={statusStyle}>{successMessage}</p>}
+          {formState === "partial" && <p style={warningStatusStyle}>{successMessage}</p>}
           {formState === "error" && <p style={errorStatusStyle}>{errorMessage}</p>}
         </form>
       </section>
