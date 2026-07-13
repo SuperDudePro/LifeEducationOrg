@@ -1,26 +1,26 @@
 export const HOME_FAQ_ITEMS = [
   {
-    label: "Starting Point",
-    question: "What are you running toward, not just away from?",
-    answer:
-      "Capable, self-directed humans who can own their lives. The critique of school matters, but the target is a young adult who can function, think, adapt, build relationships, manage health and money, and keep learning without waiting to be managed.",
-  },
-  {
     label: "Core Distinction",
     question: "Are you anti-education?",
     answer:
-      "No. Education is the point. LifeEducation rejects the institutional substitute that keeps calling itself education while producing dependency, weak thinking, fake rigor, and paperwork rituals.",
+      "Yes, if education means compulsory formal schooling as it currently exists. No, if education means learning, skill, mentorship, discipline, curiosity, or serious adult responsibility. School is one institution. Learning is larger than school.",
   },
   {
-    label: "School Stance",
-    question: "Are you anti-school?",
+    label: "Structure",
+    question: "Don't some kids need structure?",
     answer:
-      "I am anti school-as-default-authority. A great school may be worth using, but school has to prove it is building capability. It does not get automatic trust just because it is official.",
+      "Yes. Structure is necessary. But structure that builds capability is different from structure designed for institutional order at scale. LifeEducation is not less structure; it is structure pointed at capability instead of compliance.",
   },
   {
-    label: "How It Fits",
-    question: "How do the Why, Floor, By 18, and Domains fit together?",
+    label: "Equity",
+    question: "What about disadvantaged kids?",
     answer:
-      "The Why names the target. The Floor defines the non-negotiable minimum by 18. By 18 translates that contract into plain public language. The Domains are the broader capability map.",
+      "Lower expectations dressed as compassion is not equity. Kids with fewer resources need stronger routes to real capability, not weaker preparation. Support should change the route, not abandon the destination.",
+  },
+  {
+    label: "AI",
+    question: "How does AI change the argument?",
+    answer:
+      "AI makes the argument more urgent. If school is mostly content delivery, worksheets, standard answers, and compliance management, AI will absorb more of that work. Human value shifts to judgment, verification, creativity, relationships, and tool use without outsourcing the self.",
   },
 ] as const;

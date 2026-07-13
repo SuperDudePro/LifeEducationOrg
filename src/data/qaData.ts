@@ -1,7 +1,7 @@
 export const QA_DATA = {
   "intro": [
     "These are the questions we get asked most, plus the questions we think serious readers should ask even if they usually do not. Quick scan, not exhaustive policy manual. The Why is the main public-facing piece. This Q&A exists to make the public position plain, test it against obvious objections, and keep the core distinctions clean: the Floor is the contract, the Domains are the broader map, and the system stays light on purpose.",
-    "This version states the school critique more honestly. LifeEducation is not anti-education. It is anti school-as-default-authority. School can be useful. A great school can be powerful. But official schooling does not deserve automatic trust just because it is familiar, compulsory, or credentialed."
+    "This version states the school critique directly. LifeEducation is not anti-learning, anti-children, anti-reading, anti-math, anti-discipline, anti-structure, or anti-serious adults. It is against compulsory formal schooling as the default authority over childhood and learning. School is one possible environment. It does not deserve automatic trust just because it is familiar, official, or credentialed."
   ],
   "sections": [
     {
@@ -10,8 +10,7 @@ export const QA_DATA = {
         {
           "question": "What are you running toward, not just away from?",
           "answer": [
-            "We are running toward capable, self-directed humans who can own their lives. The target is a young adult who can function, think, adapt, build relationships, manage health and money, and keep learning without waiting to be managed.",
-            "School is the foil because it is the dominant institution claiming authority over learning. But the mission is not to complain about school forever. The mission is to build a clearer standard than school usually offers."
+            "We are running toward capable, self-directed humans who can own their lives. School is the foil, not the mission. The target is a young adult who can function, think, adapt, build relationships, manage health and money, and keep learning without waiting to be managed."
           ]
         },
         {
@@ -55,8 +54,7 @@ export const QA_DATA = {
         {
           "question": "Who is this for, and who is it not for?",
           "answer": [
-            "It is for families who want a serious alternative to default schooling without turning life into a giant curriculum. It is not for families looking for a packaged program, a permission slip to disengage, or a guarantee that no hard decisions will be required.",
-            "It is also not for people who need the school critique softened into harmless reform language. The critique is part of the project. The system has to be built because the default institution has not earned default trust."
+            "It is for families who want a serious alternative to default schooling without turning life into a giant curriculum. It is not for families looking for a packaged program, a permission slip to disengage, or a guarantee that no hard decisions will be required."
           ]
         },
         {
@@ -71,47 +69,11 @@ export const QA_DATA = {
       "heading": "The obvious objections",
       "items": [
         {
-          "question": "Are you anti-education?",
-          "answer": [
-            "No. Education is the point. Learning, literacy, numeracy, judgment, discipline, culture, skill, curiosity, and intellectual seriousness all matter.",
-            "What I reject is the institutional substitute that keeps calling itself education while producing dependency, weak thinking, fake rigor, and paperwork rituals. Schooling and education are not the same thing."
-          ]
-        },
-        {
           "question": "Are you anti-school?",
           "answer": [
             "I am anti school-as-default-authority.",
             "A great school with great teachers can be a powerful environment. I would use one. I am not allergic to classrooms, teachers, books, math, science, discipline, or serious study.",
             "But school is not legitimate by category. It has to prove itself like any other environment. Attendance, grades, credits, pacing guides, and credentials are not enough. The question is whether real capability is being built."
-          ]
-        },
-        {
-          "question": "Are you anti-teacher?",
-          "answer": [
-            "No. Good teachers, coaches, mentors, specialists, and demanding adults matter.",
-            "The critique is that the profession and the institution often protect school legitimacy even when the actual learning, adult competence, curriculum judgment, and student capability are weak. Caring is not enough. Training language is not enough. Paperwork is not enough. The adult has to be able to think above the script and help the learner move toward real capability."
-          ]
-        },
-        {
-          "question": "Would you use a great school?",
-          "answer": [
-            "Yes. If my kids had access to a great district, a great school, and strong teachers who expanded their ceiling, I would seriously consider using it.",
-            "The rule is not \"never use school.\" The rule is \"school is a vendor, not the operating system.\" Use what it does well. Do not hand it the steering wheel."
-          ]
-        },
-        {
-          "question": "What do you mean by school has no default legitimacy?",
-          "answer": [
-            "I mean official status is not proof of education.",
-            "A school does not deserve trust merely because it is familiar, compulsory, credentialed, or publicly funded. It earns trust by producing real capability, strong relationships, intellectual seriousness, and honest preparation for life.",
-            "If a school cannot show that, then more hours of the same weak thing do not solve the problem. Low-quality exposure repeated longer is still low-quality exposure."
-          ]
-        },
-        {
-          "question": "Is this just ranting?",
-          "answer": [
-            "No. Ranting stops at contempt. This project uses contempt as fuel, but the work is reasoned indictment plus replacement.",
-            "The indictment is that school often claims authority it has not earned. The replacement is the Floor, the Domains, the operating system, the evidence model, and the actual life built around capability."
           ]
         },
         {
@@ -123,7 +85,7 @@ export const QA_DATA = {
         {
           "question": "What if they only learn how to game the Floor?",
           "answer": [
-            "In short: Even the worst-case version is still a serious adulthood standard, not paper compliance.",
+            "In short: Even the \"worst-case\" version is still a serious adulthood standard, not paper compliance.",
             "First, that is harder than it sounds if the Floor is honest. Second, even the fallback case is still a stronger result than paper success without dependable capability. The Floor is not the aspiration. It is the minimum line below which adulthood should not be claimed."
           ]
         },
@@ -178,7 +140,133 @@ export const QA_DATA = {
         {
           "question": "What research supports this?",
           "answer": [
-            "In short: This is a first-principles system, not a rebranded research program.\n\nThis is not built from one branded pedagogy or one study. It is built from first principles about what adulthood requires and from practical observations about how capability actually forms: repeated reps, real stakes, transfer of ownership, and lived application. Some component ideas are common and well-supported. The system itself is ours."
+            "In short: This is a first-principles system, not a rebranded research program.",
+            "This is not built from one branded pedagogy or one study. It is built from first principles about what adulthood requires and from practical observations about how capability actually forms: repeated reps, real stakes, transfer of ownership, and lived application. Some component ideas are common and well-supported. The system itself is ours."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "School, structure, equity, and AI objections",
+      "items": [
+        {
+          "question": "Are you anti-education?",
+          "answer": [
+            "Yes, if education means compulsory formal schooling as it currently exists.",
+            "No, if education means learning, growth, discipline, mentorship, literacy, numeracy, curiosity, apprenticeship, practice, feedback, or serious adult responsibility. Those are exactly the things LifeEducation is trying to protect.",
+            "The problem is that formal schooling has successfully claimed the word education for itself. LifeEducation rejects that claim. School is one institution. Learning is larger than school."
+          ]
+        },
+        {
+          "question": "Are you saying school never helps anyone?",
+          "answer": [
+            "No. A bad default system can still contain good teachers, good friendships, real opportunities, safety, structure, and meaningful learning. Plenty of people did well in school, loved school, or found important adults there.",
+            "That does not answer the larger question. A system can benefit some people and still be a poor default model for human development. Personal success inside a structure does not prove the structure deserves moral loyalty."
+          ]
+        },
+        {
+          "question": "Would you use a great school?",
+          "answer": [
+            "Yes. If my kids had access to a great district, a great school, and strong teachers who expanded their ceiling, I would seriously consider using it.",
+            "The rule is not \"never use school.\" The rule is \"school is a vendor, not the operating system.\" Use what it does well. Do not hand it the steering wheel."
+          ]
+        },
+        {
+          "question": "What do you mean by school has no default legitimacy?",
+          "answer": [
+            "I mean official status is not proof of education.",
+            "A school does not deserve trust merely because it is familiar, compulsory, credentialed, or publicly funded. It earns trust by producing real capability, strong relationships, intellectual seriousness, and honest preparation for life.",
+            "If a school cannot show that, then more hours of the same weak thing do not solve the problem. Low-quality exposure repeated longer is still low-quality exposure."
+          ]
+        },
+        {
+          "question": "Is this just ranting?",
+          "answer": [
+            "No. Ranting stops at contempt. This project uses contempt as fuel, but the work is reasoned indictment plus replacement.",
+            "The indictment is that school often claims authority it has not earned. The replacement is the Floor, the Domains, the operating system, the evidence model, and the actual life built around capability."
+          ]
+        },
+        {
+          "question": "Are you attacking teachers?",
+          "answer": [
+            "No. The critique is not that teachers do not care or do not work hard. Many do. Some are excellent.",
+            "The critique is that teacher effort is often used to protect the reputation of a system that does not deserve it. Good people working hard inside a bad structure do not make the structure good. LifeEducation can honor serious teaching without granting legitimacy to compulsory schooling as the default design for childhood."
+          ]
+        },
+        {
+          "question": "Don't some kids need structure?",
+          "answer": [
+            "Yes. That is not an argument for school as the default model.",
+            "There is a difference between structure that supports a learner and structure that exists because an institution needs order at scale. Predictability, routine, direct instruction, deadlines, scaffolding, coaching, and clear expectations can all be useful. Bells, age batching, fragmented subjects, permission-based movement, constant grading, and adult-controlled pacing are not automatically justified because some children need support.",
+            "LifeEducation is not less structure. It is structure pointed at capability instead of compliance."
+          ]
+        },
+        {
+          "question": "What about kids who feel safe inside school structure?",
+          "answer": [
+            "That matters. Some kids experience school as refuge, routine, stability, or access to adults they need. That is real.",
+            "But safety inside an institution is not the same thing as proof that the institution is well designed for learning or adulthood. A young person may need stable adults, food, routine, boundaries, help, and community. Those needs should be met directly. They should not be used to defend every feature of formal schooling."
+          ]
+        },
+        {
+          "question": "What about disadvantaged kids?",
+          "answer": [
+            "The answer cannot be lower expectations dressed up as compassion.",
+            "Kids with fewer resources need stronger routes to real capability, not weaker preparation. They need literacy, money sense, communication, health, digital judgment, practical problem-solving, and the ability to navigate systems that may not care about them.",
+            "Support should change the route. It should not abandon the destination."
+          ]
+        },
+        {
+          "question": "Isn't equity the reason we need standardized schooling?",
+          "answer": [
+            "Standardization is often sold as equity, but it can also hide inequity behind sameness. Equal pacing, equal worksheets, equal grading systems, and equal seat time do not create equal capability.",
+            "Real equity would ask what a young person actually needs to become capable, safe, literate, numerate, healthy, socially grounded, and ready to act in the world. Sometimes that requires more structure. Sometimes it requires more freedom. Sometimes it requires direct instruction, tutoring, food, sleep, therapy, disability support, translation, or a different environment entirely.",
+            "Sameness is not the same thing as justice."
+          ]
+        },
+        {
+          "question": "Does LifeEducation lower the bar for kids who need more support?",
+          "answer": [
+            "No. Support changes the route. Lowering the bar changes the claim.",
+            "If a young person needs more time, different tools, assistive technology, direct instruction, coaching, repetition, therapies, or outside support, use them. But do not pretend a capability exists when it does not. False confidence is not kindness.",
+            "LifeEducation allows different routes. It does not allow fake adulthood."
+          ]
+        },
+        {
+          "question": "How does neurodiversity fit into this?",
+          "answer": [
+            "A readiness-based system should be better suited to neurodivergent learners than a one-pace, one-age, one-format model. Autonomy should transfer by capacity and reliability, not by age or by adult wishful thinking.",
+            "Some kids need more structure, fewer threads, clearer routines, sensory supports, explicit teaching, or slower control transfer. That is not failure. It is honest design. The point is not to force every kid through the same route. The point is to build real capability in a way that fits the actual child."
+          ]
+        },
+        {
+          "question": "How does AI change the argument?",
+          "answer": [
+            "AI makes the argument more urgent.",
+            "If school is mostly content delivery, worksheet completion, standard answers, and compliance management, AI will absorb more of that work. The human value will be in judgment, question-asking, verification, creativity, relationships, and the ability to use powerful tools without outsourcing the self.",
+            "LifeEducation treats AI as a tool, not an authority. The young person still has to understand, decide, explain, build, and prove capability."
+          ]
+        },
+        {
+          "question": "What about AI bias and unequal access?",
+          "answer": [
+            "Those are real concerns. But formal schooling is already biased by zip code, parent time, teacher quality, language, disability labels, test culture, compliance temperament, access to quiet space, and the ability to decode hidden rules.",
+            "AI does not introduce unfairness into a neutral system. It enters a system already full of hidden advantages and disadvantages. The answer is not to protect the old system from scrutiny. The answer is to build young people who can question tools, verify claims, notice bias, and use technology without being ruled by it."
+          ]
+        },
+        {
+          "question": "Can LifeEducation scale?",
+          "answer": [
+            "Not if scale means turning it into another standardized institution.",
+            "Some pieces can scale: the Floor, the Domains, the questions, the evidence habits, the review rhythms, and the public language around capability. But the whole system should not become a district program that pretends one structure fits every family and kid.",
+            "LifeEducation scales better as a framework than as a factory."
+          ]
+        },
+        {
+          "question": "Are you trying to reform school?",
+          "answer": [
+            "No. Some school reforms are worth doing, especially when they reduce harm or create more honest paths for students already inside the system. But LifeEducation is not mainly a school-reform project.",
+            "The goal is not to make the existing machine more pleasant. The goal is to start from a different premise: what must a young person actually be able to do to own a real life?"
           ]
         }
       ]
@@ -352,7 +440,8 @@ export const QA_DATA = {
         {
           "question": "Who decides if the Floor is actually met?",
           "answer": [
-            "In short: Primary judgment stays with the family, but high-stakes claims need stronger proof than confidence.\n\nThe family using the system has primary responsibility for that judgment, but not by vibes. Floor claims should be tied to real evidence, direct performance, and—where the stakes are higher—short challenge checks, outside proof, or formal benchmarks. For some doors, outside systems will still matter. That is fine. The internal claim should still be honest before the external one ever shows up."
+            "In short: Primary judgment stays with the family, but high-stakes claims need stronger proof than confidence.",
+            "The family using the system has primary responsibility for that judgment, but not by vibes. Floor claims should be tied to real evidence, direct performance, and—where the stakes are higher—short challenge checks, outside proof, or formal benchmarks. For some doors, outside systems will still matter. That is fine. The internal claim should still be honest before the external one ever shows up."
           ]
         }
       ]
@@ -369,37 +458,242 @@ export const QA_DATA = {
         {
           "question": "If my kid wants selective college later, what matters?",
           "answer": [
-            "Then we reverse-engineer the door honestly. Selective college may require outside validation: tests, dual enrollment, community college work, strong writing, recommendations, portfolio proof, competitions, or other credible signals. LifeEducation does not refuse those tools. It refuses to treat them as the purpose of childhood."
+            "Strong writing, demonstrated readiness, real depth in something meaningful, and a coherent story. The point is not to game admissions. It is to make real competence visible in a format that selective systems can understand."
           ]
         },
         {
-          "question": "What if my kid wants military, trades, business, athletics, or work instead?",
+          "question": "What if my kid wants trades or apprenticeships?",
           "answer": [
-            "Then the same principle applies: understand the door, identify the real requirements, build the capability, and collect the minimum honest proof that reduces friction. The path changes. The operating logic does not."
+            "Reliability, safety mindset, hands-on competence, references, and proof you can actually work. Portfolios, logs, certs, and mentor testimony often matter more there than conventional credit language."
           ]
         },
         {
-          "question": "What about returning to school later?",
+          "question": "What if they want military options?",
           "answer": [
-            "Keep enough documentation, skill reality, and formal proof to make re-entry possible if that door matters. A system that permanently traps a kid outside other options would violate optionality."
+            "Then paperwork, eligibility, documentation, fitness, and clean records matter. That path is more compliance-heavy than others, so the value of early clarity is simply that fewer surprises show up late."
+          ]
+        },
+        {
+          "question": "What about athletics?",
+          "answer": [
+            "Time gets scarce. Protect health, keep the basics from rotting, understand eligibility rules early, and do not let a performance path hollow out the rest of the person."
+          ]
+        },
+        {
+          "question": "What if they want to return to traditional school?",
+          "answer": [
+            "Keep the documentation clean and the skills real. Re-entry is easiest when you have proof of competence and you did not ignore basic requirements."
+          ]
+        },
+        {
+          "question": "What if they do not know what they want yet?",
+          "answer": [
+            "That is normal. The point of the Floor and the Domains is to keep optionality alive long enough that later choices are real rather than panic-driven."
+          ]
+        },
+        {
+          "question": "How do you handle kids who reach the Floor early?",
+          "answer": [
+            "You do not pretend the work is over. You shift the emphasis toward broader domain cultivation and self-directed depth while keeping maintenance and truth-telling alive."
+          ]
+        },
+        {
+          "question": "Why talk about \"doors\" at all?",
+          "answer": [
+            "Because some future options close accidentally and expensively. The point is not to script a career. It is to avoid closing paths by neglect when keeping them open was reasonable."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Community, socialization, and belonging",
+      "items": [
+        {
+          "question": "What does socialization mean here in reality, not theory?",
+          "answer": [
+            "Relationships, roles, shared work, and repeated contact. School is one social system. It is not automatically the best one."
+          ]
+        },
+        {
+          "question": "What about friends?",
+          "answer": [
+            "Friends come from steady shared time and shared effort, not only from sitting in the same room by birth year. That is why we value teams, clubs, gyms, jobs, volunteer groups, neighbors, extended family, and repeated community structures."
+          ]
+        },
+        {
+          "question": "Why value multi-age socialization?",
+          "answer": [
+            "Because real life is multi-age. Kids learn to lead, follow, negotiate, and belong better when they interact with younger and older people, not only peers in one same-age batch."
+          ]
+        },
+        {
+          "question": "How do you build community without school as the default?",
+          "answer": [
+            "Join structures that meet regularly and matter: sport gyms, clubs, volunteer organizations, maker spaces, lessons, debate, jobs, church if relevant, neighborhoods, and family networks."
+          ]
+        },
+        {
+          "question": "Won't kids miss out on school culture?",
+          "answer": [
+            "They may miss some school-specific culture. The question is whether school culture is the target. We care more about real belonging, real roles, and real relationships than about access to one particular youth institution."
+          ]
+        },
+        {
+          "question": "What about conflict, hard adults, and disappointment?",
+          "answer": [
+            "Good. They need some of that. A rich environment includes mentors, coaches, teammates, officials, service roles, and systems that do not instantly bend to the kid. That is part of how judgment and resilience get built."
+          ]
+        },
+        {
+          "question": "How do you avoid social isolation on the road or in homeschooling?",
+          "answer": [
+            "By designing for continuity rather than novelty alone: recurring communities, repeated places when possible, steady training groups, and adults who know the kid well enough to notice real growth."
+          ]
+        },
+        {
+          "question": "What if my kid is shy or awkward?",
+          "answer": [
+            "Then you respect temperament without mistaking it for exemption. The goal is not to make every kid socially flashy. The goal is that they can function, ask for what they need, and build working relationships in the real world."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Legality, ethics, and agenda-driven questions",
+      "items": [
+        {
+          "question": "Is this legal?",
+          "answer": [
+            "Usually some version is legal, but requirements vary by state and country. Verify locally, keep clean records, and do not build your plan on internet folklore. We are not lawyers. Check with a qualified attorney, homeschool regulatory body, or equivalent local authority before betting your child's path on assumptions."
+          ]
+        },
+        {
+          "question": "How do you stay ethical?",
+          "answer": [
+            "Do not fake documents. Do not claim learning that did not happen. Do not hide weakness behind branding language. Meet the legal minimums where you live and keep honest evidence of real work."
+          ]
+        },
+        {
+          "question": "What if you move states or countries?",
+          "answer": [
+            "Treat it like a system change. Re-check requirements, translate your documentation into the new system's language, and keep your portfolio and summaries as the constant."
+          ]
+        },
+        {
+          "question": "Are you anti-teacher?",
+          "answer": [
+            "No. Good teachers, coaches, mentors, and specialists matter a lot. The critique is about the institution, not contempt for people who teach well.",
+            "It is possible to respect serious teaching and still believe formal schooling, as the default model, is structurally misaligned with human development."
+          ]
+        },
+        {
+          "question": "Are you anti-college?",
+          "answer": [
+            "No. College is one pathway among several. The goal is not to rebel against college. The goal is to make later choices deliberate rather than default."
+          ]
+        },
+        {
+          "question": "Are you anti-credential?",
+          "answer": [
+            "No. Credentials are useful when they serve a real purpose. We are anti-credentialism: the habit of treating paper signals as a substitute for competence."
+          ]
+        },
+        {
+          "question": "Is this a backdoor way to shelter kids from ideas you dislike?",
+          "answer": [
+            "It should not be. The system is strongest when it raises kids who can encounter competing ideas, compare them fairly, and think for themselves rather than merely inherit a tribe."
+          ]
+        },
+        {
+          "question": "What if a family uses this language to justify neglect?",
+          "answer": [
+            "Then they are violating the system, not proving it wrong. The Floor is a contract. Broad language about freedom or flexibility does not erase the requirement that capability must become real."
+          ]
+        },
+        {
+          "question": "What if a parent just wants their kid to look impressive online?",
+          "answer": [
+            "That is exactly why the system distinguishes outputs from theater and evidence from performance. Real work matters. Documentation is secondary. If the display is doing more work than the life, the system has gone off the rails."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Constraints, special situations, and hard cases",
+      "items": [
+        {
+          "question": "What if both parents work full-time?",
+          "answer": [
+            "Then you design for leverage: routines, recurring community structures, coaches, mentors, shared responsibility, and a smaller, lighter operating loop. The goal is not parent-as-full-time-teacher. It is a rich environment with guardrails."
+          ]
+        },
+        {
+          "question": "What does this cost?",
+          "answer": [
+            "It can be near-zero or expensive depending on choices. Time is usually the larger cost early on. A family using public libraries, community sports, open-source tools, local volunteering, and home responsibilities as primary environments can do a lot for very little beyond normal living costs."
+          ]
+        },
+        {
+          "question": "What about neurodivergence or special needs?",
+          "answer": [
+            "Bands are readiness-based, not age-based. If a kid needs more structure, co-regulation, fewer threads, or slower transfer of ownership, that is not failure. It means the system should fit the kid's brain instead of pretending one timeline fits everyone."
+          ]
+        },
+        {
+          "question": "What if my kid has a diagnosed disability that makes some Floor requirements unrealistic?",
+          "answer": [
+            "In short: Accommodation can change the route and the proof. It cannot justify fantasy claims.",
+            "Then you do not solve that by pretending the issue does not exist. You decide what can be accommodated, what still has to become real in some form, and what outside support or modified route is required. The principle stays: the goal is honest adulthood capability, not fake sameness. The exact proof may change. The obligation to tell the truth does not."
+          ]
+        },
+        {
+          "question": "What if my kid is 14 and we are starting late?",
+          "answer": [
+            "Start thinner, not harder. Build the smallest stable loop first, baseline honestly against the Floor, and close the biggest capability gaps first. Late start changes pacing, not the destination."
+          ]
+        },
+        {
+          "question": "What if I am burned out?",
+          "answer": [
+            "Then the system has to shrink without disappearing. One daily check-in, one weekly review, one thread, and fewer ambitions is better than pretending you can run a beautiful system on empty."
+          ]
+        },
+        {
+          "question": "What if we try this and hate it?",
+          "answer": [
+            "Then treat it like a pilot. Keep what reduced stress and increased capability, drop what created drag, redesign once, and simplify if needed. The point is to serve life, not win at framework maintenance."
+          ]
+        },
+        {
+          "question": "What if the kid just wants conventional school?",
+          "answer": [
+            "Then school may be the right environment for that season. The OS can still sit on top of school if the family wants the Why, the Floor, and the broader target to stay in view."
+          ]
+        },
+        {
+          "question": "What if slow travel never happens?",
+          "answer": [
+            "Nothing breaks. Travel is one possible lab, not the goal. The environment can change. The target stays."
+          ]
+        },
+        {
+          "question": "Is this really just a justification for pulling kids out of school to travel?",
+          "answer": [
+            "No. Travel is one possible environment, not the reason the system exists. The Why, the Floor, and the Domains all make sense without travel. Travel is valuable when it deepens life. It is not valuable merely because it is mobile or unusual."
+          ]
+        },
+        {
+          "question": "What if this all sounds too idealistic?",
+          "answer": [
+            "That is fair. The answer is not to claim perfection. The answer is to start small, keep the standard honest, and make the next real decision better than the default one."
           ]
         }
       ]
     },
     {
       "heading": "Bottom line",
-      "items": [
-        {
-          "question": "What is the shortest version?",
-          "answer": [
-            "LifeEducation is not anti-education. It is anti school-as-default-authority.\n\nThe Floor is the contract. The Domains are the map. The OS keeps the work honest. School, homeschool, travel, work, mentors, and classes are possible environments. None of them gets automatic authority over the definition of readiness.\n\nThe target is not a transcript. The target is a young adult who can actually function, think, build, contribute, recover, and keep learning."
-          ]
-        }
-      ]
+      "items": []
     }
   ],
-  "bottom": [
-    "LifeEducation is not anti-education. It is anti school-as-default-authority.",
-    "The target is not a transcript. The target is a young adult who can actually function, think, build, contribute, recover, and keep learning."
-  ]
+  "bottom": []
 } as const;

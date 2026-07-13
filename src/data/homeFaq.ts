@@ -1,26 +1,26 @@
 export const HOME_FAQ_ITEMS = [
   {
-    label: "Starting Point",
-    question: "What are you running toward, not just away from?",
+    label: "Core Distinction",
+    question: "Are you anti-education?",
     answer:
-      "Kids who can run their own lives. School is not the point. The point is a young adult who can think, adapt, solve problems, and function in real life.",
+      "Yes, if education means compulsory formal schooling as it currently exists. No, if education means learning, skill, mentorship, discipline, curiosity, or serious adult responsibility. School is one institution. Learning is larger than school.",
   },
   {
-    label: "Plain English",
-    question: "What does floor-complete mean?",
+    label: "Structure",
+    question: "Don't some kids need structure?",
     answer:
-      "It means the kid can function in the real world. If you dropped them into a new city at 18, they would not panic.",
+      "Yes. Structure is necessary. But structure that builds capability is different from structure designed for institutional order at scale. LifeEducation is not less structure; it is structure pointed at capability instead of compliance.",
   },
   {
-    label: "Common Objection",
-    question: "Is this just unschooling with a nicer name?",
+    label: "Equity",
+    question: "What about disadvantaged kids?",
     answer:
-      "No. The Floor is a real contract. The Domains are a real coverage map.",
+      "Lower expectations dressed as compassion is not equity. Kids with fewer resources need stronger routes to real capability, not weaker preparation. Support should change the route, not abandon the destination.",
   },
   {
-    label: "How It Fits",
-    question: "How do the Why, Floor, By 18, and Domains fit together?",
+    label: "AI",
+    question: "How does AI change the argument?",
     answer:
-      "The Why says what this is for. The Floor sets the minimum by 18. By 18 puts that in plain English. The Domains keep the broader map in view.",
+      "AI makes the argument more urgent. If school is mostly content delivery, worksheets, standard answers, and compliance management, AI will absorb more of that work. Human value shifts to judgment, verification, creativity, relationships, and tool use without outsourcing the self.",
   },
 ] as const;
