@@ -6,6 +6,7 @@ const rootDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..")
 const sitemapPath = path.join(rootDir, "public", "sitemap.xml");
 const distDir = path.join(rootDir, "dist");
 const indexPath = path.join(distDir, "index.html");
+const canonicalHost = "https://www.lifeeducation.org";
 
 const [sitemap, indexHtml] = await Promise.all([
   readFile(sitemapPath, "utf8"),
@@ -24,8 +25,13 @@ while ((match = locationPattern.exec(sitemap)) !== null) {
 for (const route of routes) {
   const relativePath = route.replace(/^\/+/, "");
   const routeDir = path.join(distDir, relativePath);
+  const canonicalUrl = `${canonicalHost}${route}`;
+  const routeHtml = indexHtml
+    .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${canonicalUrl}" />`)
+    .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${canonicalUrl}" />`);
+
   await mkdir(routeDir, { recursive: true });
-  await writeFile(path.join(routeDir, "index.html"), indexHtml, "utf8");
+  await writeFile(path.join(routeDir, "index.html"), routeHtml, "utf8");
 }
 
 console.log(`Generated static entry pages for ${routes.size} routes.`);
