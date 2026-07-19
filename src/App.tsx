@@ -15,6 +15,15 @@ import { ContactPage } from "./pages/ContactPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { getPostBySlug } from "./content/loadPosts";
 
+const GA_TRACKING_ID = "G-XXC8QNBPH5";
+const TRACKED_HOSTS = new Set(["lifeeducation.org", "www.lifeeducation.org"]);
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 export default function App() {
   useEffect(() => {
     let link = document.querySelector("link[rel='icon']") as HTMLLinkElement | null;
@@ -118,11 +127,20 @@ export default function App() {
     setMeta("meta[property='og:description']", "content", meta.description);
     setMeta("meta[name='twitter:title']", "content", meta.title);
     setMeta("meta[name='twitter:description']", "content", meta.description);
-    setMeta("link[rel='canonical']", "href", `${window.location.origin}${pathname === "/" ? "/" : pathname}`, () => {
+    setMeta("link[rel='canonical']", "href", `https://www.lifeeducation.org${pathname === "/" ? "/" : pathname}`, () => {
       const link = document.createElement("link");
       link.rel = "canonical";
       return link;
     });
+
+    if (TRACKED_HOSTS.has(window.location.hostname.toLowerCase())) {
+      window.gtag?.("event", "page_view", {
+        send_to: GA_TRACKING_ID,
+        page_title: meta.title,
+        page_path: `${pathname}${window.location.search}`,
+        page_location: window.location.href,
+      });
+    }
   }, [pathname]);
 
   const page = useMemo(() => {
