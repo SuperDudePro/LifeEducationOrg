@@ -1,24 +1,13 @@
 import type { LifeEducationPost } from "../../postTypes";
 import { PostFigure } from "../../../components/PostFigure";
-import heroImage from "./images/hero-image.webp";
-import cardImage from "./images/card-image.webp";
 import bodyImageOne from "./images/body-image-1.webp";
 import bodyImageTwo from "./images/body-image-2.webp";
 import bodyImageThree from "./images/body-image-3.webp";
 import bodyImageFour from "./images/body-image-4.webp";
+import { metadata } from "./meta";
 
 const post: LifeEducationPost = {
-  slug: "i-was-looking-for-better-objections",
-  title: "I Was Looking for Better Objections",
-  excerpt: "I expected teachers to challenge LifeEducation as educators. Too often, they challenged it as employees of schools.",
-  publishedAt: "2026-07-19",
-  status: "Recent",
-  topic: "Education",
-  tags: ["school", "life education", "capability", "parents", "systems"],
-  heroImage,
-  heroAlt: "A tired teacher in a staff meeting looks past paperwork and laptops toward a brighter outdoor scene where people of different ages are learning and helping one another.",
-  cardImage,
-  cardAlt: "A tabletop covered with scattered speech cards around a single upright card bearing a large question mark and a small green underline.",
+  ...metadata,
   body: (
     <>
       <p>I have been asking anyone I can to tell me what is wrong with LifeEducation. I don't mean that as the polite request for feedback people make when they're hoping to be praised. I'm actually looking for weaknesses, contradictions, unrealistic expectations, and places where my own history has distorted the design.</p>
@@ -50,7 +39,7 @@ const post: LifeEducationPost = {
       <p>The same problem appears in the objection about disadvantaged children. Children whose families lack time, money, education, or stability may need more support from outside the home. Some rely on school for food, safety, disability services, dependable adults, community, or a predictable place to spend the day. Those needs are real and should never be waved away.</p>
       <p>They also don't justify lowering the adulthood standard or pretending the current system reliably meets it. Children with fewer resources need stronger routes to literacy, numeracy, communication, health, money sense, digital judgment, practical problem-solving, and the ability to navigate institutions that may not care about them. They may need translation, tutoring, therapy, assistive technology, transportation, quieter spaces, or more time.</p>
       <p>Support should change the route without abandoning the destination. Identical pacing, assignments, grading systems, and seat time don't produce identical capability. Sameness can conceal inequality as easily as it can prevent it.</p>
-      <PostFigure image={bodyImageOne} alt="A split pencil-sketch scene contrasts rows of same-age students in a classroom with a mixed-age community scene of children and adults learning and working together." />
+      <PostFigure src={bodyImageOne} alt="A split pencil-sketch scene contrasts rows of same-age students in a classroom with a mixed-age community scene of children and adults learning and working together." />
 
       <h2>Socialization Is Not Age-Stacking</h2>
       <p>The socialization objection contains a real concern. If a child is severely neglected, receives almost no healthy interaction at home, and has no meaningful life beyond the family, school may provide something essential. A more stable environment with other children and adults may be much better than what that child has outside it.</p>
@@ -85,7 +74,7 @@ const post: LifeEducationPost = {
       <p>The institution calls this consistency, but much of it is an attempt to script around uneven professional capacity. The more schools rely on templates, common slides, required components, monitoring systems, and detailed lesson directions, the less often teachers are asked to think from first principles about what students are learning and why.</p>
       <p>After enough years inside that environment, even intelligent people can become accustomed to conversations taking place several levels below the real issue. They talk about whether the template was followed, whether the pacing guide is on schedule, and whether the required component appeared. Questions about what the lesson is building, whether students understand it, and whether the structure makes sense disappear underneath the machinery.</p>
       <p>A system that trains its employees to work inside prescribed structures shouldn't be surprised when their criticism of an alternative begins by defending those structures.</p>
-      <PostFigure image={bodyImageTwo} alt="A teacher and student study a mechanical grade machine filled with gears, dials, and weighted slots, trying to understand how a final score emerges." />
+      <PostFigure src={bodyImageTwo} alt="A teacher and student study a mechanical grade machine filled with gears, dials, and weighted slots, trying to understand how a final score emerges." />
 
       <h2>The Gradebook Nobody Understands</h2>
       <p>Grading is one of the clearest examples because the system is used constantly while remaining poorly understood. Categories and weights determine what counts, what students can recover from, and where they should place their effort. If assessments make up 70 percent of a grade, that creates a very different course from one in which daily work makes up half.</p>
@@ -97,7 +86,7 @@ const post: LifeEducationPost = {
       <p>A grading system students can't understand isn't merely inconvenient. It denies them the chance to make rational choices about their own work. Worse, we have normalized systems that many of the adults administering them can't clearly describe, then blame teenagers for failing to manage those systems strategically.</p>
       <p>Schools say they're preparing young people to navigate complicated systems. The gradebook often teaches them to submit work, watch a number move, and accept the output without understanding how the machine produced it.</p>
       <p>A school that can't explain what its grades mean is in a weak position to criticize an education system built around demonstrated capability. Adults trained to accept the output of opaque systems are also unlikely to ask whether the system itself deserves to survive.</p>
-      <PostFigure image={bodyImageThree} alt="Teachers and administrators face a large board of class loads, student counts, and grade categories that do not fit together cleanly." />
+      <PostFigure src={bodyImageThree} alt="Teachers and administrators face a large board of class loads, student counts, and grade categories that do not fit together cleanly." />
 
       <h2>Following the Reasoning Would Require Admitting the Problem</h2>
       <p>The same pattern appears in staffing conversations. Suppose teachers currently teach six classes and the school reduces that load to five. One of three things must happen: the school hires more teachers, students take fewer classes, or class sizes increase.</p>
@@ -119,6 +108,8 @@ const post: LifeEducationPost = {
       <p>Sometimes I continue naming the contradiction. Sometimes I decide it isn't worth painting another target on myself and shut up. If quiet noncompliance lets me protect my family and finish my career, the system often tolerates that more easily than open honesty. It's only when someone says, "This is bullshit. What are you doing?" that the institution decides the speaker is the problem.</p>
       <p>So which explanation describes me? Am I trapped without authority? Am I protecting a comfortable job? Am I preserving my income while telling myself that private disagreement is enough? I don't like the answers available.</p>
       <p>That recognition is part of why I'm no longer willing to hand my younger children to the same system and hope that private objections somehow protect them. I can't undo the years I participated in it. I can stop pretending participation was neutral.</p>
+      <PostFigure src={bodyImageFour} alt="A teacher stands at the threshold between an overloaded classroom desk and the home beyond, holding only part of the work while leaving the rest behind." />
+
       <h2>The Work You Purchased</h2>
       <p>Schools survive by externalizing the cost of their design into private time. Teachers finish impossible jobs at night. Parents supply missing instruction and life preparation after work. Students sacrifice sleep, family time, health, play, and ordinary adolescence to schedules that no one has honestly added together.</p>
       <p>The institution then calls everyone heroic.</p>
