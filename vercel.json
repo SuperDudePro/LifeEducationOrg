@@ -6,10 +6,10 @@
       "has": [
         {
           "type": "host",
-          "value": "www.lifeeducation.org"
+          "value": "lifeeducation.org"
         }
       ],
-      "destination": "https://lifeeducation.org/:path*",
+      "destination": "https://www.lifeeducation.org/:path*",
       "permanent": true
     }
   ],
