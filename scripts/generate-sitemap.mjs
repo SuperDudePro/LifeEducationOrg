@@ -1,7 +1,7 @@
 import { readFileSync, readdirSync, writeFileSync } from "fs";
 import { join } from "path";
 
-const BASE = "https://lifeeducation.org";
+const BASE = "https://www.lifeeducation.org";
 
 function getDateStamp(date = new Date()) {
   const year = date.getFullYear();
