@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "npm run sitemap && tsc -b && vite build && npm run generate:routes",
     "check": "npm run lint && npm run build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "sitemap": "node scripts/generate-sitemap.mjs"
+    "sitemap": "node scripts/generate-sitemap.mjs",
+    "generate:routes": "node scripts/generate-route-pages.mjs"
   },
   "dependencies": {
     "react": "^19.2.4",
