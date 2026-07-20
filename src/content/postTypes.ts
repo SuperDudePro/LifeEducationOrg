@@ -12,6 +12,7 @@ export type LifeEducationPostMeta = {
   title: string;
   excerpt: string;
   publishedAt: string;
+  modifiedAt?: string;
   displayDate?: string;
   status?: PostStatus;
   topic?: string;
