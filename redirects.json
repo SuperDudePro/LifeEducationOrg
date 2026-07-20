@@ -1,0 +1,17 @@
+{
+  "canonicalOrigin": "https://www.lifeeducation.org",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "lifeeducation.org"
+        }
+      ],
+      "destination": "https://www.lifeeducation.org/:path*",
+      "permanent": true,
+      "note": "Canonicalize the bare domain to www."
+    }
+  ]
+}
