@@ -14,6 +14,7 @@ import { PostPage } from "./pages/PostPage";
 import { ContactPage } from "./pages/ContactPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { getPostBySlug } from "./content/loadPosts";
+import { applyStructuredData } from "./structuredData";
 
 const GA_TRACKING_ID = "G-XXC8QNBPH5";
 const TRACKED_HOSTS = new Set(["lifeeducation.org", "www.lifeeducation.org"]);
@@ -132,6 +133,7 @@ export default function App() {
       link.rel = "canonical";
       return link;
     });
+    applyStructuredData(pathname, meta.title, meta.description);
 
     if (TRACKED_HOSTS.has(window.location.hostname.toLowerCase())) {
       window.gtag?.("event", "page_view", {
