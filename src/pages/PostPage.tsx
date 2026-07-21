@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { PageShell } from "../components/PageShell";
 import { BackBar } from "../components/BackBar";
 import { PostCard } from "../components/PostCard";
+import { SharePost } from "../components/SharePost";
 import { formatPostDate, getRelatedPosts, loadPostBySlug } from "../content/loadPosts";
 import type { LifeEducationPost } from "../content/postTypes";
 
@@ -21,6 +22,10 @@ export function PostPage({ slug }: Props) {
   if (!post) return <PageShell><section className="doc-hero"><div className="doc-pill">Post not found</div><h1 className="doc-title">That post is not here.</h1><p className="doc-subtitle">The link may be old, or the post may have moved.</p></section><BackBar><a href="/posts" className="back-link">← Back to Posts</a></BackBar></PageShell>;
 
   const related = getRelatedPosts(post);
+  const shareUrl = `https://www.lifeeducation.org/posts/${post.slug}`;
+  const shareImageSource = post.cardImage ?? post.heroImage;
+  const shareImage = shareImageSource ? new URL(shareImageSource, "https://www.lifeeducation.org").href : undefined;
+
   return (
     <PageShell>
       <article>
@@ -35,7 +40,10 @@ export function PostPage({ slug }: Props) {
           {post.heroImage ? <div className="post-hero-media"><img src={post.heroImage} alt={post.heroAlt ?? ""} loading="eager" decoding="async" /></div> : null}
         </section>
         <BackBar><a href="/posts" className="back-link">← Back to Posts</a></BackBar>
-        <section className="post-article">{post.body}</section>
+        <section className="post-article">
+          {post.body}
+          <SharePost title={post.title} excerpt={post.excerpt} url={shareUrl} image={shareImage} />
+        </section>
       </article>
       {related.length > 0 && <section className="posts-section" aria-labelledby="related-posts-title"><div className="posts-head"><div className="posts-pill">Keep reading</div><h2 className="posts-title" id="related-posts-title">Related field notes</h2></div><div className="post-grid">{related.map((item) => <PostCard key={item.slug} post={item} />)}</div></section>}
       <footer className="footer"><div className="footer-inner"><div className="footer-text">© LifeEducation.org</div><a className="footer-link" href="/contact">Contact</a></div></footer>
