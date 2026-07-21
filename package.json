@@ -5,13 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run sitemap && npm run deployment:marker && tsc -b && vite build && npm run generate:routes",
+    "build": "npm run validate:redirects && npm run sitemap && npm run deployment:marker && tsc -b && vite build && npm run generate:routes && npm run validate:site",
     "check": "npm run lint && npm run build",
     "lint": "eslint .",
     "preview": "vite preview",
     "sitemap": "node scripts/generate-sitemap.mjs",
     "deployment:marker": "node scripts/write-deployment-marker.mjs",
-    "generate:routes": "node scripts/generate-route-pages.mjs"
+    "generate:routes": "node scripts/generate-route-pages.mjs",
+    "sync:redirects": "node scripts/sync-redirects.mjs",
+    "validate:redirects": "node scripts/validate-redirects.mjs",
+    "validate:site": "node scripts/validate-site.mjs"
   },
   "dependencies": {
     "react": "^19.2.4",
