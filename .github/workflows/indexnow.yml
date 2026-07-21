@@ -1,4 +1,4 @@
-name: Submit sitemap to IndexNow
+name: Submit changed URLs to IndexNow
 
 on:
   push:
@@ -18,12 +18,16 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Wait for production and submit URLs
+      - name: Wait for production and submit changed URLs
         run: node scripts/submit-indexnow.mjs
         env:
           SITE_URL: https://www.lifeeducation.org
           INDEXNOW_KEY: 61ce7fc9035e19de0a179e9c02972623
           DEPLOY_SHA: ${{ github.sha }}
+          BEFORE_SHA: ${{ github.event.before }}
+          EVENT_NAME: ${{ github.event_name }}
