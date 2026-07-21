@@ -1,0 +1,102 @@
+.long-post-nav {
+  position: fixed;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  z-index: 1200;
+  display: grid;
+  justify-items: end;
+  gap: 0.65rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(14px);
+  pointer-events: none;
+  transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
+}
+
+.long-post-nav--visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.long-post-nav__controls {
+  display: flex;
+  gap: 0.55rem;
+  padding: 0.45rem;
+  border: 2px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  background: rgba(3, 8, 6, 0.96);
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.36), 0 0 24px rgba(42, 138, 103, 0.18);
+  backdrop-filter: blur(10px);
+}
+
+.long-post-nav__button,
+.long-post-nav__panel a {
+  min-height: 44px;
+  border: 2px solid #2A8A67;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 850;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.long-post-nav__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 0.8rem;
+}
+
+.long-post-nav__button--top {
+  background: #177B58;
+}
+
+.long-post-nav__button:hover,
+.long-post-nav__panel a:hover {
+  background: #0D4B39;
+  border-color: #d8f7e8;
+}
+
+.long-post-nav__panel {
+  display: grid;
+  gap: 0.5rem;
+  min-width: 160px;
+  padding: 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 22px;
+  background: rgba(3, 8, 6, 0.98);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.38), 0 0 26px rgba(42, 138, 103, 0.18);
+}
+
+.long-post-nav__panel a {
+  display: flex;
+  align-items: center;
+  padding: 0.65rem 0.9rem;
+}
+
+@media (max-width: 520px) {
+  .long-post-nav {
+    right: max(0.65rem, env(safe-area-inset-right));
+    bottom: max(0.65rem, env(safe-area-inset-bottom));
+  }
+
+  .long-post-nav__controls {
+    gap: 0.4rem;
+    padding: 0.38rem;
+  }
+
+  .long-post-nav__button {
+    padding: 0.52rem 0.68rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .long-post-nav {
+    transition: none;
+  }
+}
