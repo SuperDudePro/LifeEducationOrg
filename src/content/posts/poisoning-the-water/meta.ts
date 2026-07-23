@@ -9,7 +9,7 @@ export const metadata = {
     "I’m building LifeEducation in public—and documenting why I can no longer trust the school system with my youngest children before familiarity makes the default feel normal again.",
   publishedAt: "2026-07-21",
   displayDate: "July 21, 2026",
-  status: "Recent",
+  status: "Draft",
   topic: "Founding Notes",
   tags: ["LifeEducation", "School Critique", "Building in Public"],
   heroImage,
