@@ -1,8 +1,6 @@
 import type { LifeEducationPost } from "../../postTypes";
 import { PostFigure } from "../../../components/PostFigure";
 import bodyImageOne from "./images/body-image-1.webp";
-import bodyImageTwo from "./images/body-image-2.webp";
-import bodyImageThree from "./images/body-image-3.webp";
 import bodyImageFour from "./images/body-image-4.webp";
 import { metadata } from "./meta";
 
@@ -10,146 +8,89 @@ const post: LifeEducationPost = {
   ...metadata,
   body: (
     <>
-      <p>I have been asking anyone I can to tell me what is wrong with LifeEducation. I don't mean that as the polite request for feedback people make when they're hoping to be praised. I'm actually looking for weaknesses, contradictions, unrealistic expectations, and places where my own history has distorted the design.</p>
+      <p>I have been asking people to tell me what is wrong with LifeEducation. I don't mean that as the polite request for feedback people make when they're hoping to be praised. I'm looking for weaknesses, contradictions, unrealistic expectations, and places where my own history has distorted the design.</p>
+
       <p>This system is intended for my children. I have years to test it before it becomes the center of how we prepare them for adulthood, which makes this the best possible time to discover that I'm wrong about something important. A serious objection now could save us from building years of work on a bad assumption.</p>
-      <p>Public conversations haven't been especially useful. Education is a hot topic on X, but most people want quick answers to questions they've already decided. School is either the foundation of civilization or a prison for children. Homeschooling is liberation or neglect. AI will save education or destroy it. Very few people want to sit with an unfamiliar framework long enough to understand what it actually claims.</p>
-      <p>LinkedIn may be worse. It combines AI-generated slop with professional sucking up and know-nothing certainty. People congratulate one another for repeating ideas no one has examined, wrapped in language polished enough to hide that almost nothing was said. I say that as someone who loves AI and uses it constantly. AI can sharpen thought, test assumptions, and help develop real work. It can also make empty thinking look finished.</p>
-      <p>That was why I was excited to discuss LifeEducation with teachers. Educators work with children every day. They see the gap between adult intentions and student outcomes. They know how developmental assumptions fail and how a plan that looks clean on paper can collapse the moment actual children touch it. I expected teachers to notice holes I had missed.</p>
+
+      <p>That was why I was excited to discuss LifeEducation with other teachers. Educators work with children every day. They know how clean plans collapse when actual children touch them. They see the gap between adult intentions and student outcomes. I expected them to notice holes I had missed.</p>
+
       <p>These were class discussions, not formal reviews. No one had spent months studying the framework, and no one owed me a complete critique of it. I wasn't expecting finished answers. I was hoping the questions would at least point toward the hardest parts of the design.</p>
-      <p>I still came away disappointed. The objections weren't completely false. Most contained a legitimate concern, but they rarely reached the actual structure of LifeEducation. I wanted people to test the Floor, the evidence, the transfer of responsibility, and the definition of capability. Most of the discussion returned instead to reasons school exists and reasons an alternative might fail.</p>
 
-      <h2>&quot;I Liked School&quot;</h2>
-      <p>One teacher said that he liked school and didn't think it was all that bad. I believe him. School probably worked reasonably well for him. He understood its rules, moved through it successfully, earned the credentials he needed, and eventually built a life inside the same institution.</p>
-      <p>That comment was one person's experience, not a complete defense of public education, and I don't want to make it carry more than he intended. There's nothing wrong with the life he built, and there's nothing dishonest about his experience.</p>
-      <p>The limit of the argument is that personal satisfaction can't establish that the institution is a good default design for childhood. School gave him a route he could follow toward a life he values, but that tells us more about his fit with school than it does about school's ability to prepare every child for the range of lives they might build.</p>
-      <p>Teachers are also an unusually selected group from whom to hear this argument. Most of us stayed in school, completed more school than the average person, and then returned to spend our careers there. We are disproportionately people who learned to function within the institution.</p>
-      <p>Some people enjoyed school, found excellent teachers, built friendships, earned useful credentials, and arrived at lives they value. Of course they did. That still doesn't tell us whether the structure reliably prepares a wide range of young people to build capable lives, including lives that look nothing like the lives of the adults running it.</p>
-      <p>A system cannot prove its adequacy by pointing to the people who fit it best.</p>
+      <p>Mostly, they didn't.</p>
 
-      <h2>The Questions I Hoped Teachers Would Ask</h2>
-      <p>I expected teachers to attack the LifeEducation Floor. The Floor is the non-negotiable minimum capability a young person should demonstrate before adulthood is treated as real. It covers communication, practical numeracy, health, money, judgment, technology, relationships, creative work, systems navigation, and the ability to finish difficult work without waiting for someone else to manage every step.</p>
-      <p>There should be plenty to challenge. Is eighteen the right deadline for every capability? Have I confused my own preferences with universal requirements? Are some expectations developmentally unrealistic, culturally narrow, or impossible to assess honestly? Could a capability system become another checklist young people learn to game?</p>
-      <p>The harder questions go beyond the list itself. Can we gather enough evidence to know whether capability is real without rebuilding school through constant documentation? Does the system transfer control to the young person quickly enough? What happens when a parent believes something is necessary and the young person fundamentally disagrees? Which abilities require sustained peer groups, institutions, or adults with expertise the family doesn't have?</p>
-      <p>I also expected people to question me. Where might my own anger at school be shaping the system more than I recognize? What evidence would persuade me that LifeEducation was failing? Am I protecting my children's independence, or building an elaborate structure around my own need to control the outcome?</p>
-      <p>Those are objections worth having. I don't have final answers to all of them, and some may eventually force changes to the system.</p>
-      <p>Instead, I heard that some children need structure, that parents might lack rigor or teach misinformation, that children need school for socialization, that parents may not have the time or knowledge, and that a system designed for one family might not scale. I heard concerns about disadvantaged children, unequal access, and parents imposing their own beliefs.</p>
-      <p>Those concerns deserve answers. The problem was that they usually pulled the discussion back toward the existing institution before reaching the actual design. The alternative was expected to reproduce every service, relationship, protection, and social function attached to school before it earned permission to question school's authority.</p>
-      <p>School is almost never held to the same standard in reverse.</p>
+      <h2>The Objections I Was Hoping For</h2>
 
-      <h2>The Existing System Sets the Terms</h2>
-      <p>"Some children need structure" is true, but it doesn't settle anything. Some children need a great deal of structure, others need less, and most need different amounts in different areas and at different stages. That tells us to think carefully about structure. It doesn't automatically justify bells, age batching, fragmented subjects, permission-based movement, constant grading, six or seven simultaneous classes, and adult-controlled pacing.</p>
-      <p>Structure and school aren't synonyms. Useful structure can include routines, deadlines, direct instruction, repetition, coaching, clear expectations, protected work time, and consequences for unfinished responsibilities. It can involve a school, tutor, coach, workplace, project team, parent, or community organization.</p>
-      <p>What matters is what the structure is for, who controls it, and whether it builds capability or merely produces compliance. Control should also transfer as a young person becomes more dependable, and the structure should be allowed to change when it stops serving its purpose. LifeEducation isn't an argument for less structure. It's an argument for structure pointed toward capability rather than institutional order.</p>
-      <p>The same problem appears in the objection about disadvantaged children. Children whose families lack time, money, education, or stability may need more support from outside the home. Some rely on school for food, safety, disability services, dependable adults, community, or a predictable place to spend the day. Those needs are real and should never be waved away.</p>
-      <p>They also don't justify lowering the adulthood standard or pretending the current system reliably meets it. Children with fewer resources need stronger routes to literacy, numeracy, communication, health, money sense, digital judgment, practical problem-solving, and the ability to navigate institutions that may not care about them. They may need translation, tutoring, therapy, assistive technology, transportation, quieter spaces, or more time.</p>
-      <p>Support should change the route without abandoning the destination. Identical pacing, assignments, grading systems, and seat time don't produce identical capability. Sameness can conceal inequality as easily as it can prevent it.</p>
+      <p>The LifeEducation Floor makes a large claim. It says there is a non-negotiable minimum set of capabilities a young person should demonstrate before adulthood is treated as real. That should be challenged hard.</p>
 
-      <PostFigure src={bodyImageOne} alt="A split pencil-sketch scene contrasts rows of same-age students in a classroom with a mixed-age community scene of children and adults learning and working together." />
+      <p>Is eighteen the right deadline for every capability? Have I confused my own preferences with universal requirements? Are some expectations developmentally unrealistic, culturally narrow, or impossible to assess honestly? Could the Floor become another checklist young people learn to game?</p>
 
-      <h2>Socialization Is Not Age-Stacking</h2>
-      <p>The socialization objection contains a real concern. If a child is severely neglected, receives almost no healthy interaction at home, and has no meaningful life beyond the family, school may provide something essential. A more stable environment with other children and adults may be much better than what that child has outside it.</p>
-      <p>That doesn't establish that school is the ideal social environment for every child.</p>
-      <p>A child who plays sports, spends time with friends, participates in activities, talks with older adults, helps younger children, learns to babysit, deals with neighbors, travels, joins projects, and moves through ordinary community life isn't socially deprived because those experiences happen outside a school building. That child may be engaging with a broader range of human beings than most age-segregated schools provide.</p>
-      <p>Real communities contain children, teenagers, working adults, parents, and older people. The proportions shift, but a healthy community usually contains a mixture. When one age group dominates, the environment changes. A town overwhelmed by college-age adults behaves differently from a mixed community. A place dominated by retirees does too. The imbalance itself shapes the culture.</p>
-      <p>Schools create an extreme imbalance on purpose. They stack young people by age, surround them with others born within a narrow window, and then describe the arrangement as socialization. Spending most of the day with people your exact age can teach useful things, but it isn't a natural model of society and it isn't the only way to learn how to function around other people.</p>
-      <p>Many objections to alternatives begin with some version of "unless something is wrong." Unless the home is unsafe. Unless the parents are incapable. Unless the child is isolated. Unless the family lacks resources. Those situations are real, but there's nothing wrong with my younger children that requires this remedy. They shouldn't have to endure a system badly matched to them merely because the same system provides something essential to children facing very different circumstances.</p>
-      <p>Perhaps the answer is the common good. Then someone should be willing to explain what that common good is, who benefits, who pays, and why this arrangement is necessary. Invoking the children with the greatest needs cannot end every argument about what all other children should be required to do.</p>
+      <p>The harder questions go beyond the list itself. Can we gather enough evidence to know whether capability is real without rebuilding school through constant documentation? Does control transfer to the young person quickly enough? What happens when a parent believes something is necessary and the young person fundamentally disagrees? Which abilities require sustained peer groups, institutions, or adults with expertise the family doesn't have?</p>
 
-      <h2>Parents, Beliefs, and Misinformation</h2>
-      <p>The concern about parents imposing beliefs was the closest anyone came to one of the harder objections I wanted. Parents can absolutely build systems around fear, ideology, religion, politics, status, or the need for control. A family-centered education can become an efficient way to prevent a child from encountering anything the adults don't approve of.</p>
-      <p>But that wasn't how the objection was developed. It remained a general suspicion that parents might lack rigor, teach misinformation, or transmit the wrong beliefs. In my reading, the imagined parent was not someone repeating official misinformation or adopting the institution's favored ideology too rigidly. The concern was aimed at religious or politically disfavored parents whose beliefs educators already distrust.</p>
-      <p>That's not a neutral concern about indoctrination. It's a concern about who gets to indoctrinate.</p>
-      <p>Schools transmit beliefs too. They decide what counts as knowledge, which authorities deserve trust, which risks matter, what language is acceptable, which historical interpretations are emphasized, and which questions are treated as settled. None of that disappears because the decisions are made by credentialed professionals or public institutions.</p>
-      <p>The serious issue is whether a young person gains the tools and freedom to examine those beliefs, compare them with evidence, encounter serious alternatives, and eventually reject the adults' conclusions.</p>
-      <p>"Parents might teach misinformation" is an unfalsifiable suspicion that can justify permanent institutional custody. "Am I building a system around my own need to control the outcome?" demands evidence and a mechanism for transferring control away from me. It asks what failure would look like, what the child is allowed to question, and what would force the parent to change.</p>
-      <p>LifeEducation should be judged by the second standard, not protected from it.</p>
+      <p>I also wanted people to question me. Where might my anger at school be shaping the system more than I recognize? What evidence would persuade me that LifeEducation was failing? Am I protecting my children's independence, or building an elaborate structure around my own need to control the outcome?</p>
 
-      <h2>The Time Objection Is Real</h2>
-      <p>"Parents don't have the time" isn't a shallow objection. It's probably the strongest practical objection to replacing school, and I benefit from the arrangement myself.</p>
-      <p>My family depends on the custodial function of school. I need somewhere safe and structured for my children to be while adults work. I couldn't currently function without that coverage. That's my guilt and my problem, not an argument that the education provided during those hours is adequate.</p>
-      <p>Even "couldn't" needs qualification. I mean that I couldn't do it within the family and work structure I chose. If replacing school had been the highest priority around which every other decision was organized, perhaps we could have built a different life. I don't know whether it should have been the highest priority. I do know that saying there was no alternative can hide the fact that I made tradeoffs too.</p>
-      <p>The institution should make the same admission. Nobody in education seriously believes the current day length was selected because it is pedagogically optimal. Attention, fatigue, and the limits of deliberate practice are common knowledge inside school buildings. Yet we schedule children for something shaped like an adult workday and describe nearly all of it as education because families and the economy depend on the coverage.</p>
-      <p>Dependence obliges honesty, not silence.</p>
-      <p>LifeEducation can't fully replace school for most families under current conditions. That doesn't make its standard wrong. It means the social structures around work, care, housing, transportation, and income make replacement difficult. "Not everyone can do this" is an argument against making it the immediate default, not an argument that the current education is good enough.</p>
-      <p>The design space is much larger than we admit. Mixed-age programs, apprenticeships, direct instruction, community work, technology, family life, and even childcare could be combined in ways that don't look like the inherited model. Almost every reform begins by preserving the same buildings, age divisions, schedules, custody assumptions, subject boundaries, and staffing model. We call it innovation while refusing to reconsider the shape that created the problem.</p>
+      <p>Those are objections that could force a redesign.</p>
 
-      <h2>A System That No Longer Trusts Teachers to Think</h2>
-      <p>The pattern in those discussions may reflect something deeper about the professional culture in many schools. Teachers are often treated less like experts expected to understand learning deeply and more like employees expected to administer systems created elsewhere.</p>
-      <p>I've worked with individual math lessons accompanied by plans approaching eighteen pages. The documents anticipate misconceptions, prescribe questions, predict student responses, and lay out possible instructional moves. From a distance, that level of detail can look like extraordinary instructional sophistication.</p>
-      <p>Often, it's an HR solution disguised as a mathematics solution.</p>
-      <p>The system can't depend on every teacher to understand the mathematics deeply enough to anticipate where students will struggle, interpret what a wrong answer reveals, choose a better representation, or decide what question should come next. Instead of solving the hiring, preparation, and retention problem, it tries to place the expertise into the lesson plan.</p>
-      <p>That doesn't work the way curriculum designers imagine. A teacher who doesn't understand the mathematics at the cellular level can follow an intricate lesson, but following the sequence isn't the same as understanding why each move is there. When students respond in an unexpected way, the teacher needs knowledge that can't be stored in the next box of a script.</p>
-      <p>The institution calls this consistency, but much of it is an attempt to script around uneven professional capacity. The more schools rely on templates, common slides, required components, monitoring systems, and detailed lesson directions, the less room teachers have to think from first principles about what students are learning and why.</p>
-      <p>Professional conversations begin to follow the same boundaries. They focus on whether the template was followed, whether the pacing guide is on schedule, and whether the required component appeared. Those questions may matter, but they can crowd out more basic ones: What is the lesson building? Do students understand it? Does the structure itself make sense?</p>
-      <p>When most professional work happens inside prescribed systems, criticism of an alternative will often begin by asking how it reproduces those systems. That isn't proof that the people raising the questions are unintelligent or acting in bad faith. It does mean the institution can set the terms of the conversation before the alternative is examined on its own terms.</p>
+      <h2>The Objections I Actually Heard</h2>
 
-      <PostFigure src={bodyImageTwo} alt="A teacher and student study a mechanical grade machine filled with gears, dials, and weighted slots, trying to understand how a final score emerges." />
+      <p>Instead, I heard that some people liked school and found it useful. I heard that children need structure and socialization. Parents might lack time, expertise, rigor, or ideological balance. Disadvantaged children rely on services attached to schools. A system designed for one family might not scale.</p>
 
-      <h2>The Gradebook Nobody Understands</h2>
-      <p>Grading is one of the clearest examples because the system is used constantly while remaining poorly understood. Categories and weights determine what counts, what students can recover from, and where they should place their effort. If assessments make up 70 percent of a grade, that creates a very different course from one in which daily work makes up half.</p>
-      <p>Those aren't cosmetic settings. They determine what the course rewards and, in practice, what the grade claims to measure.</p>
-      <p>Conversations about category weights and their consequences often stall. Teachers use the gradebook, enter scores, and accept the percentage it produces, but many of us don't understand the interaction between weighted categories and raw point totals well enough to explain it clearly. The machinery feels technical and uninteresting even though it governs every student's result.</p>
-      <p>Then we expect students to understand it.</p>
-      <p>In my current classroom, I'm trying to create a simple, visible path for students: complete a clearly defined amount of legitimate work and you're passing. I can't honestly make that promise until the school decides whether points, categories, or weights ultimately control the grade. After years of uncertainty, those decisions can still be made at the last minute and treated as minor settings rather than decisions about the meaning of the course.</p>
-      <p>A student may accumulate 1,600 points and reasonably believe those points mean something. Under a weighted-category system, however, the total can be nearly irrelevant. Two students can earn similar numbers of points and receive very different grades because the points were distributed across categories differently.</p>
-      <p>A grading system students can't understand isn't merely inconvenient. It denies them the chance to make rational choices about their own work. Worse, we have normalized systems that many of the adults administering them can't clearly describe, then blame teenagers for failing to manage those systems strategically.</p>
-      <p>Schools say they're preparing young people to navigate complicated systems. The gradebook often teaches them to submit work, watch a number move, and accept the output without understanding how the machine produced it.</p>
-      <p>A school that can't explain what its grades mean is in a weak position to criticize an education system built around demonstrated capability. The habit of accepting the output of opaque machinery also makes it harder to ask whether the machinery deserves to control the result.</p>
+      <p>None of those concerns is ridiculous. Some people did well in school, loved it, found important adults there, and built lives they value. Some children need a great deal of structure. Some rely on school for food, safety, disability services, dependable adults, community, or simply a predictable place to spend the day. Parents can be controlling, misinformed, ideological, disorganized, or overwhelmed.</p>
 
-      <PostFigure src={bodyImageThree} alt="Teachers and administrators face a large board of class loads, student counts, and grade categories that do not fit together cleanly." />
+      <p>Those are real concerns. They just aren't the same as testing LifeEducation.</p>
 
-      <h2>Following the Reasoning Would Require Admitting the Problem</h2>
-      <p>The same pattern appears in staffing conversations. Suppose teachers currently teach six classes and the school reduces that load to five. One of three things must happen: the school hires more teachers, students take fewer classes, or class sizes increase.</p>
-      <p>There is no fourth possibility created by good intentions.</p>
-      <p>If classes are already crowded, reducing every teacher's course load without adding staff makes those classes larger. That doesn't mean reducing teacher load is a bad idea. Six classes can be an impossible assignment. It means the people making the decision have to follow the consequences far enough to acknowledge the tradeoff.</p>
-      <p>That's where many institutional conversations stop. Following the reasoning would require admitting that the school may not have enough teachers, time, space, or money to provide what it claims to provide. Once that is admitted, leaders would have to make an honest choice, reduce a promise, or solve an actual problem. It's much safer to keep the conversation hypothetical.</p>
-      <p>When a core-subject teacher is responsible for nearly 200 students, the promise of meaningful individual attention becomes mathematically impossible within realistic working hours. Even three minutes of individual diagnosis per student per week would require ten hours before planning, teaching, grading, meetings, parent contact, or ordinary classroom interaction.</p>
-      <p>The institution may keep using the language of differentiation and individualized support, but the staffing model has already made the promise false.</p>
-      <p>The explanations are less dramatic than either stupidity or conspiracy, but they are still uncomfortable. Administrators may have limited authority, too little money, competing obligations, career incentives, coordination problems, or years of practice working around contradictions they cannot solve. None of that changes the arithmetic.</p>
-      <p>A coordination problem is real, but it doesn't remove the obligation to describe the tradeoff honestly. A principal or district administrator may not have enough authority, money, or staff to solve the problem alone. That doesn't prevent them from saying what the numbers require and which promise the system cannot currently keep.</p>
-      <p>Spend ten minutes reading education posts on LinkedIn and you'll see the professional culture that makes this easier to avoid. Visionary plans receive praise before the tradeoffs are named. AI-polished approval moves upward, professional reassurance moves sideways, and the discussion rarely continues far enough to threaten the arrangement.</p>
-      <p>Too much district administration consists of well-paid adults having imaginary conversations about hypothetical bullshit while enormous, visible problems remain unsolved in front of them. They debate future models, strategic priorities, instructional visions, graduate profiles, theoretical schedules, and aspirational frameworks while teachers carry six classes, core courses approach 200 students, grading systems remain unresolved, and students move through courses they often don't understand.</p>
-      <p>Administrators have to plan beyond tomorrow. The trouble starts when abstraction becomes a way to avoid responsibility for what's already happening. A hypothetical future can remain elegant because no real students or teachers have yet collided with it. The current system is messier, so people discuss it indirectly or bury it under professional language.</p>
-      <p>These aren't advanced insights. They are direct consequences of decisions schools make every day. Yet professional conversations often stop before reaching them because finishing the reasoning would require admitting that the stated goals and the operating structure cannot both be true.</p>
-      <p>That may help explain why my conversations kept returning to familiar institutional defenses instead of testing LifeEducation itself. The existing system supplied the categories of thought. That doesn't make every objection wrong. It means I was still looking for someone willing to step outside those categories and ask whether the alternative could fail on its own terms.</p>
+      <p>One teacher said he liked school and didn't think it was all that bad. I believe him. School probably worked reasonably well for him. He understood its rules, earned the credentials he needed, and eventually built a life inside the same institution.</p>
 
-      <h2>Which One Am I?</h2>
-      <p>It would be easy to stop there and place myself among the honest people who see the problem. That would be another kind of theater.</p>
-      <p>I've remained inside the system for decades because I need the paycheck. My family has depended on the custodial function I criticize. I've raised problems, been treated as the problem for raising them, and watched some of the things I warned about happen anyway. It is true that I have little authority. It is also true that I stayed.</p>
-      <p>Sometimes I continue naming the contradiction. Sometimes I decide it isn't worth painting another target on myself and shut up. If quiet noncompliance lets me protect my family and finish my career, the system often tolerates that more easily than open honesty. It's only when someone says, "This is bullshit. What are you doing?" that the institution decides the speaker is the problem.</p>
-      <p>So which explanation describes me? Am I trapped without authority? Am I protecting a comfortable job? Am I preserving my income while telling myself that private disagreement is enough? I don't like the answers available.</p>
-      <p>That recognition is part of why I'm no longer willing to hand my younger children to the same system and hope that private objections somehow protect them. I can't undo the years I participated in it. I can stop pretending participation was neutral.</p>
+      <p>That comment was one person's experience, not a complete defense of public education, and I don't want to make it carry more than he intended. The limit of the argument is simply that personal satisfaction can't establish that school is a good default design for childhood. A system can't prove its adequacy by pointing to the people who fit it best.</p>
 
-      <PostFigure src={bodyImageFour} alt="A teacher stands at the threshold between an overloaded classroom desk and the home beyond, holding only part of the work while leaving the rest behind." />
+      <PostFigure
+        src={bodyImageOne}
+        alt="A split pencil-sketch scene contrasts rows of same-age students in a classroom with a mixed-age community scene of children and adults learning and working together."
+      />
 
-      <h2>The Work You Purchased</h2>
-      <p>Schools survive by externalizing the cost of their design into private time. Teachers finish impossible jobs at night. Parents supply missing instruction and life preparation after work. Students sacrifice sleep, family time, health, play, and ordinary adolescence to schedules that no one has honestly added together.</p>
-      <p>The institution then calls everyone heroic.</p>
-      <p>The existence of heroic effort should make us question the design that requires heroics. Instead, schools use the heroes to deny that the design is broken. Every teacher who manages an impossible load becomes evidence that the load was possible after all, and every person who refuses to absorb the damage is treated as though they have failed the children.</p>
-      <p>I reject that arrangement.</p>
-      <p>I will do the best work I can within the time the institution has purchased and the conditions it has created. The school decided how many classes I teach, how many students sit in them, how much planning time exists, which meetings interrupt it, what grading system surrounds the course, and how much administrative work competes with instruction. The work that fits inside those conditions is the work those decisions bought.</p>
-      <p>I still grade at home sometimes. I set up gradebooks, play with course ideas, and plan lessons because the problems interest me or because I want something ready for students. That is my choice. The institution does not own those hours, and my voluntary interest can't be used as evidence that the assigned workload was reasonable.</p>
-      <p>Your refusal to plan for the reality in front of you—or your inability to understand it—does not create an obligation for me to sacrifice my health, my time, my family, or the rest of my life to compensate for it. I will not donate my private life to make an impossible system appear functional.</p>
-      <p>I have allowed institutional failure to become a personal obligation before. I will not put myself or my family in that position again in this lifetime.</p>
+      <p>The other objections followed a similar pattern. "Some children need structure" is true, but it doesn't automatically justify bells, age batching, fragmented subjects, permission-based movement, constant grading, six or seven simultaneous classes, and adult-controlled pacing. Structure and school aren't synonyms.</p>
 
-      <h2>Good Teachers Don&#x27;t Prove the System Is Good</h2>
-      <p>None of this means teachers are bad people or that meaningful education never occurs in schools. Good teachers exist, excellent teachers exist, and children find mentors, friends, activities, stability, refuge, and genuine opportunities inside school buildings. Some students thrive there, and some families desperately need what a particular school provides.</p>
-      <p>Those facts matter, but they don't settle the larger question. A system can contain decent people and valuable experiences while remaining badly designed. In fact, it often survives because teachers repair its poor decisions and create humane classrooms inside structures that repeatedly make humane work harder.</p>
-      <p>The institution also claims exceptional success as evidence that the system works while assigning widespread failure to students, teachers, and families. Exceptional success becomes institutional; widespread failure becomes personal. A spectacular teacher succeeding under bad conditions doesn't prove the conditions are good, and a spectacular student surviving an indifferent system doesn't prove the system educated them.</p>
-      <p>Criticizing the structure isn't an attack on every person inside it. The classmates who responded to me were working from their own experience and the professional assumptions available to them, not offering a formal defense of every feature of school and not acting in bad faith. That's why I'm summarizing the feedback instead of turning anyone into a villain. The individuals aren't the point.</p>
-      <p>The whole structure is.</p>
-      <p>Federal policy, state requirements, districts, schools, universities, vendors, unions, reform organizations, and professional culture have spent decades revisiting the same problems without challenging the assumptions that reproduce them. Even hard charter and reform models often intensify the same defects by demanding more measurement, more control, more pressure, and more extraction from teachers.</p>
-      <p>The problem isn't that we've failed to discover the right reform inside the system. The problem is that every reform is required to preserve the assumptions that created the failure.</p>
+      <p>"Children need socialization" is also true, but school is not the only place where children encounter other people. Sports, work, neighbors, extended family, community groups, projects, travel, clubs, and ordinary life can provide a broader range of ages and relationships than an age-segregated building.</p>
+
+      <p>"Parents might teach misinformation" is a serious concern, but schools transmit beliefs too. The real question is whether a young person learns to compare claims, examine evidence, encounter serious alternatives, and eventually reject the adults' conclusions when the evidence requires it.</p>
+
+      <p>"Not every family can do this" may be the strongest practical objection. Most families can't simply replace school under current work, housing, transportation, childcare, and income arrangements. My family currently depends on the custodial function of school too. That is an argument against pretending LifeEducation can become an immediate universal replacement. It isn't an argument that the current education is good enough.</p>
+
+      <h2>What the Feedback Was Actually Good For</h2>
+
+      <p>The conversations did not expose a fatal flaw in the Floor, the evidence model, or the transfer of responsibility. They did expose something useful: I had not made several distinctions clearly enough for an ordinary reader encountering LifeEducation for the first time.</p>
+
+      <p>That led me to expand the public Q&amp;A. It now answers questions including:</p>
+
+      <ul>
+        <li>Are you saying school never helps anyone?</li>
+        <li>Would you use a great school?</li>
+        <li>Don't some kids need structure?</li>
+        <li>What about kids who feel safe inside school structure?</li>
+        <li>What about disadvantaged kids?</li>
+        <li>Isn't equity the reason we need standardized schooling?</li>
+        <li>How does neurodiversity fit into this?</li>
+        <li>Can LifeEducation scale?</li>
+        <li>Are you attacking teachers?</li>
+      </ul>
+
+      <p>Those questions matter because they show where readers are likely to misunderstand the project. LifeEducation isn't anti-learning, anti-teacher, anti-structure, or anti-serious study. It doesn't claim that school never helps anyone or that every family can leave tomorrow. It does claim that school should be treated as one possible environment rather than the unquestioned authority over childhood and learning.</p>
+
+      <p>It also claims that support should change the route without abandoning the destination. A child may need more time, more structure, direct instruction, tutoring, therapy, assistive technology, translation, quieter spaces, or outside expertise. None of that requires pretending capability exists when it doesn't.</p>
+
+      <p>The objections helped me say those things more plainly.</p>
+
+      <PostFigure
+        src={bodyImageFour}
+        alt="A teacher stands at the threshold between an overloaded classroom desk and the home beyond, holding only part of the work while leaving the rest behind."
+      />
 
       <h2>I Am Still Looking</h2>
-      <p>LifeEducation isn't a finished product that another family can purchase and install. It's a framework being built for my children, documented publicly, tested against reality, and revised when the evidence requires it. I'm not asking people to agree with it, and I'm not pretending that our implementation will work unchanged for everyone else.</p>
-      <p>Replacement is the design my family intends to test. I don't expect the existing system to generate or grant that alternative. Meaningful change will have to be built outside the structure by families, small groups, communities, employers, individual educators, and young people willing to try combinations the institution can't imagine without translating them back into school.</p>
-      <p>Most families can't replace school right now. They still can use the LifeEducation standard. That doesn't mean assigning children another shift of lessons after a full school day. It means redirecting attention toward real capability: different questions at dinner, real errands, real money, real responsibilities, real projects, and honest checks on whether a grade or credential corresponds to anything the young person can actually do.</p>
-      <p>You don't have to leave school to use this. You do have to stop believing that finishing school proves your child can do these things.</p>
-      <p>The Floor doesn't shrink because school remains in the picture. Support may change the route, and circumstances may force compromise, but the destination remains a young adult who can communicate when situations become uncomfortable, understand money and risk, protect their health, judge claims, navigate institutions, use technology without surrendering judgment, repair relationships, make things they care about, and finish what they begin.</p>
-      <p>When they enter an unfamiliar situation, can they ask useful questions, find the right people, understand the system, and keep moving? If they cannot, LifeEducation failed, no matter how convincing the framework sounded while we were building it.</p>
-      <p>That's the standard I'm trying to test. Tell me which capability is missing, which requirement can't be justified, where the evidence model will distort behavior, where parent authority will last too long, or where a young person can satisfy the Floor without becoming genuinely capable.</p>
-      <p>I'm still looking for the objection that makes me rebuild something.</p>
+
+      <p>LifeEducation isn't a finished product that another family can purchase and install. It's a framework being built for my children, documented publicly, tested against reality, and revised when the evidence requires it. I'm not asking people to agree with it, and I'm not pretending our implementation will work unchanged for everyone else.</p>
+
+      <p>The objections I received did not make me rebuild LifeEducation. They did make me explain it better. That matters.</p>
+
+      <p>But I am still looking for the objection that forces me to change the design.</p>
     </>
   ),
 };

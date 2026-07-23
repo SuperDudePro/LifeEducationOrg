@@ -6,7 +6,7 @@ export const metadata = {
   slug: "i-was-looking-for-better-objections",
   title: "I Was Looking for Better Objections",
   excerpt:
-    "I expected teachers to challenge LifeEducation as educators. Too often, they challenged it as employees of schools.",
+    "I asked teachers to challenge LifeEducation. Their objections did not force a redesign, but they showed me what the public explanation still needed to answer.",
   publishedAt: "2026-07-19",
   displayDate: "July 19, 2026",
   status: "Recent",
