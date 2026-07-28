@@ -31,7 +31,9 @@ test("retrieval returns nothing for an unrelated factual query", () => {
 test("scope classifier separates unrelated questions from plausible LifeEducation gaps", () => {
   assert.equal(looksLikeLifeEducationQuestion("How old is my kid?"), false);
   assert.equal(looksLikeLifeEducationQuestion("How far is it to King Soopers?"), false);
+  assert.equal(looksLikeLifeEducationQuestion("What time does my kid’s school start?"), false);
   assert.equal(looksLikeLifeEducationQuestion("Should LifeEducation include calculus?"), true);
+  assert.equal(looksLikeLifeEducationQuestion("Is school bad?"), true);
   assert.equal(looksLikeLifeEducationQuestion("What should a child know about money by 18?"), true);
 });
 
