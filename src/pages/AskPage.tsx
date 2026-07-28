@@ -16,7 +16,7 @@ type StreamEvent =
   | { type: "meta" }
   | { type: "delta"; text: string }
   | { type: "sources"; sources: Source[] }
-  | { type: "done"; warnings?: string[] };
+  | { type: "done"; warnings?: string[]; offerEscalation?: boolean };
 
 const MAX_TURNS = 4;
 const MAX_QUESTION_CHARS = 1200;
@@ -88,7 +88,10 @@ export function AskPage() {
           if (message.id !== assistantId) return message;
           if (streamEvent.type === "delta") return { ...message, content: answer, pending: false };
           if (streamEvent.type === "sources") return { ...message, sources: streamEvent.sources };
-          if (streamEvent.type === "done") return { ...message, pending: false, warnings: streamEvent.warnings || [] };
+          if (streamEvent.type === "done") {
+            setShowEscalation(streamEvent.offerEscalation !== false);
+            return { ...message, pending: false, warnings: streamEvent.warnings || [] };
+          }
           return message;
         }));
       };
@@ -106,7 +109,6 @@ export function AskPage() {
       }
       if (buffer.trim()) applyEvent(JSON.parse(buffer) as StreamEvent);
       setStatus("");
-      setShowEscalation(true);
     } catch (error) {
       if (controller.signal.aborted) return;
       const message = error instanceof Error ? error.message : "The answer service is unavailable.";
