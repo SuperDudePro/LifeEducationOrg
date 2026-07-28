@@ -10,7 +10,7 @@ export const LIMITS = Object.freeze({
 });
 
 export const STANDARD_DECLINE =
-  "That is not part of the public LifeEducation system yet. The public framework is close to locked while anything beyond it is still unwritten, unfinished, or untested. I won’t guess beyond the approved public sources, but I can pass the question to Will if you’d like.";
+  "That question goes beyond the current public LifeEducation sources. If it concerns part of the LifeEducation system, that part may still be in development, testing, or writing and isn’t public yet. I won’t guess, but I can pass the question to Will if you’d like.";
 
 const STOP_WORDS = new Set([
   "a", "about", "an", "and", "are", "as", "at", "be", "but", "by", "can", "do", "for",
