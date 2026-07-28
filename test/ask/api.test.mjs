@@ -32,6 +32,14 @@ function request(body, headers = {}) {
   };
 }
 
+function streamEvents(response) {
+  return response.text
+    .trim()
+    .split("\n")
+    .filter(Boolean)
+    .map((line) => JSON.parse(line));
+}
+
 test("ask endpoint rejects a cross-site origin", async () => {
   const response = responseHarness();
   await askHandler(request({ question: "What is the Floor?" }, { origin: "https://example.com" }), response);
@@ -59,7 +67,7 @@ test("ask endpoint streams a guarded decline without calling the model", async (
   }
 });
 
-test("ask endpoint declines an unrelated query without a model call", async () => {
+test("ask endpoint rejects unrelated questions without offering escalation or calling the model", async () => {
   const originalFetch = globalThis.fetch;
   let modelCalled = false;
   globalThis.fetch = async () => {
@@ -67,10 +75,20 @@ test("ask endpoint declines an unrelated query without a model call", async () =
     throw new Error("model should not be called");
   };
   try {
-    const response = responseHarness();
-    await askHandler(request({ question: "What is the best volcano in Iceland?" }), response);
-    assert.equal(response.statusCode, 200);
-    assert.match(response.text, /"retrieved":0/);
+    for (const question of ["How old is my kid?", "How far is it to King Soopers?"]) {
+      const response = responseHarness();
+      await askHandler(request({ question }), response);
+      assert.equal(response.statusCode, 200);
+      const events = streamEvents(response);
+      const answer = events
+        .filter((event) => event.type === "delta")
+        .map((event) => event.text)
+        .join("");
+      const done = events.find((event) => event.type === "done");
+      assert.equal(events[0].retrieved, 0);
+      assert.match(answer, /That isn’t a LifeEducation question/);
+      assert.equal(done.offerEscalation, false);
+    }
     assert.equal(modelCalled, false);
   } finally {
     globalThis.fetch = originalFetch;

@@ -1,11 +1,13 @@
 import { CORPUS, SOURCES } from "./ask/corpus.generated.mjs";
 import {
   LIMITS,
+  OFF_TOPIC_DECLINE,
   STANDARD_DECLINE,
   checkRateLimit,
   clientIp,
   extractResponseText,
   getString,
+  looksLikeLifeEducationQuestion,
   normalizeHistory,
   preflightQuestion,
   readJsonBody,
@@ -64,11 +66,12 @@ function streamResult(response, result, metadata = {}) {
     warnings: [...(result.scopeWarnings || []), ...(result.privacyWarnings || [])],
     suggestedCategory: result.suggestedCategory,
     possibleExistingQA: result.possibleExistingQA,
+    offerEscalation: result.offerEscalation !== false,
   })}\n`);
   response.end();
 }
 
-function decline(message = STANDARD_DECLINE, category = "other") {
+function decline(message = STANDARD_DECLINE, category = "other", offerEscalation = true) {
   return {
     answerable: false,
     answer: message,
@@ -78,6 +81,7 @@ function decline(message = STANDARD_DECLINE, category = "other") {
     privacyWarnings: [],
     suggestedCategory: category,
     possibleExistingQA: false,
+    offerEscalation,
   };
 }
 
@@ -120,7 +124,11 @@ export default async function handler(request, response) {
 
   const retrieved = retrieveChunks(CORPUS, question, history);
   if (!retrieved.length) {
-    return streamResult(response, decline(), { retrieved: 0 });
+    const plausibleGap = looksLikeLifeEducationQuestion(question, history);
+    const result = plausibleGap
+      ? decline(STANDARD_DECLINE, "public-source-gap")
+      : decline(OFF_TOPIC_DECLINE, "off-topic", false);
+    return streamResult(response, result, { retrieved: 0 });
   }
 
   const apiKey = process.env.OPENAI_API_KEY;

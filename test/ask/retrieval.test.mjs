@@ -2,7 +2,9 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { CORPUS, SOURCES } from "../../api/ask/corpus.generated.mjs";
 import {
+  STANDARD_DECLINE,
   checkRateLimit,
+  looksLikeLifeEducationQuestion,
   normalizeHistory,
   preflightQuestion,
   retrieveChunks,
@@ -24,6 +26,15 @@ test("retrieval finds the direct anti-school Q&A and core context", () => {
 
 test("retrieval returns nothing for an unrelated factual query", () => {
   assert.deepEqual(retrieveChunks(CORPUS, "What is the best volcano in Iceland?"), []);
+});
+
+test("scope classifier separates unrelated questions from plausible LifeEducation gaps", () => {
+  assert.equal(looksLikeLifeEducationQuestion("How old is my kid?"), false);
+  assert.equal(looksLikeLifeEducationQuestion("How far is it to King Soopers?"), false);
+  assert.equal(looksLikeLifeEducationQuestion("What time does my kid’s school start?"), false);
+  assert.equal(looksLikeLifeEducationQuestion("Should LifeEducation include calculus?"), true);
+  assert.equal(looksLikeLifeEducationQuestion("Is school bad?"), true);
+  assert.equal(looksLikeLifeEducationQuestion("What should a child know about money by 18?"), true);
 });
 
 test("preflight blocks prompt injection, private material, browsing, and high-stakes advice", () => {
@@ -72,7 +83,8 @@ test("an answer without a valid citation is converted to a decline", () => {
   }, retrieved, SOURCES);
   assert.equal(result.answerable, false);
   assert.equal(result.sources.length, 0);
-  assert.match(result.answer, /not part of the public LifeEducation system yet/i);
+  assert.equal(result.answer, STANDARD_DECLINE);
+  assert.doesNotMatch(result.answer, /close to locked/i);
 });
 
 test("rate limiter resets after the window and rejects excess requests", () => {

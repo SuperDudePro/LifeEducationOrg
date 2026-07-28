@@ -10,7 +10,35 @@ export const LIMITS = Object.freeze({
 });
 
 export const STANDARD_DECLINE =
-  "That is not part of the public LifeEducation system yet. The public framework is close to locked while anything beyond it is still unwritten, unfinished, or untested. I won’t guess beyond the approved public sources, but I can pass the question to Will if you’d like.";
+  "That question goes beyond the current public LifeEducation sources. If it concerns part of the LifeEducation system, that part may still be in development, testing, or writing and isn’t public yet. I won’t guess, but I can pass the question to Will if you’d like.";
+
+export const OFF_TOPIC_DECLINE =
+  "That isn’t a LifeEducation question. Ask about the LifeEducation framework—the Floor, the ten Domains, its purpose, or the current public Q&A.";
+
+const DIRECT_SYSTEM_PATTERN =
+  /\b(life\s*education|the floor|ten domains?|by 18|before adulthood|adult readiness)\b/i;
+const EDUCATION_TOPIC_PATTERN =
+  /\b(education|educational|learning|schooling|school|teaching|curriculum|competenc|capabilit|literacy|numeracy|worldschool|homeschool)\b/i;
+const EDUCATION_INTENT_PATTERN =
+  /\b(should|need|needs|know|knows|learn|learns|teach|prepare|ready|capable|competent|why|purpose|role|good|bad|anti|against|believe|view)\b|\b(how|what) does\b/i;
+const CHILD_CONTEXT_PATTERN = /\b(child|children|kid|kids|teen|teens|student|students|young person|young people)\b/i;
+const DEVELOPMENT_PATTERN = /\b(should|need|needs|know|knows|learn|learns|teach|prepare|ready|capable|competent|by 18|before adulthood)\b/i;
+const DOMAIN_TOPIC_PATTERN =
+  /\b(read|reading|write|writing|math|money|financial|civic|physical|health|relationship|digital|career|work|cooking|food|home|safety|self-knowledge)\b/i;
+
+export function looksLikeLifeEducationQuestion(question, history = []) {
+  const priorUserText = history
+    .filter((message) => message?.role === "user")
+    .slice(-2)
+    .map((message) => String(message.content || ""))
+    .join(" ");
+  const combined = `${priorUserText} ${String(question || "")}`.trim();
+  if (DIRECT_SYSTEM_PATTERN.test(combined)) return true;
+  if (EDUCATION_TOPIC_PATTERN.test(combined) && EDUCATION_INTENT_PATTERN.test(combined)) return true;
+  return CHILD_CONTEXT_PATTERN.test(combined)
+    && DEVELOPMENT_PATTERN.test(combined)
+    && DOMAIN_TOPIC_PATTERN.test(combined);
+}
 
 const STOP_WORDS = new Set([
   "a", "about", "an", "and", "are", "as", "at", "be", "but", "by", "can", "do", "for",
