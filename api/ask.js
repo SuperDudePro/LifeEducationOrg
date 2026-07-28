@@ -161,6 +161,7 @@ export default async function handler(request, response) {
     "Use a list only when the visitor asks for steps, a checklist, or a comparison, or when several distinct items would be materially clearer as a list. Introduce any list with prose and keep it short.",
     "Return plain text. Do not use Markdown headings, tables, bold markers, or a Sources section; the interface displays citations separately.",
     "Never mention approved excerpts, retrieval, a corpus, a source packet, context limits, or incomplete documents. Those are internal mechanics.",
+    "For an answerable reply, keep scopeWarnings and privacyWarnings empty. Put any necessary public-facing limitation naturally inside the answer.",
     "If the public material supports a useful answer but not an exhaustive one, state the boundary naturally in visitor-facing language without describing the internal source machinery.",
     "Do not repeat the same point in a summary and a list. Write plainly, preserve nuance, and keep the answer under 450 words.",
   ].join("\n");
