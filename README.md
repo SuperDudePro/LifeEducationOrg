@@ -39,7 +39,11 @@ The serverless answer endpoint retrieves only from the approved corpus generated
 from the public LifeEducation data modules. The model must return a strict
 structured result, and the server rejects any citation that was not in the
 retrieved source packet. The current model floor is `gpt-5.6-sol` with medium
-reasoning. The endpoint does not browse or read private Drive files.
+reasoning. Answers lead with a direct response, synthesize source material into
+connected prose, reserve lists for genuine steps, checklists, or comparisons,
+and never expose retrieval mechanics to the visitor. The endpoint returns plain
+text because citations are rendered separately by the interface. It does not
+browse or read private Drive files.
 
 Copy `.env.example` to your local environment or add the same server-side
 variables to Vercel. `OPENAI_API_KEY` is required for model-backed answers.
