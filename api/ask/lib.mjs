@@ -264,9 +264,8 @@ export function validateModelResult(value, retrievedChunks, sources) {
     sourceCitations,
     sources: sourceCitations.map((id) => knownSources.get(id)),
     confidence,
-    scopeWarnings: Array.isArray(value?.scopeWarnings)
-      ? value.scopeWarnings.filter((item) => typeof item === "string").slice(0, 3).map((item) => item.slice(0, 240))
-      : [],
+    // Scope limits belong in the composed answer; separate scope notes read like internal retrieval diagnostics.
+    scopeWarnings: [],
     privacyWarnings: Array.isArray(value?.privacyWarnings)
       ? value.privacyWarnings.filter((item) => typeof item === "string").slice(0, 3).map((item) => item.slice(0, 240))
       : [],
