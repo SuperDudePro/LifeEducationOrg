@@ -32,6 +32,14 @@ function request(body, headers = {}) {
   };
 }
 
+function streamEvents(response) {
+  return response.text
+    .trim()
+    .split("\n")
+    .filter(Boolean)
+    .map((line) => JSON.parse(line));
+}
+
 test("ask endpoint rejects a cross-site origin", async () => {
   const response = responseHarness();
   await askHandler(request({ question: "What is the Floor?" }, { origin: "https://example.com" }), response);
@@ -71,9 +79,15 @@ test("ask endpoint rejects unrelated questions without offering escalation or ca
       const response = responseHarness();
       await askHandler(request({ question }), response);
       assert.equal(response.statusCode, 200);
-      assert.match(response.text, /"retrieved":0/);
-      assert.match(response.text, /That isn’t a LifeEducation question/);
-      assert.match(response.text, /"offerEscalation":false/);
+      const events = streamEvents(response);
+      const answer = events
+        .filter((event) => event.type === "delta")
+        .map((event) => event.text)
+        .join("");
+      const done = events.find((event) => event.type === "done");
+      assert.equal(events[0].retrieved, 0);
+      assert.match(answer, /That isn’t a LifeEducation question/);
+      assert.equal(done.offerEscalation, false);
     }
     assert.equal(modelCalled, false);
   } finally {
