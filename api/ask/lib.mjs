@@ -15,8 +15,12 @@ export const STANDARD_DECLINE =
 export const OFF_TOPIC_DECLINE =
   "That isn’t a LifeEducation question. Ask about the LifeEducation framework—the Floor, the ten Domains, its purpose, or the current public Q&A.";
 
-const DIRECT_SCOPE_PATTERN =
-  /\b(life\s*education|the floor|ten domains?|education|educational|learning|schooling|school|teaching|curriculum|competenc|capabilit|literacy|numeracy|adult readiness|worldschool|homeschool)\b/i;
+const DIRECT_SYSTEM_PATTERN =
+  /\b(life\s*education|the floor|ten domains?|by 18|before adulthood|adult readiness)\b/i;
+const EDUCATION_TOPIC_PATTERN =
+  /\b(education|educational|learning|schooling|school|teaching|curriculum|competenc|capabilit|literacy|numeracy|worldschool|homeschool)\b/i;
+const EDUCATION_INTENT_PATTERN =
+  /\b(should|need|needs|know|knows|learn|learns|teach|prepare|ready|capable|competent|why|purpose|role|good|bad|anti|against|believe|view)\b|\b(how|what) does\b/i;
 const CHILD_CONTEXT_PATTERN = /\b(child|children|kid|kids|teen|teens|student|students|young person|young people)\b/i;
 const DEVELOPMENT_PATTERN = /\b(should|need|needs|know|knows|learn|learns|teach|prepare|ready|capable|competent|by 18|before adulthood)\b/i;
 const DOMAIN_TOPIC_PATTERN =
@@ -29,7 +33,8 @@ export function looksLikeLifeEducationQuestion(question, history = []) {
     .map((message) => String(message.content || ""))
     .join(" ");
   const combined = `${priorUserText} ${String(question || "")}`.trim();
-  if (DIRECT_SCOPE_PATTERN.test(combined)) return true;
+  if (DIRECT_SYSTEM_PATTERN.test(combined)) return true;
+  if (EDUCATION_TOPIC_PATTERN.test(combined) && EDUCATION_INTENT_PATTERN.test(combined)) return true;
   return CHILD_CONTEXT_PATTERN.test(combined)
     && DEVELOPMENT_PATTERN.test(combined)
     && DOMAIN_TOPIC_PATTERN.test(combined);
