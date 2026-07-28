@@ -4,6 +4,7 @@ import { CORPUS, SOURCES } from "../../api/ask/corpus.generated.mjs";
 import {
   STANDARD_DECLINE,
   checkRateLimit,
+  looksLikeLifeEducationQuestion,
   normalizeHistory,
   preflightQuestion,
   retrieveChunks,
@@ -25,6 +26,13 @@ test("retrieval finds the direct anti-school Q&A and core context", () => {
 
 test("retrieval returns nothing for an unrelated factual query", () => {
   assert.deepEqual(retrieveChunks(CORPUS, "What is the best volcano in Iceland?"), []);
+});
+
+test("scope classifier separates unrelated questions from plausible LifeEducation gaps", () => {
+  assert.equal(looksLikeLifeEducationQuestion("How old is my kid?"), false);
+  assert.equal(looksLikeLifeEducationQuestion("How far is it to King Soopers?"), false);
+  assert.equal(looksLikeLifeEducationQuestion("Should LifeEducation include calculus?"), true);
+  assert.equal(looksLikeLifeEducationQuestion("What should a child know about money by 18?"), true);
 });
 
 test("preflight blocks prompt injection, private material, browsing, and high-stakes advice", () => {
