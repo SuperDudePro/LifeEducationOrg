@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { CORPUS, SOURCES } from "../../api/ask/corpus.generated.mjs";
 import {
+  STANDARD_DECLINE,
   checkRateLimit,
   normalizeHistory,
   preflightQuestion,
@@ -72,7 +73,8 @@ test("an answer without a valid citation is converted to a decline", () => {
   }, retrieved, SOURCES);
   assert.equal(result.answerable, false);
   assert.equal(result.sources.length, 0);
-  assert.match(result.answer, /not part of the public LifeEducation system yet/i);
+  assert.equal(result.answer, STANDARD_DECLINE);
+  assert.doesNotMatch(result.answer, /close to locked/i);
 });
 
 test("rate limiter resets after the window and rejects excess requests", () => {
