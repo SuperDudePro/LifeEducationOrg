@@ -104,6 +104,10 @@ test("ask endpoint enforces citations on a mocked structured model answer", asyn
     assert.equal(requestBody.model, "gpt-5.6-sol");
     assert.equal(requestBody.reasoning.effort, "medium");
     assert.equal(requestBody.store, false);
+    assert.match(requestBody.instructions, /coherent reply, not a fact dump/i);
+    assert.match(requestBody.instructions, /Return plain text/i);
+    assert.match(requestBody.instructions, /Never mention approved excerpts, retrieval, a corpus, a source packet/i);
+    assert.match(requestBody.instructions, /interface displays citations separately/i);
     return new Response(JSON.stringify({
       output: [{
         content: [{
