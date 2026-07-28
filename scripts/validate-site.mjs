@@ -43,10 +43,24 @@ for (const loc of locs) {
   }
 }
 if (!routes.size) fail('public/sitemap.xml', '<loc>', 'sitemap has no routes');
+if (routes.has('/ask')) fail('public/sitemap.xml', '/ask', 'hidden beta route must not appear in the sitemap');
 
 for (const route of routes) {
   const html = route === '/' ? join(DIST, 'index.html') : join(DIST, ...route.slice(1).split('/'), 'index.html');
   if (!existsSync(html)) fail(rel(html), route, 'sitemap route has no generated entry page');
+}
+
+const askHtmlPath = join(DIST, 'ask', 'index.html');
+if (!existsSync(askHtmlPath)) {
+  fail(rel(askHtmlPath), '/ask', 'hidden beta has no generated entry page');
+} else {
+  const askHtml = readFileSync(askHtmlPath, 'utf8');
+  if (!/<meta name="robots" content="noindex, nofollow" \/>/.test(askHtml)) {
+    fail(rel(askHtmlPath), 'robots', 'hidden beta entry must be noindex, nofollow');
+  }
+  if (/data-site-jsonld/.test(askHtml)) {
+    fail(rel(askHtmlPath), 'structured data', 'hidden beta entry must not contain site JSON-LD');
+  }
 }
 
 function validateTarget(source, raw) {
@@ -87,6 +101,9 @@ const patterns = [
 for (const file of files) {
   const source = rel(file);
   const text = readFileSync(file, 'utf8');
+  if (/\bhref\s*=\s*(?:\{\s*)?["'`]\/ask\/?["'`]/.test(text)) {
+    fail(source, '/ask', 'hidden beta must not have an inbound site link');
+  }
   for (const pattern of patterns) for (const match of text.matchAll(pattern)) validateTarget(source, match[1]);
   for (const match of text.matchAll(/\bsrcSet\s*=\s*(?:\{\s*)?["'`]([^"'`]+)["'`]/g)) {
     for (const part of match[1].split(',')) validateTarget(source, part.trim().split(/\s+/)[0]);

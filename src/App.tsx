@@ -13,6 +13,7 @@ import { QAPage } from "./pages/QAPage";
 import { PostsPage } from "./pages/PostsPage";
 import { PostPage } from "./pages/PostPage";
 import { ContactPage } from "./pages/ContactPage";
+import { AskPage } from "./pages/AskPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { getPostBySlug } from "./content/loadPosts";
 import { applyStructuredData } from "./structuredData";
@@ -88,6 +89,11 @@ export default function App() {
         description:
           "Send questions, corrections, objections, examples, or serious feedback about LifeEducation.",
       },
+      "/ask": {
+        title: "Ask LifeEducation | Private Beta",
+        description:
+          "A source-grounded private beta for questions about the current LifeEducation materials.",
+      },
     };
 
     let meta = metaMap[pathname] ?? metaMap["/"];
@@ -134,7 +140,19 @@ export default function App() {
       link.rel = "canonical";
       return link;
     });
-    applyStructuredData(pathname, meta.title, meta.description);
+    let robots = document.head.querySelector<HTMLMetaElement>("meta[name='robots']");
+    if (!robots) {
+      robots = document.createElement("meta");
+      robots.name = "robots";
+      document.head.appendChild(robots);
+    }
+    robots.content = pathname === "/ask" ? "noindex, nofollow" : "index, follow";
+
+    if (pathname === "/ask") {
+      document.head.querySelector("script[data-site-jsonld]")?.remove();
+    } else {
+      applyStructuredData(pathname, meta.title, meta.description);
+    }
 
     if (TRACKED_HOSTS.has(window.location.hostname.toLowerCase())) {
       window.gtag?.("event", "page_view", {
@@ -153,6 +171,7 @@ export default function App() {
     if (pathname === "/floor") return <FloorPage />;
     if (pathname === "/qa") return <QAPage />;
     if (pathname === "/contact") return <ContactPage />;
+    if (pathname === "/ask") return <AskPage />;
     if (pathname === "/posts") return <PostsPage />;
     if (pathname.startsWith("/posts/")) return <PostPage slug={pathname.replace("/posts/", "")} />;
     if (pathname === "/domains") return <DomainsPage />;

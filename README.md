@@ -26,7 +26,28 @@ npm run check
 npm run build
 npm run lint
 npm run sitemap
+npm run test:ask
 ```
+
+## Hidden Ask LifeEducation beta
+
+`/ask` is a direct-URL private beta. It is deliberately absent from site
+navigation and `public/sitemap.xml`; its generated entry page is marked
+`noindex, nofollow`.
+
+The serverless answer endpoint retrieves only from the approved corpus generated
+from the public LifeEducation data modules. The model must return a strict
+structured result, and the server rejects any citation that was not in the
+retrieved source packet. The current model floor is `gpt-5.6-sol` with medium
+reasoning. The endpoint does not browse or read private Drive files.
+
+Copy `.env.example` to your local environment or add the same server-side
+variables to Vercel. `OPENAI_API_KEY` is required for model-backed answers.
+Resend and the Ask/contact email variables enable “Send to Will.” These values
+must not use the `VITE_` prefix.
+
+The beta can run on Vercel’s current plan. OpenAI API usage and billing are
+separate from the Vercel plan.
 
 ## File Explorer upload rule
 
