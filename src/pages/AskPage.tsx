@@ -84,12 +84,12 @@ export function AskPage() {
 
       const applyEvent = (streamEvent: StreamEvent) => {
         if (streamEvent.type === "delta") answer += streamEvent.text;
+        if (streamEvent.type === "done") setShowEscalation(streamEvent.offerEscalation !== false);
         setMessages((current) => current.map((message) => {
           if (message.id !== assistantId) return message;
           if (streamEvent.type === "delta") return { ...message, content: answer, pending: false };
           if (streamEvent.type === "sources") return { ...message, sources: streamEvent.sources };
           if (streamEvent.type === "done") {
-            setShowEscalation(streamEvent.offerEscalation !== false);
             return { ...message, pending: false, warnings: streamEvent.warnings || [] };
           }
           return message;
