@@ -171,7 +171,7 @@ export function AskPage() {
             <strong>What it is not</strong>
             <p>No web browsing, private documents, diagnosis, or personal legal or medical advice.</p>
             <strong>Outside the sources</strong>
-            <p>It is not public LifeEducation yet—it may still be unwritten, unfinished, or untested.</p>
+            <p>Questions the current public sources don’t cover may concern parts of the system still in development, testing, or writing. This beta won’t guess.</p>
           </aside>
         </div>
 
