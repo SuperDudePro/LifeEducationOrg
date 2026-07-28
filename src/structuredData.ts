@@ -31,6 +31,7 @@ function pageName(pathname: string) {
     "/domains": "The 10 Domains",
     "/posts": "Posts",
     "/qa": "LifeEducation Q&A",
+    "/ask": "Ask LifeEducation",
     "/contact": "Contact",
   };
   return names[pathname] ?? "LifeEducation.org";

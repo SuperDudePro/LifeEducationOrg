@@ -20,6 +20,7 @@ const staticPages = [
   { path: "/domains", freq: "monthly", pri: "0.8" },
   { path: "/posts", freq: "weekly", pri: "0.7" },
   { path: "/qa", freq: "monthly", pri: "0.7" },
+  { path: "/ask", freq: "monthly", pri: "0.5" },
   { path: "/contact", freq: "monthly", pri: "0.6" },
 ];
 

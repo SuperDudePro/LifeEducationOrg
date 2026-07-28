@@ -17,12 +17,6 @@ export function NotFoundPage() {
           <a href="/posts" className="back-link">Read the Posts</a>
         </div>
       </BackBar>
-      <footer className="footer">
-        <div className="footer-inner">
-          <div className="footer-text">© LifeEducation.org</div>
-          <a className="footer-link" href="/contact">Contact</a>
-        </div>
-      </footer>
     </PageShell>
   );
 }

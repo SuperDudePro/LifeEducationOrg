@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { SiteNav } from "./SiteNav";
+import { SiteFooter } from "./SiteFooter";
 import { normalizePath } from "../utils/routing";
 
 export function PageShell({ children }: { children: ReactNode }) {
@@ -17,6 +18,7 @@ export function PageShell({ children }: { children: ReactNode }) {
         <main id="main-content">
           {children}
         </main>
+        <SiteFooter />
       </div>
     </div>
   );

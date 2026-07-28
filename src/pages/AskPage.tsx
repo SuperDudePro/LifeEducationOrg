@@ -160,11 +160,11 @@ export function AskPage() {
       <section className="ask-page" aria-labelledby="ask-title">
         <div className="ask-intro">
           <div>
-            <span className="ask-beta">Private beta</span>
+            <span className="ask-beta">Public beta</span>
             <h1 id="ask-title">Ask LifeEducation</h1>
             <p>
-              Ask about the current LifeEducation framework. Answers are limited to the approved public
-              sources and show exactly which source pages support them.
+              Ask about the Floor, the Domains, or how LifeEducation works. Answers come from the
+              current public framework and show which source pages support them.
             </p>
           </div>
           <aside className="ask-boundary" aria-label="Beta boundaries">
@@ -277,8 +277,9 @@ export function AskPage() {
         )}
 
         <p className="ask-privacy">
-          Questions are sent only to produce the answer. The beta does not intentionally store conversation
-          transcripts. If you choose “Send to Will,” that question and the bounded conversation are emailed to him.
+          Beta questions and answers may be reviewed to improve LifeEducation. Don&apos;t include private
+          or identifying information. If you choose “Send to Will,” that question and the bounded
+          conversation are emailed to him.
         </p>
       </section>
     </PageShell>

@@ -1,182 +1,206 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://lifeeducation.org/</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/why</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/why</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/floor</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/floor</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/by-18</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/by-18</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/domains</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/domains</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/posts</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/posts</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/qa</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/qa</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/contact</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/ask</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.lifeeducation.org/contact</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/posts/domain-1-communication</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/posts/domain-1-communication</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/posts/domain-10-life-skills-project-execution</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/posts/domain-10-life-skills-project-execution</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/posts/domain-2-practical-numeracy</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/posts/domain-2-practical-numeracy</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/posts/domain-3-scientific-thinking</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/posts/domain-3-scientific-thinking</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/posts/domain-4-social-studies-civics</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/posts/domain-4-social-studies-civics</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/posts/domain-5-philosophy-ethics</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/posts/domain-5-philosophy-ethics</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/posts/domain-6-economics-finance</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/posts/domain-6-economics-finance</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/posts/domain-7-health-physical-development</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/posts/domain-7-health-physical-development</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/posts/domain-8-creative-expression</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/posts/domain-8-creative-expression</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/posts/domain-9-technology-media-ai-literacy</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/posts/domain-9-technology-media-ai-literacy</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/posts/seven-years-to-build-a-different-way</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/posts/i-was-looking-for-better-objections</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/posts/why-section-is-live</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/posts/run</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/domains/literacy-communication</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/posts/seven-years-to-build-a-different-way</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.lifeeducation.org/posts/what-scales-is-the-fantasy</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.lifeeducation.org/posts/why-section-is-live</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.lifeeducation.org/domains/literacy-communication</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/domains/mathematics-logic</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/domains/mathematics-logic</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/domains/scientific-thinking-observation</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/domains/scientific-thinking-observation</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/domains/social-studies-civics</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/domains/social-studies-civics</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/domains/philosophy-ethics</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/domains/philosophy-ethics</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/domains/economics-finance</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/domains/economics-finance</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/domains/health-physical-development</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/domains/health-physical-development</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/domains/creative-expression</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/domains/creative-expression</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/domains/technology-media-ai-literacy</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/domains/technology-media-ai-literacy</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lifeeducation.org/domains/life-skills-project-execution</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://www.lifeeducation.org/domains/life-skills-project-execution</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

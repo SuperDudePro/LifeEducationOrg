@@ -157,12 +157,6 @@ export function HomePage() {
           </div>
         </div>
       </section>
-      <footer className="footer">
-        <div className="footer-inner">
-          <div className="footer-text">© LifeEducation.org</div>
-          <a className="footer-link" href="/contact">Contact</a>
-        </div>
-      </footer>
     </PageShell>
   );
 }

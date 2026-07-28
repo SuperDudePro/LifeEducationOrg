@@ -7,6 +7,7 @@ const sitemap = [
   "https://www.lifeeducation.org/why",
   "https://www.lifeeducation.org/floor",
   "https://www.lifeeducation.org/domains",
+  "https://www.lifeeducation.org/ask",
   "https://www.lifeeducation.org/posts",
   "https://www.lifeeducation.org/posts/example-post",
   "https://www.lifeeducation.org/domains/communication",
@@ -45,11 +46,19 @@ test("domain data selects the homepage, domains listing, and domain detail route
   ]);
 });
 
-test("Ask, API, workflow, test, and generated-file changes submit nothing", () => {
+test("an Ask page change selects the public Ask route", () => {
   const selection = selectIndexNowRoutes([
-    "api/ask.js",
     "src/pages/AskPage.tsx",
     "src/styles/ask.css",
+  ]);
+  assert.deepEqual(urlsForSelection(sitemap, selection), [
+    "https://www.lifeeducation.org/ask",
+  ]);
+});
+
+test("API, workflow, test, and generated-file changes submit nothing", () => {
+  const selection = selectIndexNowRoutes([
+    "api/ask.js",
     "test/ask/api.test.mjs",
     ".github/workflows/indexnow.yml",
     "scripts/submit-indexnow.mjs",

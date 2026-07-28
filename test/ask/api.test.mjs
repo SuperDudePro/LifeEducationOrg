@@ -142,3 +142,59 @@ test("ask endpoint enforces citations on a mocked structured model answer", asyn
     else process.env.OPENAI_API_KEY = originalKey;
   }
 });
+
+test("ask endpoint sends a privacy-bounded beta question record through Resend", async () => {
+  const originalFetch = globalThis.fetch;
+  const envNames = ["OPENAI_API_KEY", "RESEND_API_KEY", "ASK_FROM_EMAIL", "ASK_TO_EMAIL"];
+  const originalEnv = Object.fromEntries(envNames.map((name) => [name, process.env[name]]));
+  process.env.OPENAI_API_KEY = "test-openai-key";
+  process.env.RESEND_API_KEY = "test-resend-key";
+  process.env.ASK_FROM_EMAIL = "ask@example.com";
+  process.env.ASK_TO_EMAIL = "will@example.com";
+  let emailPayload;
+
+  globalThis.fetch = async (url, options) => {
+    if (String(url).includes("api.openai.com")) {
+      return new Response(JSON.stringify({
+        output: [{
+          content: [{
+            text: JSON.stringify({
+              answerable: true,
+              answer: "The Floor is the minimum capability contract expected by 18.",
+              sourceCitations: ["floor"],
+              confidence: "high",
+              scopeWarnings: [],
+              privacyWarnings: [],
+              reasonNotAnswered: "",
+              suggestedCategory: "floor",
+              possibleExistingQA: false,
+            }),
+          }],
+        }],
+      }), { status: 200, headers: { "Content-Type": "application/json" } });
+    }
+    if (String(url).includes("api.resend.com")) {
+      emailPayload = JSON.parse(options.body);
+      return new Response("{}", { status: 200, headers: { "Content-Type": "application/json" } });
+    }
+    throw new Error(`Unexpected fetch: ${url}`);
+  };
+
+  try {
+    const response = responseHarness();
+    await askHandler(request({ question: "What is the 18-year-old Floor?" }), response);
+    assert.equal(response.statusCode, 200);
+    assert.equal(emailPayload.subject, "Ask LifeEducation: answered");
+    assert.match(emailPayload.text, /Question:\nWhat is the 18-year-old Floor\?/);
+    assert.match(emailPayload.text, /The Floor is the minimum capability contract expected by 18/);
+    assert.match(emailPayload.text, /The 18-Year-Old Floor/);
+    assert.match(emailPayload.text, /No IP address or visitor profile is included/);
+    assert.doesNotMatch(emailPayload.text, /x-forwarded-for|test-/i);
+  } finally {
+    globalThis.fetch = originalFetch;
+    for (const name of envNames) {
+      if (originalEnv[name] === undefined) delete process.env[name];
+      else process.env[name] = originalEnv[name];
+    }
+  }
+});
