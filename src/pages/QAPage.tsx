@@ -1,6 +1,7 @@
 import { PageShell } from "../components/PageShell";
 import { PageIntro } from "../components/PageIntro";
 import { BackBar } from "../components/BackBar";
+import { AskCta } from "../components/AskCta";
 import { QA_DATA } from "../data/qaData";
 
 export function QAPage() {
@@ -33,7 +34,7 @@ export function QAPage() {
           <p key={paragraph} className="doc-dark-text">{paragraph}</p>
         ))}
       </section>
-      <footer className="footer"><div className="footer-inner"><div className="footer-text">© LifeEducation.org</div><a className="footer-link" href="/contact">Contact</a></div></footer>
+      <AskCta variant="qa" />
     </PageShell>
   );
 }

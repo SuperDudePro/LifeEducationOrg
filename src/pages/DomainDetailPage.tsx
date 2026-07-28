@@ -1,6 +1,7 @@
 import { PageShell } from "../components/PageShell";
 import { PageIntro } from "../components/PageIntro";
 import { BackBar } from "../components/BackBar";
+import { AskCta } from "../components/AskCta";
 import { SectionNav } from "../components/SectionNav";
 import { DOMAINS } from "../data/domainsData";
 import { FLOOR_BY_DOMAIN } from "../data/floorByDomain";
@@ -175,12 +176,7 @@ export function DomainDetailPage({ slug }: { slug: string }) {
         </section>
       ) : null}
 
-      <footer className="footer">
-        <div className="footer-inner">
-          <div className="footer-text">© LifeEducation.org</div>
-          <a className="footer-link" href="/contact">Contact</a>
-        </div>
-      </footer>
+      <AskCta />
     </PageShell>
   );
 }

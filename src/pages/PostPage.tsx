@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { PageShell } from "../components/PageShell";
 import { BackBar } from "../components/BackBar";
+import { AskCta } from "../components/AskCta";
 import { PostCard } from "../components/PostCard";
 import { SharePost } from "../components/SharePost";
 import { formatPostDate, getRelatedPosts, loadPostBySlug } from "../content/loadPosts";
@@ -42,11 +43,11 @@ export function PostPage({ slug }: Props) {
         <BackBar><a href="/posts" className="back-link">← Back to Posts</a></BackBar>
         <section className="post-article">
           {post.body}
+          <AskCta />
           <SharePost title={post.title} excerpt={post.excerpt} url={shareUrl} image={shareImage} />
         </section>
       </article>
       {related.length > 0 && <section className="posts-section" aria-labelledby="related-posts-title"><div className="posts-head"><div className="posts-pill">Keep reading</div><h2 className="posts-title" id="related-posts-title">Related field notes</h2></div><div className="post-grid">{related.map((item) => <PostCard key={item.slug} post={item} />)}</div></section>}
-      <footer className="footer"><div className="footer-inner"><div className="footer-text">© LifeEducation.org</div><a className="footer-link" href="/contact">Contact</a></div></footer>
     </PageShell>
   );
 }

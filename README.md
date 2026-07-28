@@ -29,11 +29,14 @@ npm run sitemap
 npm run test:ask
 ```
 
-## Hidden Ask LifeEducation beta
+## Ask LifeEducation public beta
 
-`/ask` is a direct-URL private beta. It is deliberately absent from site
-navigation and `public/sitemap.xml`; its generated entry page is marked
-`noindex, nofollow`.
+`/ask` is a quiet public beta. It is linked at the end of the Floor, Domains,
+Q&A, domain detail pages, and published posts, with a secondary footer link
+across the site. It is deliberately absent from the homepage feature flow and
+top navigation so it rewards readers who are already exploring the framework.
+The route is indexable, included in `public/sitemap.xml`, and eligible for
+IndexNow submission.
 
 The serverless answer endpoint retrieves only from the approved corpus generated
 from the public LifeEducation data modules. The model must return a strict
@@ -47,8 +50,9 @@ browse or read private Drive files.
 
 Copy `.env.example` to your local environment or add the same server-side
 variables to Vercel. `OPENAI_API_KEY` is required for model-backed answers.
-Resend and the Ask/contact email variables enable “Send to Will.” These values
-must not use the `VITE_` prefix.
+Resend and the Ask/contact email variables enable “Send to Will” and the
+privacy-noticed internal beta question record. These values must not use the
+`VITE_` prefix.
 
 The beta can run on Vercel’s current plan. OpenAI API usage and billing are
 separate from the Vercel plan.

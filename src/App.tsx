@@ -90,9 +90,9 @@ export default function App() {
           "Send questions, corrections, objections, examples, or serious feedback about LifeEducation.",
       },
       "/ask": {
-        title: "Ask LifeEducation | Private Beta",
+        title: "Ask LifeEducation | Questions About the Framework",
         description:
-          "A source-grounded private beta for questions about the current LifeEducation materials.",
+          "Ask questions about the LifeEducation Floor, Domains, purpose, and public framework, with source-backed answers.",
       },
     };
 
@@ -146,13 +146,8 @@ export default function App() {
       robots.name = "robots";
       document.head.appendChild(robots);
     }
-    robots.content = pathname === "/ask" ? "noindex, nofollow" : "index, follow";
-
-    if (pathname === "/ask") {
-      document.head.querySelector("script[data-site-jsonld]")?.remove();
-    } else {
-      applyStructuredData(pathname, meta.title, meta.description);
-    }
+    robots.content = "index, follow";
+    applyStructuredData(pathname, meta.title, meta.description);
 
     if (TRACKED_HOSTS.has(window.location.hostname.toLowerCase())) {
       window.gtag?.("event", "page_view", {

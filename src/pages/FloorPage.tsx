@@ -3,6 +3,7 @@ import { PageIntro } from "../components/PageIntro";
 import { BackBar } from "../components/BackBar";
 import { ContentBlocks } from "../components/ContentBlocks";
 import { SectionNav } from "../components/SectionNav";
+import { AskCta } from "../components/AskCta";
 import { FLOOR_DATA } from "../data/floorData";
 
 export function FloorPage() {
@@ -24,7 +25,7 @@ export function FloorPage() {
           <ContentBlocks blocks={section.blocks} />
         </section>
       ))}
-      <footer className="footer"><div className="footer-inner"><div className="footer-text">© LifeEducation.org</div><a className="footer-link" href="/contact">Contact</a></div></footer>
+      <AskCta />
     </PageShell>
   );
 }

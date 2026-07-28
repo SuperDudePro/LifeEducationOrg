@@ -39,7 +39,6 @@ export function PostsPage() {
         </div>
         <div className="post-grid">{matches.map((post) => <PostCard key={post.slug} post={post} />)}</div>
       </section>
-      <footer className="footer"><div className="footer-inner"><div className="footer-text">© LifeEducation.org</div><a className="footer-link" href="/contact">Contact</a></div></footer>
     </PageShell>
   );
 }

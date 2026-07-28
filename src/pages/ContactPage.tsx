@@ -183,12 +183,6 @@ export function ContactPage() {
           {formState === "error" && <p style={errorStatusStyle}>{errorMessage}</p>}
         </form>
       </section>
-      <footer className="footer">
-        <div className="footer-inner">
-          <div className="footer-text">© LifeEducation.org</div>
-          <a className="footer-link" href="/contact">Contact</a>
-        </div>
-      </footer>
     </PageShell>
   );
 }
