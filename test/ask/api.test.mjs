@@ -105,6 +105,8 @@ test("ask endpoint enforces citations on a mocked structured model answer", asyn
     assert.equal(requestBody.reasoning.effort, "medium");
     assert.equal(requestBody.store, false);
     assert.match(requestBody.instructions, /coherent reply, not a fact dump/i);
+    assert.match(requestBody.instructions, /Default to two to four connected paragraphs/i);
+    assert.match(requestBody.instructions, /question beginning with how or what is not by itself a reason to use a list/i);
     assert.match(requestBody.instructions, /Return plain text/i);
     assert.match(requestBody.instructions, /Never mention approved excerpts, retrieval, a corpus, a source packet/i);
     assert.match(requestBody.instructions, /interface displays citations separately/i);
