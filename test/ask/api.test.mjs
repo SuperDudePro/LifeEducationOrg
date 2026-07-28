@@ -104,6 +104,13 @@ test("ask endpoint enforces citations on a mocked structured model answer", asyn
     assert.equal(requestBody.model, "gpt-5.6-sol");
     assert.equal(requestBody.reasoning.effort, "medium");
     assert.equal(requestBody.store, false);
+    assert.match(requestBody.instructions, /coherent reply, not a fact dump/i);
+    assert.match(requestBody.instructions, /Default to two to four connected paragraphs/i);
+    assert.match(requestBody.instructions, /question beginning with how or what is not by itself a reason to use a list/i);
+    assert.match(requestBody.instructions, /Return plain text/i);
+    assert.match(requestBody.instructions, /Never mention approved excerpts, retrieval, a corpus, a source packet/i);
+    assert.match(requestBody.instructions, /interface displays citations separately/i);
+    assert.match(requestBody.instructions, /keep scopeWarnings and privacyWarnings empty/i);
     return new Response(JSON.stringify({
       output: [{
         content: [{
@@ -112,7 +119,7 @@ test("ask endpoint enforces citations on a mocked structured model answer", asyn
             answer: "The Floor is the minimum capability contract expected by 18.",
             sourceCitations: ["floor", "made-up-source"],
             confidence: "high",
-            scopeWarnings: [],
+            scopeWarnings: ["The approved excerpts include only part of the complete checklist."],
             privacyWarnings: [],
             reasonNotAnswered: "",
             suggestedCategory: "floor",
@@ -128,6 +135,7 @@ test("ask endpoint enforces citations on a mocked structured model answer", asyn
     assert.equal(response.statusCode, 200);
     assert.match(response.text, /"title":"The 18-Year-Old Floor"/);
     assert.doesNotMatch(response.text, /made-up-source/);
+    assert.doesNotMatch(response.text, /approved excerpts include only part/i);
   } finally {
     globalThis.fetch = originalFetch;
     if (originalKey === undefined) delete process.env.OPENAI_API_KEY;
