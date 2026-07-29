@@ -1,14 +1,17 @@
 import {
   LIMITS,
-  checkRateLimit,
-  clientIp,
   getString,
   normalizeHistory,
   readJsonBody,
   validSameSiteOrigin,
 } from "./ask/lib.mjs";
+import {
+  clientIp,
+  durableRateLimit,
+  fetchWithTimeout,
+  requestTooLarge,
+} from "./_security.mjs";
 
-const rateStore = new Map();
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function json(response, status, body) {
@@ -18,11 +21,11 @@ function json(response, status, body) {
 }
 
 async function sendEmail(apiKey, payload) {
-  return fetch("https://api.resend.com/emails", {
+  return fetchWithTimeout("https://api.resend.com/emails", {
     method: "POST",
     headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
     body: JSON.stringify(payload),
-  });
+  }, 8_000);
 }
 
 export default async function handler(request, response) {
@@ -33,8 +36,21 @@ export default async function handler(request, response) {
   if (!validSameSiteOrigin(request)) {
     return json(response, 403, { ok: false, error: "Request origin was not accepted." });
   }
-  const rate = checkRateLimit(rateStore, `escalate:${clientIp(request)}`, { limit: 4, windowMs: 60 * 60 * 1000 });
-  if (!rate.allowed) return json(response, 429, { ok: false, error: "Please wait before sending another note." });
+  if (requestTooLarge(request, 12_288)) {
+    return json(response, 413, { ok: false, error: "Request is too large." });
+  }
+  const rate = await durableRateLimit(`le:escalate:ip:${clientIp(request)}`, {
+    limit: 4,
+    windowMs: 60 * 60 * 1000,
+  });
+  if (!rate.allowed) {
+    return json(response, rate.unavailable ? 503 : 429, {
+      ok: false,
+      error: rate.unavailable
+        ? "Question forwarding is temporarily unavailable."
+        : "Please wait before sending another note.",
+    });
+  }
 
   let body;
   try {
