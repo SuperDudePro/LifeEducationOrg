@@ -1,10 +1,13 @@
 import { CORPUS, SOURCES } from "./ask/corpus.generated.mjs";
 import {
+  clientIp,
+  durableRateLimit,
+  fetchWithTimeout,
+} from "./_security.mjs";
+import {
   LIMITS,
   OFF_TOPIC_DECLINE,
   STANDARD_DECLINE,
-  checkRateLimit,
-  clientIp,
   extractResponseText,
   getString,
   looksLikeLifeEducationQuestion,
@@ -15,8 +18,6 @@ import {
   validSameSiteOrigin,
   validateModelResult,
 } from "./ask/lib.mjs";
-
-const rateStore = new Map();
 
 const RESPONSE_SCHEMA = {
   type: "object",
@@ -118,7 +119,7 @@ async function recordQuestion({ question, result, resultType, metadata = {} }) {
   ].join("\n");
 
   try {
-    const emailResponse = await fetch("https://api.resend.com/emails", {
+    const emailResponse = await fetchWithTimeout("https://api.resend.com/emails", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${RESEND_API_KEY}`,
@@ -130,8 +131,7 @@ async function recordQuestion({ question, result, resultType, metadata = {} }) {
         subject: `Ask LifeEducation: ${resultType}`,
         text,
       }),
-      signal: AbortSignal.timeout(3000),
-    });
+    }, 3_000);
     if (!emailResponse.ok) {
       console.error(`Ask LifeEducation question record failed (${emailResponse.status}).`);
     }
@@ -154,10 +154,18 @@ export default async function handler(request, response) {
     return json(response, 403, { ok: false, error: "Request origin was not accepted." });
   }
 
-  const rate = checkRateLimit(rateStore, clientIp(request));
+  const rate = await durableRateLimit(`le:ask:ip:${clientIp(request)}`, {
+    limit: 12,
+    windowMs: 15 * 60 * 1000,
+  });
   if (!rate.allowed) {
     response.setHeader("Retry-After", String(Math.max(1, Math.ceil((rate.resetAt - Date.now()) / 1000))));
-    return json(response, 429, { ok: false, error: "Please wait before asking another question." });
+    return json(response, rate.unavailable ? 503 : 429, {
+      ok: false,
+      error: rate.unavailable
+        ? "The answer service is temporarily unavailable."
+        : "Please wait before asking another question.",
+    });
   }
 
   let body;
@@ -247,7 +255,7 @@ export default async function handler(request, response) {
 
   let modelPayload;
   try {
-    const modelResponse = await fetch("https://api.openai.com/v1/responses", {
+    const modelResponse = await fetchWithTimeout("https://api.openai.com/v1/responses", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${apiKey}`,
@@ -273,7 +281,7 @@ export default async function handler(request, response) {
           },
         },
       }),
-    });
+    }, 25_000);
     if (!modelResponse.ok) {
       const requestId = modelResponse.headers.get("x-request-id") || "unavailable";
       console.error(`Ask LifeEducation model request failed (${modelResponse.status}); request ${requestId}.`);
