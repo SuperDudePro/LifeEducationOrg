@@ -6,8 +6,9 @@ export const metadata = {
   slug: "run",
   title: "RUN",
   excerpt:
-    "Life Education is a refusal to hand children an inferior product when the world itself is available as the alternative.",
+    "LifeEducation is a refusal to hand children an inferior product when the world itself is available as the alternative.",
   publishedAt: "2026-06-14",
+  modifiedAt: "2026-07-29",
   displayDate: "June 14, 2026",
   status: "Recent",
   topic: "Founding Notes",
