@@ -91,14 +91,14 @@ const post: LifeEducationPost = {
         alt="Two people at a drafting table test the load-bearing joints of a layered framework with a ruler, magnifying glass, plumb line, and small weights."
       />
 
-      <PostFigure
-        src={bodyImageFour}
-        alt="A teacher stands at the threshold between an overloaded classroom desk and the home beyond, holding only part of the work while leaving the rest behind."
-      />
-
       <h2>I Am Still Looking</h2>
 
       <p>LifeEducation isn't a finished product that another family can purchase and install. It's a framework being built for my children, documented publicly, tested against reality, and revised when the evidence requires it. I'm not asking people to agree with it, and I'm not pretending our implementation will work unchanged for everyone else.</p>
+
+      <PostFigure
+        src={bodyImageFour}
+        alt="An open chair waits at the end of a review table where several people have marked and questioned a large plan, with one green pencil left ready for another critic."
+      />
 
       <p>The objections I received did not make me rebuild LifeEducation. They did make me explain it better. That matters.</p>
 
