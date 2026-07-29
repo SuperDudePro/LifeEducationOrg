@@ -1,8 +1,9 @@
 import type { LifeEducationPost } from "../../postTypes";
 import { PostFigure } from "../../../components/PostFigure";
-import lifeSkillsHero from "./images/life-skills-project-execution-hero.webp";
-import ideaToFinished from "./images/idea-to-finished-project.webp";
-import navigatingSystems from "./images/navigating-the-system.webp";
+import bodyImage1 from "./images/body-image-1.webp";
+import bodyImage2 from "./images/body-image-2.webp";
+import bodyImage3 from "./images/body-image-3.webp";
+import bodyImage4 from "./images/body-image-4.webp";
 import { metadata } from "./meta";
 
 const post: LifeEducationPost = {
@@ -49,8 +50,8 @@ const post: LifeEducationPost = {
       </p>
 
       <PostFigure
-        src={lifeSkillsHero}
-        alt="A young adult moves through an ordinary day in a mostly black-and-white sketch -- laundry, paperwork, a bus map, a half-built project -- with restrained green accents marking the next step in each task."
+        src={bodyImage1}
+        alt="A young adult checks a list while carrying a prepared envelope and groceries beside a parked bicycle in a charcoal editorial sketch with a restrained emerald route."
       />
 
       <h2>What real life will ask them</h2>
@@ -147,8 +148,8 @@ const post: LifeEducationPost = {
       </p>
 
       <PostFigure
-        src={ideaToFinished}
-        alt="A single project shown moving from a rough sketch to a finished object across a black-and-white panel, with a restrained green line tracing the messy middle stage where most work stalls."
+        src={bodyImage2}
+        alt="A four-stage black-and-white sketch follows a habit-tracking app from an idea notebook through planning and debugging to a working phone app, with restrained green arrows linking the stages."
       />
 
       <h2>Dealing with systems that were not built to help you</h2>
@@ -182,14 +183,14 @@ const post: LifeEducationPost = {
       </p>
 
       <PostFigure
-        src={navigatingSystems}
-        alt="A young adult at a service counter in a black-and-white sketch, calmly holding paperwork while a restrained green arrow marks the path past a dead-end window to the person who can actually help."
+        src={bodyImage3}
+        alt="A young adult follows a green route through an institutional service office, passing an information dead end and reaching the support desk with documents and notes in hand."
       />
 
       <h2>How families build it</h2>
 
       <p>
-        Nobody learns this from a lecture. This domain gets built by handing a
+        Nobody builds this from a lecture alone. This domain gets built by handing a
         kid responsibility a little earlier than feels comfortable, then
         stepping back far enough that it counts.
       </p>
@@ -209,6 +210,11 @@ const post: LifeEducationPost = {
         out, letting them carry a little more than they did yesterday, and
         letting ordinary consequences teach the parts no parent can.
       </p>
+
+      <PostFigure
+        src={bodyImage4}
+        alt="A parent stands back while a young person handles a phone call, route plan, meal, and small repair in a four-stage black-and-white sketch with restrained green handoff markers."
+      />
 
       <h2>What this is not</h2>
 
@@ -263,3 +269,4 @@ const post: LifeEducationPost = {
 };
 
 export default post;
+
