@@ -8,6 +8,7 @@ export const metadata = {
   excerpt:
     "The number can be real. The story the system bolts onto it is the lie -- and that's why it never scales.",
   publishedAt: "2026-06-25",
+  modifiedAt: "2026-07-29",
   displayDate: "June 25, 2026",
   status: "Recent",
   topic: "Founding Notes",
