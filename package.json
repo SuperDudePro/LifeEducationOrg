@@ -10,7 +10,7 @@
     "check": "npm run lint && npm run test:ask && npm run test:indexnow && npm run build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test:ask": "node --test test/ask/*.test.mjs",
+    "test:ask": "NODE_ENV=test node --test test/ask/*.test.mjs",
     "test:indexnow": "node --test test/indexnow-routing.test.mjs",
     "sitemap": "node scripts/generate-sitemap.mjs",
     "deployment:marker": "node scripts/write-deployment-marker.mjs",
