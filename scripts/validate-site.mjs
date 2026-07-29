@@ -47,7 +47,18 @@ if (!routes.has('/ask')) fail('public/sitemap.xml', '/ask', 'public Ask route is
 
 for (const route of routes) {
   const html = route === '/' ? join(DIST, 'index.html') : join(DIST, ...route.slice(1).split('/'), 'index.html');
-  if (!existsSync(html)) fail(rel(html), route, 'sitemap route has no generated entry page');
+  if (!existsSync(html)) {
+    fail(rel(html), route, 'sitemap route has no generated entry page');
+    continue;
+  }
+  const routeHtml = readFileSync(html, 'utf8');
+  const canonical = `${ORIGIN}${route === '/' ? '/' : route}`;
+  if (!routeHtml.includes(`<link rel="canonical" href="${canonical}" />`)) {
+    fail(rel(html), 'canonical', `expected ${canonical}`);
+  }
+  if (route.startsWith('/posts/') && !/<title>.+ \| LifeEducation\.org<\/title>/.test(routeHtml)) {
+    fail(rel(html), 'title', 'post route is missing its static post title');
+  }
 }
 
 const askHtmlPath = join(DIST, 'ask', 'index.html');
