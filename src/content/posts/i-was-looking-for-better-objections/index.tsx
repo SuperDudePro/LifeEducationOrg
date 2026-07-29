@@ -1,6 +1,8 @@
 import type { LifeEducationPost } from "../../postTypes";
 import { PostFigure } from "../../../components/PostFigure";
 import bodyImageOne from "./images/body-image-1.webp";
+import bodyImageTwo from "./images/body-image-2.webp";
+import bodyImageThree from "./images/body-image-3.webp";
 import bodyImageFour from "./images/body-image-4.webp";
 import { metadata } from "./meta";
 
@@ -55,6 +57,11 @@ const post: LifeEducationPost = {
 
       <p>"Not every family can do this" may be the strongest practical objection. Most families can't simply replace school under current work, housing, transportation, childcare, and income arrangements. My family currently depends on the custodial function of school too. That is an argument against pretending LifeEducation can become an immediate universal replacement. It isn't an argument that the current education is good enough.</p>
 
+      <PostFigure
+        src={bodyImageTwo}
+        alt="Young people move toward the same real-world destination along several supported paths involving coaching, tutoring, mobility access, tools, transportation, and community help."
+      />
+
       <h2>What the Feedback Was Actually Good For</h2>
 
       <p>The conversations did not expose a fatal flaw in the Floor, the evidence model, or the transfer of responsibility. They did expose something useful: I had not made several distinctions clearly enough for an ordinary reader encountering LifeEducation for the first time.</p>
@@ -73,11 +80,16 @@ const post: LifeEducationPost = {
         <li>Are you attacking teachers?</li>
       </ul>
 
-      <p>Those questions matter because they show where readers are likely to misunderstand the project. LifeEducation isn't anti-learning, anti-teacher, anti-structure, or anti-serious study. It doesn't claim that school never helps anyone or that every family can leave tomorrow. It does claim that school should be treated as one possible environment rather than the unquestioned authority over childhood and learning.</p>
+      <p>Those questions matter because they show where readers are likely to misunderstand the project. LifeEducation isn't anti-learning, anti-teacher, anti-structure, or anti-serious study. It doesn't claim that school never helps anyone or that every family can leave tomorrow. It does claim that school is one possible environment, not the operating system and not the default authority over childhood and learning. A school has to prove that it builds capability; it doesn't get automatic trust because it's official.</p>
 
       <p>It also claims that support should change the route without abandoning the destination. A child may need more time, more structure, direct instruction, tutoring, therapy, assistive technology, translation, quieter spaces, or outside expertise. None of that requires pretending capability exists when it doesn't.</p>
 
       <p>The objections helped me say those things more plainly.</p>
+
+      <PostFigure
+        src={bodyImageThree}
+        alt="Two people at a drafting table test the load-bearing joints of a layered framework with a ruler, magnifying glass, plumb line, and small weights."
+      />
 
       <PostFigure
         src={bodyImageFour}
@@ -89,6 +101,8 @@ const post: LifeEducationPost = {
       <p>LifeEducation isn't a finished product that another family can purchase and install. It's a framework being built for my children, documented publicly, tested against reality, and revised when the evidence requires it. I'm not asking people to agree with it, and I'm not pretending our implementation will work unchanged for everyone else.</p>
 
       <p>The objections I received did not make me rebuild LifeEducation. They did make me explain it better. That matters.</p>
+
+      <p>If you see the weakness I haven't, <a href="/contact">send it to me</a>. Tell me which capability is missing, which requirement can't be justified, where the evidence model will distort behavior, or where parent authority will last too long.</p>
 
       <p>But I am still looking for the objection that forces me to change the design.</p>
     </>
