@@ -264,9 +264,16 @@ const post: LifeEducationPost = {
         of finished classes. A person who can function, adapt, and build
         &mdash; and then go do it.
       </p>
+
+      <p>
+        If you&apos;re handing more responsibility to a young person, what can
+        they already handle without being managed &mdash; and where do they
+        still stall? <a href="/contact">Send me a message</a>. Tell me what
+        you&apos;re handing over, what worked, and where this framework is
+        missing something.
+      </p>
     </>
   ),
 };
 
 export default post;
-
