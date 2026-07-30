@@ -1,0 +1,401 @@
+{
+  "schemaVersion": 1,
+  "site": "LifeEducation",
+  "repository": "SuperDudePro/LifeEducationOrg",
+  "status": "reviewed",
+  "reviewedAt": "2026-07-29",
+  "entries": {
+    "domain-1-communication": [
+      {
+        "ruleId": "cta.contact.required",
+        "signature": "/contact",
+        "reason": "Post is missing a reader CTA linking to the contact page."
+      },
+      {
+        "ruleId": "image.body.minimum",
+        "signature": "count=1",
+        "reason": "Only 1 distinct body images; current minimum is 4."
+      },
+      {
+        "ruleId": "image.body.sequence",
+        "signature": "actual=images/answer-actual-question-comic.jpg;expected=images/body-image-1.webp",
+        "reason": "Body roles must use the exact sequential filenames images/body-image-1.webp."
+      },
+      {
+        "ruleId": "image.role.card.filename",
+        "signature": "actual=images/communication-modes-social.jpg;expected=images/card-image.webp",
+        "reason": "card image must be named images/card-image.webp."
+      },
+      {
+        "ruleId": "image.role.hero.filename",
+        "signature": "actual=images/communication-modes-hero.jpg;expected=images/hero-image.webp",
+        "reason": "hero image must be named images/hero-image.webp."
+      }
+    ],
+    "domain-2-practical-numeracy": [
+      {
+        "ruleId": "cta.contact.required",
+        "signature": "/contact",
+        "reason": "Post is missing a reader CTA linking to the contact page."
+      },
+      {
+        "ruleId": "image.body.minimum",
+        "signature": "count=2",
+        "reason": "Only 2 distinct body images; current minimum is 4."
+      },
+      {
+        "ruleId": "image.body.sequence",
+        "signature": "actual=images/cost-of-choice-checkout.webp,images/market-math-kids.webp;expected=images/body-image-1.webp,images/body-image-2.webp",
+        "reason": "Body roles must use the exact sequential filenames images/body-image-1.webp, images/body-image-2.webp."
+      },
+      {
+        "ruleId": "image.role.card.filename",
+        "signature": "actual=images/practical-numeracy-hero.webp;expected=images/card-image.webp",
+        "reason": "card image must be named images/card-image.webp."
+      },
+      {
+        "ruleId": "image.role.distinct",
+        "signature": "images/practical-numeracy-hero.webp",
+        "reason": "Card and hero roles reuse the same image."
+      },
+      {
+        "ruleId": "image.role.hero.filename",
+        "signature": "actual=images/practical-numeracy-hero.webp;expected=images/hero-image.webp",
+        "reason": "hero image must be named images/hero-image.webp."
+      }
+    ],
+    "domain-3-scientific-thinking": [
+      {
+        "ruleId": "cta.contact.required",
+        "signature": "/contact",
+        "reason": "Post is missing a reader CTA linking to the contact page."
+      },
+      {
+        "ruleId": "image.body.minimum",
+        "signature": "count=1",
+        "reason": "Only 1 distinct body images; current minimum is 4."
+      },
+      {
+        "ruleId": "image.body.sequence",
+        "signature": "actual=images/scientific-thinking-evidence-collage.webp;expected=images/body-image-1.webp",
+        "reason": "Body roles must use the exact sequential filenames images/body-image-1.webp."
+      },
+      {
+        "ruleId": "image.role.card.filename",
+        "signature": "actual=images/scientific-thinking-observation-hero.webp;expected=images/card-image.webp",
+        "reason": "card image must be named images/card-image.webp."
+      },
+      {
+        "ruleId": "image.role.distinct",
+        "signature": "images/scientific-thinking-observation-hero.webp",
+        "reason": "Card and hero roles reuse the same image."
+      },
+      {
+        "ruleId": "image.role.hero.filename",
+        "signature": "actual=images/scientific-thinking-observation-hero.webp;expected=images/hero-image.webp",
+        "reason": "hero image must be named images/hero-image.webp."
+      }
+    ],
+    "domain-4-social-studies-civics": [
+      {
+        "ruleId": "cta.contact.required",
+        "signature": "/contact",
+        "reason": "Post is missing a reader CTA linking to the contact page."
+      },
+      {
+        "ruleId": "image.body.minimum",
+        "signature": "count=1",
+        "reason": "Only 1 distinct body images; current minimum is 4."
+      },
+      {
+        "ruleId": "image.body.sequence",
+        "signature": "actual=images/reading-the-city.webp;expected=images/body-image-1.webp",
+        "reason": "Body roles must use the exact sequential filenames images/body-image-1.webp."
+      },
+      {
+        "ruleId": "image.role.card.filename",
+        "signature": "actual=images/young-adult-with-map.webp;expected=images/card-image.webp",
+        "reason": "card image must be named images/card-image.webp."
+      },
+      {
+        "ruleId": "image.role.distinct",
+        "signature": "images/young-adult-with-map.webp",
+        "reason": "Card and hero roles reuse the same image."
+      },
+      {
+        "ruleId": "image.role.hero.filename",
+        "signature": "actual=images/young-adult-with-map.webp;expected=images/hero-image.webp",
+        "reason": "hero image must be named images/hero-image.webp."
+      }
+    ],
+    "domain-5-philosophy-ethics": [
+      {
+        "ruleId": "cta.contact.required",
+        "signature": "/contact",
+        "reason": "Post is missing a reader CTA linking to the contact page."
+      },
+      {
+        "ruleId": "image.body.minimum",
+        "signature": "count=3",
+        "reason": "Only 3 distinct body images; current minimum is 4."
+      },
+      {
+        "ruleId": "image.body.sequence",
+        "signature": "actual=images/hero-crossroads.webp,images/fair-argument.webp,images/feelings-vs-verdicts.webp;expected=images/body-image-1.webp,images/body-image-2.webp,images/body-image-3.webp",
+        "reason": "Body roles must use the exact sequential filenames images/body-image-1.webp, images/body-image-2.webp, images/body-image-3.webp."
+      },
+      {
+        "ruleId": "image.role.body-reuse",
+        "signature": "card=images/hero-crossroads.webp",
+        "reason": "card image is reused as a body image."
+      },
+      {
+        "ruleId": "image.role.body-reuse",
+        "signature": "hero=images/hero-crossroads.webp",
+        "reason": "hero image is reused as a body image."
+      },
+      {
+        "ruleId": "image.role.card.filename",
+        "signature": "actual=images/hero-crossroads.webp;expected=images/card-image.webp",
+        "reason": "card image must be named images/card-image.webp."
+      },
+      {
+        "ruleId": "image.role.distinct",
+        "signature": "images/hero-crossroads.webp",
+        "reason": "Card and hero roles reuse the same image."
+      },
+      {
+        "ruleId": "image.role.hero.filename",
+        "signature": "actual=images/hero-crossroads.webp;expected=images/hero-image.webp",
+        "reason": "hero image must be named images/hero-image.webp."
+      }
+    ],
+    "domain-6-economics-finance": [
+      {
+        "ruleId": "cta.contact.required",
+        "signature": "/contact",
+        "reason": "Post is missing a reader CTA linking to the contact page."
+      },
+      {
+        "ruleId": "image.body.minimum",
+        "signature": "count=3",
+        "reason": "Only 3 distinct body images; current minimum is 4."
+      },
+      {
+        "ruleId": "image.body.sequence",
+        "signature": "actual=images/hero-money-decisions.webp,images/opportunity-cost-crossroads.webp,images/money-questions-mentoring.webp;expected=images/body-image-1.webp,images/body-image-2.webp,images/body-image-3.webp",
+        "reason": "Body roles must use the exact sequential filenames images/body-image-1.webp, images/body-image-2.webp, images/body-image-3.webp."
+      },
+      {
+        "ruleId": "image.role.body-reuse",
+        "signature": "card=images/hero-money-decisions.webp",
+        "reason": "card image is reused as a body image."
+      },
+      {
+        "ruleId": "image.role.body-reuse",
+        "signature": "hero=images/hero-money-decisions.webp",
+        "reason": "hero image is reused as a body image."
+      },
+      {
+        "ruleId": "image.role.card.filename",
+        "signature": "actual=images/hero-money-decisions.webp;expected=images/card-image.webp",
+        "reason": "card image must be named images/card-image.webp."
+      },
+      {
+        "ruleId": "image.role.distinct",
+        "signature": "images/hero-money-decisions.webp",
+        "reason": "Card and hero roles reuse the same image."
+      },
+      {
+        "ruleId": "image.role.hero.filename",
+        "signature": "actual=images/hero-money-decisions.webp;expected=images/hero-image.webp",
+        "reason": "hero image must be named images/hero-image.webp."
+      }
+    ],
+    "domain-7-health-physical-development": [
+      {
+        "ruleId": "cta.contact.required",
+        "signature": "/contact",
+        "reason": "Post is missing a reader CTA linking to the contact page."
+      },
+      {
+        "ruleId": "image.body.minimum",
+        "signature": "count=3",
+        "reason": "Only 3 distinct body images; current minimum is 4."
+      },
+      {
+        "ruleId": "image.body.sequence",
+        "signature": "actual=images/health-physical-development-hero.webp,images/food-movement-recovery.webp,images/body-capability-map.webp;expected=images/body-image-1.webp,images/body-image-2.webp,images/body-image-3.webp",
+        "reason": "Body roles must use the exact sequential filenames images/body-image-1.webp, images/body-image-2.webp, images/body-image-3.webp."
+      },
+      {
+        "ruleId": "image.role.body-reuse",
+        "signature": "card=images/health-physical-development-hero.webp",
+        "reason": "card image is reused as a body image."
+      },
+      {
+        "ruleId": "image.role.body-reuse",
+        "signature": "hero=images/health-physical-development-hero.webp",
+        "reason": "hero image is reused as a body image."
+      },
+      {
+        "ruleId": "image.role.card.filename",
+        "signature": "actual=images/health-physical-development-hero.webp;expected=images/card-image.webp",
+        "reason": "card image must be named images/card-image.webp."
+      },
+      {
+        "ruleId": "image.role.distinct",
+        "signature": "images/health-physical-development-hero.webp",
+        "reason": "Card and hero roles reuse the same image."
+      },
+      {
+        "ruleId": "image.role.hero.filename",
+        "signature": "actual=images/health-physical-development-hero.webp;expected=images/hero-image.webp",
+        "reason": "hero image must be named images/hero-image.webp."
+      }
+    ],
+    "domain-8-creative-expression": [
+      {
+        "ruleId": "cta.contact.required",
+        "signature": "/contact",
+        "reason": "Post is missing a reader CTA linking to the contact page."
+      },
+      {
+        "ruleId": "image.body.minimum",
+        "signature": "count=3",
+        "reason": "Only 3 distinct body images; current minimum is 4."
+      },
+      {
+        "ruleId": "image.body.sequence",
+        "signature": "actual=images/creative-expression-hero.webp,images/creative-expression-revision.webp,images/creative-expression-outlet.webp;expected=images/body-image-1.webp,images/body-image-2.webp,images/body-image-3.webp",
+        "reason": "Body roles must use the exact sequential filenames images/body-image-1.webp, images/body-image-2.webp, images/body-image-3.webp."
+      },
+      {
+        "ruleId": "image.role.body-reuse",
+        "signature": "card=images/creative-expression-hero.webp",
+        "reason": "card image is reused as a body image."
+      },
+      {
+        "ruleId": "image.role.body-reuse",
+        "signature": "hero=images/creative-expression-hero.webp",
+        "reason": "hero image is reused as a body image."
+      },
+      {
+        "ruleId": "image.role.card.filename",
+        "signature": "actual=images/creative-expression-hero.webp;expected=images/card-image.webp",
+        "reason": "card image must be named images/card-image.webp."
+      },
+      {
+        "ruleId": "image.role.distinct",
+        "signature": "images/creative-expression-hero.webp",
+        "reason": "Card and hero roles reuse the same image."
+      },
+      {
+        "ruleId": "image.role.hero.filename",
+        "signature": "actual=images/creative-expression-hero.webp;expected=images/hero-image.webp",
+        "reason": "hero image must be named images/hero-image.webp."
+      }
+    ],
+    "domain-9-technology-media-ai-literacy": [
+      {
+        "ruleId": "cta.contact.required",
+        "signature": "/contact",
+        "reason": "Post is missing a reader CTA linking to the contact page."
+      },
+      {
+        "ruleId": "image.body.minimum",
+        "signature": "count=3",
+        "reason": "Only 3 distinct body images; current minimum is 4."
+      },
+      {
+        "ruleId": "image.body.sequence",
+        "signature": "actual=images/domain-9-technology-media-ai-hero.webp,images/domain-9-ai-tool-not-brain.webp,images/domain-9-attention-choice.webp;expected=images/body-image-1.webp,images/body-image-2.webp,images/body-image-3.webp",
+        "reason": "Body roles must use the exact sequential filenames images/body-image-1.webp, images/body-image-2.webp, images/body-image-3.webp."
+      },
+      {
+        "ruleId": "image.role.body-reuse",
+        "signature": "card=images/domain-9-technology-media-ai-hero.webp",
+        "reason": "card image is reused as a body image."
+      },
+      {
+        "ruleId": "image.role.body-reuse",
+        "signature": "hero=images/domain-9-technology-media-ai-hero.webp",
+        "reason": "hero image is reused as a body image."
+      },
+      {
+        "ruleId": "image.role.card.filename",
+        "signature": "actual=images/domain-9-technology-media-ai-hero.webp;expected=images/card-image.webp",
+        "reason": "card image must be named images/card-image.webp."
+      },
+      {
+        "ruleId": "image.role.distinct",
+        "signature": "images/domain-9-technology-media-ai-hero.webp",
+        "reason": "Card and hero roles reuse the same image."
+      },
+      {
+        "ruleId": "image.role.hero.filename",
+        "signature": "actual=images/domain-9-technology-media-ai-hero.webp;expected=images/hero-image.webp",
+        "reason": "hero image must be named images/hero-image.webp."
+      }
+    ],
+    "seven-years-to-build-a-different-way": [
+      {
+        "ruleId": "cta.contact.required",
+        "signature": "/contact",
+        "reason": "Post is missing a reader CTA linking to the contact page."
+      },
+      {
+        "ruleId": "image.body.minimum",
+        "signature": "count=0",
+        "reason": "Only 0 distinct body images; current minimum is 4."
+      },
+      {
+        "ruleId": "image.body.reference",
+        "signature": "(missing)",
+        "reason": "PostFigure source \"(missing)\" does not match a local image import."
+      },
+      {
+        "ruleId": "image.role.card.filename",
+        "signature": "actual=images/life-education-plane-building.webp;expected=images/card-image.webp",
+        "reason": "card image must be named images/card-image.webp."
+      },
+      {
+        "ruleId": "image.role.distinct",
+        "signature": "images/life-education-plane-building.webp",
+        "reason": "Card and hero roles reuse the same image."
+      },
+      {
+        "ruleId": "image.role.hero.filename",
+        "signature": "actual=images/life-education-plane-building.webp;expected=images/hero-image.webp",
+        "reason": "hero image must be named images/hero-image.webp."
+      }
+    ],
+    "why-section-is-live": [
+      {
+        "ruleId": "cta.contact.required",
+        "signature": "/contact",
+        "reason": "Post is missing a reader CTA linking to the contact page."
+      },
+      {
+        "ruleId": "image.body.minimum",
+        "signature": "count=1",
+        "reason": "Only 1 distinct body images; current minimum is 4."
+      },
+      {
+        "ruleId": "image.body.sequence",
+        "signature": "actual=images/real-world-navigation-inline.jpg;expected=images/body-image-1.webp",
+        "reason": "Body roles must use the exact sequential filenames images/body-image-1.webp."
+      },
+      {
+        "ruleId": "image.role.card.filename",
+        "signature": "actual=images/why-section-social.jpg;expected=images/card-image.webp",
+        "reason": "card image must be named images/card-image.webp."
+      },
+      {
+        "ruleId": "image.role.hero.filename",
+        "signature": "actual=images/why-section-hero.jpg;expected=images/hero-image.webp",
+        "reason": "hero image must be named images/hero-image.webp."
+      }
+    ]
+  }
+}
