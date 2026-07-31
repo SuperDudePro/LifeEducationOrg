@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { createRequire } from 'node:module';
+import { inspectImage } from './image-metadata.mjs';
 
 const require = createRequire(import.meta.url);
 const ts = require('typescript');
@@ -9,6 +10,11 @@ const IMAGE_EXTENSIONS = new Set(['.png', '.jpg', '.jpeg', '.webp']);
 const VALID_STATUSES = new Set(['Featured', 'Recent', 'Coming Soon', 'Draft']);
 const REQUIRED_META_FIELDS = ['slug', 'title', 'excerpt', 'publishedAt', 'status', 'topic', 'tags', 'heroImage', 'heroAlt', 'cardImage', 'cardAlt'];
 const CANONICAL_ORIGIN = 'https://www.lifeeducation.org';
+const IMAGE_GEOMETRY = {
+  card: { width: 960, height: 720 },
+  hero: { width: 1600, height: 900 },
+  body: { width: 1200, height: 900 },
+};
 
 function issue(ruleId, signature, message) {
   return { ruleId, signature, message };
@@ -180,7 +186,10 @@ function priorityFor(defects) {
     || value.ruleId.startsWith('code.')
     || /image\.role\.(?:card|hero)\.missing/.test(value.ruleId),
   )) return 'P1 structural';
-  if (defects.some((value) => value.ruleId.startsWith('image.body.'))) return 'P2 image completion';
+  if (defects.some((value) =>
+    value.ruleId.startsWith('image.body.')
+    || /^image\.role\.(?:card|hero)\.geometry$/.test(value.ruleId),
+  )) return 'P2 image completion';
   return 'P3 finish and cleanup';
 }
 
@@ -223,7 +232,7 @@ export function scanLifeEducation(root = process.cwd()) {
       add('structure.extra-file.forbidden', child.name, `Unexpected production-folder entry: ${child.name}.`);
     }
     if (!fs.existsSync(metaPath) || !fs.existsSync(indexPath)) {
-      posts.push({ slug, title: '', defects, priority: priorityFor(defects) });
+      posts.push({ slug, title: '', publishedAt: '', defects, priority: priorityFor(defects) });
       continue;
     }
 
@@ -234,6 +243,7 @@ export function scanLifeEducation(root = process.cwd()) {
     const value = (field) => metadata.values.get(field);
     const sourceSlug = value('slug') || '';
     const title = value('title') || '';
+    const publishedAt = value('publishedAt') || '';
 
     for (const field of REQUIRED_META_FIELDS) {
       const current = value(field);
@@ -329,6 +339,30 @@ export function scanLifeEducation(root = process.cwd()) {
       if (!assets.has(file)) add('asset.missing', file, `Imported image ${file} does not exist.`);
     }
 
+    const checkGeometry = (role, file, ruleId) => {
+      if (!file || !assets.has(file)) return;
+      const expected = IMAGE_GEOMETRY[role];
+      try {
+        const actual = inspectImage(path.join(folder, file));
+        if (actual.width !== expected.width || actual.height !== expected.height) {
+          add(
+            ruleId,
+            `file=${file};actual=${actual.width}x${actual.height};expected=${expected.width}x${expected.height}`,
+            `${file} is ${actual.width}x${actual.height}; the ${role} role requires ${expected.width}x${expected.height}.`,
+          );
+        }
+      } catch {
+        add(
+          ruleId,
+          `file=${file};actual=unreadable;expected=${expected.width}x${expected.height}`,
+          `${file} does not contain readable PNG, JPEG, or WebP image data; the ${role} role requires ${expected.width}x${expected.height}.`,
+        );
+      }
+    };
+    checkGeometry('card', roleFiles.get('card'), 'image.role.card.geometry');
+    checkGeometry('hero', roleFiles.get('hero'), 'image.role.hero.geometry');
+    for (const file of uniqueBodyFiles) checkGeometry('body', file, 'image.body.geometry');
+
     const publishable = value('status') !== 'Draft';
     const hasContactCta = body.links.some((href) => localHrefPath(href) === '/contact');
     if (publishable && !hasContactCta) add('cta.contact.required', '/contact', 'Post is missing a reader CTA linking to the contact page.');
@@ -349,9 +383,37 @@ export function scanLifeEducation(root = process.cwd()) {
 
     const deduped = [...new Map(defects.map((current) => [issueKey(current), current])).values()]
       .sort((a, b) => issueKey(a).localeCompare(issueKey(b)));
-    posts.push({ slug, title, defects: deduped, priority: priorityFor(deduped) });
+    posts.push({ slug, title, publishedAt, defects: deduped, priority: priorityFor(deduped) });
   }
   return { site: 'LifeEducation', repository: 'SuperDudePro/LifeEducationOrg', posts, repositoryDefects: [] };
+}
+
+export function retrofitQueue(scan, baseline) {
+  const posts = new Map(scan.posts.map((post) => [post.slug, post]));
+  const queue = Object.entries(baseline?.entries || {})
+    .map(([slug, defects]) => {
+      const post = posts.get(slug);
+      return {
+        slug,
+        title: post?.title || '',
+        publishedAt: post?.publishedAt || '',
+        priority: post?.priority || 'P1 structural',
+        defects: defects.map(({ ruleId, signature, reason, message }) => ({
+          ruleId,
+          signature,
+          message: reason || message || '',
+        })),
+      };
+    })
+    .sort((a, b) =>
+      b.publishedAt.localeCompare(a.publishedAt)
+      || a.slug.localeCompare(b.slug),
+    );
+  return queue.map((entry, index) => ({
+    queueNumber: index + 1,
+    queueTotal: queue.length,
+    ...entry,
+  }));
 }
 
 export function candidateBaseline(scan) {

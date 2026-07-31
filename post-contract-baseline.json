@@ -3,13 +3,18 @@
   "site": "LifeEducation",
   "repository": "SuperDudePro/LifeEducationOrg",
   "status": "reviewed",
-  "reviewedAt": "2026-07-29",
+  "reviewedAt": "2026-07-30",
   "entries": {
     "domain-1-communication": [
       {
         "ruleId": "cta.contact.required",
         "signature": "/contact",
         "reason": "Post is missing a reader CTA linking to the contact page."
+      },
+      {
+        "ruleId": "image.body.geometry",
+        "signature": "file=images/answer-actual-question-comic.jpg;actual=1400x933;expected=1200x900",
+        "reason": "images/answer-actual-question-comic.jpg is 1400x933; the body role requires 1200x900."
       },
       {
         "ruleId": "image.body.minimum",
@@ -27,6 +32,11 @@
         "reason": "card image must be named images/card-image.webp."
       },
       {
+        "ruleId": "image.role.card.geometry",
+        "signature": "file=images/communication-modes-social.jpg;actual=1200x630;expected=960x720",
+        "reason": "images/communication-modes-social.jpg is 1200x630; the card role requires 960x720."
+      },
+      {
         "ruleId": "image.role.hero.filename",
         "signature": "actual=images/communication-modes-hero.jpg;expected=images/hero-image.webp",
         "reason": "hero image must be named images/hero-image.webp."
@@ -37,6 +47,16 @@
         "ruleId": "cta.contact.required",
         "signature": "/contact",
         "reason": "Post is missing a reader CTA linking to the contact page."
+      },
+      {
+        "ruleId": "image.body.geometry",
+        "signature": "file=images/cost-of-choice-checkout.webp;actual=1448x1086;expected=1200x900",
+        "reason": "images/cost-of-choice-checkout.webp is 1448x1086; the body role requires 1200x900."
+      },
+      {
+        "ruleId": "image.body.geometry",
+        "signature": "file=images/market-math-kids.webp;actual=1448x1086;expected=1200x900",
+        "reason": "images/market-math-kids.webp is 1448x1086; the body role requires 1200x900."
       },
       {
         "ruleId": "image.body.minimum",
@@ -54,6 +74,11 @@
         "reason": "card image must be named images/card-image.webp."
       },
       {
+        "ruleId": "image.role.card.geometry",
+        "signature": "file=images/practical-numeracy-hero.webp;actual=1448x1086;expected=960x720",
+        "reason": "images/practical-numeracy-hero.webp is 1448x1086; the card role requires 960x720."
+      },
+      {
         "ruleId": "image.role.distinct",
         "signature": "images/practical-numeracy-hero.webp",
         "reason": "Card and hero roles reuse the same image."
@@ -62,6 +87,11 @@
         "ruleId": "image.role.hero.filename",
         "signature": "actual=images/practical-numeracy-hero.webp;expected=images/hero-image.webp",
         "reason": "hero image must be named images/hero-image.webp."
+      },
+      {
+        "ruleId": "image.role.hero.geometry",
+        "signature": "file=images/practical-numeracy-hero.webp;actual=1448x1086;expected=1600x900",
+        "reason": "images/practical-numeracy-hero.webp is 1448x1086; the hero role requires 1600x900."
       }
     ],
     "domain-3-scientific-thinking": [
@@ -69,6 +99,11 @@
         "ruleId": "cta.contact.required",
         "signature": "/contact",
         "reason": "Post is missing a reader CTA linking to the contact page."
+      },
+      {
+        "ruleId": "image.body.geometry",
+        "signature": "file=images/scientific-thinking-evidence-collage.webp;actual=1672x941;expected=1200x900",
+        "reason": "images/scientific-thinking-evidence-collage.webp is 1672x941; the body role requires 1200x900."
       },
       {
         "ruleId": "image.body.minimum",
@@ -86,6 +121,11 @@
         "reason": "card image must be named images/card-image.webp."
       },
       {
+        "ruleId": "image.role.card.geometry",
+        "signature": "file=images/scientific-thinking-observation-hero.webp;actual=1448x1086;expected=960x720",
+        "reason": "images/scientific-thinking-observation-hero.webp is 1448x1086; the card role requires 960x720."
+      },
+      {
         "ruleId": "image.role.distinct",
         "signature": "images/scientific-thinking-observation-hero.webp",
         "reason": "Card and hero roles reuse the same image."
@@ -94,6 +134,11 @@
         "ruleId": "image.role.hero.filename",
         "signature": "actual=images/scientific-thinking-observation-hero.webp;expected=images/hero-image.webp",
         "reason": "hero image must be named images/hero-image.webp."
+      },
+      {
+        "ruleId": "image.role.hero.geometry",
+        "signature": "file=images/scientific-thinking-observation-hero.webp;actual=1448x1086;expected=1600x900",
+        "reason": "images/scientific-thinking-observation-hero.webp is 1448x1086; the hero role requires 1600x900."
       }
     ],
     "domain-4-social-studies-civics": [
@@ -101,6 +146,11 @@
         "ruleId": "cta.contact.required",
         "signature": "/contact",
         "reason": "Post is missing a reader CTA linking to the contact page."
+      },
+      {
+        "ruleId": "image.body.geometry",
+        "signature": "file=images/reading-the-city.webp;actual=1448x1086;expected=1200x900",
+        "reason": "images/reading-the-city.webp is 1448x1086; the body role requires 1200x900."
       },
       {
         "ruleId": "image.body.minimum",
@@ -118,6 +168,11 @@
         "reason": "card image must be named images/card-image.webp."
       },
       {
+        "ruleId": "image.role.card.geometry",
+        "signature": "file=images/young-adult-with-map.webp;actual=1448x1086;expected=960x720",
+        "reason": "images/young-adult-with-map.webp is 1448x1086; the card role requires 960x720."
+      },
+      {
         "ruleId": "image.role.distinct",
         "signature": "images/young-adult-with-map.webp",
         "reason": "Card and hero roles reuse the same image."
@@ -126,6 +181,11 @@
         "ruleId": "image.role.hero.filename",
         "signature": "actual=images/young-adult-with-map.webp;expected=images/hero-image.webp",
         "reason": "hero image must be named images/hero-image.webp."
+      },
+      {
+        "ruleId": "image.role.hero.geometry",
+        "signature": "file=images/young-adult-with-map.webp;actual=1448x1086;expected=1600x900",
+        "reason": "images/young-adult-with-map.webp is 1448x1086; the hero role requires 1600x900."
       }
     ],
     "domain-5-philosophy-ethics": [
@@ -133,6 +193,21 @@
         "ruleId": "cta.contact.required",
         "signature": "/contact",
         "reason": "Post is missing a reader CTA linking to the contact page."
+      },
+      {
+        "ruleId": "image.body.geometry",
+        "signature": "file=images/fair-argument.webp;actual=768x479;expected=1200x900",
+        "reason": "images/fair-argument.webp is 768x479; the body role requires 1200x900."
+      },
+      {
+        "ruleId": "image.body.geometry",
+        "signature": "file=images/feelings-vs-verdicts.webp;actual=768x479;expected=1200x900",
+        "reason": "images/feelings-vs-verdicts.webp is 768x479; the body role requires 1200x900."
+      },
+      {
+        "ruleId": "image.body.geometry",
+        "signature": "file=images/hero-crossroads.webp;actual=1536x535;expected=1200x900",
+        "reason": "images/hero-crossroads.webp is 1536x535; the body role requires 1200x900."
       },
       {
         "ruleId": "image.body.minimum",
@@ -160,6 +235,11 @@
         "reason": "card image must be named images/card-image.webp."
       },
       {
+        "ruleId": "image.role.card.geometry",
+        "signature": "file=images/hero-crossroads.webp;actual=1536x535;expected=960x720",
+        "reason": "images/hero-crossroads.webp is 1536x535; the card role requires 960x720."
+      },
+      {
         "ruleId": "image.role.distinct",
         "signature": "images/hero-crossroads.webp",
         "reason": "Card and hero roles reuse the same image."
@@ -168,6 +248,11 @@
         "ruleId": "image.role.hero.filename",
         "signature": "actual=images/hero-crossroads.webp;expected=images/hero-image.webp",
         "reason": "hero image must be named images/hero-image.webp."
+      },
+      {
+        "ruleId": "image.role.hero.geometry",
+        "signature": "file=images/hero-crossroads.webp;actual=1536x535;expected=1600x900",
+        "reason": "images/hero-crossroads.webp is 1536x535; the hero role requires 1600x900."
       }
     ],
     "domain-6-economics-finance": [
@@ -175,6 +260,21 @@
         "ruleId": "cta.contact.required",
         "signature": "/contact",
         "reason": "Post is missing a reader CTA linking to the contact page."
+      },
+      {
+        "ruleId": "image.body.geometry",
+        "signature": "file=images/hero-money-decisions.webp;actual=1600x900;expected=1200x900",
+        "reason": "images/hero-money-decisions.webp is 1600x900; the body role requires 1200x900."
+      },
+      {
+        "ruleId": "image.body.geometry",
+        "signature": "file=images/money-questions-mentoring.webp;actual=1600x900;expected=1200x900",
+        "reason": "images/money-questions-mentoring.webp is 1600x900; the body role requires 1200x900."
+      },
+      {
+        "ruleId": "image.body.geometry",
+        "signature": "file=images/opportunity-cost-crossroads.webp;actual=1600x900;expected=1200x900",
+        "reason": "images/opportunity-cost-crossroads.webp is 1600x900; the body role requires 1200x900."
       },
       {
         "ruleId": "image.body.minimum",
@@ -202,6 +302,11 @@
         "reason": "card image must be named images/card-image.webp."
       },
       {
+        "ruleId": "image.role.card.geometry",
+        "signature": "file=images/hero-money-decisions.webp;actual=1600x900;expected=960x720",
+        "reason": "images/hero-money-decisions.webp is 1600x900; the card role requires 960x720."
+      },
+      {
         "ruleId": "image.role.distinct",
         "signature": "images/hero-money-decisions.webp",
         "reason": "Card and hero roles reuse the same image."
@@ -217,6 +322,21 @@
         "ruleId": "cta.contact.required",
         "signature": "/contact",
         "reason": "Post is missing a reader CTA linking to the contact page."
+      },
+      {
+        "ruleId": "image.body.geometry",
+        "signature": "file=images/body-capability-map.webp;actual=1672x941;expected=1200x900",
+        "reason": "images/body-capability-map.webp is 1672x941; the body role requires 1200x900."
+      },
+      {
+        "ruleId": "image.body.geometry",
+        "signature": "file=images/food-movement-recovery.webp;actual=1672x941;expected=1200x900",
+        "reason": "images/food-movement-recovery.webp is 1672x941; the body role requires 1200x900."
+      },
+      {
+        "ruleId": "image.body.geometry",
+        "signature": "file=images/health-physical-development-hero.webp;actual=1672x941;expected=1200x900",
+        "reason": "images/health-physical-development-hero.webp is 1672x941; the body role requires 1200x900."
       },
       {
         "ruleId": "image.body.minimum",
@@ -244,6 +364,11 @@
         "reason": "card image must be named images/card-image.webp."
       },
       {
+        "ruleId": "image.role.card.geometry",
+        "signature": "file=images/health-physical-development-hero.webp;actual=1672x941;expected=960x720",
+        "reason": "images/health-physical-development-hero.webp is 1672x941; the card role requires 960x720."
+      },
+      {
         "ruleId": "image.role.distinct",
         "signature": "images/health-physical-development-hero.webp",
         "reason": "Card and hero roles reuse the same image."
@@ -252,6 +377,11 @@
         "ruleId": "image.role.hero.filename",
         "signature": "actual=images/health-physical-development-hero.webp;expected=images/hero-image.webp",
         "reason": "hero image must be named images/hero-image.webp."
+      },
+      {
+        "ruleId": "image.role.hero.geometry",
+        "signature": "file=images/health-physical-development-hero.webp;actual=1672x941;expected=1600x900",
+        "reason": "images/health-physical-development-hero.webp is 1672x941; the hero role requires 1600x900."
       }
     ],
     "domain-8-creative-expression": [
@@ -259,6 +389,21 @@
         "ruleId": "cta.contact.required",
         "signature": "/contact",
         "reason": "Post is missing a reader CTA linking to the contact page."
+      },
+      {
+        "ruleId": "image.body.geometry",
+        "signature": "file=images/creative-expression-hero.webp;actual=1672x941;expected=1200x900",
+        "reason": "images/creative-expression-hero.webp is 1672x941; the body role requires 1200x900."
+      },
+      {
+        "ruleId": "image.body.geometry",
+        "signature": "file=images/creative-expression-outlet.webp;actual=1672x941;expected=1200x900",
+        "reason": "images/creative-expression-outlet.webp is 1672x941; the body role requires 1200x900."
+      },
+      {
+        "ruleId": "image.body.geometry",
+        "signature": "file=images/creative-expression-revision.webp;actual=1672x941;expected=1200x900",
+        "reason": "images/creative-expression-revision.webp is 1672x941; the body role requires 1200x900."
       },
       {
         "ruleId": "image.body.minimum",
@@ -286,6 +431,11 @@
         "reason": "card image must be named images/card-image.webp."
       },
       {
+        "ruleId": "image.role.card.geometry",
+        "signature": "file=images/creative-expression-hero.webp;actual=1672x941;expected=960x720",
+        "reason": "images/creative-expression-hero.webp is 1672x941; the card role requires 960x720."
+      },
+      {
         "ruleId": "image.role.distinct",
         "signature": "images/creative-expression-hero.webp",
         "reason": "Card and hero roles reuse the same image."
@@ -294,6 +444,11 @@
         "ruleId": "image.role.hero.filename",
         "signature": "actual=images/creative-expression-hero.webp;expected=images/hero-image.webp",
         "reason": "hero image must be named images/hero-image.webp."
+      },
+      {
+        "ruleId": "image.role.hero.geometry",
+        "signature": "file=images/creative-expression-hero.webp;actual=1672x941;expected=1600x900",
+        "reason": "images/creative-expression-hero.webp is 1672x941; the hero role requires 1600x900."
       }
     ],
     "domain-9-technology-media-ai-literacy": [
@@ -301,6 +456,21 @@
         "ruleId": "cta.contact.required",
         "signature": "/contact",
         "reason": "Post is missing a reader CTA linking to the contact page."
+      },
+      {
+        "ruleId": "image.body.geometry",
+        "signature": "file=images/domain-9-ai-tool-not-brain.webp;actual=1600x900;expected=1200x900",
+        "reason": "images/domain-9-ai-tool-not-brain.webp is 1600x900; the body role requires 1200x900."
+      },
+      {
+        "ruleId": "image.body.geometry",
+        "signature": "file=images/domain-9-attention-choice.webp;actual=1600x900;expected=1200x900",
+        "reason": "images/domain-9-attention-choice.webp is 1600x900; the body role requires 1200x900."
+      },
+      {
+        "ruleId": "image.body.geometry",
+        "signature": "file=images/domain-9-technology-media-ai-hero.webp;actual=1600x900;expected=1200x900",
+        "reason": "images/domain-9-technology-media-ai-hero.webp is 1600x900; the body role requires 1200x900."
       },
       {
         "ruleId": "image.body.minimum",
@@ -328,6 +498,11 @@
         "reason": "card image must be named images/card-image.webp."
       },
       {
+        "ruleId": "image.role.card.geometry",
+        "signature": "file=images/domain-9-technology-media-ai-hero.webp;actual=1600x900;expected=960x720",
+        "reason": "images/domain-9-technology-media-ai-hero.webp is 1600x900; the card role requires 960x720."
+      },
+      {
         "ruleId": "image.role.distinct",
         "signature": "images/domain-9-technology-media-ai-hero.webp",
         "reason": "Card and hero roles reuse the same image."
@@ -336,6 +511,38 @@
         "ruleId": "image.role.hero.filename",
         "signature": "actual=images/domain-9-technology-media-ai-hero.webp;expected=images/hero-image.webp",
         "reason": "hero image must be named images/hero-image.webp."
+      }
+    ],
+    "poisoning-the-water": [
+      {
+        "ruleId": "image.body.geometry",
+        "signature": "file=images/body-image-1.webp;actual=1400x991;expected=1200x900",
+        "reason": "images/body-image-1.webp is 1400x991; the body role requires 1200x900."
+      },
+      {
+        "ruleId": "image.body.geometry",
+        "signature": "file=images/body-image-2.webp;actual=1400x991;expected=1200x900",
+        "reason": "images/body-image-2.webp is 1400x991; the body role requires 1200x900."
+      },
+      {
+        "ruleId": "image.body.geometry",
+        "signature": "file=images/body-image-3.webp;actual=1400x991;expected=1200x900",
+        "reason": "images/body-image-3.webp is 1400x991; the body role requires 1200x900."
+      },
+      {
+        "ruleId": "image.body.geometry",
+        "signature": "file=images/body-image-4.webp;actual=1400x991;expected=1200x900",
+        "reason": "images/body-image-4.webp is 1400x991; the body role requires 1200x900."
+      },
+      {
+        "ruleId": "image.role.card.geometry",
+        "signature": "file=images/card-image.webp;actual=1400x991;expected=960x720",
+        "reason": "images/card-image.webp is 1400x991; the card role requires 960x720."
+      },
+      {
+        "ruleId": "image.role.hero.geometry",
+        "signature": "file=images/hero-image.webp;actual=1491x1055;expected=1600x900",
+        "reason": "images/hero-image.webp is 1491x1055; the hero role requires 1600x900."
       }
     ],
     "seven-years-to-build-a-different-way": [
@@ -360,6 +567,11 @@
         "reason": "card image must be named images/card-image.webp."
       },
       {
+        "ruleId": "image.role.card.geometry",
+        "signature": "file=images/life-education-plane-building.webp;actual=1024x558;expected=960x720",
+        "reason": "images/life-education-plane-building.webp is 1024x558; the card role requires 960x720."
+      },
+      {
         "ruleId": "image.role.distinct",
         "signature": "images/life-education-plane-building.webp",
         "reason": "Card and hero roles reuse the same image."
@@ -368,6 +580,11 @@
         "ruleId": "image.role.hero.filename",
         "signature": "actual=images/life-education-plane-building.webp;expected=images/hero-image.webp",
         "reason": "hero image must be named images/hero-image.webp."
+      },
+      {
+        "ruleId": "image.role.hero.geometry",
+        "signature": "file=images/life-education-plane-building.webp;actual=1024x558;expected=1600x900",
+        "reason": "images/life-education-plane-building.webp is 1024x558; the hero role requires 1600x900."
       }
     ],
     "why-section-is-live": [
@@ -375,6 +592,11 @@
         "ruleId": "cta.contact.required",
         "signature": "/contact",
         "reason": "Post is missing a reader CTA linking to the contact page."
+      },
+      {
+        "ruleId": "image.body.geometry",
+        "signature": "file=images/real-world-navigation-inline.jpg;actual=1400x788;expected=1200x900",
+        "reason": "images/real-world-navigation-inline.jpg is 1400x788; the body role requires 1200x900."
       },
       {
         "ruleId": "image.body.minimum",
@@ -390,6 +612,11 @@
         "ruleId": "image.role.card.filename",
         "signature": "actual=images/why-section-social.jpg;expected=images/card-image.webp",
         "reason": "card image must be named images/card-image.webp."
+      },
+      {
+        "ruleId": "image.role.card.geometry",
+        "signature": "file=images/why-section-social.jpg;actual=1200x630;expected=960x720",
+        "reason": "images/why-section-social.jpg is 1200x630; the card role requires 960x720."
       },
       {
         "ruleId": "image.role.hero.filename",
