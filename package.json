@@ -14,6 +14,7 @@
     "test:indexnow": "node --test test/indexnow-routing.test.mjs",
     "test:post-contract": "node --test test/post-contract.test.mjs",
     "validate:post-contract": "node scripts/validate-post-contract.mjs --enforce",
+    "retrofit:next": "node scripts/retrofit-next.mjs",
     "sitemap": "node scripts/generate-sitemap.mjs",
     "deployment:marker": "node scripts/write-deployment-marker.mjs",
     "generate:routes": "node scripts/generate-route-pages.mjs",

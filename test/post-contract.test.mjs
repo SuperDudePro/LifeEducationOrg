@@ -3,9 +3,27 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
-import { candidateBaseline, evaluateBaseline, scanLifeEducation } from '../scripts/post-contract.mjs';
+import { candidateBaseline, evaluateBaseline, retrofitQueue, scanLifeEducation } from '../scripts/post-contract.mjs';
 
-function createRepo({ count = 4, cardFile = 'card-image.webp', heroFile = 'hero-image.webp', gap = false, blankAlt = false } = {}) {
+function webpFixture(width, height) {
+  const bytes = Buffer.alloc(30);
+  bytes.write('RIFF', 0, 'ascii');
+  bytes.write('WEBP', 8, 'ascii');
+  bytes.write('VP8X', 12, 'ascii');
+  bytes[16] = 10;
+  bytes.writeUIntLE(width - 1, 24, 3);
+  bytes.writeUIntLE(height - 1, 27, 3);
+  return bytes;
+}
+
+function createRepo({
+  count = 4,
+  cardFile = 'card-image.webp',
+  heroFile = 'hero-image.webp',
+  gap = false,
+  blankAlt = false,
+  invalidGeometry = false,
+} = {}) {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'le-contract-'));
   const folder = path.join(root, 'src/content/posts/valid-post');
   const images = path.join(folder, 'images');
@@ -16,7 +34,9 @@ function createRepo({ count = 4, cardFile = 'card-image.webp', heroFile = 'hero-
     '<urlset><url><loc>https://www.lifeeducation.org/contact</loc></url><url><loc>https://www.lifeeducation.org/posts/valid-post</loc></url></urlset>',
   );
   const bodyFiles = Array.from({ length: count }, (_, index) => `body-image-${gap && index === count - 1 ? index + 2 : index + 1}.webp`);
-  for (const file of [cardFile, heroFile, ...bodyFiles]) fs.writeFileSync(path.join(images, file), '');
+  fs.writeFileSync(path.join(images, cardFile), webpFixture(invalidGeometry ? 1000 : 960, invalidGeometry ? 750 : 720));
+  fs.writeFileSync(path.join(images, heroFile), webpFixture(1600, 900));
+  for (const file of bodyFiles) fs.writeFileSync(path.join(images, file), webpFixture(1200, 900));
   fs.writeFileSync(
     path.join(folder, 'meta.ts'),
     `import type { LifeEducationPostMeta } from "../../postTypes";
@@ -79,6 +99,12 @@ test('code, file, and alt mismatch fails', () => {
   assert(scan.posts[0].defects.some((value) => value.ruleId === 'image.body.alt'));
 });
 
+test('invalid image geometry is reported before retrofit selection', () => {
+  const scan = scanLifeEducation(createRepo({ invalidGeometry: true }));
+  const defect = scan.posts[0].defects.find((value) => value.ruleId === 'image.role.card.geometry');
+  assert.match(defect?.signature || '', /actual=1000x750;expected=960x720/);
+});
+
 test('only the exact reviewed legacy defect is allowed', () => {
   const root = createRepo({ count: 3 });
   const first = scanLifeEducation(root);
@@ -99,4 +125,22 @@ test('obsolete baseline defects fail until removed', () => {
   baseline.status = 'reviewed';
   const repaired = scanLifeEducation(createRepo());
   assert(evaluateBaseline(repaired, baseline).some((value) => value.includes('obsolete baseline entry')));
+});
+
+test('retrofit queue is newest-first and advances only after baseline retirement', () => {
+  const scan = {
+    posts: [
+      { slug: 'older', title: 'Older', publishedAt: '2026-01-01', priority: 'P3 finish and cleanup' },
+      { slug: 'newer', title: 'Newer', publishedAt: '2026-07-01', priority: 'P2 image completion' },
+    ],
+  };
+  const baseline = {
+    entries: {
+      older: [{ ruleId: 'cta.contact.required', signature: '/contact' }],
+      newer: [{ ruleId: 'image.body.geometry', signature: 'wrong-size' }],
+    },
+  };
+  assert.equal(retrofitQueue(scan, baseline)[0].slug, 'newer');
+  delete baseline.entries.newer;
+  assert.equal(retrofitQueue(scan, baseline)[0].slug, 'older');
 });
