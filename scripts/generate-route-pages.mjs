@@ -109,16 +109,50 @@ function renderJsxNode(node, sourceFile) {
   return "";
 }
 
+function objectStringProperty(node, name, sourceFile) {
+  if (!ts.isObjectLiteralExpression(node)) return undefined;
+  for (const property of node.properties) {
+    if (!ts.isPropertyAssignment(property)) continue;
+    const key = property.name.getText(sourceFile).replace(/^['"]|['"]$/g, "");
+    if (key !== name) continue;
+    const value = unwrap(property.initializer);
+    if (value && (ts.isStringLiteral(value) || ts.isNoSubstitutionTemplateLiteral(value))) return value.text;
+  }
+  return undefined;
+}
+
+function renderParagraphBlockArrays(initializers, sourceFile) {
+  let best = "";
+  for (const initializer of initializers.values()) {
+    const array = unwrap(initializer);
+    if (!array || !ts.isArrayLiteralExpression(array)) continue;
+    const paragraphs = [];
+    for (const element of array.elements) {
+      const item = unwrap(element);
+      if (!item || !ts.isObjectLiteralExpression(item)) continue;
+      if (objectStringProperty(item, "type", sourceFile) !== "paragraph") continue;
+      const text = objectStringProperty(item, "text", sourceFile);
+      if (text) paragraphs.push(`<p>${escapeHtml(text)}</p>`);
+    }
+    const rendered = paragraphs.join("");
+    if (rendered.length > best.length) best = rendered;
+  }
+  return best;
+}
+
 function extractPostBody(source, filename) {
   const sourceFile = ts.createSourceFile(filename, source, ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
   const parseErrors = sourceFile.parseDiagnostics.map((diagnostic) => ts.flattenDiagnosticMessageText(diagnostic.messageText, "\n"));
   if (parseErrors.length) throw new Error(`Could not parse ${filename}: ${parseErrors.join("; ")}`);
 
+  const initializers = new Map();
   let bodyNode;
   for (const statement of sourceFile.statements) {
     if (!ts.isVariableStatement(statement)) continue;
     for (const declaration of statement.declarationList.declarations) {
-      if (!ts.isIdentifier(declaration.name) || declaration.name.text !== "post") continue;
+      if (!ts.isIdentifier(declaration.name)) continue;
+      initializers.set(declaration.name.text, declaration.initializer);
+      if (declaration.name.text !== "post") continue;
       const initializer = unwrap(declaration.initializer);
       if (!initializer || !ts.isObjectLiteralExpression(initializer)) continue;
       for (const property of initializer.properties) {
@@ -128,7 +162,15 @@ function extractPostBody(source, filename) {
     }
   }
   if (!bodyNode) throw new Error(`Could not read post body from ${filename}.`);
-  return renderJsxNode(bodyNode, sourceFile).trim();
+  if (ts.isIdentifier(bodyNode) && initializers.has(bodyNode.text)) bodyNode = unwrap(initializers.get(bodyNode.text));
+
+  const rendered = bodyNode ? renderJsxNode(bodyNode, sourceFile).trim() : "";
+  const renderedText = rendered.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+  if (renderedText.length >= 200) return rendered;
+
+  const blockFallback = renderParagraphBlockArrays(initializers, sourceFile);
+  if (blockFallback) return blockFallback;
+  return rendered;
 }
 
 function staticPostArticle(metadata) {
