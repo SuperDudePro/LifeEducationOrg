@@ -25,6 +25,17 @@ function walk(path) {
   );
 }
 
+function visibleText(html) {
+  return html
+    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&(?:nbsp|amp|quot|apos|lt|gt);/g, ' ')
+    .replace(/&#(?:x[0-9a-f]+|\d+);/gi, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 const sitemapPath = resolve('public/sitemap.xml');
 if (!existsSync(sitemapPath)) fail('public/sitemap.xml', '(missing)', 'sitemap was not generated');
 const sitemap = existsSync(sitemapPath) ? readFileSync(sitemapPath, 'utf8') : '';
@@ -56,8 +67,24 @@ for (const route of routes) {
   if (!routeHtml.includes(`<link rel="canonical" href="${canonical}" />`)) {
     fail(rel(html), 'canonical', `expected ${canonical}`);
   }
-  if (route.startsWith('/posts/') && !/<title>.+ \| LifeEducation\.org<\/title>/.test(routeHtml)) {
-    fail(rel(html), 'title', 'post route is missing its static post title');
+  if (route.startsWith('/posts/')) {
+    if (!/<title>.+ \| LifeEducation\.org<\/title>/.test(routeHtml)) {
+      fail(rel(html), 'title', 'post route is missing its static post title');
+    }
+    if (!/<article\b[^>]*data-static-post/.test(routeHtml)) {
+      fail(rel(html), 'static article', 'post route is missing crawler-readable article markup');
+    }
+    if (!/<h1>[^<]+<\/h1>/.test(routeHtml)) {
+      fail(rel(html), 'static h1', 'post route is missing a crawler-readable H1');
+    }
+    const bodyMatch = routeHtml.match(/<div\b[^>]*data-static-post-body[^>]*>([\s\S]*?)<\/div>\s*<\/article>/i);
+    const bodyText = bodyMatch ? visibleText(bodyMatch[1]) : '';
+    if (bodyText.length < 200) {
+      fail(rel(html), 'static body', `crawler-readable post body is too short (${bodyText.length} characters)`);
+    }
+    if (bodyMatch?.[1].includes('${')) {
+      fail(rel(html), 'static body', 'crawler-readable post body contains unresolved template expressions');
+    }
   }
 }
 
