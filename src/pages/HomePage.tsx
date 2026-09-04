@@ -1,5 +1,6 @@
 import { DOMAINS } from "../data/domainsData";
 import { HOME_FAQ_ITEMS } from "../data/homeFaqData";
+import { AskCta } from "../components/AskCta";
 import { PageShell } from "../components/PageShell";
 import { PostCard } from "../components/PostCard";
 import { SubscribeForm } from "../components/SubscribeForm";
@@ -84,6 +85,7 @@ export function HomePage() {
         </div>
         <a className="why-button" href="/qa">Read the full Q&amp;A</a>
       </section>
+      <AskCta variant="qa" />
       <section className="floor-section">
         <div className="floor-head">
           <div className="floor-pill">The Floor + By 18</div>
