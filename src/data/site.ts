@@ -14,5 +14,6 @@ export const NAV_ITEMS = [
   { href: "/domains", label: "Domains" },
   { href: "/posts", label: "Posts" },
   { href: "/qa", label: "Q&A" },
+  { href: "/ask", label: "Ask" },
   { href: "/contact", label: "Contact" },
 ] as const;
