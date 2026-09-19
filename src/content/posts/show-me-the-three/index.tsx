@@ -294,6 +294,10 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
+        The broader course design is laid out on the AQR site's <a href="https://appliedquantitativereasoning.com/why-aqr" target="_blank" rel="noreferrer">Why AQR</a> page, and the AI-specific approach is on <a href="https://appliedquantitativereasoning.com/why-ai" target="_blank" rel="noreferrer">Why AI?</a>.
+      </p>
+
+      <p>
         For most of the period I'm not standing at the front talking. Students are working. I'm moving around the room, looking at what's in front of them, asking what they're doing and why, checking what's actually theirs. Most of those exchanges are short. Sometimes thirty seconds tells me plenty. Sometimes the first answer gives me no reason to stay, and sometimes the second one opens something up and I sit down. The assessment isn't bolted onto the end of the learning — it's happening while the learning happens.
       </p>
 
