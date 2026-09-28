@@ -227,7 +227,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
 
 .site-nav-link {
   border: 2px solid var(--le-accent-light);
-  background: var(--le-accent-bright);
+  background: var(--le-accent);
   color: #ffffff;
   box-shadow: 0 0 18px var(--le-accent-glow);
   transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
@@ -260,7 +260,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
   padding: 0 22px;
   border-radius: 999px;
   border: 2px solid var(--le-accent-light);
-  background: var(--le-accent-bright);
+  background: var(--le-accent);
   color: #ffffff;
   font-weight: 800;
   box-shadow: 0 0 18px var(--le-accent-glow);
@@ -331,7 +331,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
 
 .section-nav-link:hover,
 .section-nav-link:focus-visible {
-  background: var(--le-accent-bright);
+  background: var(--le-accent);
   border-color: var(--le-accent-light);
   color: #ffffff;
   box-shadow: 0 0 20px var(--le-accent-glow);
@@ -564,7 +564,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
   padding: 0 18px;
   border-radius: 999px;
   border: 2px solid var(--le-accent-light);
-  background: var(--le-accent-bright);
+  background: var(--le-accent);
   color: #ffffff;
   font-size: 14px;
   font-weight: 900;
