@@ -47,6 +47,19 @@
   ],
   "routes": [
     {
+      "src": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "lifeeducation.org"
+        }
+      ],
+      "headers": {
+        "Location": "https://www.lifeeducation.org/$1"
+      },
+      "status": 308
+    },
+    {
       "handle": "filesystem"
     },
     {
