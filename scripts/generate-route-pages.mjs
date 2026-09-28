@@ -9,6 +9,34 @@ const distDir = path.join(rootDir, "dist");
 const indexPath = path.join(distDir, "index.html");
 const canonicalHost = "https://www.lifeeducation.org";
 const routeMetadata = new Map([
+  ["/why", {
+    title: "Why LifeEducation.org Exists | LifeEducation.org",
+    description: "The founding statement for LifeEducation: not anti-education, but anti school-as-default-authority, with real capability as the standard.",
+  }],
+  ["/floor", {
+    title: "The 18-Year-Old Floor | LifeEducation.org",
+    description: "The non-negotiable minimum adulthood capability contract for LifeEducation.",
+  }],
+  ["/by-18", {
+    title: "By 18: What You Can Do | LifeEducation.org",
+    description: "A plain-language public translation of the LifeEducation Floor contract.",
+  }],
+  ["/domains", {
+    title: "The 10 Domains | LifeEducation.org",
+    description: "The broader LifeEducation capability map across communication, math, science, civics, ethics, finance, health, creativity, technology, and life skills.",
+  }],
+  ["/posts", {
+    title: "Posts | LifeEducation.org",
+    description: "Field notes and essays on school legitimacy, the Floor, the Domains, and building LifeEducation in real life.",
+  }],
+  ["/qa", {
+    title: "LifeEducation Q&A | LifeEducation.org",
+    description: "Plain answers to common questions and objections, including the distinction between education, schooling, and school-as-default-authority.",
+  }],
+  ["/contact", {
+    title: "Contact | LifeEducation.org",
+    description: "Send questions, corrections, objections, examples, or serious feedback about LifeEducation.",
+  }],
   ["/ask", {
     title: "Ask LifeEducation | Questions About the Framework",
     description: "Ask questions about the LifeEducation Floor, Domains, purpose, and public framework, with source-backed answers.",
@@ -185,11 +213,20 @@ function staticPostArticle(metadata) {
   ].join("");
 }
 
-const [sitemap, indexHtml, postEntries] = await Promise.all([
+const [sitemap, indexHtml, postEntries, domainSource] = await Promise.all([
   readFile(sitemapPath, "utf8"),
   readFile(indexPath, "utf8"),
   readdir(path.join(rootDir, "src", "content", "posts"), { withFileTypes: true }),
+  readFile(path.join(rootDir, "src", "data", "domainsData.ts"), "utf8"),
 ]);
+
+for (const match of domainSource.matchAll(/"slug": "([^"]+)"[\s\S]*?"title": "([^"]+)"[\s\S]*?"number": "([^"]+)"/g)) {
+  const [, slug, title, number] = match;
+  routeMetadata.set(`/domains/${slug}`, {
+    title: `${title} | LifeEducation.org`,
+    description: `LifeEducation Domain ${number}: ${title}. The floor, the broader map, how it builds, and the essay.`,
+  });
+}
 
 for (const entry of postEntries.filter((item) => item.isDirectory())) {
   const postDir = path.join(rootDir, "src", "content", "posts", entry.name);
