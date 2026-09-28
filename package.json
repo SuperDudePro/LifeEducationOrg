@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "ask:corpus": "node scripts/build-ask-corpus.mjs",
-    "build": "npm run validate:redirects && npm run ask:corpus && npm run sitemap && npm run deployment:marker && tsc -b && vite build && npm run generate:routes && npm run validate:site",
+    "build": "npm run validate:redirects && npm run ask:corpus && npm run validate:sitemap && npm run deployment:marker && tsc -b && vite build && npm run generate:routes && npm run validate:site && npm run validate:discovery",
     "check": "npm run lint && npm run test:ask && npm run test:indexnow && npm run test:post-contract && npm run validate:post-contract && npm run build",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -20,7 +20,9 @@
     "generate:routes": "node scripts/generate-route-pages.mjs",
     "sync:redirects": "node scripts/sync-redirects.mjs",
     "validate:redirects": "node scripts/validate-redirects.mjs",
-    "validate:site": "node scripts/validate-site.mjs"
+    "validate:site": "node scripts/validate-site.mjs",
+    "validate:sitemap": "node scripts/validate-discovery.mjs https://www.lifeeducation.org --sitemap scripts/generate-sitemap.mjs",
+    "validate:discovery": "node scripts/validate-discovery.mjs https://www.lifeeducation.org --built"
   },
   "dependencies": {
     "react": "^19.2.4",
