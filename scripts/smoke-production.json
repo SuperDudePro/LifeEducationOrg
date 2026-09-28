@@ -1,0 +1,14 @@
+{
+  "origin": "https://www.lifeeducation.org",
+  "alternateOrigin": "https://lifeeducation.org",
+  "alternatePath": "/ask",
+  "alternateMustRedirect": false,
+  "minimumSitemapUrls": 30,
+  "routes": [
+    "/",
+    "/ask",
+    "/domains"
+  ],
+  "articlePrefix": "/posts/",
+  "browser": "ask"
+}
