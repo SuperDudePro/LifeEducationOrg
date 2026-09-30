@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "ask:corpus": "node scripts/build-ask-corpus.mjs",
-    "build": "npm run validate:redirects && npm run ask:corpus && npm run validate:sitemap && npm run deployment:marker && tsc -b && vite build && npm run generate:routes && npm run validate:site && npm run validate:discovery",
+    "generate:llms": "node scripts/generate-llms.mjs",
+    "build": "npm run validate:redirects && npm run ask:corpus && npm run generate:llms && npm run validate:sitemap && npm run deployment:marker && tsc -b && vite build && npm run generate:routes && npm run validate:site && npm run validate:discovery",
     "check": "npm run lint && npm run test:ask && npm run test:indexnow && npm run test:post-contract && npm run validate:post-contract && npm run build",
     "lint": "eslint .",
     "preview": "vite preview",

@@ -101,6 +101,10 @@ export default async function handler(request, response) {
   }
 
   if (wantsCopy && email) {
+    const copyRate = await durableRateLimit(`le:escalate:copy:${email}`, { limit: 2, windowMs: 24 * 60 * 60 * 1000 });
+    if (!copyRate.allowed) {
+      return json(response, 200, { ok: true, warning: "Your question was sent, but the email copy could not be delivered." });
+    }
     const copyResponse = await sendEmail(RESEND_API_KEY, {
       from: ASK_FROM_EMAIL,
       to: [email],
