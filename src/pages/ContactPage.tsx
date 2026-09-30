@@ -1,4 +1,5 @@
 import { type CSSProperties, type FormEvent, useState } from "react";
+import { PageIntro } from "../components/PageIntro";
 import { PageShell } from "../components/PageShell";
 
 type FormState = "idle" | "sending" | "sent" | "partial" | "error";
@@ -138,6 +139,7 @@ export function ContactPage() {
 
   return (
     <PageShell>
+      <PageIntro pill="Contact" title="Send a Note" />
       <section className="doc-section">
         <p className="doc-section-text">
           I’m building LifeEducation in public because the target matters too much to hide the weak spots. If you see a hole in the logic, a better example, or something that needs to be said more plainly, send it.
@@ -178,10 +180,12 @@ export function ContactPage() {
             {isSending ? "Sending..." : "Send note"}
           </button>
 
+        </form>
+        <div aria-live="polite" style={{ marginTop: formState === "idle" || formState === "sending" ? 0 : "1rem", maxWidth: "760px" }}>
           {formState === "sent" && <p style={statusStyle}>{successMessage}</p>}
           {formState === "partial" && <p style={warningStatusStyle}>{successMessage}</p>}
           {formState === "error" && <p style={errorStatusStyle}>{errorMessage}</p>}
-        </form>
+        </div>
       </section>
     </PageShell>
   );

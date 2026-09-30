@@ -139,8 +139,10 @@ export function SubscribeForm({ idPrefix }: Props) {
           {isSending ? "Subscribing..." : "Subscribe"}
         </button>
       </form>
-      {formState === "sent" && <p style={statusStyle}>{message}</p>}
-      {formState === "error" && <p style={errorStyle}>{message}</p>}
+      <div aria-live="polite">
+        {formState === "sent" && <p style={statusStyle}>{message}</p>}
+        {formState === "error" && <p style={errorStyle}>{message}</p>}
+      </div>
     </section>
   );
 }

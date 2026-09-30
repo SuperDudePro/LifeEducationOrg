@@ -1,6 +1,8 @@
-import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
+import { mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import vm from "node:vm";
 import ts from "typescript";
 
 const rootDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -8,6 +10,15 @@ const sitemapPath = path.join(rootDir, "public", "sitemap.xml");
 const distDir = path.join(rootDir, "dist");
 const indexPath = path.join(distDir, "index.html");
 const canonicalHost = "https://www.lifeeducation.org";
+const manifestDir = path.join(distDir, ".vite");
+const manifestPath = path.join(manifestDir, "manifest.json");
+// Vite's manifest maps each imported source image to its hashed built file.
+const assetManifest = existsSync(manifestPath) ? JSON.parse(await readFile(manifestPath, "utf8")) : {};
+const defaultShareImage = {
+  url: `${canonicalHost}/lifeeducation_break_navigator.webp`,
+  alt: "Young person navigating a foreign city with a map",
+};
+const { CORPUS } = await import(path.join(rootDir, "api", "ask", "corpus.generated.mjs"));
 const routeMetadata = new Map([
   ["/why", {
     title: "Why LifeEducation.org Exists | LifeEducation.org",
@@ -53,6 +64,36 @@ function decodeStringLiteral(value) {
   });
 }
 
+function optionalField(source, field) {
+  try {
+    return extractField(source, field);
+  } catch {
+    return undefined;
+  }
+}
+
+function postShareImage(source, postDir) {
+  for (const [imageField, altField] of [["cardImage", "cardAlt"], ["heroImage", "heroAlt"]]) {
+    const identifier = source.match(new RegExp(`\\b${imageField}:\\s*([A-Za-z_$][\\w$]*)`))?.[1];
+    const importPath = identifier && source.match(new RegExp(`import\\s+${identifier}\\s+from\\s+["']\\./([^"']+)["']`))?.[1];
+    if (!importPath) continue;
+    const sourceKey = path.relative(rootDir, path.join(postDir, importPath)).split(path.sep).join("/");
+    const built = assetManifest[sourceKey]?.file;
+    if (built) return { url: `${canonicalHost}/${built}`, alt: optionalField(source, altField) ?? "" };
+  }
+  return undefined;
+}
+
+function loadDataExport(source, exportName, filename) {
+  const compiled = ts.transpileModule(source, {
+    compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 },
+    fileName: filename,
+  }).outputText;
+  const module = { exports: {} };
+  vm.runInNewContext(compiled, { exports: module.exports, module }, { filename });
+  return module.exports[exportName];
+}
+
 function extractField(source, field) {
   const value = source.match(new RegExp(`${field}:\\s*(?:\\n\\s*)?(["'])((?:\\\\.|(?!\\1)[\\s\\S])*?)\\1,`))?.[2];
   if (value === undefined) throw new Error(`Could not read post ${field} for route metadata.`);
@@ -74,6 +115,16 @@ function escapeAttribute(value) {
 function replaceMetadata(html, name, value, attribute = "name") {
   const pattern = new RegExp(`<meta ${attribute}="${name}" content="[^"]*" \\/>`);
   return html.replace(pattern, `<meta ${attribute}="${name}" content="${escapeAttribute(value)}" />`);
+}
+
+function addShareImage(html, image) {
+  const tags = [
+    `<meta property="og:image" content="${escapeAttribute(image.url)}" />`,
+    ...(image.alt ? [`<meta property="og:image:alt" content="${escapeAttribute(image.alt)}" />`] : []),
+    `<meta name="twitter:image" content="${escapeAttribute(image.url)}" />`,
+    ...(image.alt ? [`<meta name="twitter:image:alt" content="${escapeAttribute(image.alt)}" />`] : []),
+  ];
+  return html.replace("</head>", `    ${tags.join("\n    ")}\n  </head>`);
 }
 
 function unwrap(node) {
@@ -225,6 +276,7 @@ for (const match of domainSource.matchAll(/"slug": "([^"]+)"[\s\S]*?"title": "([
   routeMetadata.set(`/domains/${slug}`, {
     title: `${title} | LifeEducation.org`,
     description: `LifeEducation Domain ${number}: ${title}. The floor, the broader map, how it builds, and the essay.`,
+    domainNumber: number,
   });
 }
 
@@ -242,9 +294,71 @@ for (const entry of postEntries.filter((item) => item.isDirectory())) {
       title: extractField(source, "title"),
       publishedAt: extractField(source, "publishedAt"),
       topic: extractField(source, "topic"),
+      modifiedAt: optionalField(source, "modifiedAt"),
+      status: optionalField(source, "status"),
+      image: postShareImage(source, postDir),
       bodyHtml: extractPostBody(bodySource, path.join(postDir, "index.tsx")),
     },
   });
+}
+
+const qaPath = path.join(rootDir, "src", "data", "qaData.ts");
+const qaData = loadDataExport(await readFile(qaPath, "utf8"), "QA_DATA", qaPath);
+const faqEntities = (qaData?.sections ?? []).flatMap((section) => section.items.map((item) => ({
+  "@type": "Question",
+  name: item.question,
+  acceptedAnswer: { "@type": "Answer", text: [item.answer].flat().join("\n\n") },
+})));
+
+// Non-post pages get a crawlable shell (heading, intro, site links, and public page text) that the app
+// replaces on load, so crawlers that do not run JavaScript still see content and internal links.
+const siteNavMarkup = `<nav aria-label="Site sections"><ul>${[
+  ["/", "Home"], ["/why", "Why"], ["/floor", "The Floor"], ["/by-18", "By 18"], ["/domains", "The 10 Domains"],
+  ["/posts", "Posts"], ["/qa", "Q&A"], ["/ask", "Ask LifeEducation"], ["/contact", "Contact"],
+].map(([href, label]) => `<li><a href="${href}">${escapeHtml(label)}</a></li>`).join("")}</ul></nav>`;
+
+function paragraphs(text) {
+  return String(text).split(/\n+/).map((line) => line.trim()).filter(Boolean).map((line) => `<p>${escapeHtml(line)}</p>`).join("");
+}
+
+function corpusSections(chunks) {
+  const sections = [];
+  for (const chunk of chunks) {
+    const heading = chunk.heading.replace(/ \(part \d+\)$/, "");
+    const last = sections.at(-1);
+    if (last?.heading === heading) last.text += `\n${chunk.text}`;
+    else sections.push({ heading, text: chunk.text });
+  }
+  return sections.map(({ heading, text }) =>
+    `<section>${heading === "Introduction" ? "" : `<h2>${escapeHtml(heading)}</h2>`}${paragraphs(text)}</section>`).join("");
+}
+
+function publishedPostLinks(limit) {
+  const items = [...routeMetadata.entries()]
+    .filter(([route, metadata]) => metadata.article && routes.has(route))
+    .sort(([, a], [, b]) => b.article.publishedAt.localeCompare(a.article.publishedAt))
+    .slice(0, limit);
+  return `<ul>${items.map(([route, metadata]) => `<li><a href="${route}">${escapeHtml(metadata.article.title)}</a> <time datetime="${escapeAttribute(metadata.article.publishedAt)}">${escapeHtml(metadata.article.publishedAt)}</time><p>${escapeHtml(metadata.description)}</p></li>`).join("")}</ul>`;
+}
+
+function staticPageShell(route, metadata) {
+  const heading = route === "/" ? "LifeEducation.org" : metadata.title.replace(/ \| LifeEducation\.org$/, "");
+  const sourceId = { "/why": "why", "/floor": "floor", "/by-18": "by-18", "/qa": "qa", "/domains": "domains" }[route];
+  let body = "";
+  if (route === "/") {
+    body = `<h2>Latest field notes</h2>${publishedPostLinks(8)}`;
+  } else if (route === "/posts") {
+    body = publishedPostLinks();
+  } else if (route.startsWith("/domains/")) {
+    const number = metadata.domainNumber;
+    body = corpusSections(CORPUS.filter((chunk) => chunk.sourceId === "domains" && chunk.heading.startsWith(`Domain ${number}:`)));
+  } else if (sourceId) {
+    const domainLinks = route === "/domains"
+      ? `<ul>${[...routeMetadata.entries()].filter(([path]) => path.startsWith("/domains/")).map(([path, item]) => `<li><a href="${path}">${escapeHtml(item.title.replace(/ \| LifeEducation\.org$/, ""))}</a></li>`).join("")}</ul>`
+      : "";
+    body = domainLinks + corpusSections(CORPUS.filter((chunk) => chunk.sourceId === sourceId));
+  }
+  return `<main data-static-page-shell><header><h1>${escapeHtml(heading)}</h1><p>${escapeHtml(metadata.description)}</p></header>${siteNavMarkup}${body}</main>`;
 }
 
 const routes = new Set();
@@ -291,6 +405,8 @@ for (const route of routes) {
           url: canonicalUrl,
           mainEntityOfPage: canonicalUrl,
           datePublished: metadata.article.publishedAt,
+          ...(metadata.article.modifiedAt ? { dateModified: metadata.article.modifiedAt } : {}),
+          ...(metadata.article.image ? { image: metadata.article.image.url } : {}),
           author: { "@type": "Person", name: "Will Gayhart" },
           publisher: { "@id": `${canonicalHost}/#organization` },
           isPartOf: { "@id": `${canonicalHost}/#website` },
@@ -303,6 +419,12 @@ for (const route of routes) {
           description: metadata.description,
           isPartOf: { "@id": `${canonicalHost}/#website` },
         },
+        ...(route === "/qa" && faqEntities.length ? [{
+          "@type": "FAQPage",
+          "@id": `${canonicalUrl}#faq`,
+          url: canonicalUrl,
+          mainEntity: faqEntities,
+        }] : []),
       ],
     }).replaceAll("<", "\\u003c");
     routeHtml = routeHtml
@@ -318,13 +440,23 @@ for (const route of routes) {
         /<script type="application\/ld\+json" data-site-jsonld>[\s\S]*?<\/script>/,
         `<script type="application/ld+json" data-site-jsonld>${jsonLd}</script>`,
       );
-    if (metadata.article) {
-      routeHtml = routeHtml.replace(/<div id="root"><\/div>/, `<div id="root">${staticPostArticle(metadata)}</div>`);
-    }
+    const shell = metadata.article ? staticPostArticle(metadata) : staticPageShell(route, metadata);
+    routeHtml = routeHtml.replace(/<div id="root"><\/div>/, `<div id="root">${shell}</div>`);
   }
+  routeHtml = addShareImage(routeHtml, metadata?.article?.image ?? defaultShareImage);
 
   await mkdir(routeDir, { recursive: true });
   await writeFile(path.join(routeDir, "index.html"), routeHtml, "utf8");
 }
 
-console.log(`Generated static entry pages for ${routes.size} public routes.`);
+// The home page is dist/index.html itself; give it the default share image and a crawlable shell last,
+// after the other routes were built from the clean template.
+await writeFile(indexPath, addShareImage(indexHtml, defaultShareImage).replace(/<div id="root"><\/div>/, `<div id="root">${staticPageShell("/", {
+  title: "LifeEducation.org",
+  description: "A lightweight operating system for raising capable, self-directed humans outside the default school script.",
+})}</div>`), "utf8");
+
+// The manifest is only a build input; do not deploy it.
+await rm(manifestDir, { recursive: true, force: true });
+
+console.log(`Generated static entry pages for ${routes.size} public routes plus the home page shell.`);

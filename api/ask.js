@@ -86,6 +86,11 @@ function decline(message = STANDARD_DECLINE, category = "other", offerEscalation
   };
 }
 
+const DAY_MS = 24 * 60 * 60 * 1000;
+// Site-wide daily ceilings so rotating IPs cannot run up model spend or flood the owner's inbox.
+const dailyModelLimit = () => Number(process.env.ASK_DAILY_MODEL_LIMIT) || 300;
+const dailyRecordLimit = () => Number(process.env.ASK_DAILY_RECORD_LIMIT) || 200;
+
 async function recordQuestion({ question, result, resultType, metadata = {} }) {
   const {
     RESEND_API_KEY,
@@ -94,6 +99,8 @@ async function recordQuestion({ question, result, resultType, metadata = {} }) {
   } = process.env;
 
   if (!RESEND_API_KEY || !ASK_FROM_EMAIL || !ASK_TO_EMAIL) return;
+  const recordBudget = await durableRateLimit("le:ask:global:record", { limit: dailyRecordLimit(), windowMs: DAY_MS });
+  if (!recordBudget.allowed) return;
 
   const sources = result.sources?.length
     ? result.sources.map((source) => `- ${source.title}: ${source.publicUrl}`).join("\n")
@@ -220,6 +227,13 @@ export default async function handler(request, response) {
       metadata: { retrieved: retrieved.length },
     });
     return json(response, 503, { ok: false, error: "Ask LifeEducation is not configured yet." });
+  }
+
+  const modelBudget = await durableRateLimit("le:ask:global:model", { limit: dailyModelLimit(), windowMs: DAY_MS });
+  if (!modelBudget.allowed) {
+    console.error("Ask LifeEducation daily model budget reached.");
+    response.setHeader("Retry-After", "3600");
+    return json(response, 503, { ok: false, error: "The answer service is temporarily unavailable." });
   }
 
   const sourcePacket = retrieved.map((chunk) => ({

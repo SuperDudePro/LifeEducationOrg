@@ -201,13 +201,6 @@ export function validSameSiteOrigin(request) {
   }
 }
 
-export function clientIp(request) {
-  return String(request.headers?.["x-forwarded-for"] || request.socket?.remoteAddress || "unknown")
-    .split(",")[0]
-    .trim()
-    .slice(0, 80);
-}
-
 export function checkRateLimit(store, key, options = {}) {
   const now = options.now ?? Date.now();
   const limit = options.limit ?? LIMITS.requestsPerWindow;

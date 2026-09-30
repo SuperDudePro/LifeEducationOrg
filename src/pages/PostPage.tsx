@@ -4,10 +4,25 @@ import { BackBar } from "../components/BackBar";
 import { AskCta } from "../components/AskCta";
 import { PostCard } from "../components/PostCard";
 import { SharePost } from "../components/SharePost";
-import { formatPostDate, getRelatedPosts, loadPostBySlug } from "../content/loadPosts";
-import type { LifeEducationPost } from "../content/postTypes";
+import { formatPostDate, getPostBySlug, getRelatedPosts, loadPostBySlug } from "../content/loadPosts";
+import type { LifeEducationPost, LifeEducationPostMeta } from "../content/postTypes";
 
 type Props = { slug: string };
+
+function PostHero({ post }: { post: LifeEducationPostMeta }) {
+  return (
+    <section className="post-hero">
+      <div className="post-hero-copy">
+        <div className="doc-pill">{post.topic ?? "Post"}</div>
+        <h1 className="doc-title">{post.title}</h1>
+        <p className="doc-subtitle">{post.excerpt}</p>
+        <p className="post-page-meta">{formatPostDate(post)}</p>
+        <div className="post-hero-actions"><a className="why-button" href="/posts">Search all posts</a></div>
+      </div>
+      {post.heroImage ? <div className="post-hero-media"><img src={post.heroImage} alt={post.heroAlt ?? ""} loading="eager" decoding="async" /></div> : null}
+    </section>
+  );
+}
 type PostLoadState = { slug: string; post: LifeEducationPost | null | undefined };
 
 export function PostPage({ slug }: Props) {
@@ -19,6 +34,9 @@ export function PostPage({ slug }: Props) {
   }, [slug]);
 
   const post = loadState.slug === slug ? loadState.post : undefined;
+  const metadata = getPostBySlug(slug);
+  // Render the hero from metadata while the body chunk loads so the layout does not jump.
+  if (post === undefined && metadata) return <PageShell><article aria-busy="true"><PostHero post={metadata} /><BackBar><a href="/posts" className="back-link">← Back to Posts</a></BackBar><section className="post-article"><p className="doc-subtitle">Loading the field note.</p></section></article></PageShell>;
   if (post === undefined) return <PageShell><section className="doc-hero"><div className="doc-pill">Loading post</div><h1 className="doc-title">Loading the field note.</h1></section></PageShell>;
   if (!post) return <PageShell><section className="doc-hero"><div className="doc-pill">Post not found</div><h1 className="doc-title">That post is not here.</h1><p className="doc-subtitle">The link may be old, or the post may have moved.</p></section><BackBar><a href="/posts" className="back-link">← Back to Posts</a></BackBar></PageShell>;
 
@@ -30,16 +48,7 @@ export function PostPage({ slug }: Props) {
   return (
     <PageShell>
       <article>
-        <section className="post-hero">
-          <div className="post-hero-copy">
-            <div className="doc-pill">{post.topic ?? "Post"}</div>
-            <h1 className="doc-title">{post.title}</h1>
-            <p className="doc-subtitle">{post.excerpt}</p>
-            <p className="post-page-meta">{formatPostDate(post)}</p>
-            <div className="post-hero-actions"><a className="why-button" href="/posts">Search all posts</a></div>
-          </div>
-          {post.heroImage ? <div className="post-hero-media"><img src={post.heroImage} alt={post.heroAlt ?? ""} loading="eager" decoding="async" /></div> : null}
-        </section>
+        <PostHero post={post} />
         <BackBar><a href="/posts" className="back-link">← Back to Posts</a></BackBar>
         <section className="post-article">
           {post.body}

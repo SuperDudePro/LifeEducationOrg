@@ -125,7 +125,7 @@ export function DomainDetailPage({ slug }: { slug: string }) {
                 <summary className="domain-band-summary">{band.band}</summary>
                 <div className="domain-band-body">
                   <div className="domain-band-group">
-                    <h4 className="domain-band-group-title">On track</h4>
+                    <h3 className="domain-band-group-title">On track</h3>
                     <ul className="doc-list">
                       {band.onTrack.map((item) => (
                         <li key={item} className="doc-list-item">
@@ -136,7 +136,7 @@ export function DomainDetailPage({ slug }: { slug: string }) {
                     </ul>
                   </div>
                   <div className="domain-band-group">
-                    <h4 className="domain-band-group-title">Worth investigating</h4>
+                    <h3 className="domain-band-group-title">Worth investigating</h3>
                     <ul className="doc-list">
                       {band.redFlags.map((item) => (
                         <li key={item} className="doc-list-item">
