@@ -3,10 +3,10 @@ import socialStudiesHero from "./images/young-adult-with-map.webp";
 
 export const metadata = {
   slug: "domain-4-social-studies-civics",
-  title: "Domain 4: Social Studies & Civics Is More Than History Class",
-  excerpt:
-    "Social Studies & Civics is not just dates, maps, presidents, and worksheets. It is how a young adult learns to read power, navigate institutions, understand history, judge the news, and stay upright inside systems built by other people.",
+  title: "Who Makes the Rules?",
+  excerpt: "Civic literacy for young adults means understanding power, history, government, institutions, and how to navigate rules when the system is unfamiliar.",
   publishedAt: "2026-05-12",
+  modifiedAt: "2026-10-12",
   status: "Recent",
   topic: "Domains",
   tags: ["LifeEducation", "Domains", "Social Studies", "Civics", "Systems Literacy"],
