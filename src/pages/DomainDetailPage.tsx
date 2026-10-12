@@ -57,7 +57,10 @@ export function DomainDetailPage({ slug }: { slug: string }) {
       <section className="doc-section">
         <h2 className="doc-section-title">What this capability includes</h2>
         <p className="doc-section-text">{copy?.scope ?? "The Floor defines the minimum; the broader domain includes opportunities for deeper development."}</p>
-        <p className="doc-section-text">For the full adulthood baseline, see <a href="/by-18">what young adults should be able to do by 18</a>. For the formal requirements, read <a href="/floor">the 18-Year-Old Floor</a>.</p>
+        <nav aria-label="Related LifeEducation standards" className="domain-page-grid">
+          <a href="/by-18" className="domain-page-card"><span className="domain-page-card-title">What young adults should be able to do by 18</span></a>
+          <a href="/floor" className="domain-page-card"><span className="domain-page-card-title">The formal 18-Year-Old Floor</span></a>
+        </nav>
       </section>
 
       <SectionNav sections={sections} />
