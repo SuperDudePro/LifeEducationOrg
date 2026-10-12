@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { LongPostNav } from "./components/LongPostNav";
 import { TREE_FAVICON } from "./data/site";
 import { DOMAINS } from "./data/domainsData";
+import { DOMAIN_PAGE_COPY } from "./data/domainPageCopy";
 import { normalizePath } from "./utils/routing";
 import { HomePage } from "./pages/HomePage";
 import { WhyPage } from "./pages/WhyPage";
@@ -109,10 +110,11 @@ export default function App() {
     } else if (pathname.startsWith("/domains/")) {
       const slug = pathname.replace("/domains/", "");
       const domain = DOMAINS.find((item) => item.slug === slug);
+      const copy = domain ? DOMAIN_PAGE_COPY[domain.slug] : undefined;
       meta = domain
         ? {
-            title: `${domain.title} | LifeEducation.org`,
-            description: `LifeEducation Domain ${domain.number}: ${domain.title}. The floor, the broader map, how it builds, and the essay.`,
+            title: copy ? `${copy.seoTitle} | LifeEducation.org` : `${domain.title} | LifeEducation.org`,
+            description: copy?.description ?? `LifeEducation Domain ${domain.number}: ${domain.title}.`,
           }
         : { title: "Domain not found | LifeEducation.org", description: defaultDescription };
     } else if (!isKnownTopLevel) {
