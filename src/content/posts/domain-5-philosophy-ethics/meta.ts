@@ -3,10 +3,10 @@ import heroCrossroads from "./images/hero-crossroads.webp";
 
 export const metadata = {
   slug: "domain-5-philosophy-ethics",
-  title: "Domain 5: Philosophy & Ethics Is More Than Having Opinions",
-  excerpt:
-    "Philosophy & Ethics is not about old books, character posters, or having the right opinions. It is how a young adult learns to think when values collide, feelings flare, rules run out, and no adult is standing there to make the call.",
+  title: "When the Right Answer Isn't Obvious",
+  excerpt: "Ethical reasoning for teenagers means testing arguments, weighing competing values, thinking through moral dilemmas, and knowing when obedience is not enough.",
   publishedAt: "2026-05-23",
+  modifiedAt: "2026-10-12",
   status: "Recent",
   topic: "Domains",
   tags: ["LifeEducation", "Domains", "Philosophy", "Ethics", "Judgment"],
