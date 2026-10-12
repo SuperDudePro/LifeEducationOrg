@@ -4,6 +4,7 @@ import { BackBar } from "../components/BackBar";
 import { AskCta } from "../components/AskCta";
 import { SectionNav } from "../components/SectionNav";
 import { DOMAINS } from "../data/domainsData";
+import { DOMAIN_PAGE_COPY } from "../data/domainPageCopy";
 import { FLOOR_BY_DOMAIN } from "../data/floorByDomain";
 import { AGE_BAND_BY_DOMAIN } from "../data/ageBandByDomain";
 import { getPostForDomain, getPostImage } from "../content/loadPosts";
@@ -26,6 +27,7 @@ export function DomainDetailPage({ slug }: { slug: string }) {
     );
   }
 
+  const copy = DOMAIN_PAGE_COPY[domain.slug];
   const floor = FLOOR_BY_DOMAIN.find((item) => item.number === domain.number);
   const ageBands = AGE_BAND_BY_DOMAIN.find((item) => item.number === domain.number);
   const essay = getPostForDomain(domain.number);
@@ -43,7 +45,7 @@ export function DomainDetailPage({ slug }: { slug: string }) {
       <PageIntro
         pill={`Domain ${domain.number}`}
         title={domain.title}
-        subtitle="The full picture for this domain: the non-negotiable floor, the broader capability map, how it builds over childhood, and the essay."
+        subtitle={copy?.intro ?? "Explore what this domain develops, what the Floor requires, and how the capability grows."}
       />
       <BackBar>
         <div className="back-link-row">
@@ -51,6 +53,15 @@ export function DomainDetailPage({ slug }: { slug: string }) {
           <a href="/" className="back-link">Back to Home</a>
         </div>
       </BackBar>
+
+      <section className="doc-section">
+        <h2 className="doc-section-title">What this capability includes</h2>
+        <p className="doc-section-text">{copy?.scope ?? "The Floor defines the minimum; the broader domain includes opportunities for deeper development."}</p>
+        <nav aria-label="Related LifeEducation standards" className="domain-page-grid">
+          <a href="/by-18" className="domain-page-card"><span className="domain-page-card-title">What young adults should be able to do by 18</span></a>
+          <a href="/floor" className="domain-page-card"><span className="domain-page-card-title">The formal 18-Year-Old Floor</span></a>
+        </nav>
+      </section>
 
       <SectionNav sections={sections} />
 
