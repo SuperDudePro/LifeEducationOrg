@@ -9,29 +9,17 @@ const post: LifeEducationPost = {
   ...metadata,
   body: (
     <>
+
       <p>
-        &quot;Philosophy&quot; makes most people think of school. Dead Greeks. Abstract
-        questions. Quotes on posters. Somebody in a coffee shop asking whether
-        the chair is real.
+        Loyalty matters. So does telling the truth. Sometimes they point in opposite directions. A rule can be clear and still lead to a cruel result. A popular position can feel right while resting on a bad argument.
       </p>
 
       <p>
-        Most people hear &quot;ethics&quot; and think about character education. Be nice.
-        Don&apos;t lie. Don&apos;t steal. Pick the right answer on the
-        worksheet.
+        I don't want young people to treat ethical questions as worksheets with the correct answer hidden somewhere. I want them to recognize conflicting obligations, explain the case against their own view fairly, and make a choice they can defend without pretending it was easy.
       </p>
 
       <p>
-        That version has its place. A young adult should know that people have
-        argued about right and wrong for a long time. They should know that
-        values matter, that actions have consequences, and that &quot;everybody does
-        it&quot; does not make something right.
-      </p>
-
-      <p>
-        But Domain 5 isn&apos;t really about old books or character posters.
-        It&apos;s about learning how to think when the answer isn&apos;t
-        obvious.
+        Philosophy offers tools for examining reasons, assumptions, values, and the lives people choose to lead. Reading thinkers from different traditions can deepen that work. But the point isn't to collect famous names; it's to get better at judgment when there is no answer key.
       </p>
 
       <h2>When principles collide</h2>
