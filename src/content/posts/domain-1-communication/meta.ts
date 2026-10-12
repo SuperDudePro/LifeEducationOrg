@@ -4,10 +4,10 @@ import communicationModesSocial from "./images/communication-modes-social.jpg";
 
 export const metadata = {
   slug: "domain-1-communication",
-  title: "Domain 1: Communication Is More Than Writing Essays",
-  excerpt:
-    "Communication is not just essays, grammar, or speeches. It is how a young adult asks for help, explains context, answers the actual question, repairs damage, and moves through the world with other people.",
+  title: "Can You Explain What Happened?",
+  excerpt: "Communication skills for teens go beyond essays. Learn why giving context, answering the actual question, listening, and asking for help are essential to adulthood.",
   publishedAt: "2026-04-29",
+  modifiedAt: "2026-10-12",
   status: "Recent",
   topic: "Domains",
   tags: ["LifeEducation", "Domains", "Communication", "The Floor", "Adult Capability"],
