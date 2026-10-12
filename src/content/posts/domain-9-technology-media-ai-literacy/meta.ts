@@ -3,10 +3,10 @@ import technologyMediaAiHero from "./images/domain-9-technology-media-ai-hero.we
 
 export const metadata = {
   slug: "domain-9-technology-media-ai-literacy",
-  title: "Domain 9: Technology, Media & AI Literacy Is More Than Being Good With Phones",
-  excerpt:
-    "Technology, Media & AI Literacy is not being a \"digital native,\" screen-time panic, or coding. It is the ability to use technology as a tool, stay skeptical online, and create with it \u2014 without being ruled by it.",
+  title: "Being Good With Your Phone Isn't Enough",
+  excerpt: "Digital, media, and AI literacy for teens means evaluating online claims, protecting personal data, using AI without surrendering judgment, and controlling attention.",
   publishedAt: "2026-05-30",
+  modifiedAt: "2026-10-12",
   displayDate: "May 30, 2026",
   status: "Recent",
   topic: "Domains",
