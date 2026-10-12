@@ -3,10 +3,11 @@ import heroMoneyDecisions from "./images/hero-money-decisions.webp";
 
 export const metadata = {
   slug: "domain-6-economics-finance",
-  title: "Domain 6: Economics & Finance Is Not Worksheets or Hot Takes",
+  title: "What Are You Really Agreeing To?",
   excerpt:
     "Economics & Finance is not about worksheets, hot takes, or getting rich. It is the ability to handle real money decisions without getting trapped by debt, paperwork, sales pressure, or institutions that profit from confusion.",
   publishedAt: "2026-05-24",
+  modifiedAt: "2026-10-12",
   displayDate: "May 24, 2026",
   status: "Recent",
   topic: "Domains",
