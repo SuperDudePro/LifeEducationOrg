@@ -173,7 +173,7 @@ const post: LifeEducationPost = {
 
       <PostFigure src={opportunityCostCrossroads} alt="A young adult stands at a sketched crossroads where a green-highlighted path points toward time, options, and freedom." />
 
-      <h2>What does this company make money on?</h2>
+      <h2>Follow the incentives</h2>
 
       <p>
         This is the single most useful question in adult financial life.
