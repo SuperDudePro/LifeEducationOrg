@@ -271,11 +271,16 @@ const [sitemap, indexHtml, postEntries, domainSource] = await Promise.all([
   readFile(path.join(rootDir, "src", "data", "domainsData.ts"), "utf8"),
 ]);
 
+const domainCopyPath = path.join(rootDir, "src", "data", "domainPageCopy.ts");
+const DOMAIN_PAGE_COPY = loadDataExport(await readFile(domainCopyPath, "utf8"), "DOMAIN_PAGE_COPY", domainCopyPath);
+
 for (const match of domainSource.matchAll(/"slug": "([^"]+)"[\s\S]*?"title": "([^"]+)"[\s\S]*?"number": "([^"]+)"/g)) {
   const [, slug, title, number] = match;
   routeMetadata.set(`/domains/${slug}`, {
-    title: `${title} | LifeEducation.org`,
-    description: `LifeEducation Domain ${number}: ${title}. The floor, the broader map, how it builds, and the essay.`,
+    title: `${DOMAIN_PAGE_COPY[slug]?.seoTitle ?? title} | LifeEducation.org`,
+    description: DOMAIN_PAGE_COPY[slug]?.description ?? `LifeEducation Domain ${number}: ${title}.`,
+    intro: DOMAIN_PAGE_COPY[slug]?.intro,
+    scope: DOMAIN_PAGE_COPY[slug]?.scope,
     domainNumber: number,
   });
 }
@@ -351,14 +356,14 @@ function staticPageShell(route, metadata) {
     body = publishedPostLinks();
   } else if (route.startsWith("/domains/")) {
     const number = metadata.domainNumber;
-    body = corpusSections(CORPUS.filter((chunk) => chunk.sourceId === "domains" && chunk.heading.startsWith(`Domain ${number}:`)));
+    body = `${metadata.scope ? `<section><h2>What this capability includes</h2><p>${escapeHtml(metadata.scope)}</p><p><a href="/by-18">What young adults should be able to do by 18</a> · <a href="/floor">The formal Floor</a></p></section>` : ""}${corpusSections(CORPUS.filter((chunk) => chunk.sourceId === "domains" && chunk.heading.startsWith(`Domain ${number}:`)))}`;
   } else if (sourceId) {
     const domainLinks = route === "/domains"
       ? `<ul>${[...routeMetadata.entries()].filter(([path]) => path.startsWith("/domains/")).map(([path, item]) => `<li><a href="${path}">${escapeHtml(item.title.replace(/ \| LifeEducation\.org$/, ""))}</a></li>`).join("")}</ul>`
       : "";
     body = domainLinks + corpusSections(CORPUS.filter((chunk) => chunk.sourceId === sourceId));
   }
-  return `<main data-static-page-shell><header><h1>${escapeHtml(heading)}</h1><p>${escapeHtml(metadata.description)}</p></header>${siteNavMarkup}${body}</main>`;
+  return `<main data-static-page-shell><header><h1>${escapeHtml(heading)}</h1><p>${escapeHtml(metadata.intro || metadata.description)}</p></header>${siteNavMarkup}${body}</main>`;
 }
 
 const routes = new Set();
