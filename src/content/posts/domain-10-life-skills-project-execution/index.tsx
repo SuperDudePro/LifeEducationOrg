@@ -54,7 +54,7 @@ const post: LifeEducationPost = {
         alt="A young adult checks a list while carrying a prepared envelope and groceries beside a parked bicycle in a charcoal editorial sketch with a restrained emerald route."
       />
 
-      <h2>What real life will ask them</h2>
+      <h2>What it means to handle your own responsibilities</h2>
 
       <p>
         By 18, the floor is supposed to be built. So real life starts asking,
@@ -187,7 +187,7 @@ const post: LifeEducationPost = {
         alt="A young adult follows a green route through an institutional service office, passing an information dead end and reaching the support desk with documents and notes in hand."
       />
 
-      <h2>How families build it</h2>
+      <h2>Hand over real responsibility</h2>
 
       <p>
         Nobody builds this from a lecture alone. This domain gets built by handing a
@@ -216,7 +216,7 @@ const post: LifeEducationPost = {
         alt="A parent stands back while a young person handles a phone call, route plan, meal, and small repair in a four-stage black-and-white sketch with restrained green handoff markers."
       />
 
-      <h2>What this is not</h2>
+      <h2>What independence isn't</h2>
 
       <p>
         The floor here is real, but it isn&apos;t a fantasy of total
@@ -238,7 +238,7 @@ const post: LifeEducationPost = {
         helpless or managed like a child in an adult body?
       </p>
 
-      <h2>Why this is the one that ties it all together</h2>
+      <h2>From knowing a skill to using it</h2>
 
       <p>
         Every other domain gives a young adult something to think with. This one
