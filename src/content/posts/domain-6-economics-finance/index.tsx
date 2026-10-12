@@ -9,36 +9,12 @@ const post: LifeEducationPost = {
   ...metadata,
   body: (
     <>
-      <p>
-        I've seen money education reduced to two things that don't prepare young people for financial decisions.
-      </p>
 
-      <p>
-        The first is a checklist. Balance a checkbook. Name the parts of a
-        paycheck. Identify a 401(k). Fill in the worksheet and turn it in. The
-        form of money taught as if knowing the names is the same as being able
-        to use them.
-      </p>
+      <p>The most expensive financial decisions often come dressed up as manageable monthly payments. A lease, a phone plan, a car loan, a credit card, or a job offer can look simple until you read what happens after you agree.</p>
 
-      <p>
-        The second is a debate club. Capitalism versus socialism. Inflation,
-        supply, demand. Pick a team and learn to argue. Economics as ideology,
-        judged on whether the student can repeat the framing the teacher
-        prefers.
-      </p>
+      <p>Young people need more than the vocabulary of economics and personal finance. They need to work through numbers, read documents carefully, recognize incentives, and ask who benefits from the terms on offer. Sometimes the right choice is to sign. Sometimes it's to walk away. Either way, they should understand the trade.</p>
 
-      <p>
-        A young adult who can&apos;t handle their own money is easier to trap in
-        a job they hate, easier to push into debt that follows them for years,
-        and easier to sell things they can&apos;t afford.
-      </p>
-
-      <p>
-        That&apos;s what this domain is about. Not worksheets. Not hot takes.
-        The ability to handle real money decisions without getting trapped by
-        debt, paperwork, sales pressure, or the institutions that make money on
-        you not knowing better.
-      </p>
+      <p>Money decisions also shape the options available later. Interest, taxes, wages, risk, and opportunity cost aren't abstractions when they affect where you can live, which work you can turn down, and how quickly one bad decision can become a long obligation.</p>
 
       <PostFigure src={heroMoneyDecisions} alt="A young adult works through a simple budget, lease, and balance screen in a mostly black-and-white sketch with restrained green highlights." />
 
