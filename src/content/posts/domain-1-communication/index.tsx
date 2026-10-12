@@ -7,20 +7,17 @@ const post: LifeEducationPost = {
   ...metadata,
   body: (
     <>
-      <p>For most people, “communication” is a school word. Essays, grammar, speeches, presentations, maybe vocabulary.</p>
 
       <p>
-        Those things matter. A young adult should be able to write clearly, speak when the situation calls for it, and read carefully enough that instructions, forms, warnings, and contracts don’t slide past them.
+        Ask a teenager what happened and you may get a perfectly accurate answer that tells you almost nothing. They know the context. You don't. The missing details are the whole problem.
       </p>
 
       <p>
-        But communication is bigger than school writing. It’s how a person moves through the world with other people — how they ask for help, explain what happened, disagree without making everything worse, repair damage after they’ve caused it, tell the truth when lying would be easier, and make themselves understandable to doctors, bosses, landlords, teachers, friends, clients, officials, strangers, and the people they love.
+        Communication isn't just writing a decent essay. It's knowing what another person needs to understand, saying it clearly, listening to the response, and trying again when the message doesn't land. That becomes important when the person across from you is a doctor, an employer, a landlord, or someone you've hurt.
       </p>
 
-      <p>A person who can’t communicate is easier to ignore, easier to mislead, easier to misunderstand, and easier to trap.</p>
-
       <p>
-        That’s why communication belongs in LifeEducation. Not because every kid needs to become a polished speaker or a beautiful writer — because every young adult needs enough command of language to function.
+        I want young adults who can read difficult material, write a useful message, explain a problem without leaving out the essentials, and disagree fairly. Being polished is optional. Being understandable isn't.
       </p>
 
       <h2>What communication actually asks of you</h2>
