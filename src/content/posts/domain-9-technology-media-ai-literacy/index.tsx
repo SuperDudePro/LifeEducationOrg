@@ -453,8 +453,7 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        And underneath all of it, one question: when they pick up the most
-        powerful tools ever built, are they the one in charge &mdash; or is something
+        And underneath all of it, one question: when they pick up tools that increasingly shape how people learn, communicate, and work, are they the one in charge &mdash; or is something
         on the other side of the glass quietly running them?
       </p>
 
