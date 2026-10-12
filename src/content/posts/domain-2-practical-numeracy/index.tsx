@@ -45,8 +45,7 @@ const post: LifeEducationPost = {
       <p>
         They should be able to read a bill and understand what they&apos;re
         being charged for. They should be able to compare two prices that are
-        packaged differently. They should understand interest well enough to be
-        afraid of bad debt. They should know that gross pay and take-home pay
+        packaged differently. They should understand how interest accumulates, compare borrowing costs, and recognize when debt creates serious risk. They should know that gross pay and take-home pay
         aren&apos;t the same thing. They should be able to estimate a total
         before the app tells them. They should be able to look at a lease, a
         phone plan, a subscription, a loan offer, or a &quot;free trial&quot;
