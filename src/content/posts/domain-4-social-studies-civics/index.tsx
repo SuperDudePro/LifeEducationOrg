@@ -307,7 +307,7 @@ const post: LifeEducationPost = {
         history.
       </p>
 
-      <h2>History is pattern recognition</h2>
+      <h2>History offers context, not a script</h2>
 
       <p>
         History class can become a storage unit for names and dates. The
