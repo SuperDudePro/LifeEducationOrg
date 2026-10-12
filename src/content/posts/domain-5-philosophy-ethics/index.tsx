@@ -34,7 +34,7 @@ const post: LifeEducationPost = {
         obvious.
       </p>
 
-      <h2>What real life will ask them</h2>
+      <h2>When principles collide</h2>
 
       <p>
         Real life will ask whether they can tell the truth when it costs them,
@@ -105,7 +105,7 @@ const post: LifeEducationPost = {
         written for the situation you are standing in.
       </p>
 
-      <h2>The floor: what they need to show</h2>
+      <h2>What a young adult needs to reason through</h2>
 
       <p>
         The floor is not &quot;quote Plato.&quot; It is not &quot;win debates.&quot; It is not
@@ -302,7 +302,7 @@ const post: LifeEducationPost = {
         worth living together.
       </p>
 
-      <h2>What this is not</h2>
+      <h2>Questions worth confronting</h2>
 
       <p>
         This is not about turning kids into miniature philosophers. It is not
@@ -347,7 +347,7 @@ const post: LifeEducationPost = {
         on has probably been worked before by people who were not stupid.
       </p>
 
-      <h2>How families build it</h2>
+      <h2>Practice disagreement without caricature</h2>
 
       <p>
         Families don&apos;t need to run a philosophy seminar at the dinner
@@ -388,7 +388,7 @@ const post: LifeEducationPost = {
         builds Domain 5 slowly, over years, without it ever looking like school.
       </p>
 
-      <h2>The real test</h2>
+      <h2>The judgment you can defend</h2>
 
       <p>
         The real test of Domain 5 isn&apos;t whether a young adult can name
@@ -413,6 +413,10 @@ const post: LifeEducationPost = {
       <p>
         That&apos;s the point of Domain 5. Not philosophy as old books. Not
         ethics as rules. Philosophy and ethics as examined adulthood.
+      </p>
+
+      <p>
+        What was a hard decision where following a rule did not settle the question? <a href="/contact">Send your experience or objection</a>. The examples that challenge this argument are often the most useful.
       </p>
     </>
   ),
