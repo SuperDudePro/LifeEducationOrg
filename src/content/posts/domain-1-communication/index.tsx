@@ -23,7 +23,7 @@ const post: LifeEducationPost = {
         That’s why communication belongs in LifeEducation. Not because every kid needs to become a polished speaker or a beautiful writer — because every young adult needs enough command of language to function.
       </p>
 
-      <h2>What real life will ask them</h2>
+      <h2>What communication actually asks of you</h2>
 
       <p>
         Real life will not ask whether they can label a sentence diagram. It will ask whether they can explain what happened, state what they need, ask a useful question, read the message carefully, document the problem, and respond without making the situation worse.
@@ -96,7 +96,7 @@ const post: LifeEducationPost = {
 
       <p>That’s not a school skill. That’s adulthood.</p>
 
-      <h2>The floor: what they need to show</h2>
+      <h2>When being understood matters</h2>
 
       <p>
         A floor-complete 18-year-old doesn’t need to be eloquent. They don’t need to write like a professional, win debates, enjoy public speaking, or come across as charming, extroverted, and quick on their feet.
@@ -158,7 +158,7 @@ const post: LifeEducationPost = {
 
       <p>That’s communication as adult competence.</p>
 
-      <h2>What this is not</h2>
+      <h2>Clarity is not polish</h2>
 
       <p>
         This isn’t about turning children into miniature executives. It’s not about making every kid debate, or grammar as a personality, or forcing shy kids to become extroverts, or correcting every sentence until the kid stops wanting to talk.
@@ -170,7 +170,7 @@ const post: LifeEducationPost = {
 
       <p>The goal isn’t more talking. The goal is better contact with reality and other people.</p>
 
-      <h2>How families build it</h2>
+      <h2>Practice the hard conversations</h2>
 
       <p>The Communication Domain doesn’t require turning the house into school. It requires real communication to be treated as real.</p>
 
@@ -200,7 +200,7 @@ const post: LifeEducationPost = {
 
       <p>Not perfectly. For real.</p>
 
-      <h2>The real test</h2>
+      <h2>When the stakes are real</h2>
 
       <p>
         The real test of Domain 1 isn’t whether a young adult can produce a clean essay on command. The real test is whether they can use language when the stakes are no longer academic.
@@ -213,6 +213,10 @@ const post: LifeEducationPost = {
       <p>That is Domain 1. Not essays. Not speeches. Not polish.</p>
 
       <p>Communication as adult capability.</p>
+
+      <p>
+        What conversation has taught you about helping a young person explain something difficult? <a href="/contact">Send your experience or objection</a>. The examples that challenge this argument are often the most useful.
+      </p>
     </>
   ),
 };
