@@ -12,7 +12,14 @@ export function DomainsPage() {
       <BackBar><a href="/" className="back-link">← Back to Home</a></BackBar>
       <section className="doc-dark">
         <p className="doc-dark-text">What should an education prepare a young person to do? LifeEducation uses ten domains to make sure entire areas of adulthood are not overlooked, from reading a contract to evaluating evidence or running a project.</p>
-        <p className="doc-dark-text">The <a href="/floor">18-Year-Old Floor</a> defines what must be demonstrated by 18. The domains are the wider map, not ten additional mandatory curricula. See <a href="/by-18">what a capable young adult should be able to do</a> for the plain-language destination.</p>
+        <p className="doc-dark-text">The 18-Year-Old Floor defines what must be demonstrated by 18. The domains are the wider map, not ten additional mandatory curricula.</p>
+      </section>
+      <section className="doc-section">
+        <h2 className="doc-section-title">Start with the adulthood target</h2>
+        <div className="domain-page-grid">
+          <a href="/by-18" className="domain-page-card"><span className="domain-page-card-title">What young adults should be able to do by 18</span></a>
+          <a href="/floor" className="domain-page-card"><span className="domain-page-card-title">The 18-Year-Old Floor</span></a>
+        </div>
       </section>
       <section className="doc-section">
         <h2 className="doc-section-title">Foundational Principles</h2>
