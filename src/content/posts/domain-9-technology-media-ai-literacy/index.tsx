@@ -50,7 +50,7 @@ const post: LifeEducationPost = {
         alt="A young adult uses a laptop, notebook, muted phone, and digital checklist in a black-and-white LifeEducation sketch with restrained green highlights."
       />
 
-      <h2>What real life will ask them</h2>
+      <h2>What digital competence means in practice</h2>
 
       <p>
         By 18, the floor is supposed to be built. Real life will ask whether
@@ -76,7 +76,7 @@ const post: LifeEducationPost = {
         The actual class is whether they run the technology or it runs them.
       </p>
 
-      <h2>The &quot;digital native&quot; myth does real damage</h2>
+      <h2>Using a phone isn't the same as understanding technology</h2>
 
       <p>
         The phrase &quot;digital native&quot; was supposed to describe a
@@ -119,7 +119,7 @@ const post: LifeEducationPost = {
         manipulate.
       </p>
 
-      <h2>The floor: what they need to show</h2>
+      <h2>Skills worth demonstrating</h2>
 
       <p>
         The floor is not coding. It is not building apps. It is not being
@@ -183,7 +183,7 @@ const post: LifeEducationPost = {
         That&apos;s the floor. Not coding. Command instead of dependence.
       </p>
 
-      <h2>AI is a tool, not a brain to borrow</h2>
+      <h2>Use AI without handing over your judgment</h2>
 
       <p>
         This is the fastest-moving part of the domain, which is exactly why the
@@ -247,7 +247,7 @@ const post: LifeEducationPost = {
         alt="A young adult uses AI to understand a lease while writing their own questions in a black-and-white LifeEducation sketch with restrained green highlights."
       />
 
-      <h2>The internet is not a library</h2>
+      <h2>Search results are not evidence by themselves</h2>
 
       <p>
         A young adult needs to understand what kind of place the internet
@@ -287,7 +287,7 @@ const post: LifeEducationPost = {
         perfectly designed to confirm what they already think.
       </p>
 
-      <h2>Attention is the thing being stolen</h2>
+      <h2>Who controls your attention?</h2>
 
       <p>
         The most important fight in this domain is not about information. It is
@@ -333,7 +333,7 @@ const post: LifeEducationPost = {
         alt="A young adult stands at a crossroads between a dark notification-filled path and a calmer path toward purposeful technology use in a black-and-white LifeEducation sketch with restrained green highlights."
       />
 
-      <h2>Your online trail follows you</h2>
+      <h2>What your digital trail reveals</h2>
 
       <p>
         There is a second self a young adult is building, often without meaning
@@ -370,7 +370,7 @@ const post: LifeEducationPost = {
         person instead of a scared one.
       </p>
 
-      <h2>What this is not</h2>
+      <h2>What digital literacy isn't</h2>
 
       <p>
         This is not about turning every kid into a programmer. It is not
@@ -400,7 +400,7 @@ const post: LifeEducationPost = {
         let them use you.
       </p>
 
-      <h2>How families build it</h2>
+      <h2>Practice with real tools and real risks</h2>
 
       <p>
         Families don&apos;t need to become IT departments. They need to stop
@@ -461,7 +461,7 @@ const post: LifeEducationPost = {
         who manages the technology.
       </p>
 
-      <h2>The real test</h2>
+      <h2>Can you use the tool without letting it use you?</h2>
 
       <p>
         The real test of Domain 9 is not whether a young adult can use a phone.
@@ -491,6 +491,10 @@ const post: LifeEducationPost = {
         That&apos;s the point of Domain 9. Not being good with phones. Not
         coding. Not screen-time panic. Technology, media, and AI as tools they
         command &mdash; not masters they serve.
+      </p>
+
+      <p>
+        Where do you see young people confusing familiarity with an app and real digital competence? <a href="/contact">Tell me what you've seen</a>. Examples that challenge this argument are welcome.
       </p>
     </>
   ),
