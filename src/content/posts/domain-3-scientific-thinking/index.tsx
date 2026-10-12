@@ -31,7 +31,7 @@ const post: LifeEducationPost = {
         confident people saying things that may or may not be true.
       </p>
 
-      <h2>What real life will ask them</h2>
+      <h2>Where observation matters</h2>
 
       <p>
         Real life will not hand them a clean experiment with labeled materials
@@ -76,7 +76,7 @@ const post: LifeEducationPost = {
         alt="A grayscale collage with green accents showing a teenager observing plants, checking information, writing notes, testing jars, and watching weather as evidence for real-world scientific thinking."
       />
 
-      <h2>The floor: what they need to show</h2>
+      <h2>What the evidence should show</h2>
 
       <p>
         The floor is not &quot;complete a biology course.&quot; It is not &quot;memorize the
@@ -239,7 +239,7 @@ const post: LifeEducationPost = {
 
       <p>That&apos;s the point.</p>
 
-      <h2>What this is not</h2>
+      <h2>Skepticism without cynicism</h2>
 
       <p>
         This is not about turning every kid into a scientist, a lab-report
@@ -254,7 +254,7 @@ const post: LifeEducationPost = {
         back.
       </p>
 
-      <h2>How families build it</h2>
+      <h2>Make curiosity a habit</h2>
 
       <p>
         Families don&apos;t need to turn the house into a lab. They need to treat
@@ -280,7 +280,7 @@ const post: LifeEducationPost = {
 
       <p>That difference matters more than the lab report.</p>
 
-      <h2>The real test</h2>
+      <h2>The question is what would change your mind</h2>
 
       <p>
         The real test of Domain 3 isn&apos;t whether a young adult remembers every
@@ -298,6 +298,10 @@ const post: LifeEducationPost = {
       <p>
         That is Scientific Thinking &amp; Observation. Not just science class.
         Part of not getting fooled. Part of not fooling yourself.
+      </p>
+
+      <p>
+        What helped you or your child learn to test an explanation rather than simply believe it? <a href="/contact">Send your experience or objection</a>. The examples that challenge this argument are often the most useful.
       </p>
     </>
   ),
