@@ -9,45 +9,12 @@ const post: LifeEducationPost = {
   ...metadata,
   body: (
     <>
-      <p>
-        Say &quot;health&quot; and most people picture one of two things: gym class or a
-        doctor&apos;s office.
-      </p>
 
-      <p>
-        Gym class turns the body into laps, uniforms, attendance, dodgeball
-        memories, fitness tests, and the kid hoping not to be embarrassed in
-        front of everyone. The doctor&apos;s office turns the body into
-        something handled by professionals. You wait until something is wrong,
-        describe it badly, get instructions, forget half of them, and hope the
-        grown-ups know what to do.
-      </p>
+      <p>At some point a young person has to become the person who notices something is wrong, describes the symptoms, asks useful questions, and follows through. They also have to live in their body every day between medical appointments.</p>
 
-      <p>
-        Then the internet gets involved and turns health into performance. Diet
-        wars. Workout influencers. Supplements. Body panic. Perfect routines
-        from people whose job is to perform perfect routines.
-      </p>
+      <p>That means understanding food, movement, sleep, recovery, stress, injury, and the risks attached to substances and sexual decisions. It means knowing when to ask for help and being able to describe what is happening without shame or performance.</p>
 
-      <p>None of that is the point.</p>
-
-      <p>
-        Health &amp; Physical Development isn&apos;t about looking impressive,
-        worshiping fitness, or becoming the family nutrition officer. It&apos;s
-        about living in a body without being helpless, ashamed, reckless, or
-        passive.
-      </p>
-
-      <p>
-        A young adult who can&apos;t take care of their body is not fully free.
-        Their energy gets managed by accident. Their movement shrinks. Their
-        health becomes somebody else&apos;s job until suddenly it can&apos;t be.
-      </p>
-
-      <p>
-        That&apos;s too fragile. Domain 7 exists because adulthood happens
-        inside a body.
-      </p>
+      <p>Health education shouldn't be a competition over appearance or a collection of scary slogans. Its purpose is increasing responsibility for the body a person will depend on for the rest of their life. Physical capability matters, but so do judgment, informed decisions, and the willingness to seek care.</p>
 
       <PostFigure
         src={heroImage}
