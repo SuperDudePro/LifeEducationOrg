@@ -7,28 +7,17 @@ const post: LifeEducationPost = {
   ...metadata,
   body: (
     <>
+
       <p>
-        Say &quot;science&quot; and most people picture a classroom. Textbooks,
-        vocabulary, lab reports, safety goggles, maybe a baking soda volcano if
-        the teacher is feeling ambitious.
+        A plant is dying. Someone says it needs more water. Someone else says it's getting too much. Both explanations sound reasonable, and neither becomes true because the person saying it sounds confident.
       </p>
 
       <p>
-        That version has its place. Kids should understand biology, chemistry,
-        physics, weather, bodies, ecosystems, and the physical world they live
-        in. But Domain 3 isn&apos;t really about passing science class.
+        That small problem captures something I want from scientific thinking: observe first, separate the evidence from the explanation, try something that could distinguish between competing accounts, and change your mind when the results point elsewhere.
       </p>
 
       <p>
-        It&apos;s about observing carefully, testing explanations, and staying open to better evidence.
-      </p>
-
-      <p>
-        A capable young adult needs to observe what is happening, ask better
-        questions, test claims, understand evidence, and change their mind when
-        the evidence gets better. Not because every kid needs to become a
-        scientist, but because every kid is going to live in a world full of
-        confident people saying things that may or may not be true.
+        Science education matters because young people need to know how the physical world works. Scientific thinking matters because they will face claims about health, products, weather, technology, and public decisions long after their last school lab. They need the habit of asking how we know.
       </p>
 
       <h2>Where observation matters</h2>
