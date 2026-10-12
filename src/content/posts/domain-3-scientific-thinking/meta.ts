@@ -3,10 +3,10 @@ import scientificThinkingHero from "./images/scientific-thinking-observation-her
 
 export const metadata = {
   slug: "domain-3-scientific-thinking",
-  title: "Domain 3: Scientific Thinking Is More Than Science Class",
-  excerpt:
-    "Scientific thinking is not just passing science class. It is how a young adult learns to observe reality, test claims, handle uncertainty, and avoid being fooled by confident people saying things that may or may not be true.",
+  title: "What Would Change Your Mind?",
+  excerpt: "Scientific thinking in everyday life means separating observation from assumption, checking evidence, testing explanations, and being willing to revise a belief.",
   publishedAt: "2026-05-08",
+  modifiedAt: "2026-10-12",
   status: "Recent",
   topic: "Domains",
   tags: ["LifeEducation", "Domains", "Scientific Thinking", "The Floor", "Adult Capability"],
