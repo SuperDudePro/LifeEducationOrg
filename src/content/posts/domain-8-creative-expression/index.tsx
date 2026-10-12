@@ -42,7 +42,7 @@ const post: LifeEducationPost = {
 
       <PostFigure src={creativeExpressionHero} alt="A young person works at a dark creative desk with sketches, models, draft pages, and restrained green accents." />
 
-      <h2>What real life will ask them</h2>
+      <h2>Why making things matters</h2>
 
       <p>
         By 18, the floor is supposed to be built. Real life will ask whether
@@ -66,7 +66,7 @@ const post: LifeEducationPost = {
         finish them.
       </p>
 
-      <h2>School installs it early</h2>
+      <h2>When children decide they aren't creative</h2>
 
       <p>
         School mostly handles creativity by sorting.
@@ -105,7 +105,7 @@ const post: LifeEducationPost = {
         to do &mdash; and crushes a kid who doesn&apos;t.
       </p>
 
-      <h2>The floor: what they need to show</h2>
+      <h2>What creative competence looks like</h2>
 
       <p>
         The floor is not artistic mastery. It is not a polished portfolio. It is
@@ -166,7 +166,7 @@ const post: LifeEducationPost = {
         making.
       </p>
 
-      <h2>Talent is a story people tell to quit</h2>
+      <h2>Talent is not the whole story</h2>
 
       <p>
         &quot;I&apos;m just not creative&quot; sounds like humility. It&apos;s
@@ -204,7 +204,7 @@ const post: LifeEducationPost = {
         make sure no kid mistakes a slow start for a closed door.
       </p>
 
-      <h2>Finishing is the whole game</h2>
+      <h2>Finishing changes the work</h2>
 
       <p>
         Starting is easy. Everybody starts.
@@ -324,7 +324,7 @@ const post: LifeEducationPost = {
 
       <PostFigure src={creativeExpressionOutlet} alt="A quiet dark creative corner holds sketches, notebooks, a small sculpture, and restrained green accents as a young person reflects nearby." />
 
-      <h2>What this is not</h2>
+      <h2>What creativity doesn't require</h2>
 
       <p>
         This is not about making artists. It is not about talent, and it is not
@@ -348,7 +348,7 @@ const post: LifeEducationPost = {
         thing.
       </p>
 
-      <h2>How families build it</h2>
+      <h2>Make room for practice and revision</h2>
 
       <p>
         Families don&apos;t need to run an art school. They need to keep making
@@ -400,7 +400,7 @@ const post: LifeEducationPost = {
         can still break.
       </p>
 
-      <h2>The real test</h2>
+      <h2>Make something, finish it, try again</h2>
 
       <p>
         The real test of Domain 8 isn&apos;t whether a young adult got an A in
@@ -421,6 +421,10 @@ const post: LifeEducationPost = {
       <p>
         A kid who believes that keeps making things. A kid who doesn&apos;t
         believe that quits at nine.
+      </p>
+
+      <p>
+        What helped a young person you know keep making things after the first attempt fell short? <a href="/contact">Tell me what you've seen</a>. Examples that challenge this argument are welcome.
       </p>
     </>
   ),
