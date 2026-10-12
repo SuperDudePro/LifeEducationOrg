@@ -3,10 +3,10 @@ import creativeExpressionHero from "./images/creative-expression-hero.webp";
 
 export const metadata = {
   slug: "domain-8-creative-expression",
-  title: "Domain 8: Creative Expression Is More Than Art Class",
-  excerpt:
-    "Creative Expression is not art class, talent you're born with, or chasing an audience. It is the ability to make something that didn't exist, finish it, and use creativity as a real tool.",
+  title: "Make Something. Finish It.",
+  excerpt: "Creative confidence grows through practice, revision, criticism, and finishing. Creativity is a real-world skill, not a label assigned to talented children.",
   publishedAt: "2026-05-29",
+  modifiedAt: "2026-10-12",
   displayDate: "May 29, 2026",
   status: "Recent",
   topic: "Domains",
