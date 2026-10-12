@@ -419,8 +419,7 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        A kid who believes that keeps making things. A kid who doesn&apos;t
-        believe that quits at nine.
+        I don't want a child deciding at nine that making things is for somebody else.
       </p>
 
       <p>
