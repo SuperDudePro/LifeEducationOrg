@@ -10,8 +10,7 @@ const post: LifeEducationPost = {
   body: (
     <>
       <p>
-        School teaches &quot;economics and finance&quot; two ways, and both of
-        them are wrong.
+        I've seen money education reduced to two things that don't prepare young people for financial decisions.
       </p>
 
       <p>
