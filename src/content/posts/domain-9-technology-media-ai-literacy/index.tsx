@@ -9,41 +9,12 @@ const post: LifeEducationPost = {
   ...metadata,
   body: (
     <>
-      <p>
-        There is a comfortable lie going around that kids today are good with
-        technology. They grew up with it, the thinking goes, so they must
-        understand it. They swipe before they can read. They can find anything
-        on a phone in seconds. Surely they have this handled.
-      </p>
 
-      <p>They don&apos;t.</p>
+      <p>A teenager can navigate a phone faster than I can and still struggle to recognize a scam, check a source, manage an account securely, or explain how an AI tool reached its answer. Familiarity with an interface is not the same as understanding the system behind it.</p>
 
-      <p>
-        What most kids have is fluency with consumption. They&apos;re very good
-        at being fed. They can scroll, tap, watch, and react all day. That&apos;s
-        not the same as competence, and the gap between the two is where a lot
-        of young adults quietly get hurt.
-      </p>
+      <p>Digital literacy has several jobs. We need young people who can use technology to make and solve things, identify manipulation and misinformation, protect themselves and others, and understand when convenience comes with a cost in privacy or attention.</p>
 
-      <p>
-        A kid who has spent ten thousand hours inside an app still can&apos;t
-        always manage a password, spot a scam, tell a real source from a fake
-        one, get useful work out of an AI without letting it think for them, or
-        put the phone down when the phone is winning. Being good at being
-        entertained by technology is not being good with technology.
-      </p>
-
-      <p>
-        Technology, Media &amp; AI Literacy isn&apos;t about becoming a
-        programmer. It&apos;s about using these tools well, staying skeptical
-        enough not to get played, and keeping your own attention instead of
-        renting it out to whoever built the feed.
-      </p>
-
-      <p>
-        Domain 9 exists because these tools are now in everyone&apos;s pocket,
-        and the people who don&apos;t understand them get used by them.
-      </p>
+      <p>AI makes the distinction especially important. A useful tool can help someone ask better questions, practice, compare possibilities, and complete real work. It can also produce confident errors or substitute for thinking that the learner still needs to do. Knowing when to trust, check, reject, or simply stop using the tool is part of being competent.</p>
 
       <PostFigure
         src={technologyMediaAiHero}
