@@ -7,30 +7,17 @@ const post: LifeEducationPost = {
   ...metadata,
   body: (
     <>
+
       <p>
-        &quot;Social studies&quot; still sounds like a class period. Dates. Maps.
-        Presidents. Wars. Capitals. A worksheet on the three branches of
-        government.
+        Knowing the three branches of government is useful. Knowing which office can actually solve your problem may be more urgent. If a rule is enforced against you, where did it come from? Who can interpret it? Who can change it? What can you do if an institution gets something wrong?
       </p>
 
       <p>
-        That version has its place. A young adult should know where they are in
-        history, how their government works, enough geography to not be
-        ridiculous, and the basic story of the country they live in.
+        That's civics as a life skill. History helps explain how those institutions and power relationships developed. Geography and cultural knowledge help us understand that the system we grew up with isn't the only one. News literacy helps us judge competing accounts of what institutions are doing now.
       </p>
 
       <p>
-        But Domain 4 isn&apos;t really about that. It&apos;s about staying upright inside
-        systems built by other people.
-      </p>
-
-      <p>
-        A capable young adult is going to deal with police, courts, elections,
-        employers, landlords, borders, banks, agencies, and platforms that don&apos;t
-        always have their best interest in mind. Not because every kid needs to
-        become a lawyer, a politician, or an activist, but because every kid is
-        going to live inside systems that can either work for them or roll right
-        over them.
+        I want a young adult who can enter an unfamiliar city or country, learn how its institutions work, and ask informed questions rather than simply accepting whatever the first official-looking person says.
       </p>
 
       <h2>The systems you actually encounter</h2>
