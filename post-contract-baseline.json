@@ -7,11 +7,6 @@
   "entries": {
     "domain-1-communication": [
       {
-        "ruleId": "cta.contact.required",
-        "signature": "/contact",
-        "reason": "Post is missing a reader CTA linking to the contact page."
-      },
-      {
         "ruleId": "image.body.geometry",
         "signature": "file=images/answer-actual-question-comic.jpg;actual=1400x933;expected=1200x900",
         "reason": "images/answer-actual-question-comic.jpg is 1400x933; the body role requires 1200x900."
@@ -43,11 +38,6 @@
       }
     ],
     "domain-2-practical-numeracy": [
-      {
-        "ruleId": "cta.contact.required",
-        "signature": "/contact",
-        "reason": "Post is missing a reader CTA linking to the contact page."
-      },
       {
         "ruleId": "image.body.geometry",
         "signature": "file=images/cost-of-choice-checkout.webp;actual=1448x1086;expected=1200x900",
@@ -96,11 +86,6 @@
     ],
     "domain-3-scientific-thinking": [
       {
-        "ruleId": "cta.contact.required",
-        "signature": "/contact",
-        "reason": "Post is missing a reader CTA linking to the contact page."
-      },
-      {
         "ruleId": "image.body.geometry",
         "signature": "file=images/scientific-thinking-evidence-collage.webp;actual=1672x941;expected=1200x900",
         "reason": "images/scientific-thinking-evidence-collage.webp is 1672x941; the body role requires 1200x900."
@@ -143,11 +128,6 @@
     ],
     "domain-4-social-studies-civics": [
       {
-        "ruleId": "cta.contact.required",
-        "signature": "/contact",
-        "reason": "Post is missing a reader CTA linking to the contact page."
-      },
-      {
         "ruleId": "image.body.geometry",
         "signature": "file=images/reading-the-city.webp;actual=1448x1086;expected=1200x900",
         "reason": "images/reading-the-city.webp is 1448x1086; the body role requires 1200x900."
@@ -189,11 +169,6 @@
       }
     ],
     "domain-5-philosophy-ethics": [
-      {
-        "ruleId": "cta.contact.required",
-        "signature": "/contact",
-        "reason": "Post is missing a reader CTA linking to the contact page."
-      },
       {
         "ruleId": "image.body.geometry",
         "signature": "file=images/fair-argument.webp;actual=768x479;expected=1200x900",
@@ -257,11 +232,6 @@
     ],
     "domain-6-economics-finance": [
       {
-        "ruleId": "cta.contact.required",
-        "signature": "/contact",
-        "reason": "Post is missing a reader CTA linking to the contact page."
-      },
-      {
         "ruleId": "image.body.geometry",
         "signature": "file=images/hero-money-decisions.webp;actual=1600x900;expected=1200x900",
         "reason": "images/hero-money-decisions.webp is 1600x900; the body role requires 1200x900."
@@ -318,11 +288,6 @@
       }
     ],
     "domain-7-health-physical-development": [
-      {
-        "ruleId": "cta.contact.required",
-        "signature": "/contact",
-        "reason": "Post is missing a reader CTA linking to the contact page."
-      },
       {
         "ruleId": "image.body.geometry",
         "signature": "file=images/body-capability-map.webp;actual=1672x941;expected=1200x900",
@@ -386,11 +351,6 @@
     ],
     "domain-8-creative-expression": [
       {
-        "ruleId": "cta.contact.required",
-        "signature": "/contact",
-        "reason": "Post is missing a reader CTA linking to the contact page."
-      },
-      {
         "ruleId": "image.body.geometry",
         "signature": "file=images/creative-expression-hero.webp;actual=1672x941;expected=1200x900",
         "reason": "images/creative-expression-hero.webp is 1672x941; the body role requires 1200x900."
@@ -452,11 +412,6 @@
       }
     ],
     "domain-9-technology-media-ai-literacy": [
-      {
-        "ruleId": "cta.contact.required",
-        "signature": "/contact",
-        "reason": "Post is missing a reader CTA linking to the contact page."
-      },
       {
         "ruleId": "image.body.geometry",
         "signature": "file=images/domain-9-ai-tool-not-brain.webp;actual=1600x900;expected=1200x900",
