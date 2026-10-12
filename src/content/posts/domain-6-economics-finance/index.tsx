@@ -43,7 +43,7 @@ const post: LifeEducationPost = {
 
       <PostFigure src={heroMoneyDecisions} alt="A young adult works through a simple budget, lease, and balance screen in a mostly black-and-white sketch with restrained green highlights." />
 
-      <h2>What real life will ask them</h2>
+      <h2>Where financial decisions get made</h2>
 
       <p>
         By 18, the floor is supposed to be built. Real life will ask whether
@@ -127,7 +127,7 @@ const post: LifeEducationPost = {
         help on the rest is hard to fool.
       </p>
 
-      <h2>The floor: what they need to show</h2>
+      <h2>Money skills worth demonstrating</h2>
 
       <p>
         The floor isn&apos;t being rich. The floor isn&apos;t picking the right
@@ -236,7 +236,7 @@ const post: LifeEducationPost = {
         being a target.
       </p>
 
-      <h2>What this is not</h2>
+      <h2>What financial competence is not</h2>
 
       <p>
         This isn&apos;t a lesson about getting rich. The floor doesn&apos;t
@@ -290,7 +290,7 @@ const post: LifeEducationPost = {
         Freedom of movement.
       </p>
 
-      <h2>How families build it</h2>
+      <h2>Let young people see real decisions</h2>
 
       <p>
         Most of this domain gets built in the regular flow of family life, not
@@ -350,7 +350,7 @@ const post: LifeEducationPost = {
 
       <PostFigure src={moneyQuestionsMentoring} alt="An older adult and a young adult study a financial statement together, with a green highlight on the question that matters most over time." />
 
-      <h2>The real test</h2>
+      <h2>Read before you agree</h2>
 
       <p>
         Can they look at a paycheck and tell you what got taken out and why? Can
@@ -371,6 +371,10 @@ const post: LifeEducationPost = {
         Not balanced checkbooks. Not memorized terms. Not picking the right
         stock. Economics and finance as the ability to handle their own money
         without getting steamrolled.
+      </p>
+
+      <p>
+        Which money decision do you wish someone had helped you understand before you signed? <a href="/contact">Send your experience or objection</a>. The examples that challenge this argument are often the most useful.
       </p>
     </>
   ),
