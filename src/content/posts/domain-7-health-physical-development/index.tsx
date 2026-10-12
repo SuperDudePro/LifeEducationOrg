@@ -54,7 +54,7 @@ const post: LifeEducationPost = {
         alt="A capable young adult walks forward through a sketched landscape with green-highlighted cues for hydration, food, first aid, and calm breathing."
       />
 
-      <h2>What real life will ask them</h2>
+      <h2>When you have to manage your own health</h2>
 
       <p>
         By 18, the floor is supposed to be built. Real life will ask whether
@@ -103,7 +103,7 @@ const post: LifeEducationPost = {
         The body is one system. This domain has to treat it that way.
       </p>
 
-      <h2>The floor: what they need to show</h2>
+      <h2>What you should be able to manage</h2>
 
       <p>
         The floor is not elite athletics. It is not a six-pack. It is not a diet
@@ -318,7 +318,7 @@ const post: LifeEducationPost = {
         No shame fog. No macho fog. No purity fog. Reality.
       </p>
 
-      <h2>What this is not</h2>
+      <h2>What health capability is not</h2>
 
       <p>
         This is not about building little athletes. It is not about body shame,
@@ -338,7 +338,7 @@ const post: LifeEducationPost = {
         work.
       </p>
 
-      <h2>How families build it</h2>
+      <h2>Practice responsible self-care</h2>
 
       <p>
         Families don&apos;t need to turn the house into a wellness program.
@@ -401,7 +401,7 @@ const post: LifeEducationPost = {
         alt="A central young adult is surrounded by sketch vignettes of hiking, swimming, first aid, doctor communication, stress regulation, and body ownership."
       />
 
-      <h2>The real test</h2>
+      <h2>Can you take care of yourself?</h2>
 
       <p>
         The real test of Domain 7 isn&apos;t whether a young adult passed health
@@ -433,6 +433,10 @@ const post: LifeEducationPost = {
         That&apos;s the point of Domain 7. Not gym class. Not wellness
         performance. Not body shame. Health and physical development as adult
         capability.
+      </p>
+
+      <p>
+        What health responsibility was hardest to learn without someone managing it for you? <a href="/contact">Send your experience or objection</a>. The examples that challenge this argument are often the most useful.
       </p>
     </>
   ),
