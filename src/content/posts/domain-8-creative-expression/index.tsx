@@ -183,7 +183,7 @@ const post: LifeEducationPost = {
       <h2>Finishing changes the work</h2>
 
       <p>
-        Starting is easy. Everybody starts.
+        Starting can be exciting. Finishing is often where the difficult work begins.
       </p>
 
       <p>
