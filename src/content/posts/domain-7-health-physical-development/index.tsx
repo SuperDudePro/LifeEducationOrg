@@ -121,7 +121,7 @@ const post: LifeEducationPost = {
         That&apos;s the floor. Not perfection. Ownership.
       </p>
 
-      <h2>Fitness is not decoration</h2>
+      <h2>Fitness is about usable capability</h2>
 
       <p>
         Fitness is often treated as either vanity or sport. That&apos;s too
