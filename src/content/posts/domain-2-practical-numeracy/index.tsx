@@ -44,7 +44,7 @@ const post: LifeEducationPost = {
         numeracy. They need enough number sense to stay awake.
       </p>
 
-      <h2>What real life will ask them</h2>
+      <h2>Where numbers meet real decisions</h2>
 
       <p>
         Real life will ask whether they can stand in front of a price, a rate, a
@@ -58,7 +58,7 @@ const post: LifeEducationPost = {
         changes the whole deal: compared to what?
       </p>
 
-      <h2>The floor: what they need to show</h2>
+      <h2>Math that should survive a classroom</h2>
 
       <p>
         By 18, a young adult should be able to handle ordinary numbers without
@@ -340,7 +340,7 @@ const post: LifeEducationPost = {
         alt="Two younger children at an outdoor market stall count coins and compare handwritten produce prices while working through simple real-world math."
       />
 
-      <h2>What this is not</h2>
+      <h2>What knowing math looks like</h2>
 
       <p>
         This is not an argument against math class, algebra, geometry,
@@ -356,7 +356,7 @@ const post: LifeEducationPost = {
         comparison well enough not to be fooled by the adult world&apos;s math.
       </p>
 
-      <h2>How families build it</h2>
+      <h2>Everyday opportunities to use numbers</h2>
 
       <p>
         Families don&apos;t need a formal program for this. They need to stop
@@ -388,7 +388,7 @@ const post: LifeEducationPost = {
         They&apos;re tools. And tools can be used well or badly.
       </p>
 
-      <h2>The real test</h2>
+      <h2>Pause before you believe the number</h2>
 
       <p>
         The real test of Domain 2 isn&apos;t whether a young adult remembers
@@ -411,6 +411,10 @@ const post: LifeEducationPost = {
       <p>
         That&apos;s practical numeracy. It&apos;s not just passing math class.
         It&apos;s part of not getting played.
+      </p>
+
+      <p>
+        Which everyday number do you wish you had learned to question sooner? <a href="/contact">Send your experience or objection</a>. The examples that challenge this argument are often the most useful.
       </p>
     </>
   ),
