@@ -10,51 +10,19 @@ const post: LifeEducationPost = {
   ...metadata,
   body: (
     <>
-      <p>
-        Say &quot;life skills&quot; and most people picture a chore chart.
-        Laundry. Dishes. Changing a tire. Boiling an egg. The home-ec version
-        of growing up, where being capable means you can run a washing machine
-        and not burn the rice.
-      </p>
 
-      <p>
-        Say &quot;project execution&quot; and people picture a planner. A
-        color-coded calendar. A productivity system with the right app and the
-        right notebook and a wall of sticky notes.
-      </p>
+      <p>It's one thing to know how to do laundry, make a budget, or put an appointment on a calendar. It's another to notice that something needs doing, decide what comes first, handle the interruption, and finish without somebody standing over you.</p>
 
-      <p>
-        That version has its place. A young adult should be able to keep a space
-        livable, feed themselves, and keep track of what they owe and when
-        it&apos;s due. Nobody is against clean laundry.
-      </p>
+      <p>That distinction is what I mean by running your own life. A young adult needs ordinary practical skills, but they also need follow-through: managing time, commitments, paperwork, relationships, and work that gets complicated halfway through.</p>
 
-      <p>
-        But Domain 10 isn&apos;t really about chores or planners. It&apos;s
-        about whether a person can run their own life and finish what they
-        start.
-      </p>
-
-      <p>
-        A capable young adult is going to be handed responsibilities with no one
-        standing over them, projects that fall apart in the middle, and systems
-        that were set up to suit somebody other than them.
-      </p>
-
-      <p>
-        Not because every kid needs to color-code their week. Because everything
-        else they have learned just sits there until they can act on it. You can
-        understand money, history, science, and your own body and still go
-        nowhere if you can&apos;t execute. This is the domain where everything
-        else becomes a life.
-      </p>
+      <p>A planner can help. So can a parent, a friend, or an AI tool. Independence doesn't mean refusing help. It means taking responsibility for the outcome, knowing when help is necessary, and being able to move the work forward when the original plan fails.</p>
 
       <PostFigure
         src={bodyImage1}
         alt="A young adult checks a list while carrying a prepared envelope and groceries beside a parked bicycle in a charcoal editorial sketch with a restrained emerald route."
       />
 
-      <h2>What real life will ask them</h2>
+      <h2>What it means to handle your own responsibilities</h2>
 
       <p>
         By 18, the floor is supposed to be built. So real life starts asking,
@@ -187,7 +155,7 @@ const post: LifeEducationPost = {
         alt="A young adult follows a green route through an institutional service office, passing an information dead end and reaching the support desk with documents and notes in hand."
       />
 
-      <h2>How families build it</h2>
+      <h2>Hand over real responsibility</h2>
 
       <p>
         Nobody builds this from a lecture alone. This domain gets built by handing a
@@ -216,7 +184,7 @@ const post: LifeEducationPost = {
         alt="A parent stands back while a young person handles a phone call, route plan, meal, and small repair in a four-stage black-and-white sketch with restrained green handoff markers."
       />
 
-      <h2>What this is not</h2>
+      <h2>What independence isn't</h2>
 
       <p>
         The floor here is real, but it isn&apos;t a fantasy of total
@@ -238,7 +206,7 @@ const post: LifeEducationPost = {
         helpless or managed like a child in an adult body?
       </p>
 
-      <h2>Why this is the one that ties it all together</h2>
+      <h2>From knowing a skill to using it</h2>
 
       <p>
         Every other domain gives a young adult something to think with. This one

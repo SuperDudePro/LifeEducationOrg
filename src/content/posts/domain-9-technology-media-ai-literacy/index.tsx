@@ -9,48 +9,19 @@ const post: LifeEducationPost = {
   ...metadata,
   body: (
     <>
-      <p>
-        There is a comfortable lie going around that kids today are good with
-        technology. They grew up with it, the thinking goes, so they must
-        understand it. They swipe before they can read. They can find anything
-        on a phone in seconds. Surely they have this handled.
-      </p>
 
-      <p>They don&apos;t.</p>
+      <p>A teenager can navigate a phone faster than I can and still struggle to recognize a scam, check a source, manage an account securely, or explain how an AI tool reached its answer. Familiarity with an interface is not the same as understanding the system behind it.</p>
 
-      <p>
-        What most kids have is fluency with consumption. They&apos;re very good
-        at being fed. They can scroll, tap, watch, and react all day. That&apos;s
-        not the same as competence, and the gap between the two is where a lot
-        of young adults quietly get hurt.
-      </p>
+      <p>Digital literacy has several jobs. We need young people who can use technology to make and solve things, identify manipulation and misinformation, protect themselves and others, and understand when convenience comes with a cost in privacy or attention.</p>
 
-      <p>
-        A kid who has spent ten thousand hours inside an app still can&apos;t
-        always manage a password, spot a scam, tell a real source from a fake
-        one, get useful work out of an AI without letting it think for them, or
-        put the phone down when the phone is winning. Being good at being
-        entertained by technology is not being good with technology.
-      </p>
-
-      <p>
-        Technology, Media &amp; AI Literacy isn&apos;t about becoming a
-        programmer. It&apos;s about using these tools well, staying skeptical
-        enough not to get played, and keeping your own attention instead of
-        renting it out to whoever built the feed.
-      </p>
-
-      <p>
-        Domain 9 exists because these tools are now in everyone&apos;s pocket,
-        and the people who don&apos;t understand them get used by them.
-      </p>
+      <p>AI makes the distinction especially important. A useful tool can help someone ask better questions, practice, compare possibilities, and complete real work. It can also produce confident errors or substitute for thinking that the learner still needs to do. Knowing when to trust, check, reject, or simply stop using the tool is part of being competent.</p>
 
       <PostFigure
         src={technologyMediaAiHero}
         alt="A young adult uses a laptop, notebook, muted phone, and digital checklist in a black-and-white LifeEducation sketch with restrained green highlights."
       />
 
-      <h2>What real life will ask them</h2>
+      <h2>What digital competence means in practice</h2>
 
       <p>
         By 18, the floor is supposed to be built. Real life will ask whether
@@ -76,7 +47,7 @@ const post: LifeEducationPost = {
         The actual class is whether they run the technology or it runs them.
       </p>
 
-      <h2>The &quot;digital native&quot; myth does real damage</h2>
+      <h2>Using a phone isn't the same as understanding technology</h2>
 
       <p>
         The phrase &quot;digital native&quot; was supposed to describe a
@@ -119,7 +90,7 @@ const post: LifeEducationPost = {
         manipulate.
       </p>
 
-      <h2>The floor: what they need to show</h2>
+      <h2>Skills worth demonstrating</h2>
 
       <p>
         The floor is not coding. It is not building apps. It is not being
@@ -183,7 +154,7 @@ const post: LifeEducationPost = {
         That&apos;s the floor. Not coding. Command instead of dependence.
       </p>
 
-      <h2>AI is a tool, not a brain to borrow</h2>
+      <h2>Use AI without handing over your judgment</h2>
 
       <p>
         This is the fastest-moving part of the domain, which is exactly why the
@@ -247,7 +218,7 @@ const post: LifeEducationPost = {
         alt="A young adult uses AI to understand a lease while writing their own questions in a black-and-white LifeEducation sketch with restrained green highlights."
       />
 
-      <h2>The internet is not a library</h2>
+      <h2>Search results are not evidence by themselves</h2>
 
       <p>
         A young adult needs to understand what kind of place the internet
@@ -287,7 +258,7 @@ const post: LifeEducationPost = {
         perfectly designed to confirm what they already think.
       </p>
 
-      <h2>Attention is the thing being stolen</h2>
+      <h2>Who controls your attention?</h2>
 
       <p>
         The most important fight in this domain is not about information. It is
@@ -333,7 +304,7 @@ const post: LifeEducationPost = {
         alt="A young adult stands at a crossroads between a dark notification-filled path and a calmer path toward purposeful technology use in a black-and-white LifeEducation sketch with restrained green highlights."
       />
 
-      <h2>Your online trail follows you</h2>
+      <h2>What your digital trail reveals</h2>
 
       <p>
         There is a second self a young adult is building, often without meaning
@@ -370,7 +341,7 @@ const post: LifeEducationPost = {
         person instead of a scared one.
       </p>
 
-      <h2>What this is not</h2>
+      <h2>What digital literacy isn't</h2>
 
       <p>
         This is not about turning every kid into a programmer. It is not
@@ -400,7 +371,7 @@ const post: LifeEducationPost = {
         let them use you.
       </p>
 
-      <h2>How families build it</h2>
+      <h2>Practice with real tools and real risks</h2>
 
       <p>
         Families don&apos;t need to become IT departments. They need to stop
@@ -461,7 +432,7 @@ const post: LifeEducationPost = {
         who manages the technology.
       </p>
 
-      <h2>The real test</h2>
+      <h2>Can you use the tool without letting it use you?</h2>
 
       <p>
         The real test of Domain 9 is not whether a young adult can use a phone.
@@ -491,6 +462,10 @@ const post: LifeEducationPost = {
         That&apos;s the point of Domain 9. Not being good with phones. Not
         coding. Not screen-time panic. Technology, media, and AI as tools they
         command &mdash; not masters they serve.
+      </p>
+
+      <p>
+        Where do you see young people confusing familiarity with an app and real digital competence? <a href="/contact">Tell me what you've seen</a>. Examples that challenge this argument are welcome.
       </p>
     </>
   ),

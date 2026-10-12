@@ -8,43 +8,20 @@ const post: LifeEducationPost = {
   ...metadata,
   body: (
     <>
+
       <p>
-        School math has its place. Kids should learn arithmetic, fractions,
-        decimals, percentages, algebra, geometry, and enough statistics to not
-        be helpless when the world starts throwing charts at them. I&apos;m not
-        interested in the lazy version of this argument where people say,
-        &quot;When am I ever going to use this?&quot; and then pretend math
-        doesn&apos;t matter.
+        A monthly payment can sound affordable until you calculate what you'll pay over the life of the loan. A discount can look impressive until you compare the original prices. A chart can be technically accurate and still leave out the information you need.
       </p>
 
       <p>
-        Math matters. But passing math class isn&apos;t the same thing as
-        knowing how numbers work in real life.
+        That's why I want young people to pause when a number is presented as an answer. What is being measured? Compared with what? Over how much time? What does the calculation leave out?
       </p>
 
       <p>
-        A kid can get decent grades in math and still have no feel for money.
-        They can solve for x and still get destroyed by a credit card. They can
-        graph a line and still believe a nonsense chart because it looks
-        official. They can calculate a percentage on a worksheet and still not
-        understand what twenty-four percent interest does when it gets attached
-        to debt.
+        This isn't an excuse to dismiss school math. The LifeEducation minimum includes actual Algebra I and Geometry competence, alongside arithmetic, estimation, probability, and interpreting data. The point is to use that knowledge when a decision doesn't arrive neatly labeled as a math problem.
       </p>
 
-      <p>
-        That gap matters because numbers are one of the main ways the adult
-        world pushes people around. Sometimes numbers clarify things. Sometimes
-        they&apos;re there to confuse you. Sometimes they&apos;re used to make
-        something sound smarter, safer, cheaper, more urgent, more scientific,
-        or more inevitable than it really is.
-      </p>
-
-      <p>
-        A capable young adult needs more than math credits. They need practical
-        numeracy. They need enough number sense to stay awake.
-      </p>
-
-      <h2>What real life will ask them</h2>
+      <h2>Where numbers meet real decisions</h2>
 
       <p>
         Real life will ask whether they can stand in front of a price, a rate, a
@@ -58,7 +35,7 @@ const post: LifeEducationPost = {
         changes the whole deal: compared to what?
       </p>
 
-      <h2>The floor: what they need to show</h2>
+      <h2>Math that should survive a classroom</h2>
 
       <p>
         By 18, a young adult should be able to handle ordinary numbers without
@@ -68,8 +45,7 @@ const post: LifeEducationPost = {
       <p>
         They should be able to read a bill and understand what they&apos;re
         being charged for. They should be able to compare two prices that are
-        packaged differently. They should understand interest well enough to be
-        afraid of bad debt. They should know that gross pay and take-home pay
+        packaged differently. They should understand how interest accumulates, compare borrowing costs, and recognize when debt creates serious risk. They should know that gross pay and take-home pay
         aren&apos;t the same thing. They should be able to estimate a total
         before the app tells them. They should be able to look at a lease, a
         phone plan, a subscription, a loan offer, or a &quot;free trial&quot;
@@ -340,7 +316,7 @@ const post: LifeEducationPost = {
         alt="Two younger children at an outdoor market stall count coins and compare handwritten produce prices while working through simple real-world math."
       />
 
-      <h2>What this is not</h2>
+      <h2>What knowing math looks like</h2>
 
       <p>
         This is not an argument against math class, algebra, geometry,
@@ -356,7 +332,7 @@ const post: LifeEducationPost = {
         comparison well enough not to be fooled by the adult world&apos;s math.
       </p>
 
-      <h2>How families build it</h2>
+      <h2>Everyday opportunities to use numbers</h2>
 
       <p>
         Families don&apos;t need a formal program for this. They need to stop
@@ -388,7 +364,7 @@ const post: LifeEducationPost = {
         They&apos;re tools. And tools can be used well or badly.
       </p>
 
-      <h2>The real test</h2>
+      <h2>Pause before you believe the number</h2>
 
       <p>
         The real test of Domain 2 isn&apos;t whether a young adult remembers
@@ -411,6 +387,10 @@ const post: LifeEducationPost = {
       <p>
         That&apos;s practical numeracy. It&apos;s not just passing math class.
         It&apos;s part of not getting played.
+      </p>
+
+      <p>
+        Which everyday number do you wish you had learned to question sooner? <a href="/contact">Send your experience or objection</a>. The examples that challenge this argument are often the most useful.
       </p>
     </>
   ),

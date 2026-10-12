@@ -3,10 +3,10 @@ import heroImage from "./images/health-physical-development-hero.webp";
 
 export const metadata = {
   slug: "domain-7-health-physical-development",
-  title: "Domain 7: Health & Physical Development Is More Than Gym Class",
-  excerpt:
-    "Health & Physical Development is not gym class, wellness content, or body shame. It is the ability to care for your body, use it well, notice when something is wrong, and get help when it's needed.",
+  title: "Taking Care of the Body You Live In",
+  excerpt: "Health literacy for teens includes food, movement, sleep, stress, medical communication, first aid, and managing your own health responsibly.",
   publishedAt: "2026-05-29",
+  modifiedAt: "2026-10-12",
   displayDate: "May 29, 2026",
   status: "Recent",
   topic: "Domains",

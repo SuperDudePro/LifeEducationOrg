@@ -9,32 +9,20 @@ const post: LifeEducationPost = {
   ...metadata,
   body: (
     <>
+
       <p>
-        &quot;Philosophy&quot; makes most people think of school. Dead Greeks. Abstract
-        questions. Quotes on posters. Somebody in a coffee shop asking whether
-        the chair is real.
+        Loyalty matters. So does telling the truth. Sometimes they point in opposite directions. A rule can be clear and still lead to a cruel result. A popular position can feel right while resting on a bad argument.
       </p>
 
       <p>
-        Most people hear &quot;ethics&quot; and think about character education. Be nice.
-        Don&apos;t lie. Don&apos;t steal. Pick the right answer on the
-        worksheet.
+        I don't want young people to treat ethical questions as worksheets with the correct answer hidden somewhere. I want them to recognize conflicting obligations, explain the case against their own view fairly, and make a choice they can defend without pretending it was easy.
       </p>
 
       <p>
-        That version has its place. A young adult should know that people have
-        argued about right and wrong for a long time. They should know that
-        values matter, that actions have consequences, and that &quot;everybody does
-        it&quot; does not make something right.
+        Philosophy offers tools for examining reasons, assumptions, values, and the lives people choose to lead. Reading thinkers from different traditions can deepen that work. But the point isn't to collect famous names; it's to get better at judgment when there is no answer key.
       </p>
 
-      <p>
-        But Domain 5 isn&apos;t really about old books or character posters.
-        It&apos;s about learning how to think when the answer isn&apos;t
-        obvious.
-      </p>
-
-      <h2>What real life will ask them</h2>
+      <h2>When principles collide</h2>
 
       <p>
         Real life will ask whether they can tell the truth when it costs them,
@@ -105,7 +93,7 @@ const post: LifeEducationPost = {
         written for the situation you are standing in.
       </p>
 
-      <h2>The floor: what they need to show</h2>
+      <h2>What a young adult needs to reason through</h2>
 
       <p>
         The floor is not &quot;quote Plato.&quot; It is not &quot;win debates.&quot; It is not
@@ -302,7 +290,7 @@ const post: LifeEducationPost = {
         worth living together.
       </p>
 
-      <h2>What this is not</h2>
+      <h2>Questions worth confronting</h2>
 
       <p>
         This is not about turning kids into miniature philosophers. It is not
@@ -347,7 +335,7 @@ const post: LifeEducationPost = {
         on has probably been worked before by people who were not stupid.
       </p>
 
-      <h2>How families build it</h2>
+      <h2>Practice disagreement without caricature</h2>
 
       <p>
         Families don&apos;t need to run a philosophy seminar at the dinner
@@ -388,7 +376,7 @@ const post: LifeEducationPost = {
         builds Domain 5 slowly, over years, without it ever looking like school.
       </p>
 
-      <h2>The real test</h2>
+      <h2>The judgment you can defend</h2>
 
       <p>
         The real test of Domain 5 isn&apos;t whether a young adult can name
@@ -413,6 +401,10 @@ const post: LifeEducationPost = {
       <p>
         That&apos;s the point of Domain 5. Not philosophy as old books. Not
         ethics as rules. Philosophy and ethics as examined adulthood.
+      </p>
+
+      <p>
+        What was a hard decision where following a rule did not settle the question? <a href="/contact">Send your experience or objection</a>. The examples that challenge this argument are often the most useful.
       </p>
     </>
   ),

@@ -7,31 +7,20 @@ const post: LifeEducationPost = {
   ...metadata,
   body: (
     <>
+
       <p>
-        Say &quot;science&quot; and most people picture a classroom. Textbooks,
-        vocabulary, lab reports, safety goggles, maybe a baking soda volcano if
-        the teacher is feeling ambitious.
+        A plant is dying. Someone says it needs more water. Someone else says it's getting too much. Both explanations sound reasonable, and neither becomes true because the person saying it sounds confident.
       </p>
 
       <p>
-        That version has its place. Kids should understand biology, chemistry,
-        physics, weather, bodies, ecosystems, and the physical world they live
-        in. But Domain 3 isn&apos;t really about passing science class.
+        That small problem captures something I want from scientific thinking: observe first, separate the evidence from the explanation, try something that could distinguish between competing accounts, and change your mind when the results point elsewhere.
       </p>
 
       <p>
-        It&apos;s about learning how to deal with reality.
+        Science education matters because young people need to know how the physical world works. Scientific thinking matters because they will face claims about health, products, weather, technology, and public decisions long after their last school lab. They need the habit of asking how we know.
       </p>
 
-      <p>
-        A capable young adult needs to observe what is happening, ask better
-        questions, test claims, understand evidence, and change their mind when
-        the evidence gets better. Not because every kid needs to become a
-        scientist, but because every kid is going to live in a world full of
-        confident people saying things that may or may not be true.
-      </p>
-
-      <h2>What real life will ask them</h2>
+      <h2>Where observation matters</h2>
 
       <p>
         Real life will not hand them a clean experiment with labeled materials
@@ -76,7 +65,7 @@ const post: LifeEducationPost = {
         alt="A grayscale collage with green accents showing a teenager observing plants, checking information, writing notes, testing jars, and watching weather as evidence for real-world scientific thinking."
       />
 
-      <h2>The floor: what they need to show</h2>
+      <h2>What the evidence should show</h2>
 
       <p>
         The floor is not &quot;complete a biology course.&quot; It is not &quot;memorize the
@@ -239,7 +228,7 @@ const post: LifeEducationPost = {
 
       <p>That&apos;s the point.</p>
 
-      <h2>What this is not</h2>
+      <h2>Skepticism without cynicism</h2>
 
       <p>
         This is not about turning every kid into a scientist, a lab-report
@@ -254,7 +243,7 @@ const post: LifeEducationPost = {
         back.
       </p>
 
-      <h2>How families build it</h2>
+      <h2>Make curiosity a habit</h2>
 
       <p>
         Families don&apos;t need to turn the house into a lab. They need to treat
@@ -280,7 +269,7 @@ const post: LifeEducationPost = {
 
       <p>That difference matters more than the lab report.</p>
 
-      <h2>The real test</h2>
+      <h2>The question is what would change your mind</h2>
 
       <p>
         The real test of Domain 3 isn&apos;t whether a young adult remembers every
@@ -298,6 +287,10 @@ const post: LifeEducationPost = {
       <p>
         That is Scientific Thinking &amp; Observation. Not just science class.
         Part of not getting fooled. Part of not fooling yourself.
+      </p>
+
+      <p>
+        What helped you or your child learn to test an explanation rather than simply believe it? <a href="/contact">Send your experience or objection</a>. The examples that challenge this argument are often the most useful.
       </p>
     </>
   ),

@@ -9,52 +9,19 @@ const post: LifeEducationPost = {
   ...metadata,
   body: (
     <>
-      <p>
-        Say &quot;health&quot; and most people picture one of two things: gym class or a
-        doctor&apos;s office.
-      </p>
 
-      <p>
-        Gym class turns the body into laps, uniforms, attendance, dodgeball
-        memories, fitness tests, and the kid hoping not to be embarrassed in
-        front of everyone. The doctor&apos;s office turns the body into
-        something handled by professionals. You wait until something is wrong,
-        describe it badly, get instructions, forget half of them, and hope the
-        grown-ups know what to do.
-      </p>
+      <p>At some point a young person has to become the person who notices something is wrong, describes the symptoms, asks useful questions, and follows through. They also have to live in their body every day between medical appointments.</p>
 
-      <p>
-        Then the internet gets involved and turns health into performance. Diet
-        wars. Workout influencers. Supplements. Body panic. Perfect routines
-        from people whose job is to perform perfect routines.
-      </p>
+      <p>That means understanding food, movement, sleep, recovery, stress, injury, and the risks attached to substances and sexual decisions. It means knowing when to ask for help and being able to describe what is happening without shame or performance.</p>
 
-      <p>None of that is the point.</p>
-
-      <p>
-        Health &amp; Physical Development isn&apos;t about looking impressive,
-        worshiping fitness, or becoming the family nutrition officer. It&apos;s
-        about living in a body without being helpless, ashamed, reckless, or
-        passive.
-      </p>
-
-      <p>
-        A young adult who can&apos;t take care of their body is not fully free.
-        Their energy gets managed by accident. Their movement shrinks. Their
-        health becomes somebody else&apos;s job until suddenly it can&apos;t be.
-      </p>
-
-      <p>
-        That&apos;s too fragile. Domain 7 exists because adulthood happens
-        inside a body.
-      </p>
+      <p>Health education shouldn't be a competition over appearance or a collection of scary slogans. Its purpose is increasing responsibility for the body a person will depend on for the rest of their life. Physical capability matters, but so do judgment, informed decisions, and the willingness to seek care.</p>
 
       <PostFigure
         src={heroImage}
         alt="A capable young adult walks forward through a sketched landscape with green-highlighted cues for hydration, food, first aid, and calm breathing."
       />
 
-      <h2>What real life will ask them</h2>
+      <h2>When you have to manage your own health</h2>
 
       <p>
         By 18, the floor is supposed to be built. Real life will ask whether
@@ -103,7 +70,7 @@ const post: LifeEducationPost = {
         The body is one system. This domain has to treat it that way.
       </p>
 
-      <h2>The floor: what they need to show</h2>
+      <h2>What you should be able to manage</h2>
 
       <p>
         The floor is not elite athletics. It is not a six-pack. It is not a diet
@@ -318,7 +285,7 @@ const post: LifeEducationPost = {
         No shame fog. No macho fog. No purity fog. Reality.
       </p>
 
-      <h2>What this is not</h2>
+      <h2>What health capability is not</h2>
 
       <p>
         This is not about building little athletes. It is not about body shame,
@@ -338,7 +305,7 @@ const post: LifeEducationPost = {
         work.
       </p>
 
-      <h2>How families build it</h2>
+      <h2>Practice responsible self-care</h2>
 
       <p>
         Families don&apos;t need to turn the house into a wellness program.
@@ -401,7 +368,7 @@ const post: LifeEducationPost = {
         alt="A central young adult is surrounded by sketch vignettes of hiking, swimming, first aid, doctor communication, stress regulation, and body ownership."
       />
 
-      <h2>The real test</h2>
+      <h2>Can you take care of yourself?</h2>
 
       <p>
         The real test of Domain 7 isn&apos;t whether a young adult passed health
@@ -433,6 +400,10 @@ const post: LifeEducationPost = {
         That&apos;s the point of Domain 7. Not gym class. Not wellness
         performance. Not body shame. Health and physical development as adult
         capability.
+      </p>
+
+      <p>
+        What health responsibility was hardest to learn without someone managing it for you? <a href="/contact">Send your experience or objection</a>. The examples that challenge this argument are often the most useful.
       </p>
     </>
   ),

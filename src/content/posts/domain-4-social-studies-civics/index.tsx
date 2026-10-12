@@ -7,33 +7,20 @@ const post: LifeEducationPost = {
   ...metadata,
   body: (
     <>
+
       <p>
-        &quot;Social studies&quot; still sounds like a class period. Dates. Maps.
-        Presidents. Wars. Capitals. A worksheet on the three branches of
-        government.
+        Knowing the three branches of government is useful. Knowing which office can actually solve your problem may be more urgent. If a rule is enforced against you, where did it come from? Who can interpret it? Who can change it? What can you do if an institution gets something wrong?
       </p>
 
       <p>
-        That version has its place. A young adult should know where they are in
-        history, how their government works, enough geography to not be
-        ridiculous, and the basic story of the country they live in.
+        That's civics as a life skill. History helps explain how those institutions and power relationships developed. Geography and cultural knowledge help us understand that the system we grew up with isn't the only one. News literacy helps us judge competing accounts of what institutions are doing now.
       </p>
 
       <p>
-        But Domain 4 isn&apos;t really about that. It&apos;s about staying upright inside
-        systems built by other people.
+        I want a young adult who can enter an unfamiliar city or country, learn how its institutions work, and ask informed questions rather than simply accepting whatever the first official-looking person says.
       </p>
 
-      <p>
-        A capable young adult is going to deal with police, courts, elections,
-        employers, landlords, borders, banks, agencies, and platforms that don&apos;t
-        always have their best interest in mind. Not because every kid needs to
-        become a lawyer, a politician, or an activist, but because every kid is
-        going to live inside systems that can either work for them or roll right
-        over them.
-      </p>
-
-      <h2>What real life will ask them</h2>
+      <h2>The systems you actually encounter</h2>
 
       <p>
         Real life will ask whether they can figure out which office has power,
@@ -76,7 +63,7 @@ const post: LifeEducationPost = {
         how to act when the diagram doesn&apos;t match the room you&apos;re standing in.
       </p>
 
-      <h2>The floor: what they need to show</h2>
+      <h2>What a young adult needs to navigate</h2>
 
       <p>
         The floor is not &quot;memorize the presidents.&quot; It is not &quot;name every
@@ -355,7 +342,7 @@ const post: LifeEducationPost = {
         A kid who knows that is harder to use.
       </p>
 
-      <h2>What this is not</h2>
+      <h2>What civics is not</h2>
 
       <p>
         This is not legal advice, political training, patriotic programming, or
@@ -370,7 +357,7 @@ const post: LifeEducationPost = {
         the whole world.
       </p>
 
-      <h2>How families build it</h2>
+      <h2>Learn to navigate actual institutions</h2>
 
       <p>
         Families don&apos;t need to recreate a school civics curriculum at home. They
@@ -401,7 +388,7 @@ const post: LifeEducationPost = {
         That&apos;s Social Studies &amp; Civics. Not the worksheet. The real thing.
       </p>
 
-      <h2>The real test</h2>
+      <h2>Can you find who has the authority?</h2>
 
       <p>
         The real test of Domain 4 isn&apos;t whether a young adult remembers enough
@@ -425,6 +412,10 @@ const post: LifeEducationPost = {
       <p>
         That&apos;s the point of Domain 4. Not social studies as school subject.
         Social studies as civic adulthood.
+      </p>
+
+      <p>
+        Which institution was hardest for you to figure out the first time? <a href="/contact">Send your experience or objection</a>. The examples that challenge this argument are often the most useful.
       </p>
     </>
   ),

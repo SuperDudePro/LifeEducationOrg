@@ -3,10 +3,10 @@ import practicalNumeracyHero from "./images/practical-numeracy-hero.webp";
 
 export const metadata = {
   slug: "domain-2-practical-numeracy",
-  title: "Domain 2: Practical Numeracy Is More Than Passing Math Class",
-  excerpt:
-    "Practical numeracy is not just passing math class. It is the number sense a young adult needs to understand money, risk, scale, prices, charts, claims, and the small traps built into ordinary life.",
+  title: "Don't Trust the Number Yet",
+  excerpt: "Practical math skills for real life include estimation, algebra, geometry, interpreting statistics, and asking better questions about prices, risk, and misleading numbers.",
   publishedAt: "2026-05-03",
+  modifiedAt: "2026-10-12",
   status: "Recent",
   topic: "Domains",
   tags: ["LifeEducation", "Domains", "Practical Numeracy", "The Floor", "Adult Capability"],

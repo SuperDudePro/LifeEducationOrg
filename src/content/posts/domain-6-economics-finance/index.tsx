@@ -9,41 +9,16 @@ const post: LifeEducationPost = {
   ...metadata,
   body: (
     <>
-      <p>
-        School teaches &quot;economics and finance&quot; two ways, and both of
-        them are wrong.
-      </p>
 
-      <p>
-        The first is a checklist. Balance a checkbook. Name the parts of a
-        paycheck. Identify a 401(k). Fill in the worksheet and turn it in. The
-        form of money taught as if knowing the names is the same as being able
-        to use them.
-      </p>
+      <p>The most expensive financial decisions often come dressed up as manageable monthly payments. A lease, a phone plan, a car loan, a credit card, or a job offer can look simple until you read what happens after you agree.</p>
 
-      <p>
-        The second is a debate club. Capitalism versus socialism. Inflation,
-        supply, demand. Pick a team and learn to argue. Economics as ideology,
-        judged on whether the student can repeat the framing the teacher
-        prefers.
-      </p>
+      <p>Young people need more than the vocabulary of economics and personal finance. They need to work through numbers, read documents carefully, recognize incentives, and ask who benefits from the terms on offer. Sometimes the right choice is to sign. Sometimes it's to walk away. Either way, they should understand the trade.</p>
 
-      <p>
-        A young adult who can&apos;t handle their own money is easier to trap in
-        a job they hate, easier to push into debt that follows them for years,
-        and easier to sell things they can&apos;t afford.
-      </p>
-
-      <p>
-        That&apos;s what this domain is about. Not worksheets. Not hot takes.
-        The ability to handle real money decisions without getting trapped by
-        debt, paperwork, sales pressure, or the institutions that make money on
-        you not knowing better.
-      </p>
+      <p>Money decisions also shape the options available later. Interest, taxes, wages, risk, and opportunity cost aren't abstractions when they affect where you can live, which work you can turn down, and how quickly one bad decision can become a long obligation.</p>
 
       <PostFigure src={heroMoneyDecisions} alt="A young adult works through a simple budget, lease, and balance screen in a mostly black-and-white sketch with restrained green highlights." />
 
-      <h2>What real life will ask them</h2>
+      <h2>Where financial decisions get made</h2>
 
       <p>
         By 18, the floor is supposed to be built. Real life will ask whether
@@ -127,7 +102,7 @@ const post: LifeEducationPost = {
         help on the rest is hard to fool.
       </p>
 
-      <h2>The floor: what they need to show</h2>
+      <h2>Money skills worth demonstrating</h2>
 
       <p>
         The floor isn&apos;t being rich. The floor isn&apos;t picking the right
@@ -236,7 +211,7 @@ const post: LifeEducationPost = {
         being a target.
       </p>
 
-      <h2>What this is not</h2>
+      <h2>What financial competence is not</h2>
 
       <p>
         This isn&apos;t a lesson about getting rich. The floor doesn&apos;t
@@ -290,7 +265,7 @@ const post: LifeEducationPost = {
         Freedom of movement.
       </p>
 
-      <h2>How families build it</h2>
+      <h2>Let young people see real decisions</h2>
 
       <p>
         Most of this domain gets built in the regular flow of family life, not
@@ -350,7 +325,7 @@ const post: LifeEducationPost = {
 
       <PostFigure src={moneyQuestionsMentoring} alt="An older adult and a young adult study a financial statement together, with a green highlight on the question that matters most over time." />
 
-      <h2>The real test</h2>
+      <h2>Read before you agree</h2>
 
       <p>
         Can they look at a paycheck and tell you what got taken out and why? Can
@@ -371,6 +346,10 @@ const post: LifeEducationPost = {
         Not balanced checkbooks. Not memorized terms. Not picking the right
         stock. Economics and finance as the ability to handle their own money
         without getting steamrolled.
+      </p>
+
+      <p>
+        Which money decision do you wish someone had helped you understand before you signed? <a href="/contact">Send your experience or objection</a>. The examples that challenge this argument are often the most useful.
       </p>
     </>
   ),
