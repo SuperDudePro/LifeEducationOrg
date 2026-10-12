@@ -20,7 +20,7 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        It&apos;s about learning how to deal with reality.
+        It&apos;s about observing carefully, testing explanations, and staying open to better evidence.
       </p>
 
       <p>
