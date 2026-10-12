@@ -9,36 +9,12 @@ const post: LifeEducationPost = {
   ...metadata,
   body: (
     <>
-      <p>
-        Most people treat creativity like eye color. You either got it or you
-        didn&apos;t.
-      </p>
 
-      <p>
-        The kid who could draw was &quot;the artist.&quot; Everyone else learned
-        early that they weren&apos;t creative, filed it under things other
-        people can do, and moved on.
-      </p>
+      <p>A child draws something, decides it isn't any good, and stops. Another keeps changing the drawing until it says what they wanted to say. The difference isn't always talent. Often it's whether someone has learned that an imperfect first attempt is part of making anything.</p>
 
-      <p>That&apos;s the lie this whole domain exists to kill.</p>
+      <p>Creativity includes music, writing, visual art, design, building, performance, and the ordinary work of finding a new way through a problem. It takes ideas, but it also takes tools, practice, criticism, revision, and finishing. None of those requires a child to have been labeled gifted.</p>
 
-      <p>
-        Because creativity isn&apos;t a personality type or a gift handed out at
-        birth to a lucky few. It&apos;s a skill, and skills grow with practice.
-        A young adult who believes they &quot;aren&apos;t creative&quot; has
-        been talked out of a tool they will need for the rest of their life.
-      </p>
-
-      <p>
-        Creative Expression isn&apos;t about becoming an artist. It&apos;s about
-        being able to make something that didn&apos;t exist before, finish it,
-        and use that ability when life hands you a problem with no template.
-      </p>
-
-      <p>
-        Domain 8 exists because adulthood keeps asking people to create, and the
-        ones who think they can&apos;t are stuck.
-      </p>
+      <p>I want young people to have creative outlets they care about, to develop judgment about their work, and to know what it feels like to carry an idea past the exciting beginning and into an actual finished thing.</p>
 
       <PostFigure src={creativeExpressionHero} alt="A young person works at a dark creative desk with sketches, models, draft pages, and restrained green accents." />
 
