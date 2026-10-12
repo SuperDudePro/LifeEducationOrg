@@ -4,11 +4,10 @@ import heroImage from "./images/hero-image.webp";
 
 export const metadata = {
   slug: "domain-10-life-skills-project-execution",
-  title: "Domain 10: Life Skills & Project Execution Is More Than Chores and a Planner",
-  excerpt:
-    "Life Skills & Project Execution is not a chore chart or a color-coded planner. It is whether a young adult can actually run their own life, finish what they start, and get things done in systems that were not built to help them.",
+  title: "Can You Run Your Own Life?",
+  excerpt: "Independent living skills for teens include managing obligations, working through setbacks, dealing with institutions, and finishing real projects without constant supervision.",
   publishedAt: "2026-05-30",
-  modifiedAt: "2026-07-29",
+  modifiedAt: "2026-10-12",
   displayDate: "May 30, 2026",
   status: "Recent",
   topic: "Domains",
