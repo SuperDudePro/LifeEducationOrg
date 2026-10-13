@@ -62,7 +62,7 @@ const post: LifeEducationPost = {
 
       <p>That is not genius-level math. That is the minimum.</p>
 
-      <h2>Math class is too clean</h2>
+      <h2>School problems and real decisions</h2>
 
       <p>
         Most school math problems arrive already cleaned up. Here are the

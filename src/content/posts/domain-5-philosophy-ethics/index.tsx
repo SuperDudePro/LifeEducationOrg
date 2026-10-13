@@ -176,8 +176,8 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        A young adult who can&apos;t argue fairly will become a bully, a coward,
-        or a puppet. Maybe all three, depending on the room.
+        A young adult who can&apos;t represent another person&apos;s argument
+        fairly is easier to mislead and less equipped to disagree productively.
       </p>
 
       <h2>Feelings are real. They are not verdicts.</h2>

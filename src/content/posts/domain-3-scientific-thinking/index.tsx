@@ -159,7 +159,8 @@ const post: LifeEducationPost = {
       <p>
         The better target is disciplined skepticism: show me how you know. What
         kind of evidence is that? Who benefits if I believe this? What would
-        change my mind?
+        change my mind? Real decisions still have to be made when the evidence
+        is incomplete.
       </p>
 
       <p>That last question matters most.</p>
@@ -227,21 +228,6 @@ const post: LifeEducationPost = {
       </p>
 
       <p>That&apos;s the point.</p>
-
-      <h2>Skepticism without cynicism</h2>
-
-      <p>
-        This is not about turning every kid into a scientist, a lab-report
-        machine, or someone who refuses to act until the evidence is perfect.
-        Real life still requires decisions with incomplete information.
-      </p>
-
-      <p>
-        It is also not about sneering at everything as fake. The target is not
-        cynicism. The target is honest contact with evidence: enough skepticism
-        to avoid being fooled, and enough humility to update when reality pushes
-        back.
-      </p>
 
       <h2>Make curiosity a habit</h2>
 
