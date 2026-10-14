@@ -1,8 +1,9 @@
 import type { LifeEducationPost } from "../../postTypes";
 import { PostFigure } from "../../../components/PostFigure";
-import technologyMediaAiHero from "./images/domain-9-technology-media-ai-hero.webp";
-import aiToolNotBrain from "./images/domain-9-ai-tool-not-brain.webp";
-import attentionChoice from "./images/domain-9-attention-choice.webp";
+import bodyImage1 from "./images/body-image-1.webp";
+import bodyImage2 from "./images/body-image-2.webp";
+import bodyImage3 from "./images/body-image-3.webp";
+import bodyImage4 from "./images/body-image-4.webp";
 import { metadata } from "./meta";
 
 const post: LifeEducationPost = {
@@ -15,11 +16,6 @@ const post: LifeEducationPost = {
       <p>Digital literacy has several jobs. We need young people who can use technology to make and solve things, identify manipulation and misinformation, protect themselves and others, and understand when convenience comes with a cost in privacy or attention.</p>
 
       <p>AI makes the distinction especially important. A useful tool can help someone ask better questions, practice, compare possibilities, and complete real work. It can also produce confident errors or substitute for thinking that the learner still needs to do. Knowing when to trust, check, reject, or simply stop using the tool is part of being competent.</p>
-
-      <PostFigure
-        src={technologyMediaAiHero}
-        alt="A young adult uses a laptop, notebook, muted phone, and digital checklist in a black-and-white LifeEducation sketch with restrained green highlights."
-      />
 
       <h2>What digital competence means in practice</h2>
 
@@ -214,7 +210,7 @@ const post: LifeEducationPost = {
       </p>
 
       <PostFigure
-        src={aiToolNotBrain}
+        src={bodyImage1}
         alt="A young adult uses AI to understand a lease while writing their own questions in a black-and-white LifeEducation sketch with restrained green highlights."
       />
 
@@ -258,6 +254,11 @@ const post: LifeEducationPost = {
         perfectly designed to confirm what they already think.
       </p>
 
+      <PostFigure
+        src={bodyImage2}
+        alt="A young adult checks an alarming earthquake claim against the USGS earthquake activity map, making notes about the source and evidence."
+      />
+
       <h2>Who controls your attention?</h2>
 
       <p>
@@ -300,7 +301,7 @@ const post: LifeEducationPost = {
       </p>
 
       <PostFigure
-        src={attentionChoice}
+        src={bodyImage3}
         alt="A young adult stands at a crossroads between a dark notification-filled path and a calmer path toward purposeful technology use in a black-and-white LifeEducation sketch with restrained green highlights."
       />
 
@@ -340,6 +341,11 @@ const post: LifeEducationPost = {
         is permanent and public, act accordingly, and still show up as a real
         person instead of a scared one.
       </p>
+
+      <PostFigure
+        src={bodyImage4}
+        alt="A thoughtful young adult considers a lasting digital footprint of posts, tagged photos, comments, and search results visible to others."
+      />
 
       <h2>What digital literacy isn't</h2>
 
@@ -453,8 +459,8 @@ const post: LifeEducationPost = {
       </p>
 
       <p>
-        And underneath all of it, one question: when they pick up the most
-        powerful tools ever built, are they the one in charge &mdash; or is something
+        And underneath all of it, one question: when they pick up tools that increasingly shape how people learn,
+        communicate, and work, are they the one in charge &mdash; or is something
         on the other side of the glass quietly running them?
       </p>
 
