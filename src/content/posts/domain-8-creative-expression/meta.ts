@@ -1,5 +1,6 @@
 import type { LifeEducationPostMeta } from "../../postTypes";
-import creativeExpressionHero from "./images/creative-expression-hero.webp";
+import cardImage from "./images/card-image.webp";
+import heroImage from "./images/hero-image.webp";
 
 export const metadata = {
   slug: "domain-8-creative-expression",
@@ -11,10 +12,10 @@ export const metadata = {
   status: "Recent",
   topic: "Domains",
   tags: ["LifeEducation", "Domains", "Creative Expression", "Creativity", "Capability"],
-  heroImage: creativeExpressionHero,
+  heroImage,
   heroAlt:
-    "A young person works at a dark creative desk with sketches, models, draft pages, and restrained green accents.",
-  cardImage: creativeExpressionHero,
+    "A young person develops creative ideas at a worktable covered with sketches, models, and draft pages.",
+  cardImage,
   cardAlt:
-    "A young person practices creative work at a dark desk with sketches, models, and restrained green accents.",
+    "A young creator reflects beside sketches, notebooks, and a small sculpture in a quiet studio.",
 } satisfies LifeEducationPostMeta;
