@@ -1,5 +1,6 @@
 import type { LifeEducationPostMeta } from "../../postTypes";
-import heroImage from "./images/health-physical-development-hero.webp";
+import cardImage from "./images/card-image.webp";
+import heroImage from "./images/hero-image.webp";
 
 export const metadata = {
   slug: "domain-7-health-physical-development",
@@ -13,8 +14,8 @@ export const metadata = {
   tags: ["LifeEducation", "Domains", "Health", "Fitness", "Body"],
   heroImage,
   heroAlt:
-    "A capable young adult walks forward through a sketched landscape with green-highlighted cues for hydration, food, first aid, and calm breathing.",
-  cardImage: heroImage,
+    "A capable young adult walking forward, with illustrations of hydration, food, first aid, and mindful breathing.",
+  cardImage,
   cardAlt:
-    "A young adult walks confidently through a mostly black-and-white LifeEducation sketch with restrained green health and movement highlights.",
+    "A young adult reviews a realistic plan for sleep, meals, hydration, and movement at a kitchen table.",
 } satisfies LifeEducationPostMeta;
