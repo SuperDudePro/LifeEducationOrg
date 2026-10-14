@@ -1,5 +1,6 @@
 import type { LifeEducationPostMeta } from "../../postTypes";
-import heroCrossroads from "./images/hero-crossroads.webp";
+import cardImage from "./images/card-image.webp";
+import heroImage from "./images/hero-image.webp";
 
 export const metadata = {
   slug: "domain-5-philosophy-ethics",
@@ -10,9 +11,8 @@ export const metadata = {
   status: "Recent",
   topic: "Domains",
   tags: ["LifeEducation", "Domains", "Philosophy", "Ethics", "Judgment"],
-  heroImage: heroCrossroads,
-  heroAlt:
-    "A young person stands at a hard ethical crossroads between an easier crowded path and a harder green-lit path toward judgment and character.",
-  cardImage: heroCrossroads,
-  cardAlt: "A young person faces a split path between easier choices and a harder ethical road.",
+  heroImage,
+  heroAlt: "Four people consider competing views of renewable energy in a mountain community.",
+  cardImage,
+  cardAlt: "A teenager studies a four-step guide for comparing arguments, testing evidence, and reaching a reasoned view.",
 } satisfies LifeEducationPostMeta;

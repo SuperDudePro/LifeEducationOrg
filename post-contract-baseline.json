@@ -37,68 +37,6 @@
         "reason": "hero image must be named images/hero-image.webp."
       }
     ],
-    "domain-5-philosophy-ethics": [
-      {
-        "ruleId": "image.body.geometry",
-        "signature": "file=images/fair-argument.webp;actual=768x479;expected=1200x900",
-        "reason": "images/fair-argument.webp is 768x479; the body role requires 1200x900."
-      },
-      {
-        "ruleId": "image.body.geometry",
-        "signature": "file=images/feelings-vs-verdicts.webp;actual=768x479;expected=1200x900",
-        "reason": "images/feelings-vs-verdicts.webp is 768x479; the body role requires 1200x900."
-      },
-      {
-        "ruleId": "image.body.geometry",
-        "signature": "file=images/hero-crossroads.webp;actual=1536x535;expected=1200x900",
-        "reason": "images/hero-crossroads.webp is 1536x535; the body role requires 1200x900."
-      },
-      {
-        "ruleId": "image.body.minimum",
-        "signature": "count=3",
-        "reason": "Only 3 distinct body images; current minimum is 4."
-      },
-      {
-        "ruleId": "image.body.sequence",
-        "signature": "actual=images/hero-crossroads.webp,images/fair-argument.webp,images/feelings-vs-verdicts.webp;expected=images/body-image-1.webp,images/body-image-2.webp,images/body-image-3.webp",
-        "reason": "Body roles must use the exact sequential filenames images/body-image-1.webp, images/body-image-2.webp, images/body-image-3.webp."
-      },
-      {
-        "ruleId": "image.role.body-reuse",
-        "signature": "card=images/hero-crossroads.webp",
-        "reason": "card image is reused as a body image."
-      },
-      {
-        "ruleId": "image.role.body-reuse",
-        "signature": "hero=images/hero-crossroads.webp",
-        "reason": "hero image is reused as a body image."
-      },
-      {
-        "ruleId": "image.role.card.filename",
-        "signature": "actual=images/hero-crossroads.webp;expected=images/card-image.webp",
-        "reason": "card image must be named images/card-image.webp."
-      },
-      {
-        "ruleId": "image.role.card.geometry",
-        "signature": "file=images/hero-crossroads.webp;actual=1536x535;expected=960x720",
-        "reason": "images/hero-crossroads.webp is 1536x535; the card role requires 960x720."
-      },
-      {
-        "ruleId": "image.role.distinct",
-        "signature": "images/hero-crossroads.webp",
-        "reason": "Card and hero roles reuse the same image."
-      },
-      {
-        "ruleId": "image.role.hero.filename",
-        "signature": "actual=images/hero-crossroads.webp;expected=images/hero-image.webp",
-        "reason": "hero image must be named images/hero-image.webp."
-      },
-      {
-        "ruleId": "image.role.hero.geometry",
-        "signature": "file=images/hero-crossroads.webp;actual=1536x535;expected=1600x900",
-        "reason": "images/hero-crossroads.webp is 1536x535; the hero role requires 1600x900."
-      }
-    ],
     "domain-6-economics-finance": [
       {
         "ruleId": "image.body.geometry",
