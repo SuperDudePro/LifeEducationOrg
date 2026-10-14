@@ -37,68 +37,6 @@
         "reason": "hero image must be named images/hero-image.webp."
       }
     ],
-    "domain-8-creative-expression": [
-      {
-        "ruleId": "image.body.geometry",
-        "signature": "file=images/creative-expression-hero.webp;actual=1672x941;expected=1200x900",
-        "reason": "images/creative-expression-hero.webp is 1672x941; the body role requires 1200x900."
-      },
-      {
-        "ruleId": "image.body.geometry",
-        "signature": "file=images/creative-expression-outlet.webp;actual=1672x941;expected=1200x900",
-        "reason": "images/creative-expression-outlet.webp is 1672x941; the body role requires 1200x900."
-      },
-      {
-        "ruleId": "image.body.geometry",
-        "signature": "file=images/creative-expression-revision.webp;actual=1672x941;expected=1200x900",
-        "reason": "images/creative-expression-revision.webp is 1672x941; the body role requires 1200x900."
-      },
-      {
-        "ruleId": "image.body.minimum",
-        "signature": "count=3",
-        "reason": "Only 3 distinct body images; current minimum is 4."
-      },
-      {
-        "ruleId": "image.body.sequence",
-        "signature": "actual=images/creative-expression-hero.webp,images/creative-expression-revision.webp,images/creative-expression-outlet.webp;expected=images/body-image-1.webp,images/body-image-2.webp,images/body-image-3.webp",
-        "reason": "Body roles must use the exact sequential filenames images/body-image-1.webp, images/body-image-2.webp, images/body-image-3.webp."
-      },
-      {
-        "ruleId": "image.role.body-reuse",
-        "signature": "card=images/creative-expression-hero.webp",
-        "reason": "card image is reused as a body image."
-      },
-      {
-        "ruleId": "image.role.body-reuse",
-        "signature": "hero=images/creative-expression-hero.webp",
-        "reason": "hero image is reused as a body image."
-      },
-      {
-        "ruleId": "image.role.card.filename",
-        "signature": "actual=images/creative-expression-hero.webp;expected=images/card-image.webp",
-        "reason": "card image must be named images/card-image.webp."
-      },
-      {
-        "ruleId": "image.role.card.geometry",
-        "signature": "file=images/creative-expression-hero.webp;actual=1672x941;expected=960x720",
-        "reason": "images/creative-expression-hero.webp is 1672x941; the card role requires 960x720."
-      },
-      {
-        "ruleId": "image.role.distinct",
-        "signature": "images/creative-expression-hero.webp",
-        "reason": "Card and hero roles reuse the same image."
-      },
-      {
-        "ruleId": "image.role.hero.filename",
-        "signature": "actual=images/creative-expression-hero.webp;expected=images/hero-image.webp",
-        "reason": "hero image must be named images/hero-image.webp."
-      },
-      {
-        "ruleId": "image.role.hero.geometry",
-        "signature": "file=images/creative-expression-hero.webp;actual=1672x941;expected=1600x900",
-        "reason": "images/creative-expression-hero.webp is 1672x941; the hero role requires 1600x900."
-      }
-    ],
     "domain-9-technology-media-ai-literacy": [
       {
         "ruleId": "image.body.geometry",

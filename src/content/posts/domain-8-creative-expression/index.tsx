@@ -1,8 +1,9 @@
 import type { LifeEducationPost } from "../../postTypes";
 import { PostFigure } from "../../../components/PostFigure";
-import creativeExpressionHero from "./images/creative-expression-hero.webp";
-import creativeExpressionRevision from "./images/creative-expression-revision.webp";
-import creativeExpressionOutlet from "./images/creative-expression-outlet.webp";
+import bodyImage1 from "./images/body-image-1.webp";
+import bodyImage2 from "./images/body-image-2.webp";
+import bodyImage3 from "./images/body-image-3.webp";
+import bodyImage4 from "./images/body-image-4.webp";
 import { metadata } from "./meta";
 
 const post: LifeEducationPost = {
@@ -16,7 +17,8 @@ const post: LifeEducationPost = {
 
       <p>I want young people to have creative outlets they care about, to develop judgment about their work, and to know what it feels like to carry an idea past the exciting beginning and into an actual finished thing.</p>
 
-      <PostFigure src={creativeExpressionHero} alt="A young person works at a dark creative desk with sketches, models, draft pages, and restrained green accents." />
+      <PostFigure src={bodyImage1} alt="A frustrated young maker studies a rough, imperfect first sketch among crumpled drafts and drawing tools." />
+
 
       <h2>Why making things matters</h2>
 
@@ -137,6 +139,8 @@ const post: LifeEducationPost = {
         things and a person who quit at nine.
       </p>
 
+      <PostFigure src={bodyImage2} alt="An artist revises a mountain landscape through repeated sketches and a digital reference at a cluttered worktable." />
+
       <p>
         That&apos;s the floor. Not mastery. A practiced relationship with
         making.
@@ -223,7 +227,8 @@ const post: LifeEducationPost = {
         rep.
       </p>
 
-      <PostFigure src={creativeExpressionRevision} alt="A young person arranges a progression of creative drafts on a dark studio wall, moving from rough sketch toward finished work." />
+      <PostFigure src={bodyImage3} alt="A progression of mountain drawings on a studio wall shows how rough ideas become more carefully finished art." />
+
 
       <h2>Taste is not the same as quality</h2>
 
@@ -270,6 +275,8 @@ const post: LifeEducationPost = {
         adult should be able to hold both.
       </p>
 
+      <PostFigure src={bodyImage4} alt="Two visitors look closely at unfamiliar abstract artwork and consider how to separate personal taste from craftsmanship." />
+
       <h2>Creativity is a tool, not decoration</h2>
 
       <p>
@@ -298,7 +305,6 @@ const post: LifeEducationPost = {
         separate species.
       </p>
 
-      <PostFigure src={creativeExpressionOutlet} alt="A quiet dark creative corner holds sketches, notebooks, a small sculpture, and restrained green accents as a young person reflects nearby." />
 
       <h2>What creativity doesn't require</h2>
 
