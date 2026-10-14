@@ -1,5 +1,6 @@
 import type { LifeEducationPostMeta } from "../../postTypes";
-import scientificThinkingHero from "./images/scientific-thinking-observation-hero.webp";
+import cardImage from "./images/card-image.webp";
+import heroImage from "./images/hero-image.webp";
 
 export const metadata = {
   slug: "domain-3-scientific-thinking",
@@ -10,10 +11,8 @@ export const metadata = {
   status: "Recent",
   topic: "Domains",
   tags: ["LifeEducation", "Domains", "Scientific Thinking", "The Floor", "Adult Capability"],
-  heroImage: scientificThinkingHero,
-  heroAlt:
-    "A grayscale kitchen table scene with green accents showing a teenager studying plant samples, notes, and digital information while testing a real-world question.",
-  cardImage: scientificThinkingHero,
-  cardAlt:
-    "A grayscale and green scene showing a teenager observing plant samples and notes as part of a real-world science investigation.",
+  heroImage,
+  heroAlt: "A teenager examines field notes and competing explanations about a lizard's behavior.",
+  cardImage,
+  cardAlt: "A young observer studies the details of a plant leaf using a magnifying glass and field notebook.",
 } satisfies LifeEducationPostMeta;
