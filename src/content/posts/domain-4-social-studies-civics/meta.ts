@@ -1,5 +1,6 @@
 import type { LifeEducationPostMeta } from "../../postTypes";
-import socialStudiesHero from "./images/young-adult-with-map.webp";
+import cardImage from "./images/card-image.webp";
+import heroImage from "./images/hero-image.webp";
 
 export const metadata = {
   slug: "domain-4-social-studies-civics",
@@ -10,10 +11,8 @@ export const metadata = {
   status: "Recent",
   topic: "Domains",
   tags: ["LifeEducation", "Domains", "Social Studies", "Civics", "Systems Literacy"],
-  heroImage: socialStudiesHero,
-  heroAlt:
-    "A young adult holding a map at the center of a city, surrounded by sketched scenes of a capitol building, polling box, passport checkpoint, bus stop, news page, and signposts pointing in different directions.",
-  cardImage: socialStudiesHero,
-  cardAlt:
-    "A young adult holding a map, surrounded by civic scenes -- capitol, polling box, passport checkpoint, bus stop, news page, and signposts.",
+  heroImage,
+  heroAlt: "Community members weigh different perspectives on renewable-energy development against a mountain landscape.",
+  cardImage,
+  cardAlt: "A young adult prepares identification and forms to navigate a state driver licensing office.",
 } satisfies LifeEducationPostMeta;
