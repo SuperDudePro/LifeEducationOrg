@@ -37,48 +37,6 @@
         "reason": "hero image must be named images/hero-image.webp."
       }
     ],
-    "domain-4-social-studies-civics": [
-      {
-        "ruleId": "image.body.geometry",
-        "signature": "file=images/reading-the-city.webp;actual=1448x1086;expected=1200x900",
-        "reason": "images/reading-the-city.webp is 1448x1086; the body role requires 1200x900."
-      },
-      {
-        "ruleId": "image.body.minimum",
-        "signature": "count=1",
-        "reason": "Only 1 distinct body images; current minimum is 4."
-      },
-      {
-        "ruleId": "image.body.sequence",
-        "signature": "actual=images/reading-the-city.webp;expected=images/body-image-1.webp",
-        "reason": "Body roles must use the exact sequential filenames images/body-image-1.webp."
-      },
-      {
-        "ruleId": "image.role.card.filename",
-        "signature": "actual=images/young-adult-with-map.webp;expected=images/card-image.webp",
-        "reason": "card image must be named images/card-image.webp."
-      },
-      {
-        "ruleId": "image.role.card.geometry",
-        "signature": "file=images/young-adult-with-map.webp;actual=1448x1086;expected=960x720",
-        "reason": "images/young-adult-with-map.webp is 1448x1086; the card role requires 960x720."
-      },
-      {
-        "ruleId": "image.role.distinct",
-        "signature": "images/young-adult-with-map.webp",
-        "reason": "Card and hero roles reuse the same image."
-      },
-      {
-        "ruleId": "image.role.hero.filename",
-        "signature": "actual=images/young-adult-with-map.webp;expected=images/hero-image.webp",
-        "reason": "hero image must be named images/hero-image.webp."
-      },
-      {
-        "ruleId": "image.role.hero.geometry",
-        "signature": "file=images/young-adult-with-map.webp;actual=1448x1086;expected=1600x900",
-        "reason": "images/young-adult-with-map.webp is 1448x1086; the hero role requires 1600x900."
-      }
-    ],
     "domain-5-philosophy-ethics": [
       {
         "ruleId": "image.body.geometry",
