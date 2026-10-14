@@ -1,8 +1,9 @@
 import type { LifeEducationPost } from "../../postTypes";
 import { PostFigure } from "../../../components/PostFigure";
-import heroImage from "./images/health-physical-development-hero.webp";
-import foodMovementRecovery from "./images/food-movement-recovery.webp";
-import bodyCapabilityMap from "./images/body-capability-map.webp";
+import bodyImage1 from "./images/body-image-1.webp";
+import bodyImage2 from "./images/body-image-2.webp";
+import bodyImage3 from "./images/body-image-3.webp";
+import bodyImage4 from "./images/body-image-4.webp";
 import { metadata } from "./meta";
 
 const post: LifeEducationPost = {
@@ -15,11 +16,6 @@ const post: LifeEducationPost = {
       <p>That means understanding food, movement, sleep, recovery, stress, injury, and the risks attached to substances and sexual decisions. It means knowing when to ask for help and being able to describe what is happening without shame or performance.</p>
 
       <p>Health education shouldn't be a competition over appearance or a collection of scary slogans. Its purpose is increasing responsibility for the body a person will depend on for the rest of their life. Physical capability matters, but so do judgment, informed decisions, and the willingness to seek care.</p>
-
-      <PostFigure
-        src={heroImage}
-        alt="A capable young adult walks forward through a sketched landscape with green-highlighted cues for hydration, food, first aid, and calm breathing."
-      />
 
       <h2>When you have to manage your own health</h2>
 
@@ -37,6 +33,11 @@ const post: LifeEducationPost = {
         reproduction, and consent without ignorance doing the thinking; and act
         in an emergency before panic takes over.
       </p>
+      <PostFigure
+        src={bodyImage1}
+        alt="A pharmacist explains a medication label to a young adult who asks questions at the pharmacy counter."
+      />
+
 
       <p>
         That&apos;s the actual class. Not a worksheet on food groups. Not one
@@ -211,11 +212,11 @@ const post: LifeEducationPost = {
         once. A young adult should be able to handle that without needing
         someone else to run the whole system.
       </p>
-
       <PostFigure
-        src={foodMovementRecovery}
+        src={bodyImage2}
         alt="A young adult prepares a simple meal while surrounding sketches show walking, stretching, sleep, hydration, and calm recovery."
       />
+
 
       <h2>Stress is physical too</h2>
 
@@ -341,6 +342,11 @@ const post: LifeEducationPost = {
         them a paramedic. The point is to make them useful in the first five
         minutes.
       </p>
+      <PostFigure
+        src={bodyImage3}
+        alt="Two bystanders assess an unresponsive cyclist and call emergency services, with a first aid kit nearby."
+      />
+
 
       <p>
         Talk about substances and sex before the world does it for you. The
@@ -362,11 +368,11 @@ const post: LifeEducationPost = {
         The goal is transfer: from parent-managed health to self-managed health.
         Slowly. Repeatedly. For real.
       </p>
-
       <PostFigure
-        src={bodyCapabilityMap}
-        alt="A central young adult is surrounded by sketch vignettes of hiking, swimming, first aid, doctor communication, stress regulation, and body ownership."
+        src={bodyImage4}
+        alt="A central young adult is surrounded by sketches of hiking, swimming, first aid, doctor communication, stress regulation, and body ownership."
       />
+
 
       <h2>Can you take care of yourself?</h2>
 
