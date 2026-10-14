@@ -37,63 +37,6 @@
         "reason": "hero image must be named images/hero-image.webp."
       }
     ],
-    "domain-6-economics-finance": [
-      {
-        "ruleId": "image.body.geometry",
-        "signature": "file=images/hero-money-decisions.webp;actual=1600x900;expected=1200x900",
-        "reason": "images/hero-money-decisions.webp is 1600x900; the body role requires 1200x900."
-      },
-      {
-        "ruleId": "image.body.geometry",
-        "signature": "file=images/money-questions-mentoring.webp;actual=1600x900;expected=1200x900",
-        "reason": "images/money-questions-mentoring.webp is 1600x900; the body role requires 1200x900."
-      },
-      {
-        "ruleId": "image.body.geometry",
-        "signature": "file=images/opportunity-cost-crossroads.webp;actual=1600x900;expected=1200x900",
-        "reason": "images/opportunity-cost-crossroads.webp is 1600x900; the body role requires 1200x900."
-      },
-      {
-        "ruleId": "image.body.minimum",
-        "signature": "count=3",
-        "reason": "Only 3 distinct body images; current minimum is 4."
-      },
-      {
-        "ruleId": "image.body.sequence",
-        "signature": "actual=images/hero-money-decisions.webp,images/opportunity-cost-crossroads.webp,images/money-questions-mentoring.webp;expected=images/body-image-1.webp,images/body-image-2.webp,images/body-image-3.webp",
-        "reason": "Body roles must use the exact sequential filenames images/body-image-1.webp, images/body-image-2.webp, images/body-image-3.webp."
-      },
-      {
-        "ruleId": "image.role.body-reuse",
-        "signature": "card=images/hero-money-decisions.webp",
-        "reason": "card image is reused as a body image."
-      },
-      {
-        "ruleId": "image.role.body-reuse",
-        "signature": "hero=images/hero-money-decisions.webp",
-        "reason": "hero image is reused as a body image."
-      },
-      {
-        "ruleId": "image.role.card.filename",
-        "signature": "actual=images/hero-money-decisions.webp;expected=images/card-image.webp",
-        "reason": "card image must be named images/card-image.webp."
-      },
-      {
-        "ruleId": "image.role.card.geometry",
-        "signature": "file=images/hero-money-decisions.webp;actual=1600x900;expected=960x720",
-        "reason": "images/hero-money-decisions.webp is 1600x900; the card role requires 960x720."
-      },
-      {
-        "ruleId": "image.role.distinct",
-        "signature": "images/hero-money-decisions.webp",
-        "reason": "Card and hero roles reuse the same image."
-      },
-      {
-        "ruleId": "image.role.hero.filename",
-        "signature": "actual=images/hero-money-decisions.webp;expected=images/hero-image.webp",
-        "reason": "hero image must be named images/hero-image.webp."
-      }
-    ],
     "domain-7-health-physical-development": [
       {
         "ruleId": "image.body.geometry",

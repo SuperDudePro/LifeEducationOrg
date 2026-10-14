@@ -1,8 +1,9 @@
 import type { LifeEducationPost } from "../../postTypes";
 import { PostFigure } from "../../../components/PostFigure";
-import heroMoneyDecisions from "./images/hero-money-decisions.webp";
-import opportunityCostCrossroads from "./images/opportunity-cost-crossroads.webp";
-import moneyQuestionsMentoring from "./images/money-questions-mentoring.webp";
+import bodyImage1 from "./images/body-image-1.webp";
+import bodyImage2 from "./images/body-image-2.webp";
+import bodyImage3 from "./images/body-image-3.webp";
+import bodyImage4 from "./images/body-image-4.webp";
 import { metadata } from "./meta";
 
 const post: LifeEducationPost = {
@@ -16,7 +17,7 @@ const post: LifeEducationPost = {
 
       <p>Money decisions also shape the options available later. Interest, taxes, wages, risk, and opportunity cost aren't abstractions when they affect where you can live, which work you can turn down, and how quickly one bad decision can become a long obligation.</p>
 
-      <PostFigure src={heroMoneyDecisions} alt="A young adult works through a simple budget, lease, and balance screen in a mostly black-and-white sketch with restrained green highlights." />
+      <PostFigure src={bodyImage1} alt="A young adult examines a paycheck and pay stub, identifying gross pay, taxes, deductions, and net pay." />
 
       <h2>Where financial decisions get made</h2>
 
@@ -171,7 +172,7 @@ const post: LifeEducationPost = {
         things they don&apos;t need.
       </p>
 
-      <PostFigure src={opportunityCostCrossroads} alt="A young adult stands at a sketched crossroads where a green-highlighted path points toward time, options, and freedom." />
+      <PostFigure src={bodyImage2} alt="A young adult stands at a sketched crossroads where a green-highlighted path points toward time, options, and freedom." />
 
       <h2>What does this company make money on?</h2>
 
@@ -210,6 +211,8 @@ const post: LifeEducationPost = {
         That question is the entire difference between being a customer and
         being a target.
       </p>
+
+      <PostFigure src={bodyImage3} alt="A young adult questions a car dealership financing pitch and traces how interest, fees, and commissions benefit the seller and lender." />
 
       <h2>What financial competence is not</h2>
 
@@ -323,7 +326,7 @@ const post: LifeEducationPost = {
         school.
       </p>
 
-      <PostFigure src={moneyQuestionsMentoring} alt="An older adult and a young adult study a financial statement together, with a green highlight on the question that matters most over time." />
+      <PostFigure src={bodyImage4} alt="An older adult and a young adult study a financial statement together, with a green highlight on the question that matters most over time." />
 
       <h2>Read before you agree</h2>
 

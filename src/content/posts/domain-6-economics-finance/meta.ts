@@ -1,5 +1,6 @@
 import type { LifeEducationPostMeta } from "../../postTypes";
-import heroMoneyDecisions from "./images/hero-money-decisions.webp";
+import heroImage from "./images/hero-image.webp";
+import cardImage from "./images/card-image.webp";
 
 export const metadata = {
   slug: "domain-6-economics-finance",
@@ -11,10 +12,10 @@ export const metadata = {
   status: "Recent",
   topic: "Domains",
   tags: ["LifeEducation", "Domains", "Economics", "Finance", "Money"],
-  heroImage: heroMoneyDecisions,
+  heroImage,
   heroAlt:
     "A young adult works through a simple budget, lease, and balance screen in a mostly black-and-white sketch with restrained green highlights.",
-  cardImage: heroMoneyDecisions,
+  cardImage,
   cardAlt:
-    "A young adult reviews a budget and lease in a black-and-white LifeEducation sketch with green highlights.",
+    "A young adult reviews a rental agreement beside an apartment listing, highlighting important lease clauses and questions.",
 } satisfies LifeEducationPostMeta;
