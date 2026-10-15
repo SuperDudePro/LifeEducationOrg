@@ -85,6 +85,7 @@ const post: LifeEducationPost = {
       <p>
         Because if the target is wrong, the system doesn’t matter.
       </p>
+      <p>What do you think a young adult should actually be able to do by 18? <a href="/contact">Send me your answer—or your objection.</a></p>
     </>
   ),
 };
