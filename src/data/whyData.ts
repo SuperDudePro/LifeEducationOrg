@@ -1,6 +1,8 @@
 export const WHY_DATA = {
   "title": "Why LifeEducation.org Exists",
-  "subtitle": "Public thesis and founding argument",
+  "seoTitle": "Education vs. Schooling: Preparing Kids for Real Life | LifeEducation.org",
+  "seoDescription": "School is one possible environment, not the default authority over education. LifeEducation begins with the capabilities a young adult should actually have by 18.",
+  "subtitle": "Why education should prepare children for real life—not just success in school.",
   "intro": [
     "Most education talk starts in the wrong place.",
     "It starts with school. Or curriculum. Or standards. Or credentials.",
@@ -9,7 +11,8 @@ export const WHY_DATA = {
   ],
   "sections": [
     {
-      "heading": "The Standard",
+      "id": "purpose-of-education",
+      "heading": "What Is Education Supposed to Prepare Us For?",
       "body": [
         "Not what classes they sat through. Not what boxes got checked. Not what looked impressive on paper. What can they actually do, on their own, in real life?",
         "That is the standard.",
@@ -18,7 +21,8 @@ export const WHY_DATA = {
       ]
     },
     {
-      "heading": "Not Anti-Education. Anti Default Legitimacy.",
+      "id": "education-vs-schooling",
+      "heading": "Education vs. Schooling: Who Earns Our Trust?",
       "body": [
         "This is not anti-education. Education is the point.",
         "It is anti the institutional substitute that keeps calling itself education while producing dependency, weak thinking, fake rigor, and paperwork rituals. It is a rejection of school-as-default-authority.",
@@ -26,6 +30,7 @@ export const WHY_DATA = {
       ]
     },
     {
+      "id": "what-lifeeducation-is",
       "heading": "What LifeEducation Is",
       "body": [
         "This project is not about tweaking school around the edges. It is about naming a better target and building around that target directly.",
@@ -35,15 +40,18 @@ export const WHY_DATA = {
       ]
     },
     {
+      "id": "school-legitimacy",
       "heading": "The Legitimacy Problem",
       "body": [
         "School asks for trust it often has not earned.",
         "It asks families to treat attendance, grades, credits, standards, pacing guides, lesson-plan templates, and official language as evidence that education is happening. Sometimes real education is happening inside that structure. Often the structure is mostly protecting itself.",
         "A weak school is not redeemed by more hours, more slogans, more belonging language, more curriculum packages, more testing, more consultant language, or more paperwork rituals. Low-quality exposure repeated longer is still low-quality exposure.",
+        "This matters because the failures are not only logistical. They are moral and intellectual. School claims authority over children while too often refusing to show that its authority produces capable adults.",
         "LifeEducation does not begin by asking how to improve school. It begins by asking what school should have had to prove all along."
       ]
     },
     {
+      "id": "six-priorities",
       "heading": "What We Are Optimizing For",
       "body": [
         "Underneath the whole project are six priorities:"
@@ -59,7 +67,8 @@ export const WHY_DATA = {
       "footer": "Those six priorities are the point. They run through every domain, every review, and every decision. They are what the system is optimizing for."
     },
     {
-      "heading": "What Floor-Complete Means",
+      "id": "capable-by-18",
+      "heading": "What a Capable 18-Year-Old Can Actually Do",
       "body": [
         "A floor-complete 18-year-old is not perfect.",
         "They are a young adult who can function.",
@@ -69,7 +78,8 @@ export const WHY_DATA = {
       ]
     },
     {
-      "heading": "What This Looks Like In Practice",
+      "id": "real-life-learning",
+      "heading": "Learning Real-Life Skills Through Real Life",
       "body": [
         "This does not mean turning the house into school.",
         "It means building a life where real things happen on purpose."
@@ -88,18 +98,30 @@ export const WHY_DATA = {
       "footer": "The parent's job is not to lecture all day. The parent's job is closer to environment design: choosing good contexts, noticing opportunities, arranging exposure, sequencing challenge, and closing loops when life presents something worth learning from. Evidence and outputs exist to make capability legible and steer decisions, not to create paperwork. The system stays light on purpose."
     },
     {
-      "heading": "The Three Layers",
+      "id": "three-layers",
+      "heading": "The Three Layers of LifeEducation",
       "body": [
         "LifeEducation makes the most sense when you see it as three layers, not one.",
         "1. Floor Completion",
         "This is the minimum adulthood contract. By 18, the young adult can function effectively in the real world without being managed like a child in an adult body.",
         "2. Domain Cultivation",
-        "This is the broader lived environment. The domains are not school subjects in disguise. They are a coverage map. They keep the full range of adult competence in view: communication, quantitative reasoning, science and systems, money, health, ethics, creativity, technology, and real-world execution.",
+        "This is the broader lived environment. The domains are not school subjects in disguise. They are a coverage map because real life is broad, and families can overdevelop what they already value while neglecting unfamiliar territory. They keep the full range of adult competence in view: communication, quantitative reasoning, science and systems, money, health, ethics, creativity, technology, and real-world execution.",
         "3. Depth and Specialization",
-        "Above the Floor, depth, specialization, and direction become increasingly self-directed. The point is not to force equal depth everywhere. The point is to build a broad enough human first, then let depth become real."
+        "Above the Floor, depth, specialization, and direction become increasingly self-directed. Writing, mechanics, entrepreneurship, science, athletics, art, travel, or languages might become a young person’s particular direction. The point is not to force equal depth everywhere. It is to build broad capability first, then give real ownership of depth.",
+        "A child may reach much of the Floor early. That is success, not an excuse to stop. The richer challenge is making the Domains part of ordinary life rather than another school-style checklist."
       ]
     },
     {
+      "id": "only-the-floor",
+      "heading": "What If They Only Meet the Floor?",
+      "body": [
+        "What if a young person aims only for the minimum and stops there?",
+        "Even that fallback is meaningful: the Floor demands demonstrated real-world capability rather than treating attendance, credits, or credentials as proof. But the Floor is deliberately a minimum, not the ambition.",
+        "The broader Domains, family responsibilities, projects, relationships, and increasingly self-directed depth provide room to keep growing. The Floor is not the ceiling. It is the line below which we do not pretend adulthood readiness has been established."
+      ]
+    },
+    {
+      "id": "what-this-is-not",
       "heading": "What This Is Not",
       "bullets": [
         "This is not school at home.",
@@ -112,23 +134,28 @@ export const WHY_DATA = {
       "footer": "LifeEducation is for families who want to raise capable adults without surrendering the target to grades, pacing guides, institutional defaults, or the assumption that official schooling is the same thing as education."
     },
     {
-      "heading": "Why Document It At All",
+      "id": "why-document",
+      "heading": "Why Document Real-World Capability?",
       "body": [
         "Documentation is a tool for clarity, coherence, and legibility.",
         "Inside the family, it makes the target explicit: what is required, what is optional, what we are optimizing for, and whether daily life is actually pointing at the adult we say we want to produce.",
-        "Outside the family, it makes real capability visible without turning life into theater."
+        "Outside the family, it makes real capability visible without turning life into theater.",
+        "The Why sets the purpose. The Floor defines the minimum. The Domains keep the whole map visible. Operating mechanics explain how the system runs, but they do not redefine its purpose."
       ]
     },
     {
+      "id": "why-my-family",
       "heading": "Why This Matters For My Family",
       "body": [
         "I am building this for my family first.",
         "My two younger kids will likely grow up across multiple environments and systems. Travel may become one of those environments, but travel is not the point. It is just one possible lab.",
+        "The real goal is broader: raise people who can function well anywhere. That is why the operating system matters more than any one setting.",
         "If a great school or district becomes available, I may use it. But I will use it as an environment, not as the source of truth. School has to earn its place by helping build capability. It does not get the steering wheel just because it is school."
       ]
     },
     {
-      "heading": "Bottom Line",
+      "id": "own-their-lives",
+      "heading": "The Goal: Young Adults Who Can Own Their Lives",
       "body": [
         "I am not trying to raise kids who are merely school-successful.",
         "I am trying to raise kids who can own their lives.",
