@@ -369,7 +369,7 @@ function staticPageShell(route, metadata) {
       const markup = (block) => {
         if (block.type === "paragraph") return `<p>${escapeHtml(block.text)}</p>`;
         if (block.type === "list") return `<ul>${block.items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
-        const match = block.text.match(/^Domain (\\d+) — /);
+        const match = block.text.match(/^Domain (\d+) — /);
         if (match) {
           const domain = domainSlugs.find((d) => d.number === match[1]);
           return `<h3 id="floor-domain-${match[1]}">${escapeHtml(block.text)}</h3>${domain ? `<p><a href="/domains/${escapeAttribute(domain.slug)}">Explore ${escapeHtml(domain.title)}</a></p>` : ""}`;
