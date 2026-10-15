@@ -266,8 +266,8 @@ function staticPostArticle(metadata) {
     "<main data-static-post-shell>",
     "<article data-static-post>",
     `<header><h1>${escapeHtml(metadata.article.title)}</h1><p>${escapeHtml(metadata.description)}</p><p><time datetime="${escapeAttribute(publishedAt)}">${escapeHtml(publishedAt)}</time></p></header>`,
-    `<div data-static-post-body>${metadata.article.bodyHtml}</div>`,
     `<nav aria-label="Explore LifeEducation"><a href="/">Home</a> · <a href="/posts">All posts</a> · <a href="/domains">The 10 Domains</a> · <a href="/floor">The Floor</a></nav>`,
+    `<div data-static-post-body>${metadata.article.bodyHtml}</div>`,
     "</article>",
     "</main>",
   ].join("");
