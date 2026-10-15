@@ -277,6 +277,10 @@ const [sitemap, indexHtml, postEntries, domainSource] = await Promise.all([
   readFile(path.join(rootDir, "src", "data", "domainsData.ts"), "utf8"),
 ]);
 
+const awaitStaticSources = {
+  floor: await readFile(path.join(rootDir, "src", "data", "floorByDomain.ts"), "utf8"),
+  ages: await readFile(path.join(rootDir, "src", "data", "ageBandByDomain.ts"), "utf8"),
+};
 const domainCopyPath = path.join(rootDir, "src", "data", "domainPageCopy.ts");
 const DOMAIN_PAGE_COPY = loadDataExport(await readFile(domainCopyPath, "utf8"), "DOMAIN_PAGE_COPY", domainCopyPath);
 
@@ -353,13 +357,28 @@ function publishedPostLinks(limit) {
 }
 
 function staticPageShell(route, metadata) {
-  const heading = route === "/" ? "LifeEducation.org" : route === "/domains" ? DOMAINS_HUB.heading : route === "/by-18" ? BY18_DATA.title : route === "/floor" ? FLOOR_DATA.title : metadata.title.replace(/ \| LifeEducation\.org$/, "");
+  const heading = route === "/domains/literacy-communication" ? "Literacy & Communication" : route === "/" ? "LifeEducation.org" : route === "/domains" ? DOMAINS_HUB.heading : route === "/by-18" ? BY18_DATA.title : route === "/floor" ? FLOOR_DATA.title : metadata.title.replace(/ \| LifeEducation\.org$/, "");
   const sourceId = { "/why": "why", "/floor": "floor", "/by-18": "by-18", "/qa": "qa", "/domains": "domains" }[route];
   let body = "";
   if (route === "/") {
     body = `<h2>Latest field notes</h2>${publishedPostLinks(8)}`;
   } else if (route === "/posts") {
     body = publishedPostLinks();
+  } else if (route === "/domains/literacy-communication") {
+    const data = loadDataExport(domainSource, "DOMAINS", "src/data/domainsData.ts").find((d) => d.slug === "literacy-communication");
+    const floorFile = path.join(rootDir, "src", "data", "floorByDomain.ts");
+    const ageFile = path.join(rootDir, "src", "data", "ageBandByDomain.ts");
+    const floor = loadDataExport(awaitStaticSources.floor, "FLOOR_BY_DOMAIN", floorFile).find((d) => d.number === "1");
+    const ages = loadDataExport(awaitStaticSources.ages, "AGE_BAND_BY_DOMAIN", ageFile).find((d) => d.number === "1");
+    const list = (values) => `<ul>${values.map((value) => `<li>${escapeHtml(value)}</li>`).join("")}</ul>`;
+    const headings = [["floor", "The Floor"], ["map", "The Broader Map"], ["runway", "How It Builds"], ["essay", "The Essay"]];
+    const essay = [...routeMetadata.entries()].find(([url]) => /^\/posts\/domain-1-/.test(url));
+    body = `<section><h2>Communication Skills That Matter in Adult Life</h2><p>${escapeHtml(metadata.scope)}</p><p><a href="/by-18">What young adults should be able to do by 18</a> · <a href="/floor#floor-domain-1">The formal Floor: Domain 1</a></p></section>`
+      + `<nav aria-label="On this page">${headings.filter(([id]) => id !== "essay" || essay).map(([id, title]) => `<a href="#${id}">${escapeHtml(title)}</a>`).join(" · ")}</nav>`
+      + `<section id="floor"><h2>The Floor for This Domain</h2><p>The non-negotiable minimum. This is the contract, not the menu — what a floor-complete 18-year-old must actually be able to do.</p>${list(floor.canDo)}<h3>Not on the Floor</h3>${list(floor.notOnFloor)}</section>`
+      + `<section id="map"><h2>The Broader Map</h2><p>The fuller landscape this domain engages over time. Inclusion here does not by itself make a competency mandatory.</p><h3>Core Outcomes</h3>${list(data.coreOutcomes)}<h3>Key Competencies</h3>${list(data.competencies)}<h3>Evidence Examples</h3><p>${escapeHtml(data.evidence)}</p></section>`
+      + `<section id="runway"><h2>How It Builds</h2><p>${escapeHtml(ages.runwayNote)}</p><p>Written for adults: developmental signals are prompts to investigate, not diagnoses or verdicts.</p>${ages.bands.map((band) => `<section><h3>${escapeHtml(band.band)}</h3><h4>On track</h4>${list(band.onTrack)}<h4>Worth investigating</h4>${list(band.redFlags)}<p>What's building: ${escapeHtml(band.building)}</p></section>`).join("")}</section>`
+      + (essay ? `<section id="essay"><h2>The Essay</h2><p><a href="${escapeAttribute(essay[0])}">${escapeHtml(essay[1].article?.title ?? "Read the Domain 1 essay")}</a></p></section>` : "");
   } else if (route.startsWith("/domains/")) {
     const number = metadata.domainNumber;
     body = `${metadata.scope ? `<section><h2>What this capability includes</h2><p>${escapeHtml(metadata.scope)}</p><p><a href="/by-18">What young adults should be able to do by 18</a> · <a href="/floor">The formal Floor</a></p></section>` : ""}${corpusSections(CORPUS.filter((chunk) => chunk.sourceId === "domains" && chunk.heading.startsWith(`Domain ${number}:`)))}`;

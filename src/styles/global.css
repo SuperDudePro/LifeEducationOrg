@@ -842,3 +842,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
 .floor-domain-link { margin: 9px 0 0; font-size: 15px; line-height: 1.6; }
 .floor-domain-link a { color: #0d4b39; text-decoration: underline; text-underline-offset: 3px; }
 .doc-subheading[id] { scroll-margin-top: 24px; }
+
+/* Domain 1 editorial link treatment. */
+.domain-context-links { display: flex; flex-wrap: wrap; gap: 12px 24px; margin: 24px 0 0; }
+.domain-context-links a { color: #0d4b39; text-decoration: underline; text-underline-offset: 3px; font-weight: 700; line-height: 1.7; }

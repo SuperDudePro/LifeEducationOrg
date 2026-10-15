@@ -33,6 +33,7 @@ export function DomainDetailPage({ slug }: { slug: string }) {
   const essay = getPostForDomain(domain.number);
   const essayImage = essay ? getPostImage(essay, "card") : undefined;
 
+  const isPilot = domain.slug === "literacy-communication";
   const sections = [
     floor ? { id: "floor", heading: "The Floor" } : null,
     { id: "map", heading: "The Broader Map" },
@@ -55,12 +56,12 @@ export function DomainDetailPage({ slug }: { slug: string }) {
       </BackBar>
 
       <section className="doc-section">
-        <h2 className="doc-section-title">What this capability includes</h2>
+        <h2 className="doc-section-title">{isPilot ? "Communication Skills That Matter in Adult Life" : "What this capability includes"}</h2>
         <p className="doc-section-text">{copy?.scope ?? "The Floor defines the minimum; the broader domain includes opportunities for deeper development."}</p>
-        <nav aria-label="Related LifeEducation standards" className="domain-page-grid">
+        {isPilot ? <nav aria-label="Related LifeEducation standards" className="domain-context-links"><a href="/by-18">What young adults should be able to do by 18</a><a href="/floor#floor-domain-1">The formal Floor: Domain 1</a></nav> : <nav aria-label="Related LifeEducation standards" className="domain-page-grid">
           <a href="/by-18" className="domain-page-card"><span className="domain-page-card-title">What young adults should be able to do by 18</span></a>
           <a href="/floor" className="domain-page-card"><span className="domain-page-card-title">The formal 18-Year-Old Floor</span></a>
-        </nav>
+        </nav>}
       </section>
 
       <SectionNav sections={sections} />
@@ -72,7 +73,7 @@ export function DomainDetailPage({ slug }: { slug: string }) {
             The non-negotiable minimum. This is the contract, not the menu — what a
             floor-complete 18-year-old must actually be able to do.
           </p>
-          <p className="domain-layer-source">From the LifeEducation Floor (v2.4).</p>
+          <p className="domain-layer-source">From the LifeEducation Floor.</p>
           <ul className="doc-list">
             {floor.canDo.map((item) => (
               <li key={item} className="doc-list-item">
@@ -98,7 +99,7 @@ export function DomainDetailPage({ slug }: { slug: string }) {
           The fuller landscape this domain engages over time. Broader than the floor —
           inclusion here does not by itself make a competency mandatory.
         </p>
-        <p className="domain-layer-source">From the 10-Domain Framework (v1.6).</p>
+        <p className="domain-layer-source">From the 10-Domain Framework.</p>
         <h3 className="doc-subheading-small">Core Outcomes</h3>
         <ul className="doc-list">
           {domain.coreOutcomes.map((item) => (
@@ -126,7 +127,7 @@ export function DomainDetailPage({ slug }: { slug: string }) {
           <h2 className="doc-section-title">How It Builds</h2>
           <p className="doc-section-text">{ageBands.runwayNote}</p>
           <p className="domain-layer-source">
-            From the Age-Band Scaffolding (v0.6). Written for adults: "on track" means a
+            From the Age-Band Scaffolding. Written for adults: "on track" means a
             normal healthy trajectory toward the floor, not gifted or ahead. "Red flags"
             are persistent patterns worth investigating, not verdicts.
           </p>
