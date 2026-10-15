@@ -20,6 +20,8 @@ const defaultShareImage = {
 };
 const { CORPUS } = await import(path.join(rootDir, "api", "ask", "corpus.generated.mjs"));
 const floorPath = path.join(rootDir, "src", "data", "floorData.ts");
+const whyPath = path.join(rootDir, "src", "data", "whyData.ts");
+const WHY_DATA = loadDataExport(await readFile(whyPath, "utf8"), "WHY_DATA", whyPath);
 const FLOOR_DATA = loadDataExport(await readFile(floorPath, "utf8"), "FLOOR_DATA", floorPath);
 const by18Path = path.join(rootDir, "src", "data", "by18Data.ts");
 const BY18_DATA = loadDataExport(await readFile(by18Path, "utf8"), "BY18_DATA", by18Path);
@@ -27,8 +29,8 @@ const domainsHubPath = path.join(rootDir, "src", "data", "domainsHub.ts");
 const DOMAINS_HUB = loadDataExport(await readFile(domainsHubPath, "utf8"), "DOMAINS_HUB", domainsHubPath);
 const routeMetadata = new Map([
   ["/why", {
-    title: "Why LifeEducation.org Exists | LifeEducation.org",
-    description: "The founding statement for LifeEducation: not anti-education, but anti school-as-default-authority, with real capability as the standard.",
+    title: WHY_DATA.seoTitle,
+    description: WHY_DATA.seoDescription,
   }],
   ["/floor", {
     title: FLOOR_DATA.seoTitle,
@@ -357,7 +359,7 @@ function publishedPostLinks(limit) {
 }
 
 function staticPageShell(route, metadata) {
-  const heading = route.startsWith("/domains/") ? (loadDataExport(domainSource, "DOMAINS", "src/data/domainsData.ts").find((d) => d.slug === route.slice("/domains/".length))?.title ?? metadata.title) : route === "/" ? "LifeEducation.org" : route === "/domains" ? DOMAINS_HUB.heading : route === "/by-18" ? BY18_DATA.title : route === "/floor" ? FLOOR_DATA.title : metadata.title.replace(/ \| LifeEducation\.org$/, "");
+  const heading = route.startsWith("/domains/") ? (loadDataExport(domainSource, "DOMAINS", "src/data/domainsData.ts").find((d) => d.slug === route.slice("/domains/".length))?.title ?? metadata.title) : route === "/" ? "LifeEducation.org" : route === "/domains" ? DOMAINS_HUB.heading : route === "/why" ? WHY_DATA.title : route === "/by-18" ? BY18_DATA.title : route === "/floor" ? FLOOR_DATA.title : metadata.title.replace(/ \| LifeEducation\.org$/, "");
   const sourceId = { "/why": "why", "/floor": "floor", "/by-18": "by-18", "/qa": "qa", "/domains": "domains" }[route];
   let body = "";
   if (route === "/") {
@@ -380,7 +382,16 @@ function staticPageShell(route, metadata) {
       + `<section id="runway"><h2>How It Builds</h2><p>${escapeHtml(ages.runwayNote)}</p><p>Written for adults: developmental signals are prompts to investigate, not diagnoses or verdicts.</p>${ages.bands.map((band) => `<section><h3>${escapeHtml(band.band)}</h3><h4>On track</h4>${list(band.onTrack)}<h4>Worth investigating</h4>${list(band.redFlags)}<p>What's building: ${escapeHtml(band.building)}</p></section>`).join("")}</section>`
       + (essay ? `<section id="essay"><h2>The Essay</h2><p><a href="${escapeAttribute(essay[0])}">${escapeHtml(essay[1].article?.title ?? "Read the Domain essay")}</a></p></section>` : "");
   } else if (sourceId) {
-    if (route === "/floor") {
+    if (route === "/why") {
+      const related = {
+        "capable-by-18": `<p>See <a href="/by-18">the real-life skills young adults should have by 18</a> and <a href="/floor">the 18-Year-Old Floor</a>.</p>`,
+        "three-layers": `<p>Explore <a href="/domains">the 10 Domains</a>.</p>`,
+      };
+      body = `<nav aria-label="On this page"><h2>On this page</h2><ol>${WHY_DATA.sections.map((s) => `<li><a href="#${escapeAttribute(s.id)}">${escapeHtml(s.heading)}</a></li>`).join("")}</ol></nav>`
+        + WHY_DATA.intro.map((line) => `<p>${escapeHtml(line)}</p>`).join("")
+        + WHY_DATA.sections.map((s) => `<section id="${escapeAttribute(s.id)}"><h2>${escapeHtml(s.heading)}</h2>${(s.body ?? []).map((line) => `<p>${escapeHtml(line)}</p>`).join("")}${s.bullets?.length ? `<ul>${s.bullets.map((line) => `<li>${escapeHtml(line)}</li>`).join("")}</ul>` : ""}${s.footer ? `<p>${escapeHtml(s.footer)}</p>` : ""}${related[s.id] ?? ""}</section>`).join("")
+        + `<section><h2>Questions About This Approach?</h2><p>Explore the <a href="/qa">LifeEducation Q&A</a> for important distinctions and objections.</p></section>`;
+    } else if (route === "/floor") {
       const domainSlugs = loadDataExport(domainSource, "DOMAINS", "src/data/domainsData.ts");
       const markup = (block) => {
         if (block.type === "paragraph") return `<p>${escapeHtml(block.text)}</p>`;
