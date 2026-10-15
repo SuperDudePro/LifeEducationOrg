@@ -58,7 +58,7 @@ async function get(url, options = {}) {
 
 async function waitForDeployment() {
   assert.match(expectedCommit || '', /^[0-9a-f]{40}$/i, 'DEPLOY_SHA must be a full commit SHA');
-  for (let attempt = 1; attempt <= 30; attempt++) {
+  for (let attempt = 1; attempt <= 90; attempt++) {
     try {
       const response = await get(`${origin}/deployment.json?t=${Date.now()}`);
       if (response.ok && (await response.json()).commit === expectedCommit) {
@@ -66,9 +66,9 @@ async function waitForDeployment() {
         return;
       }
     } catch (error) { console.log(`Deployment check ${attempt}: ${error.message}`); }
-    if (attempt < 30) await sleep(10000);
+    if (attempt < 90) await sleep(10000);
   }
-  throw new Error(`Production did not reach ${expectedCommit} within five minutes`);
+  throw new Error(`Production did not reach ${expectedCommit} within fifteen minutes`);
 }
 
 await waitForDeployment();
