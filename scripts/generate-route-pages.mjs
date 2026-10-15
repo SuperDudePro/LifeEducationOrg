@@ -92,6 +92,20 @@ function postShareImage(source, postDir) {
   return undefined;
 }
 
+function postInlineFigures(source, postDir) {
+  const figures = [];
+  const imports = new Map([...source.matchAll(/import\\s+([A-Za-z_$][\\w$]*)\\s+from\\s+["']\\.\\/([^"']+\\.(?:webp|jpg|jpeg|png))["']/g)]
+    .map(([, identifier, file]) => [identifier, file]));
+  for (const [, identifier, alt] of source.matchAll(/<PostFigure\\s+src=\\{([A-Za-z_$][\\w$]*)\\}\\s+alt="([^"]+)"[^>]*\\/>/g)) {
+    const file = imports.get(identifier);
+    if (!file) continue;
+    const key = path.relative(rootDir, path.join(postDir, file)).split(path.sep).join("/");
+    const built = assetManifest[key]?.file;
+    if (built) figures.push(`<figure data-static-post-figure><img src="/${escapeAttribute(built)}" alt="${escapeAttribute(alt)}" loading="lazy"></figure>`);
+  }
+  return figures.join("");
+}
+
 function loadDataExport(source, exportName, filename) {
   const compiled = ts.transpileModule(source, {
     compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 },
@@ -267,7 +281,7 @@ function staticPostArticle(metadata) {
     "<article data-static-post>",
     `<header><h1>${escapeHtml(metadata.article.title)}</h1><p>${escapeHtml(metadata.description)}</p><p><time datetime="${escapeAttribute(publishedAt)}">${escapeHtml(publishedAt)}</time></p></header>`,
     `<nav aria-label="Explore LifeEducation"><a href="/">Home</a> · <a href="/posts">All posts</a> · <a href="/domains">The 10 Domains</a> · <a href="/floor">The Floor</a></nav>`,
-    `<div data-static-post-body>${metadata.article.bodyHtml}</div>`,
+    `<div data-static-post-body>${metadata.article.bodyHtml}${metadata.article.figuresHtml ?? ""}</div>`,
     "</article>",
     "</main>",
   ].join("");
@@ -315,6 +329,7 @@ for (const entry of postEntries.filter((item) => item.isDirectory())) {
       modifiedAt: optionalField(source, "modifiedAt"),
       status: optionalField(source, "status"),
       image: postShareImage(source, postDir),
+      figuresHtml: postInlineFigures(bodySource, postDir),
       bodyHtml: extractPostBody(bodySource, path.join(postDir, "index.tsx")),
     },
   });
