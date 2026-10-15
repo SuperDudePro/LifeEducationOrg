@@ -1,6 +1,9 @@
 export const BY18_DATA = {
   "title": "By 18: What You Can Do",
-  "subtitle": "Public translation of the Floor contract",
+  "subtitle": "A whole-life benchmark for the skills teenagers need before adulthood—not just chores, grades, or college applications.",
+  "seoTitle": "Life Skills for Teens: What Young Adults Should Be Able to Do by 18 | LifeEducation.org",
+  "seoDescription": "A serious benchmark for adulthood readiness: the communication, money, health, judgment, technology, relationship, and real-world skills a young adult should be able to use by 18.",
+  "thesis": "This is the point of the system. Not what classes you sat through. Not what boxes got checked. Not what looked good on paper. By 18, you can actually do real things in real life.",
   "intro": [
     "“By 18” names the deadline, not the earliest possible finish. A young person may meet this standard earlier; if they do, the focus shifts toward maintenance, broader domain cultivation, and increasingly self-directed depth."
   ],
@@ -51,7 +54,7 @@ export const BY18_DATA = {
         "explain how power works: who has it, how they got it, how they keep it, and how it changes. (D4)",
         "understand civic structures — voting, laws, courts, and rights — well enough to pass a rigorous civics exam. (D4)",
         "recognize historical patterns and use them to make better sense of current events. (D4)",
-        "understand your own historical and cultural context, including your U.S., Philippines, and Ireland connections. (D4)",
+        "understand your own historical and cultural context, including the places, communities, and histories that shaped you. (D4)",
         "read news critically: notice bias, missing context, conflicting accounts, and manipulative framing. (D1, D4, D9)",
         "understand that systems are human-made, have tradeoffs, and can be changed. (D4, D6)"
       ]
@@ -73,7 +76,7 @@ export const BY18_DATA = {
       "items": [
         "take responsibility for sleep, hygiene, movement, and nutrition without needing to be nagged. (D7)",
         "cook real meals and feed yourself reasonably well in normal life. (D7, D10)",
-        "maintain physical fitness in roughly the top-10% of your age group through real habits, not occasional effort. (D7)",
+        "maintain physical fitness in roughly the top-10% of your age group through real habits, not occasional effort. This is a demanding LifeEducation Floor standard, not a universal measure of adulthood readiness. (D7)",
         "recognize when something is wrong with your body and decide when to rest, treat it, or get help. (D7)",
         "handle basic first aid and emergency response without freezing. (D7, D10)",
         "understand substances, sex, reproduction, and consent well enough to make informed decisions. (D7)",
