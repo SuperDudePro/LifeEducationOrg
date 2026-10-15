@@ -94,9 +94,9 @@ function postShareImage(source, postDir) {
 
 function postInlineFigures(source, postDir) {
   const figures = [];
-  const imports = new Map([...source.matchAll(/import\\s+([A-Za-z_$][\\w$]*)\\s+from\\s+["']\\.\\/([^"']+\\.(?:webp|jpg|jpeg|png))["']/g)]
+  const imports = new Map([...source.matchAll(/import\s+([A-Za-z_$][\w$]*)\s+from\s+["']\.\/([^"']+\.(?:webp|jpg|jpeg|png))["']/g)]
     .map(([, identifier, file]) => [identifier, file]));
-  for (const [, identifier, alt] of source.matchAll(/<PostFigure\\s+src=\\{([A-Za-z_$][\\w$]*)\\}\\s+alt="([^"]+)"[^>]*\\/>/g)) {
+  for (const [, identifier, alt] of source.matchAll(/<PostFigure\s+src=\{([A-Za-z_$][\w$]*)\}\s+alt="([^"]+)"[^>]*\/>/g)) {
     const file = imports.get(identifier);
     if (!file) continue;
     const key = path.relative(rootDir, path.join(postDir, file)).split(path.sep).join("/");
