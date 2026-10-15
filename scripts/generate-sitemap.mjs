@@ -3,13 +3,6 @@ import { join } from "path";
 
 const BASE = "https://www.lifeeducation.org";
 
-function getDateStamp(date = new Date()) {
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const day = String(date.getDate()).padStart(2, "0");
-  return `${year}-${month}-${day}`;
-}
-
 // Use explicit post modification dates. Do not claim unchanged pages were modified at build time.
 const overrideDate = process.env.SITEMAP_LASTMOD || undefined;
 
@@ -61,8 +54,7 @@ const postDirs = readdirSync("src/content/posts", { withFileTypes: true })
     return { slug, status, lastmod: modifiedAt || publishedAt };
   })
   .filter((post) => post.status !== "Draft" && post.status !== "Coming Soon")
-  .map((post) => post)
-  .sort();
+  .sort((a, b) => a.slug.localeCompare(b.slug));
 
 const urls = [
   ...staticPages.map((p) => ({ loc: BASE + p.path, freq: p.freq, pri: p.pri })),
