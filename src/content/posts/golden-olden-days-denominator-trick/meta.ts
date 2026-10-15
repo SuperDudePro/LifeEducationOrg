@@ -6,7 +6,7 @@ export const metadata = {
   slug: "golden-olden-days-denominator-trick",
   title: "The Golden Olden Days Were a Denominator Trick",
   excerpt:
-    "People love saying students used to be smarter and better educated. Before we compare today’s students to the past, we have to ask who was counted, who was excluded, and what the numbers prove.",
+    "Were students really smarter in the past? Before comparing generations, ask who stayed in school, who was excluded, and whose results were counted.",
   publishedAt: "2026-08-16",
   status: "Recent",
   topic: "Schooling and Capability",
