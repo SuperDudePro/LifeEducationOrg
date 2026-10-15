@@ -10,7 +10,6 @@ const post: LifeEducationPost = {
   ...metadata,
   body: (
     <>
-      <p><em>The number can be real. The story the system bolts onto it is the lie — and that's why it never scales.</em></p>
       <p><em>This picks up where <a href="/posts/run">Run</a> left off.</em></p>
       <p>I said I had a theory. Here it is, in one sentence: you can't reproduce something that was never there.</p>
       <p>For years I thought the good schools didn't spread because the system smothered them — that somewhere out there were real successes, fragile and rare, and the machine kept crushing them before they could multiply. That's the comforting version. It lets you keep believing the good thing exists and the only problem is getting it to travel.</p>
