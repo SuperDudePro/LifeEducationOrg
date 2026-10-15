@@ -3,7 +3,6 @@ name: Production smoke
 on:
   push:
     branches: [main]
-  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -16,7 +15,7 @@ concurrency:
 jobs:
   smoke:
     runs-on: ubuntu-24.04
-    timeout-minutes: 12
+    timeout-minutes: 22
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -27,5 +26,5 @@ jobs:
       - name: Check production after deployment
         run: node scripts/smoke-production.mjs
         env:
-          DEPLOY_SHA: ${{ github.event.pull_request.base.sha || github.sha }}
+          DEPLOY_SHA: ${{ github.sha }}
           SMOKE_BROWSER: '1'

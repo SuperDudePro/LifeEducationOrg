@@ -38,7 +38,7 @@ function changedFiles() {
 async function waitForDeployment() {
   if (!expectedCommit) return;
   const markerUrl = `${siteUrl}/deployment.json`;
-  for (let attempt = 1; attempt <= 30; attempt += 1) {
+  for (let attempt = 1; attempt <= 90; attempt += 1) {
     try {
       const response = await fetch(`${markerUrl}?t=${Date.now()}`, {
         headers: { "cache-control": "no-cache" },
@@ -53,10 +53,10 @@ async function waitForDeployment() {
     } catch (error) {
       console.log(`Deployment check ${attempt} failed: ${error.message}`);
     }
-    console.log(`Waiting for production deployment (${attempt}/30)...`);
+    console.log(`Waiting for production deployment (${attempt}/90)...`);
     await sleep(10000);
   }
-  throw new Error(`Production did not reach commit ${expectedCommit} within five minutes.`);
+  throw new Error(`Production did not reach commit ${expectedCommit} within fifteen minutes.`);
 }
 
 function parseSitemap(xml) {

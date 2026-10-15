@@ -82,7 +82,7 @@ function optionalField(source, field) {
 
 function postShareImage(source, postDir) {
   for (const [imageField, altField] of [["cardImage", "cardAlt"], ["heroImage", "heroAlt"]]) {
-    const identifier = source.match(new RegExp(`\\b${imageField}:\\s*([A-Za-z_$][\\w$]*)`))?.[1];
+    const identifier = source.match(new RegExp(`\\b${imageField}\\s*(?::\\s*([A-Za-z_$][\\w$]*))?\\s*[,}]`))?.[1] ?? (source.match(new RegExp(`\\b${imageField}\\s*(?:,|})`)) ? imageField : undefined);
     const importPath = identifier && source.match(new RegExp(`import\\s+${identifier}\\s+from\\s+["']\\./([^"']+)["']`))?.[1];
     if (!importPath) continue;
     const sourceKey = path.relative(rootDir, path.join(postDir, importPath)).split(path.sep).join("/");
@@ -266,6 +266,7 @@ function staticPostArticle(metadata) {
     "<main data-static-post-shell>",
     "<article data-static-post>",
     `<header><h1>${escapeHtml(metadata.article.title)}</h1><p>${escapeHtml(metadata.description)}</p><p><time datetime="${escapeAttribute(publishedAt)}">${escapeHtml(publishedAt)}</time></p></header>`,
+    `<nav aria-label="Explore LifeEducation"><a href="/">Home</a> · <a href="/posts">All posts</a> · <a href="/domains">The 10 Domains</a> · <a href="/floor">The Floor</a></nav>`,
     `<div data-static-post-body>${metadata.article.bodyHtml}</div>`,
     "</article>",
     "</main>",
