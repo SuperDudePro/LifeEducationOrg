@@ -5,6 +5,7 @@ import { DOMAINS } from "./data/domainsData";
 import { DOMAIN_PAGE_COPY } from "./data/domainPageCopy";
 import { DOMAINS_HUB } from "./data/domainsHub";
 import { BY18_DATA } from "./data/by18Data";
+import { FLOOR_DATA } from "./data/floorData";
 import { normalizePath } from "./utils/routing";
 import { HomePage } from "./pages/HomePage";
 import { WhyPage } from "./pages/WhyPage";
@@ -63,9 +64,8 @@ export default function App() {
           "The founding statement for LifeEducation: not anti-education, but anti school-as-default-authority, with real capability as the standard.",
       },
       "/floor": {
-        title: "The 18-Year-Old Floor | LifeEducation.org",
-        description:
-          "The non-negotiable minimum adulthood capability contract for LifeEducation.",
+        title: FLOOR_DATA.seoTitle,
+        description: FLOOR_DATA.seoDescription,
       },
       "/by-18": {
         title: BY18_DATA.seoTitle,
