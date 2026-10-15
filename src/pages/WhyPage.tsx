@@ -16,10 +16,19 @@ export function WhyPage() {
           <p key={paragraph} className="doc-dark-text">{paragraph}</p>
         ))}
       </section>
-      <SectionNav sections={WHY_DATA.sections} />
+      <SectionNav sections={WHY_DATA.sections.map(({ id, heading }) => ({ id, heading }))} />
       {WHY_DATA.sections.map((section, index) => (
         <section key={section.id} id={section.id}>
-          <RichSection {...section} className={index % 2 === 0 ? "doc-section-light" : "doc-section-medium"} />
+          {section.id === "three-layers" ? (
+            <section className={`doc-section ${index % 2 === 0 ? "doc-section-light" : "doc-section-medium"}`}>
+              <h2 className="doc-section-title">{section.heading}</h2>
+              {section.body.map((paragraph, paragraphIndex) => [1, 3, 5].includes(paragraphIndex) ? (
+                <h3 key={paragraph} className="doc-section-text"><strong>{paragraph}</strong></h3>
+              ) : <p key={paragraph} className="doc-section-text">{paragraph}</p>)}
+            </section>
+          ) : (
+            <RichSection {...section} className={index % 2 === 0 ? "doc-section-light" : "doc-section-medium"} />
+          )}
           {section.id === "capable-by-18" && <div className="doc-section doc-section-alt"><p className="doc-section-text">See the public benchmark: <a href="/by-18">the real-life skills young adults should have by 18</a>. For the non-negotiable standard, read <a href="/floor">the 18-Year-Old Floor</a>.</p></div>}
           {section.id === "three-layers" && <div className="doc-section doc-section-alt"><p className="doc-section-text">Explore <a href="/domains">the 10 Domains</a> to see the broader map of human capability.</p></div>}
         </section>
