@@ -19,6 +19,8 @@ const defaultShareImage = {
   alt: "Young person navigating a foreign city with a map",
 };
 const { CORPUS } = await import(path.join(rootDir, "api", "ask", "corpus.generated.mjs"));
+const domainsHubPath = path.join(rootDir, "src", "data", "domainsHub.ts");
+const DOMAINS_HUB = loadDataExport(await readFile(domainsHubPath, "utf8"), "DOMAINS_HUB", domainsHubPath);
 const routeMetadata = new Map([
   ["/why", {
     title: "Why LifeEducation.org Exists | LifeEducation.org",
@@ -33,8 +35,8 @@ const routeMetadata = new Map([
     description: "A plain-language public translation of the LifeEducation Floor contract.",
   }],
   ["/domains", {
-    title: "The 10 Domains | LifeEducation.org",
-    description: "The broader LifeEducation capability map across communication, math, science, civics, ethics, finance, health, creativity, technology, and life skills.",
+    title: DOMAINS_HUB.seoTitle,
+    description: DOMAINS_HUB.seoDescription,
   }],
   ["/posts", {
     title: "Posts | LifeEducation.org",
@@ -347,7 +349,7 @@ function publishedPostLinks(limit) {
 }
 
 function staticPageShell(route, metadata) {
-  const heading = route === "/" ? "LifeEducation.org" : metadata.title.replace(/ \| LifeEducation\.org$/, "");
+  const heading = route === "/" ? "LifeEducation.org" : route === "/domains" ? DOMAINS_HUB.heading : metadata.title.replace(/ \| LifeEducation\.org$/, "");
   const sourceId = { "/why": "why", "/floor": "floor", "/by-18": "by-18", "/qa": "qa", "/domains": "domains" }[route];
   let body = "";
   if (route === "/") {
@@ -358,12 +360,16 @@ function staticPageShell(route, metadata) {
     const number = metadata.domainNumber;
     body = `${metadata.scope ? `<section><h2>What this capability includes</h2><p>${escapeHtml(metadata.scope)}</p><p><a href="/by-18">What young adults should be able to do by 18</a> · <a href="/floor">The formal Floor</a></p></section>` : ""}${corpusSections(CORPUS.filter((chunk) => chunk.sourceId === "domains" && chunk.heading.startsWith(`Domain ${number}:`)))}`;
   } else if (sourceId) {
-    const domainLinks = route === "/domains"
-      ? `<ul>${[...routeMetadata.entries()].filter(([path]) => path.startsWith("/domains/")).map(([path, item]) => `<li><a href="${path}">${escapeHtml(item.title.replace(/ \| LifeEducation\.org$/, ""))}</a></li>`).join("")}</ul>`
-      : "";
-    body = domainLinks + corpusSections(CORPUS.filter((chunk) => chunk.sourceId === sourceId));
+    if (route === "/domains") {
+      const domains = loadDataExport(domainSource, "DOMAINS", "src/data/domainsData.ts");
+      body = `<section><h2>What this map covers</h2><p>${escapeHtml(DOMAINS_HUB.introduction)}</p><p>${escapeHtml(DOMAINS_HUB.distinction)}</p></section>`
+        + `<section><h2>Start with the adulthood target</h2><p><a href="/by-18">What young adults should be able to do by 18</a> · <a href="/floor">The 18-Year-Old Floor</a></p></section>`
+        + `<section><h2>The 10 Areas of Capability</h2><ol>${domains.map((domain) => `<li><a href="/domains/${escapeAttribute(domain.slug)}">${escapeHtml(domain.title)}</a><p>${escapeHtml(DOMAINS_HUB.cards[domain.slug])}</p></li>`).join("")}</ol></section>`;
+    } else {
+      body = corpusSections(CORPUS.filter((chunk) => chunk.sourceId === sourceId));
+    }
   }
-  return `<main data-static-page-shell><header><h1>${escapeHtml(heading)}</h1><p>${escapeHtml(metadata.intro || metadata.description)}</p></header>${siteNavMarkup}${body}</main>`;
+  return `<main data-static-page-shell><header><h1>${escapeHtml(heading)}</h1><p>${escapeHtml(route === "/domains" ? DOMAINS_HUB.subtitle : metadata.intro || metadata.description)}</p></header>${siteNavMarkup}${body}</main>`;
 }
 
 const routes = new Set();
