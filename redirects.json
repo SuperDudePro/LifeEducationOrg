@@ -2,6 +2,18 @@
   "canonicalOrigin": "https://www.lifeeducation.org",
   "redirects": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "lifeeducation.org"
+        }
+      ],
+      "destination": "https://www.lifeeducation.org/",
+      "permanent": true,
+      "note": "Canonicalize the apex homepage, which differs from the wildcard path matcher."
+    },
+    {
       "source": "/:path*",
       "has": [
         {

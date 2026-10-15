@@ -27,7 +27,7 @@ const NON_PUBLIC_PATTERNS = [
   /^\.github\//,
   /^api\//,
   /^test\//,
-  /^scripts\//,
+  /^scripts\/(?!generate-route-pages\.mjs$|generate-sitemap\.mjs$)/,
   /^docs?\//,
   /(^|\/)[^/]+\.md$/i,
   /^public\/deployment\.json$/,
@@ -40,6 +40,8 @@ const NON_PUBLIC_PATTERNS = [
 ];
 
 const BROAD_PUBLIC_PATTERNS = [
+  /^scripts\/generate-route-pages\.mjs$/,
+  /^scripts\/generate-sitemap\.mjs$/,
   /^src\/App\.tsx$/,
   /^src\/main\.tsx$/,
   /^src\/structuredData\.ts$/,
