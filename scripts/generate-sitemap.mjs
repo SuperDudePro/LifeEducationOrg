@@ -10,7 +10,8 @@ function getDateStamp(date = new Date()) {
   return `${year}-${month}-${day}`;
 }
 
-const today = process.env.SITEMAP_LASTMOD ?? getDateStamp();
+// Use explicit post modification dates. Do not claim unchanged pages were modified at build time.
+const overrideDate = process.env.SITEMAP_LASTMOD || undefined;
 
 const staticPages = [
   { path: "/", freq: "weekly", pri: "1.0" },
@@ -55,20 +56,22 @@ const postDirs = readdirSync("src/content/posts", { withFileTypes: true })
       throw new Error(`Post folder "${d.name}" does not match metadata slug "${slug}".`);
     }
 
-    return { slug, status };
+    const modifiedAt = metaSource.match(/modifiedAt:\s*"([0-9]{4}-[0-9]{2}-[0-9]{2})"/)?.[1];
+    const publishedAt = metaSource.match(/publishedAt:\s*"([0-9]{4}-[0-9]{2}-[0-9]{2})"/)?.[1];
+    return { slug, status, lastmod: modifiedAt || publishedAt };
   })
   .filter((post) => post.status !== "Draft" && post.status !== "Coming Soon")
-  .map((post) => post.slug)
+  .map((post) => post)
   .sort();
 
 const urls = [
   ...staticPages.map((p) => ({ loc: BASE + p.path, freq: p.freq, pri: p.pri })),
-  ...postDirs.map((slug) => ({ loc: `${BASE}/posts/${slug}`, freq: "monthly", pri: "0.6" })),
+  ...postDirs.map(({ slug, lastmod }) => ({ loc: `${BASE}/posts/${slug}`, freq: "monthly", pri: "0.6", lastmod })),
   ...domainSlugs.map((slug) => ({ loc: `${BASE}/domains/${slug}`, freq: "monthly", pri: "0.7" })),
 ];
 
 const body = urls.map((u) =>
-  `  <url>\n    <loc>${u.loc}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>${u.freq}</changefreq>\n    <priority>${u.pri}</priority>\n  </url>`
+  `  <url>\n    <loc>${u.loc}</loc>${overrideDate || u.lastmod ? `\n    <lastmod>${overrideDate || u.lastmod}</lastmod>` : ""}\n    <changefreq>${u.freq}</changefreq>\n    <priority>${u.pri}</priority>\n  </url>`
 ).join("\n");
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`;
