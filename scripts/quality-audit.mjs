@@ -106,6 +106,29 @@ try {
       } catch (error) { failures.push(`${path}: ${error.message}`); }
       finally { await page.close(); }
     }
+    // Mobile regression: check real 390px viewport, not a resized desktop screenshot.
+    const mobileRoutes = ['/', '/why', '/floor', '/by-18', '/domains', '/posts/seven-years-to-build-a-different-way', '/posts/why-section-is-live', '/ask', '/contact'];
+    for (const path of mobileRoutes) {
+      const page = await browser.newPage({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2 });
+      try {
+        const response = await page.goto(`${origin}${path}`, { waitUntil: 'networkidle', timeout: 30000 });
+        assert.equal(response?.status(), 200, `${path}: mobile route failed`);
+        await page.locator('main').first().waitFor();
+        const state = await page.evaluate(() => ({
+          viewport: window.innerWidth,
+          documentWidth: document.documentElement.scrollWidth,
+          mainWidth: document.querySelector('main')?.getBoundingClientRect().width,
+          headings: [...document.querySelectorAll('h1')].map((element) => element.textContent?.trim()),
+          brokenImages: [...document.querySelectorAll('main img')].filter((image) => image.complete && image.naturalWidth === 0).map((image) => image.getAttribute('src')),
+        }));
+        if (state.documentWidth > state.viewport + 2) failures.push(`${path}: mobile horizontal overflow ${state.documentWidth}px > ${state.viewport}px`);
+        if (state.brokenImages.length) failures.push(`${path}: mobile broken images: ${state.brokenImages.join(', ')}`);
+        if (state.headings.length !== 1) failures.push(`${path}: mobile expected one h1, got ${state.headings.length}`);
+        report.routes.push({ path, viewport: '390px mobile', state });
+        console.log(`${path}: mobile width ${state.documentWidth}/${state.viewport}px, images ${state.brokenImages.length} broken`);
+      } catch (error) { failures.push(`${path}: mobile ${error.message}`); }
+      finally { await page.close(); }
+    }
   } finally { await browser.close(); }
 } finally {
   try { process.kill(-server.pid); } catch { /* preview already exited */ }
