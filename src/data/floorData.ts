@@ -2,11 +2,11 @@ import type { StructuredSection } from "../types";
 
 export const FLOOR_DATA = {
   "title": "The 18-Year-Old Floor",
-  "subtitle": "Contract",
-  "notice": "Working Draft. This is the current authority on the minimum contract, but it is still intentionally open for revision.",
+  "subtitle": "The minimum real-world capabilities a young adult must demonstrate by 18. Not a curriculum, grades, or seat time—a standard based on what someone can actually do.",
+  "seoTitle": "Adult Readiness Standards: The 18-Year-Old Floor | LifeEducation.org",
+  "seoDescription": "The LifeEducation Floor defines the non-negotiable minimum capability expected by age 18. It is a real adulthood contract based on demonstrated ability, not grades or seat time.",
   "intro": [
-    "The Floor is the non-negotiable minimum capability expected by age 18.",
-    "It is not a curriculum, transcript, or credential chase. It defines what capability must honestly exist before adulthood is claimed."
+    "The Floor is the non-negotiable minimum capability expected by age 18. It defines what must honestly be demonstrated, not what classes someone attended or which credentials they collected."
   ],
   "sections": [
     {
@@ -762,4 +762,4 @@ export const FLOOR_DATA = {
       ]
     }
   ]
-} satisfies { title: string; subtitle: string; notice: string; intro: string[]; sections: StructuredSection[] };
+} satisfies { title: string; subtitle: string; seoTitle: string; seoDescription: string; intro: string[]; sections: StructuredSection[] };
