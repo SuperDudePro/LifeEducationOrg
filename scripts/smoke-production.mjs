@@ -107,6 +107,10 @@ const asset = await get(`${origin}${moduleTag.src}`);
 assert.equal(asset.status, 200, `client module returned HTTP ${asset.status}`);
 assert.ok((await asset.text()).length > 100, 'client module is empty');
 
+const apexHome = await get(`${config.alternateOrigin}/`);
+assert.ok([301, 308].includes(apexHome.status), `Apex homepage returned ${apexHome.status} instead of a permanent redirect`);
+assert.equal(new URL(apexHome.headers.get('location'), config.alternateOrigin).href, `${origin}/`, 'Apex homepage redirects to wrong URL');
+
 const alternate = await get(`${config.alternateOrigin}${config.alternatePath}`);
 if (config.alternateMustRedirect) {
   assert.ok([301, 308].includes(alternate.status), `alternate host returned ${alternate.status}, expected permanent redirect`);
