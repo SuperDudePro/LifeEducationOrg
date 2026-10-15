@@ -2,7 +2,7 @@ export const BY18_DATA = {
   "title": "By 18: What You Can Do",
   "subtitle": "A whole-life benchmark for the skills teenagers need before adulthood—not just chores, grades, or college applications.",
   "seoTitle": "Life Skills for Teens: What Young Adults Should Be Able to Do by 18 | LifeEducation.org",
-  "seoDescription": "A serious benchmark for adulthood readiness: the communication, money, health, judgment, technology, relationship, and real-world skills a young adult should be able to use by 18.",
+  "seoDescription": "What should teens be able to do by 18? A whole-life benchmark for communication, money, health, technology, relationships, judgment, and independence.",
   "thesis": "This is the point of the system. Not what classes you sat through. Not what boxes got checked. Not what looked good on paper. By 18, you can actually do real things in real life.",
   "intro": [
     "“By 18” names the deadline, not the earliest possible finish. A young person may meet this standard earlier; if they do, the focus shifts toward maintenance, broader domain cultivation, and increasingly self-directed depth."

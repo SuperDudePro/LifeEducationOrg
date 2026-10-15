@@ -6,7 +6,7 @@ export const metadata = {
   slug: "show-me-the-three",
   title: "Show Me the Three",
   excerpt:
-    "AI can make a student's work look better without making the student better. The real question is what the learner owns: where they started, how far they moved, and whether they can explain and defend the work.",
+    "AI can make student work look polished without proving learning. Show me where the student started, how far they moved, and what they can explain.",
   publishedAt: "2026-09-19",
   status: "Recent",
   topic: "Founding Notes",

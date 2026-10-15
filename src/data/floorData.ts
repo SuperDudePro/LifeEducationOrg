@@ -4,7 +4,7 @@ export const FLOOR_DATA = {
   "title": "The 18-Year-Old Floor",
   "subtitle": "The minimum real-world capabilities a young adult must demonstrate by 18. Not a curriculum, grades, or seat time—a standard based on what someone can actually do.",
   "seoTitle": "Adult Readiness Standards: The 18-Year-Old Floor | LifeEducation.org",
-  "seoDescription": "The LifeEducation Floor defines the non-negotiable minimum capability expected by age 18. It is a real adulthood contract based on demonstrated ability, not grades or seat time.",
+  "seoDescription": "The 18-Year-Old Floor sets a non-negotiable standard for what young adults must demonstrate by 18—not grades, credits, or classroom seat time.",
   "intro": [
     "The Floor is the non-negotiable minimum capability expected by age 18. It defines what must honestly be demonstrated, not what classes someone attended or which credentials they collected."
   ],
