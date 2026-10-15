@@ -826,3 +826,11 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
   .domain-essay-card { grid-template-columns: 1fr; }
   .domain-essay-media { aspect-ratio: 16 / 9; }
 }
+
+/* By 18: restrained contents navigation and readable connections. */
+.by18-toc-list { max-width: 1050px; columns: 2; column-gap: 38px; margin: 22px 0 0; padding-left: 22px; }
+.by18-toc-list li { break-inside: avoid; margin: 0 0 12px; line-height: 1.55; }
+.by18-toc-list a, .by18-related a, .doc-closing-text a, .doc-section-text a { color: #0d4b39; text-decoration: underline; text-underline-offset: 3px; }
+.by18-related { max-width: 980px; margin: 24px 0 0; color: #475569; font-size: 15px; line-height: 1.7; }
+.doc-section[id] { scroll-margin-top: 20px; }
+@media (max-width: 640px) { .by18-toc-list { columns: 1; } }
