@@ -4,6 +4,7 @@ import { TREE_FAVICON } from "./data/site";
 import { DOMAINS } from "./data/domainsData";
 import { DOMAIN_PAGE_COPY } from "./data/domainPageCopy";
 import { DOMAINS_HUB } from "./data/domainsHub";
+import { BY18_DATA } from "./data/by18Data";
 import { normalizePath } from "./utils/routing";
 import { HomePage } from "./pages/HomePage";
 import { WhyPage } from "./pages/WhyPage";
@@ -67,9 +68,8 @@ export default function App() {
           "The non-negotiable minimum adulthood capability contract for LifeEducation.",
       },
       "/by-18": {
-        title: "By 18: What You Can Do | LifeEducation.org",
-        description:
-          "A plain-language public translation of the LifeEducation Floor contract.",
+        title: BY18_DATA.seoTitle,
+        description: BY18_DATA.seoDescription,
       },
       "/domains": {
         title: DOMAINS_HUB.seoTitle,
