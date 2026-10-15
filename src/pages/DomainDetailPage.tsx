@@ -33,7 +33,7 @@ export function DomainDetailPage({ slug }: { slug: string }) {
   const essay = getPostForDomain(domain.number);
   const essayImage = essay ? getPostImage(essay, "card") : undefined;
 
-  const isPilot = domain.slug === "literacy-communication";
+  const isPilot = true;
   const sections = [
     floor ? { id: "floor", heading: "The Floor" } : null,
     { id: "map", heading: "The Broader Map" },
@@ -56,9 +56,9 @@ export function DomainDetailPage({ slug }: { slug: string }) {
       </BackBar>
 
       <section className="doc-section">
-        <h2 className="doc-section-title">{isPilot ? "Communication Skills That Matter in Adult Life" : "What this capability includes"}</h2>
+        <h2 className="doc-section-title">{domain.number === "1" ? "Communication Skills That Matter in Adult Life" : copy?.seoTitle ?? "What this capability includes"}</h2>
         <p className="doc-section-text">{copy?.scope ?? "The Floor defines the minimum; the broader domain includes opportunities for deeper development."}</p>
-        {isPilot ? <nav aria-label="Related LifeEducation standards" className="domain-context-links"><a href="/by-18">What young adults should be able to do by 18</a><a href="/floor#floor-domain-1">The formal Floor: Domain 1</a></nav> : <nav aria-label="Related LifeEducation standards" className="domain-page-grid">
+        {isPilot ? <nav aria-label="Related LifeEducation standards" className="domain-context-links"><a href="/by-18">What young adults should be able to do by 18</a><a href={`/floor#floor-domain-${domain.number}`}>The formal Floor: Domain {domain.number}</a></nav> : <nav aria-label="Related LifeEducation standards" className="domain-page-grid">
           <a href="/by-18" className="domain-page-card"><span className="domain-page-card-title">What young adults should be able to do by 18</span></a>
           <a href="/floor" className="domain-page-card"><span className="domain-page-card-title">The formal 18-Year-Old Floor</span></a>
         </nav>}
