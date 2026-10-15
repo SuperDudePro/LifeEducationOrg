@@ -75,6 +75,19 @@ for (const route of routes) {
     if (!/<article\b[^>]*data-static-post/.test(routeHtml)) {
       fail(rel(html), 'static article', 'post route is missing crawler-readable article markup');
     }
+    const shareImage = routeHtml.match(/<meta property="og:image" content="([^"]+)" \/>/)?.[1];
+    if (!shareImage) {
+      fail(rel(html), 'social preview', 'post route is missing an Open Graph image');
+    } else {
+      const imageUrl = new URL(shareImage);
+      const builtAsset = join(DIST, ...imageUrl.pathname.slice(1).split('/'));
+      if (imageUrl.origin !== ORIGIN || !existsSync(builtAsset)) {
+        fail(rel(html), 'social preview', `image is not a local built asset (${shareImage})`);
+      }
+      if (route.startsWith('/posts/domain-') && route !== '/posts/domain-1-communication' && shareImage.endsWith('/lifeeducation_break_navigator.webp')) {
+        fail(rel(html), 'social preview', 'domain essay uses the generic fallback instead of its dedicated card image');
+      }
+    }
     if (!/<h1>[^<]+<\/h1>/.test(routeHtml)) {
       fail(rel(html), 'static h1', 'post route is missing a crawler-readable H1');
     }
