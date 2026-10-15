@@ -3,6 +3,7 @@ import { LongPostNav } from "./components/LongPostNav";
 import { TREE_FAVICON } from "./data/site";
 import { DOMAINS } from "./data/domainsData";
 import { DOMAIN_PAGE_COPY } from "./data/domainPageCopy";
+import { DOMAINS_HUB } from "./data/domainsHub";
 import { normalizePath } from "./utils/routing";
 import { HomePage } from "./pages/HomePage";
 import { WhyPage } from "./pages/WhyPage";
@@ -71,9 +72,8 @@ export default function App() {
           "A plain-language public translation of the LifeEducation Floor contract.",
       },
       "/domains": {
-        title: "The 10 Domains | LifeEducation.org",
-        description:
-          "The broader LifeEducation capability map across communication, math, science, civics, ethics, finance, health, creativity, technology, and life skills.",
+        title: DOMAINS_HUB.seoTitle,
+        description: DOMAINS_HUB.seoDescription,
       },
       "/posts": {
         title: "Posts | LifeEducation.org",
