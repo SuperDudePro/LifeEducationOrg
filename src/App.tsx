@@ -1,3 +1,4 @@
+import { WHY_DATA } from "./data/whyData";
 import { useEffect, useMemo, useState } from "react";
 import { LongPostNav } from "./components/LongPostNav";
 import { TREE_FAVICON } from "./data/site";
@@ -59,9 +60,8 @@ export default function App() {
         description: defaultDescription,
       },
       "/why": {
-        title: "Why LifeEducation.org Exists | LifeEducation.org",
-        description:
-          "The founding statement for LifeEducation: not anti-education, but anti school-as-default-authority, with real capability as the standard.",
+        title: WHY_DATA.seoTitle,
+        description: WHY_DATA.seoDescription,
       },
       "/floor": {
         title: FLOOR_DATA.seoTitle,
