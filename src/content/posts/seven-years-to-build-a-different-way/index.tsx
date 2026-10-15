@@ -146,6 +146,7 @@ const postBody = (
 
       return <p key={`paragraph-${index}`}>{block.text}</p>;
     })}
+    <p>If you're trying to prepare your kids for something more than school success, what would you build differently? <a href="/contact">Tell me what you're working toward.</a></p>
   </>
 );
 
