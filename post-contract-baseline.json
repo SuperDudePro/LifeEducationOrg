@@ -12,11 +12,6 @@
         "reason": "images/answer-actual-question-comic.jpg is 1400x933; the body role requires 1200x900."
       },
       {
-        "ruleId": "image.body.minimum",
-        "signature": "count=1",
-        "reason": "Only 1 distinct body images; current minimum is 4."
-      },
-      {
         "ruleId": "image.body.sequence",
         "signature": "actual=images/answer-actual-question-comic.jpg;expected=images/body-image-1.webp",
         "reason": "Body roles must use the exact sequential filenames images/body-image-1.webp."
@@ -76,11 +71,6 @@
         "reason": "Post is missing a reader CTA linking to the contact page."
       },
       {
-        "ruleId": "image.body.minimum",
-        "signature": "count=0",
-        "reason": "Only 0 distinct body images; current minimum is 4."
-      },
-      {
         "ruleId": "image.body.reference",
         "signature": "(missing)",
         "reason": "PostFigure source \"(missing)\" does not match a local image import."
@@ -121,11 +111,6 @@
         "ruleId": "image.body.geometry",
         "signature": "file=images/real-world-navigation-inline.jpg;actual=1400x788;expected=1200x900",
         "reason": "images/real-world-navigation-inline.jpg is 1400x788; the body role requires 1200x900."
-      },
-      {
-        "ruleId": "image.body.minimum",
-        "signature": "count=1",
-        "reason": "Only 1 distinct body images; current minimum is 4."
       },
       {
         "ruleId": "image.body.sequence",
