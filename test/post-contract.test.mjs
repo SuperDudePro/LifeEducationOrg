@@ -82,9 +82,11 @@ test('valid current-standard LifeEducation post passes', () => {
   assert.deepEqual(scan.posts[0].defects, []);
 });
 
-test('fewer than four body roles fails', () => {
-  const scan = scanLifeEducation(createRepo({ count: 3 }));
-  assert(scan.posts[0].defects.some((value) => value.ruleId === 'image.body.minimum'));
+test('author may choose zero, one, three, or four body images', () => {
+  for (const count of [0, 1, 3, 4]) {
+    const scan = scanLifeEducation(createRepo({ count }));
+    assert.deepEqual(scan.posts[0].defects, [], `count ${count}: ${JSON.stringify(scan.posts[0].defects)}`);
+  }
 });
 
 test('card or hero reuse and numbering gaps fail', () => {
@@ -106,7 +108,7 @@ test('invalid image geometry is reported before retrofit selection', () => {
 });
 
 test('only the exact reviewed legacy defect is allowed', () => {
-  const root = createRepo({ count: 3 });
+  const root = createRepo({ invalidGeometry: true });
   const first = scanLifeEducation(root);
   const baseline = candidateBaseline(first);
   baseline.status = 'reviewed';
@@ -120,7 +122,7 @@ test('only the exact reviewed legacy defect is allowed', () => {
 });
 
 test('obsolete baseline defects fail until removed', () => {
-  const legacy = scanLifeEducation(createRepo({ count: 3 }));
+  const legacy = scanLifeEducation(createRepo({ invalidGeometry: true }));
   const baseline = candidateBaseline(legacy);
   baseline.status = 'reviewed';
   const repaired = scanLifeEducation(createRepo());
