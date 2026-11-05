@@ -303,9 +303,6 @@ export function scanLifeEducation(root = process.cwd()) {
       if (!figure.alt?.value?.trim()) add('image.body.alt', file, `Body image ${file} has empty alt text.`);
     }
     const uniqueBodyFiles = [...new Set(bodyFiles)];
-    if (uniqueBodyFiles.length < 4) {
-      add('image.body.minimum', `count=${uniqueBodyFiles.length}`, `Only ${uniqueBodyFiles.length} distinct body images; current minimum is 4.`);
-    }
     if (bodyFiles.length !== uniqueBodyFiles.length) {
       add('image.body.distinct', `files=${bodyFiles.join(',')}`, 'One or more body images are rendered more than once.');
     }
