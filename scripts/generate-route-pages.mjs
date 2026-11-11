@@ -379,7 +379,7 @@ function staticPageShell(route, metadata) {
   const sourceId = { "/why": "why", "/floor": "floor", "/by-18": "by-18", "/qa": "qa", "/domains": "domains" }[route];
   let body = "";
   if (route === "/") {
-    body = `<h2>Latest field notes</h2>${publishedPostLinks(8)}`;
+    body = `<section aria-label="Explore the LifeEducation framework"><p>LifeEducation starts with the question of what young adults should actually be able to do. <a href="/by-18">What teenagers should be able to do by 18</a> explains the public target, <a href="/floor">the formal 18-Year-Old Floor</a> sets the minimum, and <a href="/domains">the ten areas of real-world capability</a> show the broader map.</p></section><h2>Latest field notes</h2>${publishedPostLinks(8)}`;
   } else if (route === "/posts") {
     body = publishedPostLinks();
   } else if (route.startsWith("/domains/")) {
@@ -534,8 +534,8 @@ for (const route of routes) {
 // The home page is dist/index.html itself; give it the default share image and a crawlable shell last,
 // after the other routes were built from the clean template.
 await writeFile(indexPath, addShareImage(indexHtml, defaultShareImage).replace(/<div id="root"><\/div>/, `<div id="root">${staticPageShell("/", {
-  title: "LifeEducation.org",
-  description: "A lightweight operating system for raising capable, self-directed humans outside the default school script.",
+  title: "LifeEducation.org | Raising Capable, Self-Directed Young Adults",
+  description: "LifeEducation starts with a practical question: what should a young adult actually be able to do by 18? Explore the Floor, the ten domains, and an education system built around real capability.",
 })}</div>`), "utf8");
 
 // The manifest is only a build input; do not deploy it.
