@@ -47,7 +47,7 @@ export function HomePage() {
             <p className="why-text">
               A great school may be worth using. But school is an environment, not the operating system, and it does not deserve automatic trust just because it is official.
             </p>
-            <a className="why-button" href="/why">Read the Why Statement</a>
+            <a className="why-button" href="/why">Why education is not the same as schooling</a>
           </div>
           <div className="why-cards">
             <div className="why-card">
@@ -103,7 +103,7 @@ export function HomePage() {
             <div className="floor-card-label">Public translation</div>
             <div className="floor-card-title">By 18: What You Can Do</div>
             <div className="floor-card-text">This is the same contract in plain public language.</div>
-            <a className="floor-card-button floor-card-button-accent" href="/by-18">Read the By 18 document</a>
+            <a className="floor-card-button floor-card-button-accent" href="/by-18">What teenagers should be able to do by 18</a>
           </div>
         </div>
       </section>
@@ -123,7 +123,7 @@ export function HomePage() {
           ))}
         </div>
         <div className="domains-note">Contract first. Full map second.</div>
-        <a className="domains-button" href="/domains">Read the Domains document</a>
+        <a className="domains-button" href="/domains">Explore the ten areas of real-world capability</a>
       </section>
       <section className="posts-section posts-section-home">
         <div className="posts-head">
