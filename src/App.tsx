@@ -56,8 +56,8 @@ export default function App() {
       "LifeEducation.org is a lightweight operating system for raising capable, self-directed humans without treating school as the default authority over education.";
     const metaMap: Record<string, { title: string; description: string }> = {
       "/": {
-        title: "LifeEducation.org",
-        description: defaultDescription,
+        title: "LifeEducation.org | Raising Capable, Self-Directed Young Adults",
+        description: "LifeEducation starts with a practical question: what should a young adult actually be able to do by 18? Explore the Floor, the ten domains, and an education system built around real capability.",
       },
       "/why": {
         title: WHY_DATA.seoTitle,
