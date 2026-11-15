@@ -176,10 +176,13 @@ export default function App() {
     return <NotFoundPage />;
   }, [pathname]);
 
+  const journeyHref = pathname === "/floor" || pathname === "/by-18" || pathname.startsWith("/domains/") ? "/domains" : "/posts";
+  const journeyLabel = journeyHref === "/domains" ? "All Domains" : "All posts";
+
   return (
     <>
       {page}
-      <LongPostNav homeHref="/" postsHref="/posts" postsLabel="All posts" />
+      <LongPostNav homeHref="/" postsHref={journeyHref} postsLabel={journeyLabel} />
     </>
   );
 }

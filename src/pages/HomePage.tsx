@@ -21,6 +21,11 @@ export function HomePage() {
             <p className="hero-text">
               LifeEducation is not anti-education. It is anti school-as-default-authority: a refusal to treat official schooling as proof of learning, plus a real system for building capability.
             </p>
+            <nav className="hero-start-links" aria-label="Start exploring LifeEducation">
+              <a className="why-button" href="/by-18">Start with By 18</a>
+              <a className="hero-start-link" href="/floor">The formal Floor</a>
+              <a className="hero-start-link" href="/domains">Explore the 10 Domains</a>
+            </nav>
           </div>
         </section>
         <section className="hero-art">
