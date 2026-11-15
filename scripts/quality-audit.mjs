@@ -107,7 +107,7 @@ try {
       finally { await page.close(); }
     }
     // Mobile regression: check real 390px viewport, not a resized desktop screenshot.
-    const mobileRoutes = ['/', '/why', '/floor', '/by-18', '/domains', '/posts/seven-years-to-build-a-different-way', '/posts/why-section-is-live', '/ask', '/contact'];
+    const mobileRoutes = ['/', '/why', '/floor', '/by-18', '/domains', '/posts', '/posts/seven-years-to-build-a-different-way', '/posts/why-section-is-live', '/ask', '/contact'];
     for (const path of mobileRoutes) {
       const page = await browser.newPage({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2 });
       try {
@@ -124,6 +124,29 @@ try {
         if (state.documentWidth > state.viewport + 2) failures.push(`${path}: mobile horizontal overflow ${state.documentWidth}px > ${state.viewport}px`);
         if (state.brokenImages.length) failures.push(`${path}: mobile broken images: ${state.brokenImages.join(', ')}`);
         if (state.headings.length !== 1) failures.push(`${path}: mobile expected one h1, got ${state.headings.length}`);
+        if (path === '/') {
+          const start = page.getByRole('navigation', { name: 'Start exploring LifeEducation' });
+          for (const label of ['Start with By 18', 'The formal Floor', 'Explore the 10 Domains']) {
+            if (!(await start.getByRole('link', { name: label }).count())) failures.push('Home: missing framework entry ' + label);
+          }
+        }
+        const menu = page.getByRole('button', { name: 'Explore site' });
+        if (!(await menu.isVisible())) failures.push(`${path}: mobile menu is not visible`);
+        else {
+          if (await menu.getAttribute('aria-expanded') !== 'false') failures.push(`${path}: mobile menu not initially collapsed`);
+          await menu.click();
+          const expanded = page.getByRole('button', { name: 'Close menu' });
+          if (await expanded.getAttribute('aria-expanded') !== 'true') failures.push(`${path}: mobile menu did not expand`);
+          if (!(await page.locator('#site-nav-mobile-links').getByRole('link', { name: 'By 18' }).isVisible())) failures.push(`${path}: By 18 unavailable in mobile menu`);
+        }
+        if (path === '/posts') {
+          const search = page.getByRole('textbox', { name: 'Search posts' });
+          await search.fill('zzzz-reader-journey-no-match');
+          if (!(await page.getByRole('status').getByText('No posts match those filters.').isVisible())) failures.push('Archive: missing zero-result guidance');
+          await page.getByRole('button', { name: 'Clear filters and show all posts' }).click();
+          if (await search.inputValue()) failures.push('Archive: clear filters left query text');
+        }
+
         report.routes.push({ path, viewport: '390px mobile', state });
         console.log(`${path}: mobile width ${state.documentWidth}/${state.viewport}px, images ${state.brokenImages.length} broken`);
       } catch (error) { failures.push(`${path}: mobile ${error.message}`); }
