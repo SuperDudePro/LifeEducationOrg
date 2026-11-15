@@ -14,7 +14,7 @@ export function SiteNav({ currentPath }: { currentPath: string }) {
       </div>
       <div className="site-nav-mobile">
         <button type="button" className="site-nav-menu-toggle" aria-expanded={menuOpen} aria-controls="site-nav-mobile-links" onClick={() => setMenuOpen((value) => !value)}>{menuOpen ? "Close menu" : "Explore site"} <span aria-hidden="true">{menuOpen ? "−" : "+"}</span></button>
-        {menuOpen && <div id="site-nav-mobile-links" className="site-nav-mobile-links">{links}</div>}
+        <div id="site-nav-mobile-links" className="site-nav-mobile-links" hidden={!menuOpen}>{links}</div>
       </div>
     </nav>
   );
