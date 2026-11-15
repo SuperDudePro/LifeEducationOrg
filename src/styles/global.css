@@ -846,3 +846,22 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
 /* Domain 1 editorial link treatment. */
 .domain-context-links { display: flex; flex-wrap: wrap; gap: 12px 24px; margin: 24px 0 0; }
 .domain-context-links a { color: #0d4b39; text-decoration: underline; text-underline-offset: 3px; font-weight: 700; line-height: 1.7; }
+
+/* Reader journeys: accessible compact nav, early framework entry points, archive recovery. */
+.site-nav-mobile { display: none; }
+.hero-start-links { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-top: 26px; }
+.hero-start-links .why-button { margin: 0; }
+.hero-start-link { color: #0d4b39; font-weight: 800; text-decoration: underline; text-underline-offset: 4px; line-height: 1.5; }
+.hero-start-link:hover, .hero-start-link:focus-visible { color: #177b58; }
+.posts-empty { max-width: 600px; padding: 28px; border: 1px solid #b4cfc3; border-radius: 16px; background: #fff; color: #334155; }
+.posts-empty p { margin: 0 0 18px; }
+.posts-empty button { cursor: pointer; }
+@media (max-width: 900px) {
+  .site-nav-inner { display: none; }
+  .site-nav-mobile { display: block; max-width: 780px; margin: 0 auto; }
+  .site-nav-menu-toggle { width: 100%; min-height: 48px; display: flex; justify-content: space-between; align-items: center; padding: 10px 18px; border: 2px solid var(--le-accent-light); border-radius: 14px; background: var(--le-accent); color: #fff; font: inherit; font-weight: 800; cursor: pointer; }
+  .site-nav-menu-toggle:hover, .site-nav-menu-toggle:focus-visible { background: var(--le-accent-dark); outline-offset: 3px; }
+  .site-nav-mobile-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; padding-top: 12px; }
+  .site-nav-mobile-links .site-nav-link { min-width: 0; text-align: center; }
+}
+@media (max-width: 440px) { .site-nav-mobile-links { grid-template-columns: 1fr; } }
