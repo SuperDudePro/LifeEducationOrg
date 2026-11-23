@@ -866,3 +866,28 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
   .site-nav-mobile-links .site-nav-link { min-width: 0; text-align: center; }
 }
 @media (max-width: 440px) { .site-nav-mobile-links { grid-template-columns: 1fr; } }
+
+/* Guided Explorer: a lightweight homepage route into already-published material. */
+.guided-explorer { padding: 48px 56px 56px; background: #f8fafc; color: #0f172a; border-bottom: 1px solid rgba(15,23,42,.1); }
+.guided-explorer-header { max-width: 900px; }
+.guided-explorer-pill { display: inline-flex; padding: 8px 14px; border: 2px solid #177b58; border-radius: 999px; color: #0d4b39; font-size: 12px; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
+.guided-explorer h2 { margin: 20px 0 0; color: #0d4b39; font: 500 clamp(28px,3.5vw,44px)/1.1 Georgia,"Times New Roman",serif; }
+.guided-explorer-header p { margin: 16px 0 0; color: #334155; line-height: 1.7; font-size: 17px; }
+.guided-explorer-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; margin-top: 26px; }
+.guided-explorer-card { display: flex; flex-direction: column; min-width: 0; border: 1px solid #cbd5e1; border-radius: 22px; padding: 24px; background: #fff; }
+.guided-explorer-card h3 { margin: 0; color: #0f172a; font: 500 25px/1.2 Georgia,"Times New Roman",serif; }
+.guided-explorer-card p { margin: 12px 0 18px; color: #475569; line-height: 1.6; }
+.guided-explorer-links { display: flex; flex-wrap: wrap; gap: 12px 20px; margin-top: auto; }
+.guided-explorer-links a, .guided-explorer-more a { color: #0d4b39; font-weight: 750; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.guided-explorer-links a { display: inline-block; padding: 6px 0; }
+.guided-explorer-links a:hover, .guided-explorer-more a:hover { color: #177b58; }
+.guided-explorer-more { margin: 24px 0 0; line-height: 1.6; color: #334155; }
+@media (max-width: 900px) {
+  .guided-explorer { padding: 40px 32px; }
+}
+@media (max-width: 640px) {
+  .guided-explorer { padding: 32px 20px; }
+  .guided-explorer-grid { grid-template-columns: 1fr; }
+  .guided-explorer-card { padding: 20px; }
+  .guided-explorer-card h3 { font-size: 23px; }
+}
