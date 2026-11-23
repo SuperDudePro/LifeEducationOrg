@@ -1,4 +1,5 @@
 import { DOMAINS } from "../data/domainsData";
+import { GuidedExplorer } from "../components/GuidedExplorer";
 import { HOME_FAQ_ITEMS } from "../data/homeFaqData";
 import { AskCta } from "../components/AskCta";
 import { PageShell } from "../components/PageShell";
@@ -41,6 +42,7 @@ export function HomePage() {
           <img className="image-break-img" src="/lifeeducation_break_navigator.webp" alt="Young person navigating a foreign city with a map" loading="lazy" decoding="async" />
         </div>
       </section>
+      <GuidedExplorer />
       <section className="why">
         <div className="why-grid">
           <div className="why-copy">
