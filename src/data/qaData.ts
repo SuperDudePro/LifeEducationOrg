@@ -152,9 +152,9 @@ export const QA_DATA = {
         {
           "question": "Are you anti-education?",
           "answer": [
-            "Yes, if education means compulsory formal schooling as it currently exists.",
-            "No, if education means learning, growth, discipline, mentorship, literacy, numeracy, curiosity, apprenticeship, practice, feedback, or serious adult responsibility. Those are exactly the things LifeEducation is trying to protect.",
-            "The problem is that formal schooling has successfully claimed the word education for itself. LifeEducation rejects that claim. School is one institution. Learning is larger than school."
+            "No. Education is the point: learning, growth, discipline, mentorship, literacy, numeracy, curiosity, apprenticeship, practice, feedback, and serious adult responsibility.",
+            "What LifeEducation opposes is compulsory formal schooling as the default model for childhood, and the assumption that institutional authority proves children are being educated. Formal schooling has claimed the word education for itself. LifeEducation rejects that claim.",
+            "School is one institution. Learning is larger than school."
           ]
         },
         {
