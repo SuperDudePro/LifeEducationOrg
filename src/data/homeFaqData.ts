@@ -3,7 +3,7 @@ export const HOME_FAQ_ITEMS = [
     label: "Core Distinction",
     question: "Are you anti-education?",
     answer:
-      "Yes, if education means compulsory formal schooling as it currently exists. No, if education means learning, skill, mentorship, discipline, curiosity, or serious adult responsibility. School is one institution. Learning is larger than school.",
+      "No. Education is the point: learning and real capability. LifeEducation opposes compulsory formal schooling as the default model for childhood, not serious teaching or learning. School is one institution. Learning is larger than school.",
   },
   {
     label: "Structure",
