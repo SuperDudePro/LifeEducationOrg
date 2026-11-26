@@ -1,0 +1,38 @@
+name: Post ledger closeout
+
+on:
+  pull_request_target:
+    types: [closed]
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: Merged Publisher PR number to retry
+        required: true
+        type: number
+
+permissions:
+  contents: read
+  pull-requests: read
+  statuses: write
+
+concurrency:
+  group: post-ledger-${{ github.event.pull_request.number || inputs.pr_number }}
+  cancel-in-progress: false
+
+jobs:
+  reconcile:
+    if: >-
+      (github.event_name == 'pull_request_target' &&
+      github.event.pull_request.merged == true &&
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      startsWith(github.event.pull_request.head.ref, 'publisher/')) ||
+      (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main')
+    # Pin the identical reviewed Publisher implementation. Upgrade this pin
+    # explicitly alongside future shared closeout changes.
+    uses: SuperDudePro/Blog-Site/.github/workflows/publisher-ledger-reusable.yml@dbf5dd37dc61519ceb85c4fcdb468f4308c604b9
+    with:
+      pr_number: ${{ github.event.pull_request.number || inputs.pr_number }}
+      implementation_ref: dbf5dd37dc61519ceb85c4fcdb468f4308c604b9
+    secrets:
+      WILBERT_LEDGER_TOKEN: ${{ secrets.WILBERT_LEDGER_TOKEN }}
