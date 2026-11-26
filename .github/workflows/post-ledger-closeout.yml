@@ -9,7 +9,7 @@ on:
       pr_number:
         description: Merged Publisher PR number to retry
         required: true
-        type: number
+        type: string
 
 permissions:
   contents: read
@@ -30,9 +30,9 @@ jobs:
       (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main')
     # Pin the identical reviewed Publisher implementation. Upgrade this pin
     # explicitly alongside future shared closeout changes.
-    uses: SuperDudePro/Blog-Site/.github/workflows/publisher-ledger-reusable.yml@dbf5dd37dc61519ceb85c4fcdb468f4308c604b9
+    uses: SuperDudePro/Blog-Site/.github/workflows/publisher-ledger-reusable.yml@4692ed7bb6920e189fbc93ef7a1248ef622c0691
     with:
-      pr_number: ${{ github.event.pull_request.number || inputs.pr_number }}
-      implementation_ref: dbf5dd37dc61519ceb85c4fcdb468f4308c604b9
+      pr_number: ${{ format('{0}', github.event.pull_request.number || inputs.pr_number) }}
+      implementation_ref: 4692ed7bb6920e189fbc93ef7a1248ef622c0691
     secrets:
       WILBERT_LEDGER_TOKEN: ${{ secrets.WILBERT_LEDGER_TOKEN }}
