@@ -55,3 +55,25 @@ jobs:
       - name: Validate manifest, source and approved image-byte digests
         working-directory: post-source
         run: node ../publisher-contract/scripts/validate-publishing-pr.mjs
+
+  publishing-contract-regression:
+    if: github.event_name == 'pull_request' && !startsWith(github.head_ref, 'publisher/')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: post-source
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: SuperDudePro/Blog-Site
+          ref: 4692ed7bb6920e189fbc93ef7a1248ef622c0691
+          path: publisher-contract
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Test shared CLI against LifeEducation fixtures
+        working-directory: post-source
+        run: node scripts/test-publishing-pr-contract.mjs ../publisher-contract
